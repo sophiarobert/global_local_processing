@@ -54,7 +54,7 @@ psychoJS.start({
   expName: expName,
   expInfo: expInfo,
   resources: [
-    {'name': 'Stimuli/bankcard.png', 'path': 'Stimuli/bankcard.png'}
+    {'name': 'bankcard.png', 'path': 'bankcard.png'}
   ]
 });
 
@@ -206,7 +206,7 @@ function experimentInit() {
   ccimage = new visual.ImageStim({
     win : psychoJS.window,
     name : 'ccimage', units : undefined, 
-    image : 'Stimuli/bankcard.png', mask : undefined,
+    image : 'bankcard.png', mask : undefined,
     ori : 0, pos : [0, 0], size : [(x_size * x_scale), (y_size * y_scale)],
     color : new util.Color([1, 1, 1]), opacity : 1,
     flipHoriz : false, flipVert : false,
