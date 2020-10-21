@@ -345,7 +345,7 @@ function experimentInit() {
           cond_file_run1 = "Designs/design2_run1.csv";
       } else {
           if ((expInfo["design"] === "3")) {
-              instruction_run1 = "Designs/design3_run1.png";
+              instructions_run1 = "Designs/design3_run1.png";
               cond_file_run1 = "Designs/design3_run1.csv";
           } else {
               if ((expInfo["design"] === "4")) {
