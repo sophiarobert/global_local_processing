@@ -7,7 +7,7 @@
     <Param name="Data file delimiter" updates="None" val="auto" valType="str"/>
     <Param name="Data filename" updates="None" val="u'data/%s_%s_%s' % (expInfo['participant'], expName, expInfo['date'])" valType="code"/>
     <Param name="Enable Escape" updates="None" val="True" valType="bool"/>
-    <Param name="Experiment info" updates="None" val="{'participant': '', 'session': '001'}" valType="code"/>
+    <Param name="Experiment info" updates="None" val="{'participant': '', 'design': '1', 'position': '0'}" valType="code"/>
     <Param name="Force stereo" updates="None" val="True" valType="bool"/>
     <Param name="Full-screen window" updates="None" val="True" valType="bool"/>
     <Param name="HTML path" updates="None" val="" valType="str"/>
@@ -38,7 +38,7 @@
         <Param name="Before Experiment" updates="constant" val="" valType="extendedCode"/>
         <Param name="Before JS Experiment" updates="constant" val="" valType="extendedCode"/>
         <Param name="Begin Experiment" updates="constant" val="" valType="extendedCode"/>
-        <Param name="Begin JS Experiment" updates="constant" val="thisExp=psychoJS.experiment;&amp;#10;win=psychoJS.window;&amp;#10;event=psychoJS.eventManager;&amp;#10;Array.prototype.append = [].push;&amp;#10;shuffle = util.shuffle;&amp;#10;webbrowser=window;&amp;#10;&amp;#10;random=Math.random;&amp;#10;randint=function(min, maxplusone) {&amp;#10;    return Math.floor(Math.random() * (maxplusone - min) ) + min;&amp;#10;}&amp;#10;&amp;#10;round = function(num, n=0) {    &amp;#10;    return +(Math.round(num + (&quot;e+&quot; + n))  + (&quot;e-&quot; + n));&amp;#10;}&amp;#10;&amp;#10;psychoJS.downloadResources([{name: (&quot;Stimuli/bankcard.png&quot;), path:(&quot;Stimuli/bankcard.png&quot;)},&amp;#10;{name: (&quot;Stimuli/greenCheck.png&quot;), path:(&quot;Stimuli/greenCheck.png&quot;)},&amp;#10;{name: (&quot;Stimuli/redWrong.png&quot;), path:(&quot;Stimuli/redWrong.png&quot;)},&amp;#10;{name: (&quot;Stimuli/HofH2.bmp&quot;), path:(&quot;Stimuli/HofH2.bmp&quot;)},&amp;#10;{name: (&quot;Stimuli/HofS2.bmp&quot;), path:(&quot;Stimuli/HofS2.bmp&quot;)},&amp;#10;{name: (&quot;Stimuli/SofH2.bmp&quot;), path:(&quot;Stimuli/SofH2.bmp&quot;)},&amp;#10;{name: (&quot;Stimuli/SofS2.bmp&quot;), path:(&quot;Stimuli/SofS2.bmp&quot;)},&amp;#10;{name: (&quot;Designs/design1_run1.png&quot;), path:(&quot;Designs/design1_run1.png&quot;)},&amp;#10;{name: (&quot;Designs/design2_run1.png&quot;), path:(&quot;Designs/design2_run1.png&quot;)},&amp;#10;{name: (&quot;Designs/design3_run1.png&quot;), path:(&quot;Designs/design3_run1.png&quot;)},&amp;#10;{name: (&quot;Designs/design4_run1.png&quot;), path:(&quot;Designs/design4_run1.png&quot;)},&amp;#10;{name: (&quot;Designs/design1_run2.png&quot;), path:(&quot;Designs/design1_run2.png&quot;)},&amp;#10;{name: (&quot;Designs/design2_run2.png&quot;), path:(&quot;Designs/design2_run2.png&quot;)},&amp;#10;{name: (&quot;Designs/design3_run2.png&quot;), path:(&quot;Designs/design3_run2.png&quot;)},&amp;#10;{name: (&quot;Designs/design4_run2.png&quot;), path:(&quot;Designs/design4_run2.png&quot;)},&amp;#10;{name: (&quot;Designs/design1_run1.csv&quot;), path:(&quot;Designs/design1_run1.csv&quot;)},&amp;#10;{name: (&quot;Designs/design2_run1.csv&quot;), path:(&quot;Designs/design2_run1.csv&quot;)},&amp;#10;{name: (&quot;Designs/design3_run1.csv&quot;), path:(&quot;Designs/design3_run1.csv&quot;)},&amp;#10;{name: (&quot;Designs/design4_run1.csv&quot;), path:(&quot;Designs/design4_run1.csv&quot;)},&amp;#10;{name: (&quot;Designs/design1_run2.csv&quot;), path:(&quot;Designs/design1_run2.csv&quot;)},&amp;#10;{name: (&quot;Designs/design2_run2.csv&quot;), path:(&quot;Designs/design2_run2.csv&quot;)},&amp;#10;{name: (&quot;Designs/design3_run2.csv&quot;), path:(&quot;Designs/design3_run2.csv&quot;)},&amp;#10;{name: (&quot;Designs/design4_run2.csv&quot;), path:(&quot;Designs/design4_run2.csv&quot;)}]);&amp;#10;&amp;#10;//expInfo['OS'] = window.navigator.platform;&amp;#10;//expInfo['xResolution'] = screen.width;&amp;#10;//expInfo['yResolution'] = screen.height;" valType="extendedCode"/>
+        <Param name="Begin JS Experiment" updates="constant" val="thisExp=psychoJS.experiment;&amp;#10;win=psychoJS.window;&amp;#10;event=psychoJS.eventManager;&amp;#10;Array.prototype.append = [].push;&amp;#10;shuffle = util.shuffle;&amp;#10;webbrowser=window;&amp;#10;&amp;#10;random=Math.random;&amp;#10;randint=function(min, maxplusone) {&amp;#10;    return Math.floor(Math.random() * (maxplusone - min) ) + min;&amp;#10;}&amp;#10;&amp;#10;round = function(num, n=0) {    &amp;#10;    return +(Math.round(num + (&quot;e+&quot; + n))  + (&quot;e-&quot; + n));&amp;#10;}&amp;#10;&amp;#10;psychoJS.downloadResources([{name: (&quot;Stimuli/greenCheck.png&quot;), path:(&quot;Stimuli/greenCheck.png&quot;)},&amp;#10;{name: (&quot;Stimuli/redWrong.png&quot;), path:(&quot;Stimuli/redWrong.png&quot;)},&amp;#10;{name: (&quot;Stimuli/HofH2.bmp&quot;), path:(&quot;Stimuli/HofH2.bmp&quot;)},&amp;#10;{name: (&quot;Stimuli/HofS2.bmp&quot;), path:(&quot;Stimuli/HofS2.bmp&quot;)},&amp;#10;{name: (&quot;Stimuli/SofH2.bmp&quot;), path:(&quot;Stimuli/SofH2.bmp&quot;)},&amp;#10;{name: (&quot;Stimuli/SofS2.bmp&quot;), path:(&quot;Stimuli/SofS2.bmp&quot;)},&amp;#10;{name: (&quot;Designs/design1_run1.png&quot;), path:(&quot;Designs/design1_run1.png&quot;)},&amp;#10;{name: (&quot;Designs/design2_run1.png&quot;), path:(&quot;Designs/design2_run1.png&quot;)},&amp;#10;{name: (&quot;Designs/design3_run1.png&quot;), path:(&quot;Designs/design3_run1.png&quot;)},&amp;#10;{name: (&quot;Designs/design4_run1.png&quot;), path:(&quot;Designs/design4_run1.png&quot;)},&amp;#10;{name: (&quot;Designs/design1_run2.png&quot;), path:(&quot;Designs/design1_run2.png&quot;)},&amp;#10;{name: (&quot;Designs/design2_run2.png&quot;), path:(&quot;Designs/design2_run2.png&quot;)},&amp;#10;{name: (&quot;Designs/design3_run2.png&quot;), path:(&quot;Designs/design3_run2.png&quot;)},&amp;#10;{name: (&quot;Designs/design4_run2.png&quot;), path:(&quot;Designs/design4_run2.png&quot;)},&amp;#10;{name: (&quot;Designs/design1_run1.csv&quot;), path:(&quot;Designs/design1_run1.csv&quot;)},&amp;#10;{name: (&quot;Designs/design2_run1.csv&quot;), path:(&quot;Designs/design2_run1.csv&quot;)},&amp;#10;{name: (&quot;Designs/design3_run1.csv&quot;), path:(&quot;Designs/design3_run1.csv&quot;)},&amp;#10;{name: (&quot;Designs/design4_run1.csv&quot;), path:(&quot;Designs/design4_run1.csv&quot;)},&amp;#10;{name: (&quot;Designs/design1_run2.csv&quot;), path:(&quot;Designs/design1_run2.csv&quot;)},&amp;#10;{name: (&quot;Designs/design2_run2.csv&quot;), path:(&quot;Designs/design2_run2.csv&quot;)},&amp;#10;{name: (&quot;Designs/design3_run2.csv&quot;), path:(&quot;Designs/design3_run2.csv&quot;)},&amp;#10;{name: (&quot;Designs/design4_run2.csv&quot;), path:(&quot;Designs/design4_run2.csv&quot;)}]);&amp;#10;&amp;#10;expInfo['OS'] = window.navigator.platform;&amp;#10;expInfo['xResolution'] = screen.width;&amp;#10;expInfo['yResolution'] = screen.height;" valType="extendedCode"/>
         <Param name="Begin JS Routine" updates="constant" val="" valType="extendedCode"/>
         <Param name="Begin Routine" updates="constant" val="" valType="extendedCode"/>
         <Param name="Code Type" updates="None" val="JS" valType="str"/>
@@ -142,8 +142,133 @@
         <Param name="units" updates="None" val="from exp settings" valType="str"/>
       </ImageComponent>
     </Routine>
+    <Routine name="pracInstruct">
+      <CodeComponent name="code_2">
+        <Param name="Before Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Before JS Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Begin Experiment" updates="constant" val="&amp;#10;fixColor_opts = [&quot;orange&quot;, &quot;pink&quot;];&amp;#10;shuffle(fixColor_opts);&amp;#10;prac1_fixColSwitch = [0,0,0,1];&amp;#10;shuffle(prac1_fixColSwitch);&amp;#10;prac2_fixColSwitch = [0,0,0,1];&amp;#10;shuffle(prac2_fixColSwitch);&amp;#10;fixColorIdx_Run1 =  [0, 0, 0, 0, 0, 0, 0, 1, &amp;#10;                                   0, 0, 0, 0, 0, 0, 0, 1, &amp;#10;                                   0, 0, 0, 0, 0, 0, 0, 1, &amp;#10;                                   0, 0, 0, 0, 0, 0, 0, 1, &amp;#10;                                   0, 0, 0, 0, 0, 0, 0, 1, &amp;#10;                                   0, 0, 0, 0, 0, 0, 0, 1, &amp;#10;                                   0, 0, 0, 0, 0, 0, 0, 1, &amp;#10;                                   0, 0, 0, 0, 0, 0, 0, 1, &amp;#10;                                   0, 0, 0, 0, 0, 0, 0, 1, &amp;#10;                                   0, 0, 0, 0, 0, 0, 0, 1, &amp;#10;                                   0, 0, 0, 0, 0, 0, 0, 1,&amp;#10;                                   0, 0, 0, 0, 0, 0, 0, 1];&amp;#10;shuffle(fixColorIdx_Run1);&amp;#10;fixColorIdx_Run2 = [0, 0, 0, 0, 0, 0, 0, 1, &amp;#10;                                   0, 0, 0, 0, 0, 0, 0, 1, &amp;#10;                                   0, 0, 0, 0, 0, 0, 0, 1, &amp;#10;                                   0, 0, 0, 0, 0, 0, 0, 1, &amp;#10;                                   0, 0, 0, 0, 0, 0, 0, 1, &amp;#10;                                   0, 0, 0, 0, 0, 0, 0, 1, &amp;#10;                                   0, 0, 0, 0, 0, 0, 0, 1, &amp;#10;                                   0, 0, 0, 0, 0, 0, 0, 1, &amp;#10;                                   0, 0, 0, 0, 0, 0, 0, 1, &amp;#10;                                   0, 0, 0, 0, 0, 0, 0, 1, &amp;#10;                                   0, 0, 0, 0, 0, 0, 0, 1,&amp;#10;                                   0, 0, 0, 0, 0, 0, 0, 1];&amp;#10;shuffle(fixColorIdx_Run2);&amp;#10;&amp;#10;&amp;#10;thisExp.addData('fixpR1', prac1_fixColSwitch)&amp;#10;thisExp.addData('fixR1', fixColorIdx_Run1)&amp;#10;thisExp.addData('fixpR2', prac2_fixColSwitch)&amp;#10;thisExp.addData('fixR2', fixColorIdx_Run2)" valType="extendedCode"/>
+        <Param name="Begin JS Experiment" updates="constant" val="fixColor_opts = [&quot;orange&quot;, &quot;pink&quot;];&amp;#10;shuffle(fixColor_opts);&amp;#10;prac1_fixColSwitch = [0, 0, 0, 1];&amp;#10;shuffle(prac1_fixColSwitch);&amp;#10;prac2_fixColSwitch = [0, 0, 0, 1];&amp;#10;shuffle(prac2_fixColSwitch);&amp;#10;fixColorIdx_Run1 = [0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1];&amp;#10;shuffle(fixColorIdx_Run1);&amp;#10;fixColorIdx_Run2 = [0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1];&amp;#10;shuffle(fixColorIdx_Run2);&amp;#10;thisExp.addData(&quot;fixpR1&quot;, prac1_fixColSwitch);&amp;#10;thisExp.addData(&quot;fixR1&quot;, fixColorIdx_Run1);&amp;#10;thisExp.addData(&quot;fixpR2&quot;, prac2_fixColSwitch);&amp;#10;thisExp.addData(&quot;fixR2&quot;, fixColorIdx_Run2);&amp;#10;" valType="extendedCode"/>
+        <Param name="Begin JS Routine" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Begin Routine" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Code Type" updates="None" val="Auto-&gt;JS" valType="str"/>
+        <Param name="Each Frame" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Each JS Frame" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End JS Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End JS Routine" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End Routine" updates="constant" val="" valType="extendedCode"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="name" updates="None" val="code_2" valType="code"/>
+      </CodeComponent>
+      <TextComponent name="start_exp_text">
+        <Param name="color" updates="constant" val="white" valType="str"/>
+        <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="flip" updates="constant" val="" valType="str"/>
+        <Param name="font" updates="constant" val="Arial" valType="str"/>
+        <Param name="languageStyle" updates="None" val="LTR" valType="str"/>
+        <Param name="letterHeight" updates="constant" val="0.1" valType="code"/>
+        <Param name="name" updates="None" val="start_exp_text" valType="code"/>
+        <Param name="opacity" updates="constant" val="1" valType="code"/>
+        <Param name="ori" updates="constant" val="0" valType="code"/>
+        <Param name="pos" updates="constant" val="(0, 0)" valType="code"/>
+        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="stopVal" updates="constant" val="" valType="code"/>
+        <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
+        <Param name="text" updates="constant" val="You will play two games. &amp;#10;Before you start, let’s do some practice!&amp;#10;&amp;#10;Are you ready? &amp;#10;Press ’Space’ to start practice!" valType="extendedStr"/>
+        <Param name="units" updates="None" val="from exp settings" valType="str"/>
+        <Param name="wrapWidth" updates="constant" val="" valType="code"/>
+      </TextComponent>
+      <KeyboardComponent name="start_exp_press">
+        <Param name="allowedKeys" updates="constant" val="'space'," valType="code"/>
+        <Param name="correctAns" updates="constant" val="" valType="str"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="discard previous" updates="constant" val="True" valType="bool"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="forceEndRoutine" updates="constant" val="True" valType="bool"/>
+        <Param name="name" updates="None" val="start_exp_press" valType="code"/>
+        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="1" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="stopVal" updates="constant" val="" valType="code"/>
+        <Param name="store" updates="constant" val="nothing" valType="str"/>
+        <Param name="storeCorrect" updates="constant" val="False" valType="bool"/>
+        <Param name="syncScreenRefresh" updates="constant" val="True" valType="bool"/>
+      </KeyboardComponent>
+    </Routine>
+    <Routine name="prac_instr_run1">
+      <CodeComponent name="code_3">
+        <Param name="Before Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Before JS Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Begin Experiment" updates="constant" val="if expInfo['design']=='1':&amp;#10;    instructions_run1 = 'Designs/design1_run1.png'&amp;#10;    cond_file_run1 = 'Designs/design1_run1.csv'&amp;#10;elif expInfo['design']=='2':&amp;#10;    instructions_run1 = 'Designs/design2_run1.png'&amp;#10;    cond_file_run1 = 'Designs/design2_run1.csv'&amp;#10;elif expInfo['design']=='3':&amp;#10;    instruction_run1 = 'Designs/design3_run1.png'&amp;#10;    cond_file_run1 = 'Designs/design3_run1.csv'&amp;#10;elif expInfo['design']=='4':&amp;#10;    instructions_run1 = 'Designs/design4_run1.png'&amp;#10;    cond_file_run1 = 'Designs/design4_run1.csv'&amp;#10;&amp;#10;rand8Idx = [0,1,2,3,4,5,6,7];&amp;#10;shuffle(rand8Idx)&amp;#10;rand4rows_run1 = rand8Idx[0:4]" valType="extendedCode"/>
+        <Param name="Begin JS Experiment" updates="constant" val="if ((expInfo[&quot;design&quot;] === &quot;1&quot;)) {&amp;#10;    instructions_run1 = &quot;Designs/design1_run1.png&quot;;&amp;#10;    cond_file_run1 = &quot;Designs/design1_run1.csv&quot;;&amp;#10;} else {&amp;#10;    if ((expInfo[&quot;design&quot;] === &quot;2&quot;)) {&amp;#10;        instructions_run1 = &quot;Designs/design2_run1.png&quot;;&amp;#10;        cond_file_run1 = &quot;Designs/design2_run1.csv&quot;;&amp;#10;    } else {&amp;#10;        if ((expInfo[&quot;design&quot;] === &quot;3&quot;)) {&amp;#10;            instruction_run1 = &quot;Designs/design3_run1.png&quot;;&amp;#10;            cond_file_run1 = &quot;Designs/design3_run1.csv&quot;;&amp;#10;        } else {&amp;#10;            if ((expInfo[&quot;design&quot;] === &quot;4&quot;)) {&amp;#10;                instructions_run1 = &quot;Designs/design4_run1.png&quot;;&amp;#10;                cond_file_run1 = &quot;Designs/design4_run1.csv&quot;;&amp;#10;            }&amp;#10;        }&amp;#10;    }&amp;#10;}&amp;#10;rand8Idx = [0, 1, 2, 3, 4, 5, 6, 7];&amp;#10;shuffle(rand8Idx);&amp;#10;rand4rows_run1 = rand8Idx.slice(0, 4);&amp;#10;" valType="extendedCode"/>
+        <Param name="Begin JS Routine" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Begin Routine" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Code Type" updates="None" val="Auto-&gt;JS" valType="str"/>
+        <Param name="Each Frame" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Each JS Frame" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End JS Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End JS Routine" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End Routine" updates="constant" val="" valType="extendedCode"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="name" updates="None" val="code_3" valType="code"/>
+      </CodeComponent>
+      <ImageComponent name="instructions_imageR1">
+        <Param name="color" updates="constant" val="$[1,1,1]" valType="str"/>
+        <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="flipHoriz" updates="constant" val="False" valType="bool"/>
+        <Param name="flipVert" updates="constant" val="False" valType="bool"/>
+        <Param name="image" updates="set every repeat" val="$instructions_run1" valType="str"/>
+        <Param name="interpolate" updates="constant" val="linear" valType="str"/>
+        <Param name="mask" updates="constant" val="None" valType="str"/>
+        <Param name="name" updates="None" val="instructions_imageR1" valType="code"/>
+        <Param name="opacity" updates="constant" val="1" valType="code"/>
+        <Param name="ori" updates="constant" val="0" valType="code"/>
+        <Param name="pos" updates="constant" val="(0, 0)" valType="code"/>
+        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
+        <Param name="size" updates="constant" val="(0.75*1.5, 0.75)" valType="code"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="stopVal" updates="constant" val="" valType="code"/>
+        <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
+        <Param name="texture resolution" updates="constant" val="512" valType="code"/>
+        <Param name="units" updates="None" val="from exp settings" valType="str"/>
+      </ImageComponent>
+      <KeyboardComponent name="key_resp">
+        <Param name="allowedKeys" updates="constant" val="'space'," valType="code"/>
+        <Param name="correctAns" updates="constant" val="" valType="str"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="discard previous" updates="constant" val="True" valType="bool"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="forceEndRoutine" updates="constant" val="True" valType="bool"/>
+        <Param name="name" updates="None" val="key_resp" valType="code"/>
+        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="1" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="stopVal" updates="constant" val="" valType="code"/>
+        <Param name="store" updates="constant" val="nothing" valType="str"/>
+        <Param name="storeCorrect" updates="constant" val="False" valType="bool"/>
+        <Param name="syncScreenRefresh" updates="constant" val="True" valType="bool"/>
+      </KeyboardComponent>
+    </Routine>
   </Routines>
   <Flow>
     <Routine name="screen_scale"/>
+    <Routine name="pracInstruct"/>
+    <Routine name="prac_instr_run1"/>
   </Flow>
 </PsychoPy2experiment>
