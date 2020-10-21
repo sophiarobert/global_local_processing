@@ -126,8 +126,7 @@ function experimentInit() {
       return +(Math.round(num + ("e+" + n))  + ("e-" + n));
   }
   
-  psychoJS.downloadResources([{name: ("bankcard.png"), path:("bankcard.png")},
-  {name: ("Stimuli/greenCheck.png"), path:("Stimuli/greenCheck.png")},
+  psychoJS.downloadResources([{name: ("Stimuli/greenCheck.png"), path:("Stimuli/greenCheck.png")},
   {name: ("Stimuli/redWrong.png"), path:("Stimuli/redWrong.png")},
   {name: ("Stimuli/HofH2.bmp"), path:("Stimuli/HofH2.bmp")},
   {name: ("Stimuli/HofS2.bmp"), path:("Stimuli/HofS2.bmp")},
