@@ -57,7 +57,7 @@ psychoJS.start({
   ]
 });
 
-psychoJS.experimentLogger.setLevel(core.Logger.ServerLevel.EXP);
+psychoJS.experimentLogger.setLevel(core.Logger.ServerLevel.DEBUG);
 
 
 var frameDur;
