@@ -139,9 +139,9 @@ function experimentInit() {
   {name: ("Designs/design3_run2.csv"), path:("Designs/design3_run2.csv")},
   {name: ("Designs/design4_run2.csv"), path:("Designs/design4_run2.csv")}]);
   
-  expInfo['OS'] = window.navigator.platform;
-  expInfo['xResolution'] = screen.width;
-  expInfo['yResolution'] = screen.height;
+  //expInfo['OS'] = window.navigator.platform;
+  //expInfo['xResolution'] = screen.width;
+  //expInfo['yResolution'] = screen.height;
   oldt = 0;
   x_size = 8.56;
   y_size = 5.398;
