@@ -7,7 +7,7 @@
     <Param name="Data file delimiter" updates="None" val="auto" valType="str"/>
     <Param name="Data filename" updates="None" val="u'data/%s_%s_%s' % (expInfo['participant'], expName, expInfo['date'])" valType="code"/>
     <Param name="Enable Escape" updates="None" val="True" valType="bool"/>
-    <Param name="Experiment info" updates="None" val="{'participant':'', 'session':'001'}" valType="code"/>
+    <Param name="Experiment info" updates="None" val="{'participant': '', 'session': '001'}" valType="code"/>
     <Param name="Force stereo" updates="None" val="True" valType="bool"/>
     <Param name="Full-screen window" updates="None" val="True" valType="bool"/>
     <Param name="HTML path" updates="None" val="" valType="str"/>
@@ -24,13 +24,13 @@
     <Param name="Show mouse" updates="None" val="False" valType="bool"/>
     <Param name="Units" updates="None" val="height" valType="str"/>
     <Param name="Use version" updates="None" val="" valType="str"/>
-    <Param name="Window size (pixels)" updates="None" val="(1024, 768)" valType="code"/>
+    <Param name="Window size (pixels)" updates="None" val="[1792, 1120]" valType="code"/>
     <Param name="blendMode" updates="None" val="avg" valType="str"/>
     <Param name="color" updates="None" val="$[0,0,0]" valType="str"/>
     <Param name="colorSpace" updates="None" val="rgb" valType="str"/>
     <Param name="expName" updates="None" val="global_local" valType="str"/>
     <Param name="exportHTML" updates="None" val="on Sync" valType="str"/>
-    <Param name="logging level" updates="None" val="exp" valType="code"/>
+    <Param name="logging level" updates="None" val="debug" valType="code"/>
   </Settings>
   <Routines>
     <Routine name="screen_scale">
@@ -86,7 +86,7 @@
         <Param name="startType" updates="None" val="time (s)" valType="str"/>
         <Param name="startVal" updates="None" val="0.0" valType="code"/>
         <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
-        <Param name="stopVal" updates="constant" val="1.0" valType="code"/>
+        <Param name="stopVal" updates="constant" val="" valType="code"/>
         <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
         <Param name="text" updates="constant" val="Resize this image to match the size of a credit card with arrow keys" valType="extendedStr"/>
         <Param name="units" updates="None" val="from exp settings" valType="str"/>
@@ -110,7 +110,7 @@
         <Param name="startType" updates="None" val="time (s)" valType="str"/>
         <Param name="startVal" updates="None" val="0.0" valType="code"/>
         <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
-        <Param name="stopVal" updates="constant" val="1.0" valType="code"/>
+        <Param name="stopVal" updates="constant" val="" valType="code"/>
         <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
         <Param name="text" updates="constant" val="Press Space when you’re finished" valType="extendedStr"/>
         <Param name="units" updates="None" val="from exp settings" valType="str"/>
@@ -136,7 +136,7 @@
         <Param name="startType" updates="None" val="time (s)" valType="str"/>
         <Param name="startVal" updates="None" val="0.0" valType="code"/>
         <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
-        <Param name="stopVal" updates="constant" val="1.0" valType="code"/>
+        <Param name="stopVal" updates="constant" val="" valType="code"/>
         <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
         <Param name="texture resolution" updates="constant" val="512" valType="code"/>
         <Param name="units" updates="None" val="from exp settings" valType="str"/>
