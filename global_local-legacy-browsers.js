@@ -116,7 +116,7 @@ function experimentInit() {
       return +(Math.round(num + ("e+" + n))  + ("e-" + n));
   }
   
-  psychoJS.downloadResources([{name: ("Stimuli/bankcard.png"), path:("Stimuli/bankcard.png")},
+  psychoJS.downloadResources([{name: ("bankcard.png"), path:("bankcard.png")},
   {name: ("Stimuli/greenCheck.png"), path:("Stimuli/greenCheck.png")},
   {name: ("Stimuli/redWrong.png"), path:("Stimuli/redWrong.png")},
   {name: ("Stimuli/HofH2.bmp"), path:("Stimuli/HofH2.bmp")},
@@ -140,9 +140,9 @@ function experimentInit() {
   {name: ("Designs/design3_run2.csv"), path:("Designs/design3_run2.csv")},
   {name: ("Designs/design4_run2.csv"), path:("Designs/design4_run2.csv")}]);
   
-  //expInfo['OS'] = window.navigator.platform;
-  //expInfo['xResolution'] = screen.width;
-  //expInfo['yResolution'] = screen.height;
+  expInfo['OS'] = window.navigator.platform;
+  expInfo['xResolution'] = screen.width;
+  expInfo['yResolution'] = screen.height;
   oldt = 0;
   x_size = 8.56;
   y_size = 5.398;
