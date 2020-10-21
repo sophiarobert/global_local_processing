@@ -1,0 +1,9 @@
+runID,imgID,stimLabel,imFile,corr,side
+1,1,smallHcongr,Stimuli/HofH2.bmp,f,left
+1,3,smallHincon,Stimuli/SofH2.bmp,f,left
+1,5,smallScongr,Stimuli/SofS2.bmp,j,left
+1,7,smallSincon,Stimuli/HofS2.bmp,j,left
+1,2,smallHcongr,Stimuli/HofH2.bmp,f,right
+1,4,smallHincon,Stimuli/SofH2.bmp,f,right
+1,6,smallScongr,Stimuli/SofS2.bmp,j,right
+1,8,smallSincon,Stimuli/HofS2.bmp,j,right
