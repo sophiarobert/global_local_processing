@@ -17,7 +17,7 @@ psychoJS.openWindow({
 
 // store info about the experiment session:
 let expName = 'global_local';  // from the Builder filename that created this script
-let expInfo = {'participant': '', 'design': '1', 'position': '1'};
+let expInfo = {'participant': '', 'design': '1', 'position': '2'};
 
 // schedule the experiment:
 psychoJS.schedule(psychoJS.gui.DlgFromDict({
@@ -141,7 +141,7 @@ var prac_instr_run1Clock;
 var instructions_run1;
 var cond_file_run1;
 var rand8Idx;
-var rand4rows_run1;
+var randRows_run1;
 var Pinstructions_imageR1;
 var key_resp;
 var pracFixR1Clock;
@@ -163,6 +163,7 @@ var Trial_run1;
 var Total_run1;
 var Trial_run2;
 var Total_run2;
+var positionRows;
 var instructions_imageR1;
 var key_resp_2;
 var trialFixR1Clock;
@@ -176,7 +177,7 @@ var fix_resp_2;
 var prac_instr_run2Clock;
 var instructions_run2;
 var cond_file_run2;
-var rand4rows_run2;
+var randRows_run2;
 var Pinstructions_imageR2;
 var key_resp_3;
 var pracFixR2Clock;
@@ -272,7 +273,7 @@ function experimentInit() {
     font: 'Arial',
     units: undefined, 
     pos: [0, 0.3], height: 0.05,  wrapWidth: undefined, ori: 0,
-    color: new util.Color('white'),  opacity: 1,
+    color: new util.Color('black'),  opacity: 1,
     depth: -2.0 
   });
   
@@ -283,7 +284,7 @@ function experimentInit() {
     font: 'Arial',
     units: undefined, 
     pos: [0, (- 0.3)], height: 0.05,  wrapWidth: undefined, ori: 0,
-    color: new util.Color('white'),  opacity: 1,
+    color: new util.Color('black'),  opacity: 1,
     depth: -3.0 
   });
   
@@ -343,9 +344,23 @@ function experimentInit() {
           }
       }
   }
-  rand8Idx = [0, 1, 2, 3, 4, 5, 6, 7];
-  shuffle(rand8Idx);
-  rand4rows_run1 = rand8Idx.slice(0, 4);
+  if ((expInfo["position"] === "2")) {
+      rand8Idx = [0, 1, 2, 3, 4, 5, 6, 7];
+      shuffle(rand8Idx);
+      randRows_run1 = rand8Idx.slice(0, 4);
+  } else {
+      if ((expInfo["position"] === "1")) {
+          rand4Idx = [0, 1, 2, 3];
+          shuffle(rand4Idx);
+          randRows_run1 = rand4Idx.slice(0, 2);
+      } else {
+          if ((expInfo["position"] === "3")) {
+              rand4Idx = [4, 5, 6, 7];
+              shuffle(rand4Idx);
+              randRows_run1 = rand4Idx.slice(0, 2);
+          }
+      }
+  }
   
   Pinstructions_imageR1 = new visual.ImageStim({
     win : psychoJS.window,
@@ -440,6 +455,15 @@ function experimentInit() {
   Total_run1 = 96;
   Trial_run2 = 1;
   Total_run2 = 96;
+  if ((expInfo["position"] === "2")) {
+      positionRows = [0, 1, 2, 3, 4, 5, 6, 7];
+  }
+  if ((expInfo["position"] === "1")) {
+      positionRows = [0, 1, 2, 3];
+  }
+  if ((expInfo["position"] === "3")) {
+      positionRows = [4, 5, 6, 7];
+  }
   
   instructions_imageR1 = new visual.ImageStim({
     win : psychoJS.window,
@@ -514,9 +538,23 @@ function experimentInit() {
           }
       }
   }
-  rand8Idx = [0, 1, 2, 3, 4, 5, 6, 7];
-  shuffle(rand8Idx);
-  rand4rows_run2 = rand8Idx.slice(0, 4);
+  if ((expInfo["position"] === "2")) {
+      rand8Idx = [0, 1, 2, 3, 4, 5, 6, 7];
+      shuffle(rand8Idx);
+      randRows_run2 = rand8Idx.slice(0, 4);
+  } else {
+      if ((expInfo["position"] === "1")) {
+          rand4Idx = [0, 1, 2, 3];
+          shuffle(rand4Idx);
+          randRows_run2 = rand4Idx.slice(0, 2);
+      } else {
+          if ((expInfo["position"] === "3")) {
+              rand4Idx = [4, 5, 6, 7];
+              shuffle(rand4Idx);
+              randRows_run2 = rand4Idx.slice(0, 2);
+          }
+      }
+  }
   
   Pinstructions_imageR2 = new visual.ImageStim({
     win : psychoJS.window,
@@ -1073,7 +1111,7 @@ function prac_trials_run1LoopBegin(prac_trials_run1LoopScheduler) {
     psychoJS: psychoJS,
     nReps: 1, method: TrialHandler.Method.RANDOM,
     extraInfo: expInfo, originPath: undefined,
-    trialList: TrialHandler.importConditions(psychoJS.serverManager, cond_file_run1, rand4rows_run1),
+    trialList: TrialHandler.importConditions(psychoJS.serverManager, cond_file_run1, randRows_run1),
     seed: undefined, name: 'prac_trials_run1'
   });
   psychoJS.experiment.addLoop(prac_trials_run1); // add the loop to the experiment
@@ -1114,7 +1152,7 @@ function trials_run1LoopBegin(trials_run1LoopScheduler) {
     psychoJS: psychoJS,
     nReps: 12, method: TrialHandler.Method.FULLRANDOM,
     extraInfo: expInfo, originPath: undefined,
-    trialList: cond_file_run1,
+    trialList: TrialHandler.importConditions(psychoJS.serverManager, cond_file_run1, positionRows),
     seed: undefined, name: 'trials_run1'
   });
   psychoJS.experiment.addLoop(trials_run1); // add the loop to the experiment
@@ -1152,7 +1190,7 @@ function prac_trials_run2LoopBegin(prac_trials_run2LoopScheduler) {
     psychoJS: psychoJS,
     nReps: 1, method: TrialHandler.Method.RANDOM,
     extraInfo: expInfo, originPath: undefined,
-    trialList: TrialHandler.importConditions(psychoJS.serverManager, cond_file_run2, rand4rows_run2),
+    trialList: TrialHandler.importConditions(psychoJS.serverManager, cond_file_run2, randRows_run2),
     seed: undefined, name: 'prac_trials_run2'
   });
   psychoJS.experiment.addLoop(prac_trials_run2); // add the loop to the experiment
@@ -1193,7 +1231,7 @@ function trials_run2LoopBegin(trials_run2LoopScheduler) {
     psychoJS: psychoJS,
     nReps: 12, method: TrialHandler.Method.FULLRANDOM,
     extraInfo: expInfo, originPath: undefined,
-    trialList: cond_file_run2,
+    trialList: TrialHandler.importConditions(psychoJS.serverManager, cond_file_run2, positionRows),
     seed: undefined, name: 'trials_run2'
   });
   psychoJS.experiment.addLoop(trials_run2); // add the loop to the experiment
@@ -1261,11 +1299,19 @@ function pracFixR1RoutineBegin(snapshot) {
     if ((expInfo["position"] === "0")) {
         xPosition = 0;
     } else {
-        if ((expInfo["position"] === "1")) {
+        if ((expInfo["position"] === "2")) {
             if ((side === "left")) {
                 xPosition = (- (width * x_scale));
             } else {
                 if ((side === "right")) {
+                    xPosition = (width * x_scale);
+                }
+            }
+        } else {
+            if ((expInfo["position"] === "1")) {
+                xPosition = (- (width * x_scale));
+            } else {
+                if ((expInfo["position"] === "3")) {
                     xPosition = (width * x_scale);
                 }
             }
@@ -1815,11 +1861,19 @@ function trialFixR1RoutineBegin(snapshot) {
     if ((expInfo["position"] === "0")) {
         xPosition = 0;
     } else {
-        if ((expInfo["position"] === "1")) {
+        if ((expInfo["position"] === "2")) {
             if ((side === "left")) {
                 xPosition = (- (width * x_scale));
             } else {
                 if ((side === "right")) {
+                    xPosition = (width * x_scale);
+                }
+            }
+        } else {
+            if ((expInfo["position"] === "1")) {
+                xPosition = (- (width * x_scale));
+            } else {
+                if ((expInfo["position"] === "3")) {
                     xPosition = (width * x_scale);
                 }
             }
@@ -2273,11 +2327,19 @@ function pracFixR2RoutineBegin(snapshot) {
     if ((expInfo["position"] === "0")) {
         xPosition = 0;
     } else {
-        if ((expInfo["position"] === "1")) {
+        if ((expInfo["position"] === "2")) {
             if ((side === "left")) {
                 xPosition = (- (width * x_scale));
             } else {
                 if ((side === "right")) {
+                    xPosition = (width * x_scale);
+                }
+            }
+        } else {
+            if ((expInfo["position"] === "1")) {
+                xPosition = (- (width * x_scale));
+            } else {
+                if ((expInfo["position"] === "3")) {
                     xPosition = (width * x_scale);
                 }
             }
@@ -2547,11 +2609,19 @@ function trialFixR2RoutineBegin(snapshot) {
     if ((expInfo["position"] === "0")) {
         xPosition = 0;
     } else {
-        if ((expInfo["position"] === "1")) {
+        if ((expInfo["position"] === "2")) {
             if ((side === "left")) {
                 xPosition = (- (width * x_scale));
             } else {
                 if ((side === "right")) {
+                    xPosition = (width * x_scale);
+                }
+            }
+        } else {
+            if ((expInfo["position"] === "1")) {
+                xPosition = (- (width * x_scale));
+            } else {
+                if ((expInfo["position"] === "3")) {
                     xPosition = (width * x_scale);
                 }
             }

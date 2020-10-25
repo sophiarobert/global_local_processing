@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2020.2.4),
-    on Wed Oct 21 13:58:42 2020
+    on Sun Oct 25 13:46:37 2020
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -37,7 +37,7 @@ os.chdir(_thisDir)
 # Store info about the experiment session
 psychopyVersion = '2020.2.4'
 expName = 'global_local'  # from the Builder filename that created this script
-expInfo = {'participant': 'SR', 'design': '1', 'position': '0'}
+expInfo = {'participant': '', 'design': '1', 'position': '2'}
 dlg = gui.DlgFromDict(dictionary=expInfo, sort_keys=False, title=expName)
 if dlg.OK == False:
     core.quit()  # user pressed cancel
@@ -113,14 +113,14 @@ text_top = visual.TextStim(win=win, name='text_top',
     text='Resize this image to match the size of a credit card with arrow keys',
     font='Arial',
     pos=(0, 0.3), height=0.05, wrapWidth=None, ori=0, 
-    color='white', colorSpace='rgb', opacity=1, 
+    color='black', colorSpace='rgb', opacity=1, 
     languageStyle='LTR',
     depth=-2.0);
 text_bottom = visual.TextStim(win=win, name='text_bottom',
     text='Press Space when you’re finished',
     font='Arial',
     pos=(0, -0.3), height=0.05, wrapWidth=None, ori=0, 
-    color='white', colorSpace='rgb', opacity=1, 
+    color='black', colorSpace='rgb', opacity=1, 
     languageStyle='LTR',
     depth=-3.0);
 ccimage = visual.ImageStim(
@@ -167,12 +167,6 @@ fixColorIdx_Run2 = [0, 0, 0, 0, 0, 0, 0, 1,
                                    0, 0, 0, 0, 0, 0, 0, 1,
                                    0, 0, 0, 0, 0, 0, 0, 1];
 shuffle(fixColorIdx_Run2);
-
-
-thisExp.addData('fixpR1', prac1_fixColSwitch)
-thisExp.addData('fixR1', fixColorIdx_Run1)
-thisExp.addData('fixpR2', prac2_fixColSwitch)
-thisExp.addData('fixR2', fixColorIdx_Run2)
 start_exp_text = visual.TextStim(win=win, name='start_exp_text',
     text='You will play two games. \nBefore you start, let’s do some practice!\n\nAre you ready? \nPress Space to start practice!',
     font='Arial',
@@ -191,7 +185,7 @@ elif expInfo['design']=='2':
     instructions_run1 = 'Designs/design2_run1.png'
     cond_file_run1 = 'Designs/design2_run1.csv'
 elif expInfo['design']=='3':
-    instruction_run1 = 'Designs/design3_run1.png'
+    instructions_run1 = 'Designs/design3_run1.png'
     cond_file_run1 = 'Designs/design3_run1.csv'
 elif expInfo['design']=='4':
     instructions_run1 = 'Designs/design4_run1.png'
@@ -229,6 +223,13 @@ fix_respP1_1 = keyboard.Keyboard()
 
 # Initialize components for Routine "prac_img"
 prac_imgClock = core.Clock()
+text_5 = visual.TextStim(win=win, name='text_5',
+    text='+',
+    font='Arial',
+    pos=(0, 0), height=0.05, wrapWidth=None, ori=0, 
+    color='white', colorSpace='rgb', opacity=1, 
+    languageStyle='LTR',
+    depth=0.0);
 prac_image = visual.ImageStim(
     win=win,
     name='prac_image', 
@@ -236,7 +237,7 @@ prac_image = visual.ImageStim(
     ori=0, pos=[0,0], size=1.0,
     color=[1,1,1], colorSpace='rgb', opacity=1,
     flipHoriz=False, flipVert=False,
-    texRes=512, interpolate=True, depth=0.0)
+    texRes=512, interpolate=True, depth=-1.0)
 prac_resp = keyboard.Keyboard()
 prac_fix_resp_2 = keyboard.Keyboard()
 
@@ -294,6 +295,13 @@ fix_resp1_1 = keyboard.Keyboard()
 
 # Initialize components for Routine "trial_img"
 trial_imgClock = core.Clock()
+text_6 = visual.TextStim(win=win, name='text_6',
+    text='+',
+    font='Arial',
+    pos=(0, 0), height=0.05, wrapWidth=None, ori=0, 
+    color='white', colorSpace='rgb', opacity=1, 
+    languageStyle='LTR',
+    depth=0.0);
 trial_image = visual.ImageStim(
     win=win,
     name='trial_image', 
@@ -301,7 +309,7 @@ trial_image = visual.ImageStim(
     ori=0, pos=[0,0], size=1.0,
     color=[1,1,1], colorSpace='rgb', opacity=1,
     flipHoriz=False, flipVert=False,
-    texRes=512, interpolate=True, depth=0.0)
+    texRes=512, interpolate=True, depth=-1.0)
 trial_resp = keyboard.Keyboard()
 fix_resp_2 = keyboard.Keyboard()
 
@@ -346,6 +354,13 @@ fix_respP2_1 = keyboard.Keyboard()
 
 # Initialize components for Routine "prac_img"
 prac_imgClock = core.Clock()
+text_5 = visual.TextStim(win=win, name='text_5',
+    text='+',
+    font='Arial',
+    pos=(0, 0), height=0.05, wrapWidth=None, ori=0, 
+    color='white', colorSpace='rgb', opacity=1, 
+    languageStyle='LTR',
+    depth=0.0);
 prac_image = visual.ImageStim(
     win=win,
     name='prac_image', 
@@ -353,7 +368,7 @@ prac_image = visual.ImageStim(
     ori=0, pos=[0,0], size=1.0,
     color=[1,1,1], colorSpace='rgb', opacity=1,
     flipHoriz=False, flipVert=False,
-    texRes=512, interpolate=True, depth=0.0)
+    texRes=512, interpolate=True, depth=-1.0)
 prac_resp = keyboard.Keyboard()
 prac_fix_resp_2 = keyboard.Keyboard()
 
@@ -405,6 +420,13 @@ fix_resp2_1 = keyboard.Keyboard()
 
 # Initialize components for Routine "trial_img"
 trial_imgClock = core.Clock()
+text_6 = visual.TextStim(win=win, name='text_6',
+    text='+',
+    font='Arial',
+    pos=(0, 0), height=0.05, wrapWidth=None, ori=0, 
+    color='white', colorSpace='rgb', opacity=1, 
+    languageStyle='LTR',
+    depth=0.0);
 trial_image = visual.ImageStim(
     win=win,
     name='trial_image', 
@@ -412,7 +434,7 @@ trial_image = visual.ImageStim(
     ori=0, pos=[0,0], size=1.0,
     color=[1,1,1], colorSpace='rgb', opacity=1,
     flipHoriz=False, flipVert=False,
-    texRes=512, interpolate=True, depth=0.0)
+    texRes=512, interpolate=True, depth=-1.0)
 trial_resp = keyboard.Keyboard()
 fix_resp_2 = keyboard.Keyboard()
 
@@ -753,12 +775,17 @@ for thisPrac_trials_run1 in prac_trials_run1:
     
     if expInfo['position'] == '0':
         xPosition = 0
-    elif expInfo['position'] == '1':
+    elif expInfo['position'] == '2':
         if side == 'left':
             xPosition = -(width*x_scale)
         elif side == 'right':
             xPosition = width*x_scale
+    elif expInfo['position'] == '1':
+        xPosition = -(width*x_scale)
+    elif expInfo['position'] == '3':
+        xPosition = width*x_scale
     
+    thisExp.addData('fixpR1', prac1_fixColSwitch[pTrial_run1-1])
     text.setColor(currFix, colorSpace='rgb')
     fix_respP1_1.keys = []
     fix_respP1_1.rt = []
@@ -870,6 +897,7 @@ for thisPrac_trials_run1 in prac_trials_run1:
     # ------Prepare to start Routine "prac_img"-------
     continueRoutine = True
     # update component parameters for each repeat
+    text_5.setColor(currFix, colorSpace='rgb')
     prac_image.setPos((xPosition, 0))
     prac_image.setSize((width*x_scale, height*y_scale))
     prac_image.setImage(imFile)
@@ -880,7 +908,7 @@ for thisPrac_trials_run1 in prac_trials_run1:
     prac_fix_resp_2.rt = []
     _prac_fix_resp_2_allKeys = []
     # keep track of which components have finished
-    prac_imgComponents = [prac_image, prac_resp, prac_fix_resp_2]
+    prac_imgComponents = [text_5, prac_image, prac_resp, prac_fix_resp_2]
     for thisComponent in prac_imgComponents:
         thisComponent.tStart = None
         thisComponent.tStop = None
@@ -902,6 +930,15 @@ for thisPrac_trials_run1 in prac_trials_run1:
         tThisFlipGlobal = win.getFutureFlipTime(clock=None)
         frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
         # update/draw components on each frame
+        
+        # *text_5* updates
+        if text_5.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+            # keep track of start time/frame for later
+            text_5.frameNStart = frameN  # exact frame index
+            text_5.tStart = t  # local t and not account for scr refresh
+            text_5.tStartRefresh = tThisFlipGlobal  # on global time
+            win.timeOnFlip(text_5, 'tStartRefresh')  # time at next scr refresh
+            text_5.setAutoDraw(True)
         
         # *prac_image* updates
         if prac_image.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
@@ -980,6 +1017,8 @@ for thisPrac_trials_run1 in prac_trials_run1:
     for thisComponent in prac_imgComponents:
         if hasattr(thisComponent, "setAutoDraw"):
             thisComponent.setAutoDraw(False)
+    prac_trials_run1.addData('text_5.started', text_5.tStartRefresh)
+    prac_trials_run1.addData('text_5.stopped', text_5.tStopRefresh)
     prac_trials_run1.addData('prac_image.started', prac_image.tStartRefresh)
     prac_trials_run1.addData('prac_image.stopped', prac_image.tStopRefresh)
     # check responses
@@ -1215,11 +1254,17 @@ for thisTrials_run1 in trials_run1:
     
     if expInfo['position'] == '0':
         xPosition = 0
-    elif expInfo['position'] == '1':
+    elif expInfo['position'] == '2':
         if side == 'left':
             xPosition = -(width*x_scale)
         elif side == 'right':
             xPosition = width*x_scale
+    elif expInfo['position'] == '1':
+        xPosition = -(width*x_scale)
+    elif expInfo['position'] == '3':
+        xPosition = width*x_scale
+    
+    thisExp.addData('fixR1', fixColorIdx_Run1[Trial_run1-1])
     text_2.setColor(currFix, colorSpace='rgb')
     fix_resp1_1.keys = []
     fix_resp1_1.rt = []
@@ -1331,6 +1376,7 @@ for thisTrials_run1 in trials_run1:
     # ------Prepare to start Routine "trial_img"-------
     continueRoutine = True
     # update component parameters for each repeat
+    text_6.setColor(currFix, colorSpace='rgb')
     trial_image.setPos((xPosition, 0))
     trial_image.setSize((width*x_scale,height*y_scale))
     trial_image.setImage(imFile)
@@ -1341,7 +1387,7 @@ for thisTrials_run1 in trials_run1:
     fix_resp_2.rt = []
     _fix_resp_2_allKeys = []
     # keep track of which components have finished
-    trial_imgComponents = [trial_image, trial_resp, fix_resp_2]
+    trial_imgComponents = [text_6, trial_image, trial_resp, fix_resp_2]
     for thisComponent in trial_imgComponents:
         thisComponent.tStart = None
         thisComponent.tStop = None
@@ -1363,6 +1409,15 @@ for thisTrials_run1 in trials_run1:
         tThisFlipGlobal = win.getFutureFlipTime(clock=None)
         frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
         # update/draw components on each frame
+        
+        # *text_6* updates
+        if text_6.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+            # keep track of start time/frame for later
+            text_6.frameNStart = frameN  # exact frame index
+            text_6.tStart = t  # local t and not account for scr refresh
+            text_6.tStartRefresh = tThisFlipGlobal  # on global time
+            win.timeOnFlip(text_6, 'tStartRefresh')  # time at next scr refresh
+            text_6.setAutoDraw(True)
         
         # *trial_image* updates
         if trial_image.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
@@ -1441,6 +1496,8 @@ for thisTrials_run1 in trials_run1:
     for thisComponent in trial_imgComponents:
         if hasattr(thisComponent, "setAutoDraw"):
             thisComponent.setAutoDraw(False)
+    trials_run1.addData('text_6.started', text_6.tStartRefresh)
+    trials_run1.addData('text_6.stopped', text_6.tStopRefresh)
     trials_run1.addData('trial_image.started', trial_image.tStartRefresh)
     trials_run1.addData('trial_image.stopped', trial_image.tStopRefresh)
     # check responses
@@ -1599,11 +1656,17 @@ for thisPrac_trials_run2 in prac_trials_run2:
     
     if expInfo['position'] == '0':
         xPosition = 0
-    elif expInfo['position'] == '1':
+    elif expInfo['position'] == '2':
         if side == 'left':
             xPosition = -(width*x_scale)
         elif side == 'right':
             xPosition = width*x_scale
+    elif expInfo['position'] == '1':
+        xPosition = -(width*x_scale)
+    elif expInfo['position'] == '3':
+        xPosition = width*x_scale
+    
+    thisExp.addData('fixpR2', prac2_fixColSwitch[pTrial_run2-1])
     text_3.setColor(currFix, colorSpace='rgb')
     fix_respP2_1.keys = []
     fix_respP2_1.rt = []
@@ -1715,6 +1778,7 @@ for thisPrac_trials_run2 in prac_trials_run2:
     # ------Prepare to start Routine "prac_img"-------
     continueRoutine = True
     # update component parameters for each repeat
+    text_5.setColor(currFix, colorSpace='rgb')
     prac_image.setPos((xPosition, 0))
     prac_image.setSize((width*x_scale, height*y_scale))
     prac_image.setImage(imFile)
@@ -1725,7 +1789,7 @@ for thisPrac_trials_run2 in prac_trials_run2:
     prac_fix_resp_2.rt = []
     _prac_fix_resp_2_allKeys = []
     # keep track of which components have finished
-    prac_imgComponents = [prac_image, prac_resp, prac_fix_resp_2]
+    prac_imgComponents = [text_5, prac_image, prac_resp, prac_fix_resp_2]
     for thisComponent in prac_imgComponents:
         thisComponent.tStart = None
         thisComponent.tStop = None
@@ -1747,6 +1811,15 @@ for thisPrac_trials_run2 in prac_trials_run2:
         tThisFlipGlobal = win.getFutureFlipTime(clock=None)
         frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
         # update/draw components on each frame
+        
+        # *text_5* updates
+        if text_5.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+            # keep track of start time/frame for later
+            text_5.frameNStart = frameN  # exact frame index
+            text_5.tStart = t  # local t and not account for scr refresh
+            text_5.tStartRefresh = tThisFlipGlobal  # on global time
+            win.timeOnFlip(text_5, 'tStartRefresh')  # time at next scr refresh
+            text_5.setAutoDraw(True)
         
         # *prac_image* updates
         if prac_image.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
@@ -1825,6 +1898,8 @@ for thisPrac_trials_run2 in prac_trials_run2:
     for thisComponent in prac_imgComponents:
         if hasattr(thisComponent, "setAutoDraw"):
             thisComponent.setAutoDraw(False)
+    prac_trials_run2.addData('text_5.started', text_5.tStartRefresh)
+    prac_trials_run2.addData('text_5.stopped', text_5.tStopRefresh)
     prac_trials_run2.addData('prac_image.started', prac_image.tStartRefresh)
     prac_trials_run2.addData('prac_image.stopped', prac_image.tStopRefresh)
     # check responses
@@ -2060,11 +2135,17 @@ for thisTrials_run2 in trials_run2:
     
     if expInfo['position'] == '0':
         xPosition = 0
-    elif expInfo['position'] == '1':
+    elif expInfo['position'] == '2':
         if side == 'left':
             xPosition = -(width*x_scale)
         elif side == 'right':
             xPosition = width*x_scale
+    elif expInfo['position'] == '1':
+        xPosition = -(width*x_scale)
+    elif expInfo['position'] == '3':
+        xPosition = width*x_scale
+    
+    thisExp.addData('fixR2', fixColorIdx_Run2[Trial_run2-1])
     text_4.setColor(currFix, colorSpace='rgb')
     fix_resp2_1.keys = []
     fix_resp2_1.rt = []
@@ -2176,6 +2257,7 @@ for thisTrials_run2 in trials_run2:
     # ------Prepare to start Routine "trial_img"-------
     continueRoutine = True
     # update component parameters for each repeat
+    text_6.setColor(currFix, colorSpace='rgb')
     trial_image.setPos((xPosition, 0))
     trial_image.setSize((width*x_scale,height*y_scale))
     trial_image.setImage(imFile)
@@ -2186,7 +2268,7 @@ for thisTrials_run2 in trials_run2:
     fix_resp_2.rt = []
     _fix_resp_2_allKeys = []
     # keep track of which components have finished
-    trial_imgComponents = [trial_image, trial_resp, fix_resp_2]
+    trial_imgComponents = [text_6, trial_image, trial_resp, fix_resp_2]
     for thisComponent in trial_imgComponents:
         thisComponent.tStart = None
         thisComponent.tStop = None
@@ -2208,6 +2290,15 @@ for thisTrials_run2 in trials_run2:
         tThisFlipGlobal = win.getFutureFlipTime(clock=None)
         frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
         # update/draw components on each frame
+        
+        # *text_6* updates
+        if text_6.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+            # keep track of start time/frame for later
+            text_6.frameNStart = frameN  # exact frame index
+            text_6.tStart = t  # local t and not account for scr refresh
+            text_6.tStartRefresh = tThisFlipGlobal  # on global time
+            win.timeOnFlip(text_6, 'tStartRefresh')  # time at next scr refresh
+            text_6.setAutoDraw(True)
         
         # *trial_image* updates
         if trial_image.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
@@ -2286,6 +2377,8 @@ for thisTrials_run2 in trials_run2:
     for thisComponent in trial_imgComponents:
         if hasattr(thisComponent, "setAutoDraw"):
             thisComponent.setAutoDraw(False)
+    trials_run2.addData('text_6.started', text_6.tStartRefresh)
+    trials_run2.addData('text_6.stopped', text_6.tStopRefresh)
     trials_run2.addData('trial_image.started', trial_image.tStartRefresh)
     trials_run2.addData('trial_image.stopped', trial_image.tStopRefresh)
     # check responses

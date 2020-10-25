@@ -7,7 +7,7 @@
     <Param name="Data file delimiter" updates="None" val="auto" valType="str"/>
     <Param name="Data filename" updates="None" val="u'data/%s_%s_%s' % (expInfo['participant'], expName, expInfo['date'])" valType="code"/>
     <Param name="Enable Escape" updates="None" val="True" valType="bool"/>
-    <Param name="Experiment info" updates="None" val="{'participant': '', 'design': '1', 'position': '1'}" valType="code"/>
+    <Param name="Experiment info" updates="None" val="{'participant': '', 'design': '1', 'position': '2'}" valType="code"/>
     <Param name="Force stereo" updates="None" val="True" valType="bool"/>
     <Param name="Full-screen window" updates="None" val="True" valType="bool"/>
     <Param name="HTML path" updates="None" val="" valType="str"/>
@@ -69,7 +69,7 @@
         <Param name="name" updates="None" val="code_1" valType="code"/>
       </CodeComponent>
       <TextComponent name="text_top">
-        <Param name="color" updates="constant" val="white" valType="str"/>
+        <Param name="color" updates="constant" val="black" valType="str"/>
         <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
         <Param name="disabled" updates="None" val="False" valType="bool"/>
         <Param name="durationEstim" updates="None" val="" valType="code"/>
@@ -81,7 +81,7 @@
         <Param name="opacity" updates="constant" val="1" valType="code"/>
         <Param name="ori" updates="constant" val="0" valType="code"/>
         <Param name="pos" updates="constant" val="(0, 0.3)" valType="code"/>
-        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
+        <Param name="saveStartStop" updates="None" val="False" valType="bool"/>
         <Param name="startEstim" updates="None" val="" valType="code"/>
         <Param name="startType" updates="None" val="time (s)" valType="str"/>
         <Param name="startVal" updates="None" val="0.0" valType="code"/>
@@ -93,7 +93,7 @@
         <Param name="wrapWidth" updates="constant" val="" valType="code"/>
       </TextComponent>
       <TextComponent name="text_bottom">
-        <Param name="color" updates="constant" val="white" valType="str"/>
+        <Param name="color" updates="constant" val="black" valType="str"/>
         <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
         <Param name="disabled" updates="None" val="False" valType="bool"/>
         <Param name="durationEstim" updates="None" val="" valType="code"/>
@@ -105,7 +105,7 @@
         <Param name="opacity" updates="constant" val="1" valType="code"/>
         <Param name="ori" updates="constant" val="0" valType="code"/>
         <Param name="pos" updates="constant" val="(0, -0.3)" valType="code"/>
-        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
+        <Param name="saveStartStop" updates="None" val="False" valType="bool"/>
         <Param name="startEstim" updates="None" val="" valType="code"/>
         <Param name="startType" updates="None" val="time (s)" valType="str"/>
         <Param name="startVal" updates="None" val="0.0" valType="code"/>
@@ -130,7 +130,7 @@
         <Param name="opacity" updates="constant" val="1" valType="code"/>
         <Param name="ori" updates="constant" val="0" valType="code"/>
         <Param name="pos" updates="constant" val="(0, 0)" valType="code"/>
-        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
+        <Param name="saveStartStop" updates="None" val="False" valType="bool"/>
         <Param name="size" updates="constant" val="$(x_size*x_scale, y_size*y_scale)" valType="code"/>
         <Param name="startEstim" updates="None" val="" valType="code"/>
         <Param name="startType" updates="None" val="time (s)" valType="str"/>
@@ -173,7 +173,7 @@
         <Param name="opacity" updates="constant" val="1" valType="code"/>
         <Param name="ori" updates="constant" val="0" valType="code"/>
         <Param name="pos" updates="constant" val="(0, 0)" valType="code"/>
-        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
+        <Param name="saveStartStop" updates="None" val="False" valType="bool"/>
         <Param name="startEstim" updates="None" val="" valType="code"/>
         <Param name="startType" updates="None" val="time (s)" valType="str"/>
         <Param name="startVal" updates="None" val="0.0" valType="code"/>
@@ -192,7 +192,7 @@
         <Param name="durationEstim" updates="None" val="" valType="code"/>
         <Param name="forceEndRoutine" updates="constant" val="True" valType="bool"/>
         <Param name="name" updates="None" val="start_exp_press" valType="code"/>
-        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
+        <Param name="saveStartStop" updates="None" val="False" valType="bool"/>
         <Param name="startEstim" updates="None" val="" valType="code"/>
         <Param name="startType" updates="None" val="time (s)" valType="str"/>
         <Param name="startVal" updates="None" val="1" valType="code"/>
@@ -207,8 +207,8 @@
       <CodeComponent name="code_3">
         <Param name="Before Experiment" updates="constant" val="" valType="extendedCode"/>
         <Param name="Before JS Experiment" updates="constant" val="" valType="extendedCode"/>
-        <Param name="Begin Experiment" updates="constant" val="if expInfo['design']=='1':&amp;#10;    instructions_run1 = 'Designs/design1_run1.png'&amp;#10;    cond_file_run1 = 'Designs/design1_run1.csv'&amp;#10;elif expInfo['design']=='2':&amp;#10;    instructions_run1 = 'Designs/design2_run1.png'&amp;#10;    cond_file_run1 = 'Designs/design2_run1.csv'&amp;#10;elif expInfo['design']=='3':&amp;#10;    instructions_run1 = 'Designs/design3_run1.png'&amp;#10;    cond_file_run1 = 'Designs/design3_run1.csv'&amp;#10;elif expInfo['design']=='4':&amp;#10;    instructions_run1 = 'Designs/design4_run1.png'&amp;#10;    cond_file_run1 = 'Designs/design4_run1.csv'&amp;#10;&amp;#10;rand8Idx = [0,1,2,3,4,5,6,7];&amp;#10;shuffle(rand8Idx)&amp;#10;rand4rows_run1 = rand8Idx[0:4]" valType="extendedCode"/>
-        <Param name="Begin JS Experiment" updates="constant" val="if ((expInfo[&quot;design&quot;] === &quot;1&quot;)) {&amp;#10;    instructions_run1 = &quot;Designs/design1_run1.png&quot;;&amp;#10;    cond_file_run1 = &quot;Designs/design1_run1.csv&quot;;&amp;#10;} else {&amp;#10;    if ((expInfo[&quot;design&quot;] === &quot;2&quot;)) {&amp;#10;        instructions_run1 = &quot;Designs/design2_run1.png&quot;;&amp;#10;        cond_file_run1 = &quot;Designs/design2_run1.csv&quot;;&amp;#10;    } else {&amp;#10;        if ((expInfo[&quot;design&quot;] === &quot;3&quot;)) {&amp;#10;            instructions_run1 = &quot;Designs/design3_run1.png&quot;;&amp;#10;            cond_file_run1 = &quot;Designs/design3_run1.csv&quot;;&amp;#10;        } else {&amp;#10;            if ((expInfo[&quot;design&quot;] === &quot;4&quot;)) {&amp;#10;                instructions_run1 = &quot;Designs/design4_run1.png&quot;;&amp;#10;                cond_file_run1 = &quot;Designs/design4_run1.csv&quot;;&amp;#10;            }&amp;#10;        }&amp;#10;    }&amp;#10;}&amp;#10;rand8Idx = [0, 1, 2, 3, 4, 5, 6, 7];&amp;#10;shuffle(rand8Idx);&amp;#10;rand4rows_run1 = rand8Idx.slice(0, 4);&amp;#10;" valType="extendedCode"/>
+        <Param name="Begin Experiment" updates="constant" val="if expInfo['design']=='1':&amp;#10;    instructions_run1 = 'Designs/design1_run1.png'&amp;#10;    cond_file_run1 = 'Designs/design1_run1.csv'&amp;#10;elif expInfo['design']=='2':&amp;#10;    instructions_run1 = 'Designs/design2_run1.png'&amp;#10;    cond_file_run1 = 'Designs/design2_run1.csv'&amp;#10;elif expInfo['design']=='3':&amp;#10;    instructions_run1 = 'Designs/design3_run1.png'&amp;#10;    cond_file_run1 = 'Designs/design3_run1.csv'&amp;#10;elif expInfo['design']=='4':&amp;#10;    instructions_run1 = 'Designs/design4_run1.png'&amp;#10;    cond_file_run1 = 'Designs/design4_run1.csv'&amp;#10;&amp;#10;if expInfo['position']=='2':&amp;#10;    rand8Idx = [0,1,2,3,4,5,6,7];&amp;#10;    shuffle(rand8Idx)&amp;#10;    randRows_run1 = rand8Idx[0:4]&amp;#10;elif expInfo['position']=='1':&amp;#10;    rand4Idx = [0,1,2,3];&amp;#10;    shuffle(rand4Idx)&amp;#10;    randRows_run1 = rand4Idx[0:2]&amp;#10;elif expInfo['position']=='3':&amp;#10;    rand4Idx = [4,5,6,7];&amp;#10;    shuffle(rand4Idx)&amp;#10;    randRows_run1 = rand4Idx[0:2]" valType="extendedCode"/>
+        <Param name="Begin JS Experiment" updates="constant" val="if ((expInfo[&quot;design&quot;] === &quot;1&quot;)) {&amp;#10;    instructions_run1 = &quot;Designs/design1_run1.png&quot;;&amp;#10;    cond_file_run1 = &quot;Designs/design1_run1.csv&quot;;&amp;#10;} else {&amp;#10;    if ((expInfo[&quot;design&quot;] === &quot;2&quot;)) {&amp;#10;        instructions_run1 = &quot;Designs/design2_run1.png&quot;;&amp;#10;        cond_file_run1 = &quot;Designs/design2_run1.csv&quot;;&amp;#10;    } else {&amp;#10;        if ((expInfo[&quot;design&quot;] === &quot;3&quot;)) {&amp;#10;            instructions_run1 = &quot;Designs/design3_run1.png&quot;;&amp;#10;            cond_file_run1 = &quot;Designs/design3_run1.csv&quot;;&amp;#10;        } else {&amp;#10;            if ((expInfo[&quot;design&quot;] === &quot;4&quot;)) {&amp;#10;                instructions_run1 = &quot;Designs/design4_run1.png&quot;;&amp;#10;                cond_file_run1 = &quot;Designs/design4_run1.csv&quot;;&amp;#10;            }&amp;#10;        }&amp;#10;    }&amp;#10;}&amp;#10;if ((expInfo[&quot;position&quot;] === &quot;2&quot;)) {&amp;#10;    rand8Idx = [0, 1, 2, 3, 4, 5, 6, 7];&amp;#10;    shuffle(rand8Idx);&amp;#10;    randRows_run1 = rand8Idx.slice(0, 4);&amp;#10;} else {&amp;#10;    if ((expInfo[&quot;position&quot;] === &quot;1&quot;)) {&amp;#10;        rand4Idx = [0, 1, 2, 3];&amp;#10;        shuffle(rand4Idx);&amp;#10;        randRows_run1 = rand4Idx.slice(0, 2);&amp;#10;    } else {&amp;#10;        if ((expInfo[&quot;position&quot;] === &quot;3&quot;)) {&amp;#10;            rand4Idx = [4, 5, 6, 7];&amp;#10;            shuffle(rand4Idx);&amp;#10;            randRows_run1 = rand4Idx.slice(0, 2);&amp;#10;        }&amp;#10;    }&amp;#10;}&amp;#10;" valType="extendedCode"/>
         <Param name="Begin JS Routine" updates="constant" val="" valType="extendedCode"/>
         <Param name="Begin Routine" updates="constant" val="" valType="extendedCode"/>
         <Param name="Code Type" updates="None" val="Auto-&gt;JS" valType="str"/>
@@ -235,7 +235,7 @@
         <Param name="opacity" updates="constant" val="1" valType="code"/>
         <Param name="ori" updates="constant" val="0" valType="code"/>
         <Param name="pos" updates="constant" val="(0, 0)" valType="code"/>
-        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
+        <Param name="saveStartStop" updates="None" val="False" valType="bool"/>
         <Param name="size" updates="constant" val="(0.75*1.5, 0.75)" valType="code"/>
         <Param name="startEstim" updates="None" val="" valType="code"/>
         <Param name="startType" updates="None" val="time (s)" valType="str"/>
@@ -254,7 +254,7 @@
         <Param name="durationEstim" updates="None" val="" valType="code"/>
         <Param name="forceEndRoutine" updates="constant" val="True" valType="bool"/>
         <Param name="name" updates="None" val="key_resp" valType="code"/>
-        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
+        <Param name="saveStartStop" updates="None" val="False" valType="bool"/>
         <Param name="startEstim" updates="None" val="" valType="code"/>
         <Param name="startType" updates="None" val="time (s)" valType="str"/>
         <Param name="startVal" updates="None" val="1" valType="code"/>
@@ -271,8 +271,8 @@
         <Param name="Before JS Experiment" updates="constant" val="" valType="extendedCode"/>
         <Param name="Begin Experiment" updates="constant" val="pTrial_run1 = 1&amp;#10;pracTotal_run1 = 4&amp;#10;&amp;#10;pTrial_run2 = 1&amp;#10;pracTotal_run2 = 4&amp;#10;" valType="extendedCode"/>
         <Param name="Begin JS Experiment" updates="constant" val="pTrial_run1 = 1;&amp;#10;pracTotal_run1 = 4;&amp;#10;pTrial_run2 = 1;&amp;#10;pracTotal_run2 = 4;&amp;#10;" valType="extendedCode"/>
-        <Param name="Begin JS Routine" updates="constant" val="trialMsg = (((&quot;Practice: &quot; + pTrial_run1.toString()) + &quot; of &quot;) + pracTotal_run1.toString());&amp;#10;if (((pTrial_run1 - 1) === 0)) {&amp;#10;    currFix = fixColor_opts[0];&amp;#10;} else {&amp;#10;    if ((prac1_fixColSwitch[(pTrial_run1 - 1)] === 0)) {&amp;#10;        currFix = currFix;&amp;#10;    } else {&amp;#10;        if ((currFix === &quot;pink&quot;)) {&amp;#10;            currFix = &quot;orange&quot;;&amp;#10;        } else {&amp;#10;            if ((currFix === &quot;orange&quot;)) {&amp;#10;                currFix = &quot;pink&quot;;&amp;#10;            }&amp;#10;        }&amp;#10;    }&amp;#10;}&amp;#10;a = 1.25;&amp;#10;b = 1.75;&amp;#10;fixDur = (((b - a) * random()) + a);&amp;#10;if ((expInfo[&quot;position&quot;] === &quot;0&quot;)) {&amp;#10;    xPosition = 0;&amp;#10;} else {&amp;#10;    if ((expInfo[&quot;position&quot;] === &quot;1&quot;)) {&amp;#10;        if ((side === &quot;left&quot;)) {&amp;#10;            xPosition = (- (width * x_scale));&amp;#10;        } else {&amp;#10;            if ((side === &quot;right&quot;)) {&amp;#10;                xPosition = (width * x_scale);&amp;#10;            }&amp;#10;        }&amp;#10;    }&amp;#10;}&amp;#10;thisExp.addData(&quot;fixpR1&quot;, prac1_fixColSwitch[(pTrial_run1 - 1)]);&amp;#10;" valType="extendedCode"/>
-        <Param name="Begin Routine" updates="constant" val="trialMsg = &quot;Practice: &quot; + str(pTrial_run1) + ' of ' + str(pracTotal_run1)&amp;#10;if pTrial_run1-1 == 0:&amp;#10;    currFix = fixColor_opts[0]&amp;#10;else:&amp;#10;    if prac1_fixColSwitch[pTrial_run1-1] == 0:&amp;#10;        currFix = currFix&amp;#10;    elif currFix == 'pink':&amp;#10;        currFix = 'orange'&amp;#10;    elif currFix == 'orange':&amp;#10;        currFix = 'pink'&amp;#10; &amp;#10;a = 1.25 # min ITI&amp;#10;b = 1.75 # max ITI&amp;#10;fixDur = (b-a) * random()+a&amp;#10;&amp;#10;if expInfo['position'] == '0':&amp;#10;    xPosition = 0&amp;#10;elif expInfo['position'] == '1':&amp;#10;    if side == 'left':&amp;#10;        xPosition = -(width*x_scale)&amp;#10;    elif side == 'right':&amp;#10;        xPosition = width*x_scale&amp;#10;&amp;#10;thisExp.addData('fixpR1', prac1_fixColSwitch[pTrial_run1-1])" valType="extendedCode"/>
+        <Param name="Begin JS Routine" updates="constant" val="trialMsg = (((&quot;Practice: &quot; + pTrial_run1.toString()) + &quot; of &quot;) + pracTotal_run1.toString());&amp;#10;if (((pTrial_run1 - 1) === 0)) {&amp;#10;    currFix = fixColor_opts[0];&amp;#10;} else {&amp;#10;    if ((prac1_fixColSwitch[(pTrial_run1 - 1)] === 0)) {&amp;#10;        currFix = currFix;&amp;#10;    } else {&amp;#10;        if ((currFix === &quot;pink&quot;)) {&amp;#10;            currFix = &quot;orange&quot;;&amp;#10;        } else {&amp;#10;            if ((currFix === &quot;orange&quot;)) {&amp;#10;                currFix = &quot;pink&quot;;&amp;#10;            }&amp;#10;        }&amp;#10;    }&amp;#10;}&amp;#10;a = 1.25;&amp;#10;b = 1.75;&amp;#10;fixDur = (((b - a) * random()) + a);&amp;#10;if ((expInfo[&quot;position&quot;] === &quot;0&quot;)) {&amp;#10;    xPosition = 0;&amp;#10;} else {&amp;#10;    if ((expInfo[&quot;position&quot;] === &quot;2&quot;)) {&amp;#10;        if ((side === &quot;left&quot;)) {&amp;#10;            xPosition = (- (width * x_scale));&amp;#10;        } else {&amp;#10;            if ((side === &quot;right&quot;)) {&amp;#10;                xPosition = (width * x_scale);&amp;#10;            }&amp;#10;        }&amp;#10;    } else {&amp;#10;        if ((expInfo[&quot;position&quot;] === &quot;1&quot;)) {&amp;#10;            xPosition = (- (width * x_scale));&amp;#10;        } else {&amp;#10;            if ((expInfo[&quot;position&quot;] === &quot;3&quot;)) {&amp;#10;                xPosition = (width * x_scale);&amp;#10;            }&amp;#10;        }&amp;#10;    }&amp;#10;}&amp;#10;thisExp.addData(&quot;fixpR1&quot;, prac1_fixColSwitch[(pTrial_run1 - 1)]);&amp;#10;" valType="extendedCode"/>
+        <Param name="Begin Routine" updates="constant" val="trialMsg = &quot;Practice: &quot; + str(pTrial_run1) + ' of ' + str(pracTotal_run1)&amp;#10;if pTrial_run1-1 == 0:&amp;#10;    currFix = fixColor_opts[0]&amp;#10;else:&amp;#10;    if prac1_fixColSwitch[pTrial_run1-1] == 0:&amp;#10;        currFix = currFix&amp;#10;    elif currFix == 'pink':&amp;#10;        currFix = 'orange'&amp;#10;    elif currFix == 'orange':&amp;#10;        currFix = 'pink'&amp;#10; &amp;#10;a = 1.25 # min ITI&amp;#10;b = 1.75 # max ITI&amp;#10;fixDur = (b-a) * random()+a&amp;#10;&amp;#10;if expInfo['position'] == '0':&amp;#10;    xPosition = 0&amp;#10;elif expInfo['position'] == '2':&amp;#10;    if side == 'left':&amp;#10;        xPosition = -(width*x_scale)&amp;#10;    elif side == 'right':&amp;#10;        xPosition = width*x_scale&amp;#10;elif expInfo['position'] == '1':&amp;#10;    xPosition = -(width*x_scale)&amp;#10;elif expInfo['position'] == '3':&amp;#10;    xPosition = width*x_scale&amp;#10;&amp;#10;thisExp.addData('fixpR1', prac1_fixColSwitch[pTrial_run1-1])" valType="extendedCode"/>
         <Param name="Code Type" updates="None" val="Auto-&gt;JS" valType="str"/>
         <Param name="Each Frame" updates="constant" val="" valType="extendedCode"/>
         <Param name="Each JS Frame" updates="constant" val="" valType="extendedCode"/>
@@ -296,7 +296,7 @@
         <Param name="opacity" updates="constant" val="1" valType="code"/>
         <Param name="ori" updates="constant" val="0" valType="code"/>
         <Param name="pos" updates="constant" val="(0, 0)" valType="code"/>
-        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
+        <Param name="saveStartStop" updates="None" val="False" valType="bool"/>
         <Param name="startEstim" updates="None" val="" valType="code"/>
         <Param name="startType" updates="None" val="time (s)" valType="str"/>
         <Param name="startVal" updates="None" val="0.0" valType="code"/>
@@ -315,7 +315,7 @@
         <Param name="durationEstim" updates="None" val="" valType="code"/>
         <Param name="forceEndRoutine" updates="constant" val="False" valType="bool"/>
         <Param name="name" updates="None" val="fix_respP1_1" valType="code"/>
-        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
+        <Param name="saveStartStop" updates="None" val="False" valType="bool"/>
         <Param name="startEstim" updates="None" val="" valType="code"/>
         <Param name="startType" updates="None" val="time (s)" valType="str"/>
         <Param name="startVal" updates="None" val="0.0" valType="code"/>
@@ -340,7 +340,7 @@
         <Param name="opacity" updates="constant" val="1" valType="code"/>
         <Param name="ori" updates="constant" val="0" valType="code"/>
         <Param name="pos" updates="constant" val="(0, 0)" valType="code"/>
-        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
+        <Param name="saveStartStop" updates="None" val="False" valType="bool"/>
         <Param name="startEstim" updates="None" val="" valType="code"/>
         <Param name="startType" updates="None" val="time (s)" valType="str"/>
         <Param name="startVal" updates="None" val="0.0" valType="code"/>
@@ -365,7 +365,7 @@
         <Param name="opacity" updates="constant" val="1" valType="code"/>
         <Param name="ori" updates="constant" val="0" valType="code"/>
         <Param name="pos" updates="set every repeat" val="$(xPosition, 0)" valType="code"/>
-        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
+        <Param name="saveStartStop" updates="None" val="False" valType="bool"/>
         <Param name="size" updates="set every repeat" val="$(width*x_scale, height*y_scale)" valType="code"/>
         <Param name="startEstim" updates="None" val="" valType="code"/>
         <Param name="startType" updates="None" val="time (s)" valType="str"/>
@@ -384,7 +384,7 @@
         <Param name="durationEstim" updates="None" val="" valType="code"/>
         <Param name="forceEndRoutine" updates="constant" val="True" valType="bool"/>
         <Param name="name" updates="None" val="prac_resp" valType="code"/>
-        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
+        <Param name="saveStartStop" updates="None" val="False" valType="bool"/>
         <Param name="startEstim" updates="None" val="" valType="code"/>
         <Param name="startType" updates="None" val="time (s)" valType="str"/>
         <Param name="startVal" updates="None" val="0.0" valType="code"/>
@@ -402,7 +402,7 @@
         <Param name="durationEstim" updates="None" val="" valType="code"/>
         <Param name="forceEndRoutine" updates="constant" val="False" valType="bool"/>
         <Param name="name" updates="None" val="prac_fix_resp_2" valType="code"/>
-        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
+        <Param name="saveStartStop" updates="None" val="False" valType="bool"/>
         <Param name="startEstim" updates="None" val="" valType="code"/>
         <Param name="startType" updates="None" val="time (s)" valType="str"/>
         <Param name="startVal" updates="None" val="0.0" valType="code"/>
@@ -445,7 +445,7 @@
         <Param name="opacity" updates="constant" val="1" valType="code"/>
         <Param name="ori" updates="constant" val="0" valType="code"/>
         <Param name="pos" updates="constant" val="(0, 0)" valType="code"/>
-        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
+        <Param name="saveStartStop" updates="None" val="False" valType="bool"/>
         <Param name="size" updates="constant" val="(0.5, 0.5)" valType="code"/>
         <Param name="startEstim" updates="None" val="" valType="code"/>
         <Param name="startType" updates="None" val="time (s)" valType="str"/>
@@ -461,8 +461,8 @@
       <CodeComponent name="code_6">
         <Param name="Before Experiment" updates="constant" val="" valType="extendedCode"/>
         <Param name="Before JS Experiment" updates="constant" val="" valType="extendedCode"/>
-        <Param name="Begin Experiment" updates="constant" val="if expInfo['design']=='1':&amp;#10;    instructions_run1 = 'Designs/design1_run1.png'&amp;#10;    cond_file_run1 = 'Designs/design1_run1.csv'&amp;#10;elif expInfo['design']=='2':&amp;#10;    instructions_run1 = 'Designs/design2_run1.png'&amp;#10;    cond_file_run1 = 'Designs/design2_run1.csv'&amp;#10;elif expInfo['design']=='3':&amp;#10;    instructions_run1 =  'Designs/design3_run1.png'&amp;#10;    cond_file_run1 = 'Designs/design3_run1.csv'&amp;#10;elif expInfo['design']=='4':&amp;#10;    instructions_run1 =  'Designs/design4_run1.png'&amp;#10;    cond_file_run1 = 'Designs/design4_run1.csv'&amp;#10;&amp;#10;Trial_run1 = 1&amp;#10;Total_run1 = 96&amp;#10;&amp;#10;Trial_run2 = 1&amp;#10;Total_run2 = 96" valType="extendedCode"/>
-        <Param name="Begin JS Experiment" updates="constant" val="if ((expInfo[&quot;design&quot;] === &quot;1&quot;)) {&amp;#10;    instructions_run1 = &quot;Designs/design1_run1.png&quot;;&amp;#10;    cond_file_run1 = &quot;Designs/design1_run1.csv&quot;;&amp;#10;} else {&amp;#10;    if ((expInfo[&quot;design&quot;] === &quot;2&quot;)) {&amp;#10;        instructions_run1 = &quot;Designs/design2_run1.png&quot;;&amp;#10;        cond_file_run1 = &quot;Designs/design2_run1.csv&quot;;&amp;#10;    } else {&amp;#10;        if ((expInfo[&quot;design&quot;] === &quot;3&quot;)) {&amp;#10;            instructions_run1 = &quot;Designs/design3_run1.png&quot;;&amp;#10;            cond_file_run1 = &quot;Designs/design3_run1.csv&quot;;&amp;#10;        } else {&amp;#10;            if ((expInfo[&quot;design&quot;] === &quot;4&quot;)) {&amp;#10;                instructions_run1 = &quot;Designs/design4_run1.png&quot;;&amp;#10;                cond_file_run1 = &quot;Designs/design4_run1.csv&quot;;&amp;#10;            }&amp;#10;        }&amp;#10;    }&amp;#10;}&amp;#10;Trial_run1 = 1;&amp;#10;Total_run1 = 96;&amp;#10;Trial_run2 = 1;&amp;#10;Total_run2 = 96;&amp;#10;" valType="extendedCode"/>
+        <Param name="Begin Experiment" updates="constant" val="if expInfo['design']=='1':&amp;#10;    instructions_run1 = 'Designs/design1_run1.png'&amp;#10;    cond_file_run1 = 'Designs/design1_run1.csv'&amp;#10;elif expInfo['design']=='2':&amp;#10;    instructions_run1 = 'Designs/design2_run1.png'&amp;#10;    cond_file_run1 = 'Designs/design2_run1.csv'&amp;#10;elif expInfo['design']=='3':&amp;#10;    instructions_run1 =  'Designs/design3_run1.png'&amp;#10;    cond_file_run1 = 'Designs/design3_run1.csv'&amp;#10;elif expInfo['design']=='4':&amp;#10;    instructions_run1 =  'Designs/design4_run1.png'&amp;#10;    cond_file_run1 = 'Designs/design4_run1.csv'&amp;#10;&amp;#10;Trial_run1 = 1&amp;#10;Total_run1 = 96&amp;#10;&amp;#10;Trial_run2 = 1&amp;#10;Total_run2 = 96&amp;#10;&amp;#10;if expInfo['position']=='2':&amp;#10;    positionRows = [0,1,2,3,4,5,6,7]&amp;#10;if expInfo['position']=='1':&amp;#10;    positionRows = [0,1,2,3]&amp;#10;if expInfo['position']=='3':&amp;#10;    positionRows = [4,5,6,7]" valType="extendedCode"/>
+        <Param name="Begin JS Experiment" updates="constant" val="if ((expInfo[&quot;design&quot;] === &quot;1&quot;)) {&amp;#10;    instructions_run1 = &quot;Designs/design1_run1.png&quot;;&amp;#10;    cond_file_run1 = &quot;Designs/design1_run1.csv&quot;;&amp;#10;} else {&amp;#10;    if ((expInfo[&quot;design&quot;] === &quot;2&quot;)) {&amp;#10;        instructions_run1 = &quot;Designs/design2_run1.png&quot;;&amp;#10;        cond_file_run1 = &quot;Designs/design2_run1.csv&quot;;&amp;#10;    } else {&amp;#10;        if ((expInfo[&quot;design&quot;] === &quot;3&quot;)) {&amp;#10;            instructions_run1 = &quot;Designs/design3_run1.png&quot;;&amp;#10;            cond_file_run1 = &quot;Designs/design3_run1.csv&quot;;&amp;#10;        } else {&amp;#10;            if ((expInfo[&quot;design&quot;] === &quot;4&quot;)) {&amp;#10;                instructions_run1 = &quot;Designs/design4_run1.png&quot;;&amp;#10;                cond_file_run1 = &quot;Designs/design4_run1.csv&quot;;&amp;#10;            }&amp;#10;        }&amp;#10;    }&amp;#10;}&amp;#10;Trial_run1 = 1;&amp;#10;Total_run1 = 96;&amp;#10;Trial_run2 = 1;&amp;#10;Total_run2 = 96;&amp;#10;if ((expInfo[&quot;position&quot;] === &quot;2&quot;)) {&amp;#10;    positionRows = [0, 1, 2, 3, 4, 5, 6, 7];&amp;#10;}&amp;#10;if ((expInfo[&quot;position&quot;] === &quot;1&quot;)) {&amp;#10;    positionRows = [0, 1, 2, 3];&amp;#10;}&amp;#10;if ((expInfo[&quot;position&quot;] === &quot;3&quot;)) {&amp;#10;    positionRows = [4, 5, 6, 7];&amp;#10;}&amp;#10;" valType="extendedCode"/>
         <Param name="Begin JS Routine" updates="constant" val="" valType="extendedCode"/>
         <Param name="Begin Routine" updates="constant" val="" valType="extendedCode"/>
         <Param name="Code Type" updates="None" val="Auto-&gt;JS" valType="str"/>
@@ -489,7 +489,7 @@
         <Param name="opacity" updates="constant" val="1" valType="code"/>
         <Param name="ori" updates="constant" val="0" valType="code"/>
         <Param name="pos" updates="constant" val="(0, 0)" valType="code"/>
-        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
+        <Param name="saveStartStop" updates="None" val="False" valType="bool"/>
         <Param name="size" updates="constant" val="(0.75*1.5, 0.75)" valType="code"/>
         <Param name="startEstim" updates="None" val="" valType="code"/>
         <Param name="startType" updates="None" val="time (s)" valType="str"/>
@@ -508,7 +508,7 @@
         <Param name="durationEstim" updates="None" val="" valType="code"/>
         <Param name="forceEndRoutine" updates="constant" val="True" valType="bool"/>
         <Param name="name" updates="None" val="key_resp_2" valType="code"/>
-        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
+        <Param name="saveStartStop" updates="None" val="False" valType="bool"/>
         <Param name="startEstim" updates="None" val="" valType="code"/>
         <Param name="startType" updates="None" val="time (s)" valType="str"/>
         <Param name="startVal" updates="None" val="1" valType="code"/>
@@ -525,8 +525,8 @@
         <Param name="Before JS Experiment" updates="constant" val="" valType="extendedCode"/>
         <Param name="Begin Experiment" updates="constant" val="" valType="extendedCode"/>
         <Param name="Begin JS Experiment" updates="constant" val="" valType="extendedCode"/>
-        <Param name="Begin JS Routine" updates="constant" val="if (((Trial_run1 - 1) === 0)) {&amp;#10;    currFix = fixColor_opts[0];&amp;#10;} else {&amp;#10;    if ((fixColorIdx_Run1[(Trial_run1 - 1)] === 0)) {&amp;#10;        currFix = currFix;&amp;#10;    } else {&amp;#10;        if ((currFix === &quot;pink&quot;)) {&amp;#10;            currFix = &quot;orange&quot;;&amp;#10;        } else {&amp;#10;            if ((currFix === &quot;orange&quot;)) {&amp;#10;                currFix = &quot;pink&quot;;&amp;#10;            }&amp;#10;        }&amp;#10;    }&amp;#10;}&amp;#10;a = 1.25;&amp;#10;b = 1.75;&amp;#10;fixDur = (((b - a) * random()) + a);&amp;#10;if ((expInfo[&quot;position&quot;] === &quot;0&quot;)) {&amp;#10;    xPosition = 0;&amp;#10;} else {&amp;#10;    if ((expInfo[&quot;position&quot;] === &quot;1&quot;)) {&amp;#10;        if ((side === &quot;left&quot;)) {&amp;#10;            xPosition = (- (width * x_scale));&amp;#10;        } else {&amp;#10;            if ((side === &quot;right&quot;)) {&amp;#10;                xPosition = (width * x_scale);&amp;#10;            }&amp;#10;        }&amp;#10;    }&amp;#10;}&amp;#10;thisExp.addData(&quot;fixR1&quot;, fixColorIdx_Run1[(Trial_run1 - 1)]);&amp;#10;" valType="extendedCode"/>
-        <Param name="Begin Routine" updates="constant" val="if Trial_run1-1 == 0:&amp;#10;    currFix = fixColor_opts[0]&amp;#10;else:&amp;#10;    if fixColorIdx_Run1[Trial_run1-1] == 0:&amp;#10;        currFix = currFix&amp;#10;    elif currFix == 'pink':&amp;#10;        currFix = 'orange'&amp;#10;    elif currFix == 'orange':&amp;#10;        currFix = 'pink'&amp;#10;&amp;#10;a = 1.25 # min ITI&amp;#10;b = 1.75 # max ITI&amp;#10;fixDur = (b-a) * random()+a&amp;#10;&amp;#10;if expInfo['position'] == '0':&amp;#10;    xPosition = 0&amp;#10;elif expInfo['position'] == '1':&amp;#10;    if side == 'left':&amp;#10;        xPosition = -(width*x_scale)&amp;#10;    elif side == 'right':&amp;#10;        xPosition = width*x_scale&amp;#10;&amp;#10;thisExp.addData('fixR1', fixColorIdx_Run1[Trial_run1-1])" valType="extendedCode"/>
+        <Param name="Begin JS Routine" updates="constant" val="if (((Trial_run1 - 1) === 0)) {&amp;#10;    currFix = fixColor_opts[0];&amp;#10;} else {&amp;#10;    if ((fixColorIdx_Run1[(Trial_run1 - 1)] === 0)) {&amp;#10;        currFix = currFix;&amp;#10;    } else {&amp;#10;        if ((currFix === &quot;pink&quot;)) {&amp;#10;            currFix = &quot;orange&quot;;&amp;#10;        } else {&amp;#10;            if ((currFix === &quot;orange&quot;)) {&amp;#10;                currFix = &quot;pink&quot;;&amp;#10;            }&amp;#10;        }&amp;#10;    }&amp;#10;}&amp;#10;a = 1.25;&amp;#10;b = 1.75;&amp;#10;fixDur = (((b - a) * random()) + a);&amp;#10;if ((expInfo[&quot;position&quot;] === &quot;0&quot;)) {&amp;#10;    xPosition = 0;&amp;#10;} else {&amp;#10;    if ((expInfo[&quot;position&quot;] === &quot;2&quot;)) {&amp;#10;        if ((side === &quot;left&quot;)) {&amp;#10;            xPosition = (- (width * x_scale));&amp;#10;        } else {&amp;#10;            if ((side === &quot;right&quot;)) {&amp;#10;                xPosition = (width * x_scale);&amp;#10;            }&amp;#10;        }&amp;#10;    } else {&amp;#10;        if ((expInfo[&quot;position&quot;] === &quot;1&quot;)) {&amp;#10;            xPosition = (- (width * x_scale));&amp;#10;        } else {&amp;#10;            if ((expInfo[&quot;position&quot;] === &quot;3&quot;)) {&amp;#10;                xPosition = (width * x_scale);&amp;#10;            }&amp;#10;        }&amp;#10;    }&amp;#10;}&amp;#10;thisExp.addData(&quot;fixR1&quot;, fixColorIdx_Run1[(Trial_run1 - 1)]);&amp;#10;" valType="extendedCode"/>
+        <Param name="Begin Routine" updates="constant" val="if Trial_run1-1 == 0:&amp;#10;    currFix = fixColor_opts[0]&amp;#10;else:&amp;#10;    if fixColorIdx_Run1[Trial_run1-1] == 0:&amp;#10;        currFix = currFix&amp;#10;    elif currFix == 'pink':&amp;#10;        currFix = 'orange'&amp;#10;    elif currFix == 'orange':&amp;#10;        currFix = 'pink'&amp;#10;&amp;#10;a = 1.25 # min ITI&amp;#10;b = 1.75 # max ITI&amp;#10;fixDur = (b-a) * random()+a&amp;#10;&amp;#10;if expInfo['position'] == '0':&amp;#10;    xPosition = 0&amp;#10;elif expInfo['position'] == '2':&amp;#10;    if side == 'left':&amp;#10;        xPosition = -(width*x_scale)&amp;#10;    elif side == 'right':&amp;#10;        xPosition = width*x_scale&amp;#10;elif expInfo['position'] == '1':&amp;#10;    xPosition = -(width*x_scale)&amp;#10;elif expInfo['position'] == '3':&amp;#10;    xPosition = width*x_scale&amp;#10;&amp;#10;thisExp.addData('fixR1', fixColorIdx_Run1[Trial_run1-1])" valType="extendedCode"/>
         <Param name="Code Type" updates="None" val="Auto-&gt;JS" valType="str"/>
         <Param name="Each Frame" updates="constant" val="" valType="extendedCode"/>
         <Param name="Each JS Frame" updates="constant" val="" valType="extendedCode"/>
@@ -671,8 +671,8 @@
       <CodeComponent name="code_8">
         <Param name="Before Experiment" updates="constant" val="" valType="extendedCode"/>
         <Param name="Before JS Experiment" updates="constant" val="" valType="extendedCode"/>
-        <Param name="Begin Experiment" updates="constant" val="if expInfo['design']=='1':&amp;#10;    instructions_run2 = 'Designs/design1_run2.png'&amp;#10;    cond_file_run2 = 'Designs/design1_run2.csv'&amp;#10;elif expInfo['design']=='2':&amp;#10;    instructions_run2 = 'Designs/design2_run2.png'&amp;#10;    cond_file_run2 = 'Designs/design2_run2.csv'&amp;#10;elif expInfo['design']=='3':&amp;#10;    instructions_run2 =  'Designs/design3_run2.png'&amp;#10;    cond_file_run2 = 'Designs/design3_run2.csv'&amp;#10;elif expInfo['design']=='4':&amp;#10;    instructions_run2 =  'Designs/design4_run2.png'&amp;#10;    cond_file_run2 = 'Designs/design4_run2.csv'&amp;#10;&amp;#10;rand8Idx = [0,1,2,3,4,5,6,7];&amp;#10;shuffle(rand8Idx)&amp;#10;rand4rows_run2 = rand8Idx[0:4]" valType="extendedCode"/>
-        <Param name="Begin JS Experiment" updates="constant" val="if ((expInfo[&quot;design&quot;] === &quot;1&quot;)) {&amp;#10;    instructions_run2 = &quot;Designs/design1_run2.png&quot;;&amp;#10;    cond_file_run2 = &quot;Designs/design1_run2.csv&quot;;&amp;#10;} else {&amp;#10;    if ((expInfo[&quot;design&quot;] === &quot;2&quot;)) {&amp;#10;        instructions_run2 = &quot;Designs/design2_run2.png&quot;;&amp;#10;        cond_file_run2 = &quot;Designs/design2_run2.csv&quot;;&amp;#10;    } else {&amp;#10;        if ((expInfo[&quot;design&quot;] === &quot;3&quot;)) {&amp;#10;            instructions_run2 = &quot;Designs/design3_run2.png&quot;;&amp;#10;            cond_file_run2 = &quot;Designs/design3_run2.csv&quot;;&amp;#10;        } else {&amp;#10;            if ((expInfo[&quot;design&quot;] === &quot;4&quot;)) {&amp;#10;                instructions_run2 = &quot;Designs/design4_run2.png&quot;;&amp;#10;                cond_file_run2 = &quot;Designs/design4_run2.csv&quot;;&amp;#10;            }&amp;#10;        }&amp;#10;    }&amp;#10;}&amp;#10;rand8Idx = [0, 1, 2, 3, 4, 5, 6, 7];&amp;#10;shuffle(rand8Idx);&amp;#10;rand4rows_run2 = rand8Idx.slice(0, 4);&amp;#10;" valType="extendedCode"/>
+        <Param name="Begin Experiment" updates="constant" val="if expInfo['design']=='1':&amp;#10;    instructions_run2 = 'Designs/design1_run2.png'&amp;#10;    cond_file_run2 = 'Designs/design1_run2.csv'&amp;#10;elif expInfo['design']=='2':&amp;#10;    instructions_run2 = 'Designs/design2_run2.png'&amp;#10;    cond_file_run2 = 'Designs/design2_run2.csv'&amp;#10;elif expInfo['design']=='3':&amp;#10;    instructions_run2 =  'Designs/design3_run2.png'&amp;#10;    cond_file_run2 = 'Designs/design3_run2.csv'&amp;#10;elif expInfo['design']=='4':&amp;#10;    instructions_run2 =  'Designs/design4_run2.png'&amp;#10;    cond_file_run2 = 'Designs/design4_run2.csv'&amp;#10;&amp;#10;if expInfo['position']=='2':&amp;#10;    rand8Idx = [0,1,2,3,4,5,6,7];&amp;#10;    shuffle(rand8Idx)&amp;#10;    randRows_run2 = rand8Idx[0:4]&amp;#10;elif expInfo['position']=='1':&amp;#10;    rand4Idx = [0,1,2,3];&amp;#10;    shuffle(rand4Idx)&amp;#10;    randRows_run2 = rand4Idx[0:2]&amp;#10;elif expInfo['position']=='3':&amp;#10;    rand4Idx = [4,5,6,7];&amp;#10;    shuffle(rand4Idx)&amp;#10;    randRows_run2 = rand4Idx[0:2]" valType="extendedCode"/>
+        <Param name="Begin JS Experiment" updates="constant" val="if ((expInfo[&quot;design&quot;] === &quot;1&quot;)) {&amp;#10;    instructions_run2 = &quot;Designs/design1_run2.png&quot;;&amp;#10;    cond_file_run2 = &quot;Designs/design1_run2.csv&quot;;&amp;#10;} else {&amp;#10;    if ((expInfo[&quot;design&quot;] === &quot;2&quot;)) {&amp;#10;        instructions_run2 = &quot;Designs/design2_run2.png&quot;;&amp;#10;        cond_file_run2 = &quot;Designs/design2_run2.csv&quot;;&amp;#10;    } else {&amp;#10;        if ((expInfo[&quot;design&quot;] === &quot;3&quot;)) {&amp;#10;            instructions_run2 = &quot;Designs/design3_run2.png&quot;;&amp;#10;            cond_file_run2 = &quot;Designs/design3_run2.csv&quot;;&amp;#10;        } else {&amp;#10;            if ((expInfo[&quot;design&quot;] === &quot;4&quot;)) {&amp;#10;                instructions_run2 = &quot;Designs/design4_run2.png&quot;;&amp;#10;                cond_file_run2 = &quot;Designs/design4_run2.csv&quot;;&amp;#10;            }&amp;#10;        }&amp;#10;    }&amp;#10;}&amp;#10;if ((expInfo[&quot;position&quot;] === &quot;2&quot;)) {&amp;#10;    rand8Idx = [0, 1, 2, 3, 4, 5, 6, 7];&amp;#10;    shuffle(rand8Idx);&amp;#10;    randRows_run2 = rand8Idx.slice(0, 4);&amp;#10;} else {&amp;#10;    if ((expInfo[&quot;position&quot;] === &quot;1&quot;)) {&amp;#10;        rand4Idx = [0, 1, 2, 3];&amp;#10;        shuffle(rand4Idx);&amp;#10;        randRows_run2 = rand4Idx.slice(0, 2);&amp;#10;    } else {&amp;#10;        if ((expInfo[&quot;position&quot;] === &quot;3&quot;)) {&amp;#10;            rand4Idx = [4, 5, 6, 7];&amp;#10;            shuffle(rand4Idx);&amp;#10;            randRows_run2 = rand4Idx.slice(0, 2);&amp;#10;        }&amp;#10;    }&amp;#10;}&amp;#10;" valType="extendedCode"/>
         <Param name="Begin JS Routine" updates="constant" val="" valType="extendedCode"/>
         <Param name="Begin Routine" updates="constant" val="" valType="extendedCode"/>
         <Param name="Code Type" updates="None" val="Auto-&gt;JS" valType="str"/>
@@ -699,7 +699,7 @@
         <Param name="opacity" updates="constant" val="1" valType="code"/>
         <Param name="ori" updates="constant" val="0" valType="code"/>
         <Param name="pos" updates="constant" val="(0, 0)" valType="code"/>
-        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
+        <Param name="saveStartStop" updates="None" val="False" valType="bool"/>
         <Param name="size" updates="constant" val="(0.75*1.5, 0.75)" valType="code"/>
         <Param name="startEstim" updates="None" val="" valType="code"/>
         <Param name="startType" updates="None" val="time (s)" valType="str"/>
@@ -718,7 +718,7 @@
         <Param name="durationEstim" updates="None" val="" valType="code"/>
         <Param name="forceEndRoutine" updates="constant" val="True" valType="bool"/>
         <Param name="name" updates="None" val="key_resp_3" valType="code"/>
-        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
+        <Param name="saveStartStop" updates="None" val="False" valType="bool"/>
         <Param name="startEstim" updates="None" val="" valType="code"/>
         <Param name="startType" updates="None" val="time (s)" valType="str"/>
         <Param name="startVal" updates="None" val="1" valType="code"/>
@@ -735,8 +735,8 @@
         <Param name="Before JS Experiment" updates="constant" val="" valType="extendedCode"/>
         <Param name="Begin Experiment" updates="constant" val="" valType="extendedCode"/>
         <Param name="Begin JS Experiment" updates="constant" val="" valType="extendedCode"/>
-        <Param name="Begin JS Routine" updates="constant" val="trialMsg = (((&quot;Practice: &quot; + pTrial_run2.toString()) + &quot; of &quot;) + pracTotal_run2.toString());&amp;#10;if (((pTrial_run2 - 1) === 0)) {&amp;#10;    currFix = fixColor_opts[0];&amp;#10;} else {&amp;#10;    if ((prac2_fixColSwitch[(pTrial_run2 - 1)] === 0)) {&amp;#10;        currFix = currFix;&amp;#10;    } else {&amp;#10;        if ((currFix === &quot;pink&quot;)) {&amp;#10;            currFix = &quot;orange&quot;;&amp;#10;        } else {&amp;#10;            if ((currFix === &quot;orange&quot;)) {&amp;#10;                currFix = &quot;pink&quot;;&amp;#10;            }&amp;#10;        }&amp;#10;    }&amp;#10;}&amp;#10;a = 1.25;&amp;#10;b = 1.75;&amp;#10;fixDur = (((b - a) * random()) + a);&amp;#10;if ((expInfo[&quot;position&quot;] === &quot;0&quot;)) {&amp;#10;    xPosition = 0;&amp;#10;} else {&amp;#10;    if ((expInfo[&quot;position&quot;] === &quot;1&quot;)) {&amp;#10;        if ((side === &quot;left&quot;)) {&amp;#10;            xPosition = (- (width * x_scale));&amp;#10;        } else {&amp;#10;            if ((side === &quot;right&quot;)) {&amp;#10;                xPosition = (width * x_scale);&amp;#10;            }&amp;#10;        }&amp;#10;    }&amp;#10;}&amp;#10;thisExp.addData(&quot;fixpR2&quot;, prac2_fixColSwitch[(pTrial_run2 - 1)]);&amp;#10;" valType="extendedCode"/>
-        <Param name="Begin Routine" updates="constant" val="trialMsg = &quot;Practice: &quot; + str(pTrial_run2) + ' of ' + str(pracTotal_run2)&amp;#10;if pTrial_run2-1 == 0:&amp;#10;    currFix = fixColor_opts[0]&amp;#10;else:&amp;#10;    if prac2_fixColSwitch[pTrial_run2-1] == 0:&amp;#10;        currFix = currFix&amp;#10;    elif  currFix == 'pink':&amp;#10;        currFix = 'orange'&amp;#10;    elif currFix == 'orange':&amp;#10;        currFix = 'pink'&amp;#10;a = 1.25 # min ITI&amp;#10;b = 1.75 # max ITI&amp;#10;fixDur = (b-a) * random()+a&amp;#10;&amp;#10;if expInfo['position'] == '0':&amp;#10;    xPosition = 0&amp;#10;elif expInfo['position'] == '1':&amp;#10;    if side == 'left':&amp;#10;        xPosition = -(width*x_scale)&amp;#10;    elif side == 'right':&amp;#10;        xPosition = width*x_scale&amp;#10;&amp;#10;thisExp.addData('fixpR2', prac2_fixColSwitch[pTrial_run2-1])" valType="extendedCode"/>
+        <Param name="Begin JS Routine" updates="constant" val="trialMsg = (((&quot;Practice: &quot; + pTrial_run2.toString()) + &quot; of &quot;) + pracTotal_run2.toString());&amp;#10;if (((pTrial_run2 - 1) === 0)) {&amp;#10;    currFix = fixColor_opts[0];&amp;#10;} else {&amp;#10;    if ((prac2_fixColSwitch[(pTrial_run2 - 1)] === 0)) {&amp;#10;        currFix = currFix;&amp;#10;    } else {&amp;#10;        if ((currFix === &quot;pink&quot;)) {&amp;#10;            currFix = &quot;orange&quot;;&amp;#10;        } else {&amp;#10;            if ((currFix === &quot;orange&quot;)) {&amp;#10;                currFix = &quot;pink&quot;;&amp;#10;            }&amp;#10;        }&amp;#10;    }&amp;#10;}&amp;#10;a = 1.25;&amp;#10;b = 1.75;&amp;#10;fixDur = (((b - a) * random()) + a);&amp;#10;if ((expInfo[&quot;position&quot;] === &quot;0&quot;)) {&amp;#10;    xPosition = 0;&amp;#10;} else {&amp;#10;    if ((expInfo[&quot;position&quot;] === &quot;2&quot;)) {&amp;#10;        if ((side === &quot;left&quot;)) {&amp;#10;            xPosition = (- (width * x_scale));&amp;#10;        } else {&amp;#10;            if ((side === &quot;right&quot;)) {&amp;#10;                xPosition = (width * x_scale);&amp;#10;            }&amp;#10;        }&amp;#10;    } else {&amp;#10;        if ((expInfo[&quot;position&quot;] === &quot;1&quot;)) {&amp;#10;            xPosition = (- (width * x_scale));&amp;#10;        } else {&amp;#10;            if ((expInfo[&quot;position&quot;] === &quot;3&quot;)) {&amp;#10;                xPosition = (width * x_scale);&amp;#10;            }&amp;#10;        }&amp;#10;    }&amp;#10;}&amp;#10;thisExp.addData(&quot;fixpR2&quot;, prac2_fixColSwitch[(pTrial_run2 - 1)]);&amp;#10;" valType="extendedCode"/>
+        <Param name="Begin Routine" updates="constant" val="trialMsg = &quot;Practice: &quot; + str(pTrial_run2) + ' of ' + str(pracTotal_run2)&amp;#10;if pTrial_run2-1 == 0:&amp;#10;    currFix = fixColor_opts[0]&amp;#10;else:&amp;#10;    if prac2_fixColSwitch[pTrial_run2-1] == 0:&amp;#10;        currFix = currFix&amp;#10;    elif  currFix == 'pink':&amp;#10;        currFix = 'orange'&amp;#10;    elif currFix == 'orange':&amp;#10;        currFix = 'pink'&amp;#10;a = 1.25 # min ITI&amp;#10;b = 1.75 # max ITI&amp;#10;fixDur = (b-a) * random()+a&amp;#10;&amp;#10;if expInfo['position'] == '0':&amp;#10;    xPosition = 0&amp;#10;elif expInfo['position'] == '2':&amp;#10;    if side == 'left':&amp;#10;        xPosition = -(width*x_scale)&amp;#10;    elif side == 'right':&amp;#10;        xPosition = width*x_scale&amp;#10;elif expInfo['position'] == '1':&amp;#10;    xPosition = -(width*x_scale)&amp;#10;elif expInfo['position'] == '3':&amp;#10;    xPosition = width*x_scale&amp;#10;&amp;#10;thisExp.addData('fixpR2', prac2_fixColSwitch[pTrial_run2-1])" valType="extendedCode"/>
         <Param name="Code Type" updates="None" val="Auto-&gt;JS" valType="str"/>
         <Param name="Each Frame" updates="constant" val="" valType="extendedCode"/>
         <Param name="Each JS Frame" updates="constant" val="" valType="extendedCode"/>
@@ -760,7 +760,7 @@
         <Param name="opacity" updates="constant" val="1" valType="code"/>
         <Param name="ori" updates="constant" val="0" valType="code"/>
         <Param name="pos" updates="constant" val="(0, 0)" valType="code"/>
-        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
+        <Param name="saveStartStop" updates="None" val="False" valType="bool"/>
         <Param name="startEstim" updates="None" val="" valType="code"/>
         <Param name="startType" updates="None" val="time (s)" valType="str"/>
         <Param name="startVal" updates="None" val="0.0" valType="code"/>
@@ -779,7 +779,7 @@
         <Param name="durationEstim" updates="None" val="" valType="code"/>
         <Param name="forceEndRoutine" updates="constant" val="False" valType="bool"/>
         <Param name="name" updates="None" val="fix_respP2_1" valType="code"/>
-        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
+        <Param name="saveStartStop" updates="None" val="False" valType="bool"/>
         <Param name="startEstim" updates="None" val="" valType="code"/>
         <Param name="startType" updates="None" val="time (s)" valType="str"/>
         <Param name="startVal" updates="None" val="0.0" valType="code"/>
@@ -823,7 +823,7 @@
         <Param name="opacity" updates="constant" val="1" valType="code"/>
         <Param name="ori" updates="constant" val="0" valType="code"/>
         <Param name="pos" updates="constant" val="(0, 0)" valType="code"/>
-        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
+        <Param name="saveStartStop" updates="None" val="False" valType="bool"/>
         <Param name="size" updates="constant" val="(0.75*1.5, 0.75)" valType="code"/>
         <Param name="startEstim" updates="None" val="" valType="code"/>
         <Param name="startType" updates="None" val="time (s)" valType="str"/>
@@ -842,7 +842,7 @@
         <Param name="durationEstim" updates="None" val="" valType="code"/>
         <Param name="forceEndRoutine" updates="constant" val="True" valType="bool"/>
         <Param name="name" updates="None" val="key_resp_4" valType="code"/>
-        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
+        <Param name="saveStartStop" updates="None" val="False" valType="bool"/>
         <Param name="startEstim" updates="None" val="" valType="code"/>
         <Param name="startType" updates="None" val="time (s)" valType="str"/>
         <Param name="startVal" updates="None" val="1" valType="code"/>
@@ -859,8 +859,8 @@
         <Param name="Before JS Experiment" updates="constant" val="" valType="extendedCode"/>
         <Param name="Begin Experiment" updates="constant" val="" valType="extendedCode"/>
         <Param name="Begin JS Experiment" updates="constant" val="" valType="extendedCode"/>
-        <Param name="Begin JS Routine" updates="constant" val="if (((Trial_run2 - 1) === 0)) {&amp;#10;    currFix = fixColor_opts[0];&amp;#10;} else {&amp;#10;    if ((fixColorIdx_Run2[(Trial_run2 - 1)] === 0)) {&amp;#10;        currFix = currFix;&amp;#10;    } else {&amp;#10;        if ((currFix === &quot;pink&quot;)) {&amp;#10;            currFix = &quot;orange&quot;;&amp;#10;        } else {&amp;#10;            if ((currFix === &quot;orange&quot;)) {&amp;#10;                currFix = &quot;pink&quot;;&amp;#10;            }&amp;#10;        }&amp;#10;    }&amp;#10;}&amp;#10;a = 1.25;&amp;#10;b = 1.75;&amp;#10;fixDur = (((b - a) * random()) + a);&amp;#10;if ((expInfo[&quot;position&quot;] === &quot;0&quot;)) {&amp;#10;    xPosition = 0;&amp;#10;} else {&amp;#10;    if ((expInfo[&quot;position&quot;] === &quot;1&quot;)) {&amp;#10;        if ((side === &quot;left&quot;)) {&amp;#10;            xPosition = (- (width * x_scale));&amp;#10;        } else {&amp;#10;            if ((side === &quot;right&quot;)) {&amp;#10;                xPosition = (width * x_scale);&amp;#10;            }&amp;#10;        }&amp;#10;    }&amp;#10;}&amp;#10;thisExp.addData(&quot;fixR2&quot;, fixColorIdx_Run2[(Trial_run2 - 1)]);&amp;#10;" valType="extendedCode"/>
-        <Param name="Begin Routine" updates="constant" val="if Trial_run2-1 == 0:&amp;#10;    currFix = fixColor_opts[0]&amp;#10;else:&amp;#10;    if fixColorIdx_Run2[Trial_run2-1] == 0:&amp;#10;        currFix = currFix&amp;#10;    elif currFix == 'pink':&amp;#10;        currFix = 'orange'&amp;#10;    elif currFix == 'orange':&amp;#10;        currFix = 'pink'&amp;#10;        &amp;#10;a = 1.25 # min ITI&amp;#10;b = 1.75 # max ITI&amp;#10;fixDur = (b-a) * random()+a&amp;#10;&amp;#10;if expInfo['position'] == '0':&amp;#10;    xPosition = 0&amp;#10;elif expInfo['position'] == '1':&amp;#10;    if side == 'left':&amp;#10;        xPosition = -(width*x_scale)&amp;#10;    elif side == 'right':&amp;#10;        xPosition = width*x_scale&amp;#10;&amp;#10;thisExp.addData('fixR2', fixColorIdx_Run2[Trial_run2-1])" valType="extendedCode"/>
+        <Param name="Begin JS Routine" updates="constant" val="if (((Trial_run2 - 1) === 0)) {&amp;#10;    currFix = fixColor_opts[0];&amp;#10;} else {&amp;#10;    if ((fixColorIdx_Run2[(Trial_run2 - 1)] === 0)) {&amp;#10;        currFix = currFix;&amp;#10;    } else {&amp;#10;        if ((currFix === &quot;pink&quot;)) {&amp;#10;            currFix = &quot;orange&quot;;&amp;#10;        } else {&amp;#10;            if ((currFix === &quot;orange&quot;)) {&amp;#10;                currFix = &quot;pink&quot;;&amp;#10;            }&amp;#10;        }&amp;#10;    }&amp;#10;}&amp;#10;a = 1.25;&amp;#10;b = 1.75;&amp;#10;fixDur = (((b - a) * random()) + a);&amp;#10;if ((expInfo[&quot;position&quot;] === &quot;0&quot;)) {&amp;#10;    xPosition = 0;&amp;#10;} else {&amp;#10;    if ((expInfo[&quot;position&quot;] === &quot;2&quot;)) {&amp;#10;        if ((side === &quot;left&quot;)) {&amp;#10;            xPosition = (- (width * x_scale));&amp;#10;        } else {&amp;#10;            if ((side === &quot;right&quot;)) {&amp;#10;                xPosition = (width * x_scale);&amp;#10;            }&amp;#10;        }&amp;#10;    } else {&amp;#10;        if ((expInfo[&quot;position&quot;] === &quot;1&quot;)) {&amp;#10;            xPosition = (- (width * x_scale));&amp;#10;        } else {&amp;#10;            if ((expInfo[&quot;position&quot;] === &quot;3&quot;)) {&amp;#10;                xPosition = (width * x_scale);&amp;#10;            }&amp;#10;        }&amp;#10;    }&amp;#10;}&amp;#10;thisExp.addData(&quot;fixR2&quot;, fixColorIdx_Run2[(Trial_run2 - 1)]);&amp;#10;" valType="extendedCode"/>
+        <Param name="Begin Routine" updates="constant" val="if Trial_run2-1 == 0:&amp;#10;    currFix = fixColor_opts[0]&amp;#10;else:&amp;#10;    if fixColorIdx_Run2[Trial_run2-1] == 0:&amp;#10;        currFix = currFix&amp;#10;    elif currFix == 'pink':&amp;#10;        currFix = 'orange'&amp;#10;    elif currFix == 'orange':&amp;#10;        currFix = 'pink'&amp;#10;        &amp;#10;a = 1.25 # min ITI&amp;#10;b = 1.75 # max ITI&amp;#10;fixDur = (b-a) * random()+a&amp;#10;&amp;#10;if expInfo['position'] == '0':&amp;#10;    xPosition = 0&amp;#10;elif expInfo['position'] == '2':&amp;#10;    if side == 'left':&amp;#10;        xPosition = -(width*x_scale)&amp;#10;    elif side == 'right':&amp;#10;        xPosition = width*x_scale&amp;#10;elif expInfo['position'] == '1':&amp;#10;    xPosition = -(width*x_scale)&amp;#10;elif expInfo['position'] == '3':&amp;#10;    xPosition = width*x_scale&amp;#10;&amp;#10;thisExp.addData('fixR2', fixColorIdx_Run2[Trial_run2-1])" valType="extendedCode"/>
         <Param name="Code Type" updates="None" val="Auto-&gt;JS" valType="str"/>
         <Param name="Each Frame" updates="constant" val="" valType="extendedCode"/>
         <Param name="Each JS Frame" updates="constant" val="" valType="extendedCode"/>
@@ -928,7 +928,7 @@
         <Param name="opacity" updates="constant" val="1" valType="code"/>
         <Param name="ori" updates="constant" val="0" valType="code"/>
         <Param name="pos" updates="constant" val="(0, 0)" valType="code"/>
-        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
+        <Param name="saveStartStop" updates="None" val="False" valType="bool"/>
         <Param name="startEstim" updates="None" val="" valType="code"/>
         <Param name="startType" updates="None" val="time (s)" valType="str"/>
         <Param name="startVal" updates="None" val="0.0" valType="code"/>
@@ -946,7 +946,7 @@
     <Routine name="pracInstruct"/>
     <Routine name="prac_instr_run1"/>
     <LoopInitiator loopType="TrialHandler" name="prac_trials_run1">
-      <Param name="Selected rows" updates="None" val="$rand4rows_run1" valType="str"/>
+      <Param name="Selected rows" updates="None" val="$randRows_run1" valType="str"/>
       <Param name="conditions" updates="None" val="None" valType="str"/>
       <Param name="conditionsFile" updates="None" val="$cond_file_run1" valType="str"/>
       <Param name="endPoints" updates="None" val="[0, 1]" valType="num"/>
@@ -962,7 +962,7 @@
     <LoopTerminator name="prac_trials_run1"/>
     <Routine name="trial_instr_run1"/>
     <LoopInitiator loopType="TrialHandler" name="trials_run1">
-      <Param name="Selected rows" updates="None" val="" valType="str"/>
+      <Param name="Selected rows" updates="None" val="$positionRows" valType="str"/>
       <Param name="conditions" updates="None" val="None" valType="str"/>
       <Param name="conditionsFile" updates="None" val="$cond_file_run1" valType="str"/>
       <Param name="endPoints" updates="None" val="[0, 1]" valType="num"/>
@@ -977,7 +977,7 @@
     <LoopTerminator name="trials_run1"/>
     <Routine name="prac_instr_run2"/>
     <LoopInitiator loopType="TrialHandler" name="prac_trials_run2">
-      <Param name="Selected rows" updates="None" val="$rand4rows_run2" valType="str"/>
+      <Param name="Selected rows" updates="None" val="$randRows_run2" valType="str"/>
       <Param name="conditions" updates="None" val="None" valType="str"/>
       <Param name="conditionsFile" updates="None" val="$cond_file_run2" valType="str"/>
       <Param name="endPoints" updates="None" val="[0, 1]" valType="num"/>
@@ -993,7 +993,7 @@
     <LoopTerminator name="prac_trials_run2"/>
     <Routine name="trial_instr_run2"/>
     <LoopInitiator loopType="TrialHandler" name="trials_run2">
-      <Param name="Selected rows" updates="None" val="" valType="str"/>
+      <Param name="Selected rows" updates="None" val="$positionRows" valType="str"/>
       <Param name="conditions" updates="None" val="None" valType="str"/>
       <Param name="conditionsFile" updates="None" val="$cond_file_run2" valType="str"/>
       <Param name="endPoints" updates="None" val="[0, 1]" valType="num"/>
