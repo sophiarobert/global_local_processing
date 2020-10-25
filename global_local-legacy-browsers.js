@@ -152,6 +152,7 @@ var pracTotal_run2;
 var text;
 var fix_respP1_1;
 var prac_imgClock;
+var text_5;
 var prac_image;
 var prac_resp;
 var prac_fix_resp_2;
@@ -168,6 +169,7 @@ var trialFixR1Clock;
 var text_2;
 var fix_resp1_1;
 var trial_imgClock;
+var text_6;
 var trial_image;
 var trial_resp;
 var fix_resp_2;
@@ -382,6 +384,17 @@ function experimentInit() {
   
   // Initialize components for Routine "prac_img"
   prac_imgClock = new util.Clock();
+  text_5 = new visual.TextStim({
+    win: psychoJS.window,
+    name: 'text_5',
+    text: '+',
+    font: 'Arial',
+    units: undefined, 
+    pos: [0, 0], height: 0.1,  wrapWidth: undefined, ori: 0,
+    color: new util.Color('white'),  opacity: 1,
+    depth: 0.0 
+  });
+  
   prac_image = new visual.ImageStim({
     win : psychoJS.window,
     name : 'prac_image', units : undefined, 
@@ -389,7 +402,7 @@ function experimentInit() {
     ori : 0, pos : [0, 0], size : 1.0,
     color : new util.Color([1, 1, 1]), opacity : 1,
     flipHoriz : false, flipVert : false,
-    texRes : 512, interpolate : true, depth : 0.0 
+    texRes : 512, interpolate : true, depth : -1.0 
   });
   prac_resp = new core.Keyboard({psychoJS: psychoJS, clock: new util.Clock(), waitForStart: true});
   
@@ -460,6 +473,17 @@ function experimentInit() {
   
   // Initialize components for Routine "trial_img"
   trial_imgClock = new util.Clock();
+  text_6 = new visual.TextStim({
+    win: psychoJS.window,
+    name: 'text_6',
+    text: '+',
+    font: 'Arial',
+    units: undefined, 
+    pos: [0, 0], height: 0.05,  wrapWidth: undefined, ori: 0,
+    color: new util.Color(currFix),  opacity: 1,
+    depth: 0.0 
+  });
+  
   trial_image = new visual.ImageStim({
     win : psychoJS.window,
     name : 'trial_image', units : undefined, 
@@ -467,7 +491,7 @@ function experimentInit() {
     ori : 0, pos : [0, 0], size : 1.0,
     color : new util.Color([1, 1, 1]), opacity : 1,
     flipHoriz : false, flipVert : false,
-    texRes : 512, interpolate : true, depth : 0.0 
+    texRes : 512, interpolate : true, depth : -1.0 
   });
   trial_resp = new core.Keyboard({psychoJS: psychoJS, clock: new util.Clock(), waitForStart: true});
   
@@ -526,6 +550,17 @@ function experimentInit() {
   
   // Initialize components for Routine "prac_img"
   prac_imgClock = new util.Clock();
+  text_5 = new visual.TextStim({
+    win: psychoJS.window,
+    name: 'text_5',
+    text: '+',
+    font: 'Arial',
+    units: undefined, 
+    pos: [0, 0], height: 0.1,  wrapWidth: undefined, ori: 0,
+    color: new util.Color('white'),  opacity: 1,
+    depth: 0.0 
+  });
+  
   prac_image = new visual.ImageStim({
     win : psychoJS.window,
     name : 'prac_image', units : undefined, 
@@ -533,7 +568,7 @@ function experimentInit() {
     ori : 0, pos : [0, 0], size : 1.0,
     color : new util.Color([1, 1, 1]), opacity : 1,
     flipHoriz : false, flipVert : false,
-    texRes : 512, interpolate : true, depth : 0.0 
+    texRes : 512, interpolate : true, depth : -1.0 
   });
   prac_resp = new core.Keyboard({psychoJS: psychoJS, clock: new util.Clock(), waitForStart: true});
   
@@ -600,6 +635,17 @@ function experimentInit() {
   
   // Initialize components for Routine "trial_img"
   trial_imgClock = new util.Clock();
+  text_6 = new visual.TextStim({
+    win: psychoJS.window,
+    name: 'text_6',
+    text: '+',
+    font: 'Arial',
+    units: undefined, 
+    pos: [0, 0], height: 0.05,  wrapWidth: undefined, ori: 0,
+    color: new util.Color(currFix),  opacity: 1,
+    depth: 0.0 
+  });
+  
   trial_image = new visual.ImageStim({
     win : psychoJS.window,
     name : 'trial_image', units : undefined, 
@@ -607,7 +653,7 @@ function experimentInit() {
     ori : 0, pos : [0, 0], size : 1.0,
     color : new util.Color([1, 1, 1]), opacity : 1,
     flipHoriz : false, flipVert : false,
-    texRes : 512, interpolate : true, depth : 0.0 
+    texRes : 512, interpolate : true, depth : -1.0 
   });
   trial_resp = new core.Keyboard({psychoJS: psychoJS, clock: new util.Clock(), waitForStart: true});
   
@@ -1360,6 +1406,7 @@ function prac_imgRoutineBegin(snapshot) {
     prac_imgClock.reset(); // clock
     frameN = -1;
     // update component parameters for each repeat
+    text_5.setColor(new util.Color(currFix));
     prac_image.setPos([xPosition, 0]);
     prac_image.setSize([(width * x_scale), (height * y_scale)]);
     prac_image.setImage(imFile);
@@ -1371,6 +1418,7 @@ function prac_imgRoutineBegin(snapshot) {
     _prac_fix_resp_2_allKeys = [];
     // keep track of which components have finished
     prac_imgComponents = [];
+    prac_imgComponents.push(text_5);
     prac_imgComponents.push(prac_image);
     prac_imgComponents.push(prac_resp);
     prac_imgComponents.push(prac_fix_resp_2);
@@ -1393,6 +1441,16 @@ function prac_imgRoutineEachFrame(snapshot) {
     t = prac_imgClock.getTime();
     frameN = frameN + 1;// number of completed frames (so 0 is the first frame)
     // update/draw components on each frame
+    
+    // *text_5* updates
+    if (t >= 0.0 && text_5.status === PsychoJS.Status.NOT_STARTED) {
+      // keep track of start time/frame for later
+      text_5.tStart = t;  // (not accounting for frame time here)
+      text_5.frameNStart = frameN;  // exact frame index
+      
+      text_5.setAutoDraw(true);
+    }
+
     
     // *prac_image* updates
     if (t >= 0.0 && prac_image.status === PsychoJS.Status.NOT_STARTED) {
@@ -1911,6 +1969,7 @@ function trial_imgRoutineBegin(snapshot) {
     _fix_resp_2_allKeys = [];
     // keep track of which components have finished
     trial_imgComponents = [];
+    trial_imgComponents.push(text_6);
     trial_imgComponents.push(trial_image);
     trial_imgComponents.push(trial_resp);
     trial_imgComponents.push(fix_resp_2);
@@ -1933,6 +1992,16 @@ function trial_imgRoutineEachFrame(snapshot) {
     t = trial_imgClock.getTime();
     frameN = frameN + 1;// number of completed frames (so 0 is the first frame)
     // update/draw components on each frame
+    
+    // *text_6* updates
+    if (t >= 0.0 && text_6.status === PsychoJS.Status.NOT_STARTED) {
+      // keep track of start time/frame for later
+      text_6.tStart = t;  // (not accounting for frame time here)
+      text_6.frameNStart = frameN;  // exact frame index
+      
+      text_6.setAutoDraw(true);
+    }
+
     
     // *trial_image* updates
     if (t >= 0.0 && trial_image.status === PsychoJS.Status.NOT_STARTED) {
