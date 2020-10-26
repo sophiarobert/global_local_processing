@@ -335,6 +335,7 @@ function experimentInit() {
   
   // Initialize components for Routine "prac_instr_run1"
   prac_instr_run1Clock = new util.Clock();
+  var rand4Idx;
   if ((expInfo["design"] === "1")) {
       instructions_run1 = "Designs/design1_run1.png";
       cond_file_run1 = "Designs/design1_run1.csv";
@@ -379,7 +380,7 @@ function experimentInit() {
     ori : 0, pos : [0, 0], size : [(0.75 * 1.5), 0.75],
     color : new util.Color([1, 1, 1]), opacity : 1,
     flipHoriz : false, flipVert : false,
-    texRes : 512, interpolate : true, depth : -1.0 
+    texRes : 512, interpolate : true, depth : -2.0 
   });
   key_resp = new core.Keyboard({psychoJS: psychoJS, clock: new util.Clock(), waitForStart: true});
   
@@ -2861,6 +2862,8 @@ function quitPsychoJS(message, isCompleted) {
   if (psychoJS.experiment.isEntryEmpty()) {
     psychoJS.experiment.nextEntry();
   }
+  
+  
   
   
   
