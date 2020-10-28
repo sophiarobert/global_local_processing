@@ -363,12 +363,12 @@ function experimentInit() {
       if ((expInfo["position"] === "1")) {
           rand4Idx = [0, 1, 2, 3];
           shuffle(rand4Idx);
-          randRows_run1 = rand4Idx.slice(0, 2);
+          randRows_run1 = rand4Idx;
       } else {
           if ((expInfo["position"] === "3")) {
               rand4Idx = [4, 5, 6, 7];
               shuffle(rand4Idx);
-              randRows_run1 = rand4Idx.slice(0, 2);
+              randRows_run1 = rand4Idx;
           }
       }
   }
@@ -557,12 +557,12 @@ function experimentInit() {
       if ((expInfo["position"] === "1")) {
           rand4Idx = [0, 1, 2, 3];
           shuffle(rand4Idx);
-          randRows_run2 = rand4Idx.slice(0, 2);
+          randRows_run2 = rand4Idx;
       } else {
           if ((expInfo["position"] === "3")) {
               rand4Idx = [4, 5, 6, 7];
               shuffle(rand4Idx);
-              randRows_run2 = rand4Idx.slice(0, 2);
+              randRows_run2 = rand4Idx;
           }
       }
   }
