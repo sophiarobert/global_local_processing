@@ -136,6 +136,8 @@ var unittext;
 var vsize;
 var height;
 var width;
+var width3deg;
+var width4deg;
 var text_top;
 var text_bottom;
 var ccimage;
@@ -273,8 +275,10 @@ function experimentInit() {
           vsize = 1;
       }
   }
-  height = 3.459;
-  width = 3.459;
+  height = (1.7296 * 2);
+  width = (1.7296 * 2);
+  width3deg = 2.5958;
+  width4deg = (1.7296 * 2);
   
   text_top = new visual.TextStim({
     win: psychoJS.window,
@@ -309,7 +313,7 @@ function experimentInit() {
   });
   // Initialize components for Routine "pracInstruct"
   pracInstructClock = new util.Clock();
-  fixColor_opts = ["orange", "pink"];
+  fixColor_opts = ["black", "white"];
   shuffle(fixColor_opts);
   prac1_fixColSwitch = [0, 0, 0, 1];
   shuffle(prac1_fixColSwitch);
@@ -1288,11 +1292,11 @@ function pracFixR1RoutineBegin(snapshot) {
         if ((prac1_fixColSwitch[(pTrial_run1 - 1)] === 0)) {
             currFix = currFix;
         } else {
-            if ((currFix === "pink")) {
-                currFix = "orange";
+            if ((currFix === "white")) {
+                currFix = "black";
             } else {
-                if ((currFix === "orange")) {
-                    currFix = "pink";
+                if ((currFix === "white")) {
+                    currFix = "black";
                 }
             }
         }
@@ -1305,18 +1309,18 @@ function pracFixR1RoutineBegin(snapshot) {
     } else {
         if ((expInfo["position"] === "2")) {
             if ((side === "left")) {
-                xPosition = (- (width * x_scale));
+                xPosition = (- (width4deg * x_scale));
             } else {
                 if ((side === "right")) {
-                    xPosition = (width * x_scale);
+                    xPosition = (width4deg * x_scale);
                 }
             }
         } else {
             if ((expInfo["position"] === "1")) {
-                xPosition = (- (width * x_scale));
+                xPosition = (- (width4deg * x_scale));
             } else {
                 if ((expInfo["position"] === "3")) {
-                    xPosition = (width * x_scale);
+                    xPosition = (width4deg * x_scale);
                 }
             }
         }
@@ -1846,11 +1850,11 @@ function trialFixR1RoutineBegin(snapshot) {
         if ((fixColorIdx_Run1[(Trial_run1 - 1)] === 0)) {
             currFix = currFix;
         } else {
-            if ((currFix === "pink")) {
-                currFix = "orange";
+            if ((currFix === "white")) {
+                currFix = "black";
             } else {
-                if ((currFix === "orange")) {
-                    currFix = "pink";
+                if ((currFix === "white")) {
+                    currFix = "black";
                 }
             }
         }
@@ -1863,18 +1867,18 @@ function trialFixR1RoutineBegin(snapshot) {
     } else {
         if ((expInfo["position"] === "2")) {
             if ((side === "left")) {
-                xPosition = (- (width * x_scale));
+                xPosition = (- (width4deg * x_scale));
             } else {
                 if ((side === "right")) {
-                    xPosition = (width * x_scale);
+                    xPosition = (width4deg * x_scale);
                 }
             }
         } else {
             if ((expInfo["position"] === "1")) {
-                xPosition = (- (width * x_scale));
+                xPosition = (- (width4deg * x_scale));
             } else {
                 if ((expInfo["position"] === "3")) {
-                    xPosition = (width * x_scale);
+                    xPosition = (width4deg * x_scale);
                 }
             }
         }
@@ -2309,11 +2313,11 @@ function pracFixR2RoutineBegin(snapshot) {
         if ((prac2_fixColSwitch[(pTrial_run2 - 1)] === 0)) {
             currFix = currFix;
         } else {
-            if ((currFix === "pink")) {
-                currFix = "orange";
+            if ((currFix === "white")) {
+                currFix = "black";
             } else {
-                if ((currFix === "orange")) {
-                    currFix = "pink";
+                if ((currFix === "white")) {
+                    currFix = "black";
                 }
             }
         }
@@ -2326,18 +2330,18 @@ function pracFixR2RoutineBegin(snapshot) {
     } else {
         if ((expInfo["position"] === "2")) {
             if ((side === "left")) {
-                xPosition = (- (width * x_scale));
+                xPosition = (- (width4deg * x_scale));
             } else {
                 if ((side === "right")) {
-                    xPosition = (width * x_scale);
+                    xPosition = (width4deg * x_scale);
                 }
             }
         } else {
             if ((expInfo["position"] === "1")) {
-                xPosition = (- (width * x_scale));
+                xPosition = (- (width4deg * x_scale));
             } else {
                 if ((expInfo["position"] === "3")) {
-                    xPosition = (width * x_scale);
+                    xPosition = (width4deg * x_scale);
                 }
             }
         }
@@ -2589,11 +2593,11 @@ function trialFixR2RoutineBegin(snapshot) {
         if ((fixColorIdx_Run2[(Trial_run2 - 1)] === 0)) {
             currFix = currFix;
         } else {
-            if ((currFix === "pink")) {
-                currFix = "orange";
+            if ((currFix === "white")) {
+                currFix = "black";
             } else {
-                if ((currFix === "orange")) {
-                    currFix = "pink";
+                if ((currFix === "white")) {
+                    currFix = "black";
                 }
             }
         }
@@ -2606,18 +2610,18 @@ function trialFixR2RoutineBegin(snapshot) {
     } else {
         if ((expInfo["position"] === "2")) {
             if ((side === "left")) {
-                xPosition = (- (width * x_scale));
+                xPosition = (- (width4deg * x_scale));
             } else {
                 if ((side === "right")) {
-                    xPosition = (width * x_scale);
+                    xPosition = (width4deg * x_scale);
                 }
             }
         } else {
             if ((expInfo["position"] === "1")) {
-                xPosition = (- (width * x_scale));
+                xPosition = (- (width4deg * x_scale));
             } else {
                 if ((expInfo["position"] === "3")) {
-                    xPosition = (width * x_scale);
+                    xPosition = (width4deg * x_scale);
                 }
             }
         }
