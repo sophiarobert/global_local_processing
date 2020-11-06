@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2020.2.4),
-    on Sun Oct 25 14:03:49 2020
+    on Thu Nov  5 23:02:42 2020
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -107,8 +107,10 @@ else:
     vsize=1
 
 # h = tan(degrees = 2) x (distance = 49.53)
-height = 3.459
-width = 3.459
+height = 1.7296*2
+width = 1.7296*2
+width3deg = 2.5958
+width4deg = 1.7296*2
 text_top = visual.TextStim(win=win, name='text_top',
     text='Resize this image to match the size of a credit card with arrow keys',
     font='Arial',
@@ -135,7 +137,7 @@ ccimage = visual.ImageStim(
 # Initialize components for Routine "pracInstruct"
 pracInstructClock = core.Clock()
 
-fixColor_opts = ["orange", "pink"];
+fixColor_opts = ["black", "white"];
 shuffle(fixColor_opts);
 prac1_fixColSwitch = [0,0,0,1];
 shuffle(prac1_fixColSwitch);
@@ -198,11 +200,11 @@ if expInfo['position']=='2':
 elif expInfo['position']=='1':
     rand4Idx = [0,1,2,3];
     shuffle(rand4Idx)
-    randRows_run1 = rand4Idx[0:2]
+    randRows_run1 = rand4Idx
 elif expInfo['position']=='3':
     rand4Idx = [4,5,6,7];
     shuffle(rand4Idx)
-    randRows_run1 = rand4Idx[0:2]
+    randRows_run1 = rand4Idx
 Pinstructions_imageR1 = visual.ImageStim(
     win=win,
     name='Pinstructions_imageR1', 
@@ -210,7 +212,7 @@ Pinstructions_imageR1 = visual.ImageStim(
     ori=0, pos=(0, 0), size=(0.75*1.5, 0.75),
     color=[1,1,1], colorSpace='rgb', opacity=1,
     flipHoriz=False, flipVert=False,
-    texRes=512, interpolate=True, depth=-1.0)
+    texRes=512, interpolate=True, depth=-2.0)
 key_resp = keyboard.Keyboard()
 
 # Initialize components for Routine "pracFixR1"
@@ -351,11 +353,11 @@ if expInfo['position']=='2':
 elif expInfo['position']=='1':
     rand4Idx = [0,1,2,3];
     shuffle(rand4Idx)
-    randRows_run2 = rand4Idx[0:2]
+    randRows_run2 = rand4Idx
 elif expInfo['position']=='3':
     rand4Idx = [4,5,6,7];
     shuffle(rand4Idx)
-    randRows_run2 = rand4Idx[0:2]
+    randRows_run2 = rand4Idx
 Pinstructions_imageR2 = visual.ImageStim(
     win=win,
     name='Pinstructions_imageR2', 
@@ -779,10 +781,10 @@ for thisPrac_trials_run1 in prac_trials_run1:
     else:
         if prac1_fixColSwitch[pTrial_run1-1] == 0:
             currFix = currFix
-        elif currFix == 'pink':
-            currFix = 'orange'
-        elif currFix == 'orange':
-            currFix = 'pink'
+        elif currFix == 'white':
+            currFix = 'black'
+        elif currFix == 'white':
+            currFix = 'black'
      
     a = 1.25 # min ITI
     b = 1.75 # max ITI
@@ -792,13 +794,13 @@ for thisPrac_trials_run1 in prac_trials_run1:
         xPosition = 0
     elif expInfo['position'] == '2':
         if side == 'left':
-            xPosition = -(width*x_scale)
+            xPosition = -(width4deg*x_scale)
         elif side == 'right':
-            xPosition = width*x_scale
+            xPosition = width4deg*x_scale
     elif expInfo['position'] == '1':
-        xPosition = -(width*x_scale)
+        xPosition = -(width4deg*x_scale)
     elif expInfo['position'] == '3':
-        xPosition = width*x_scale
+        xPosition = width4deg*x_scale
     
     thisExp.addData('fixpR1', prac1_fixColSwitch[pTrial_run1-1])
     text.setColor(currFix, colorSpace='rgb')
@@ -1242,10 +1244,10 @@ for thisTrials_run1 in trials_run1:
     else:
         if fixColorIdx_Run1[Trial_run1-1] == 0:
             currFix = currFix
-        elif currFix == 'pink':
-            currFix = 'orange'
-        elif currFix == 'orange':
-            currFix = 'pink'
+        elif currFix == 'white':
+            currFix = 'black'
+        elif currFix == 'white':
+            currFix = 'black'
     
     a = 1.25 # min ITI
     b = 1.75 # max ITI
@@ -1255,13 +1257,13 @@ for thisTrials_run1 in trials_run1:
         xPosition = 0
     elif expInfo['position'] == '2':
         if side == 'left':
-            xPosition = -(width*x_scale)
+            xPosition = -(width4deg*x_scale)
         elif side == 'right':
-            xPosition = width*x_scale
+            xPosition = width4deg*x_scale
     elif expInfo['position'] == '1':
-        xPosition = -(width*x_scale)
+        xPosition = -(width4deg*x_scale)
     elif expInfo['position'] == '3':
-        xPosition = width*x_scale
+        xPosition = width4deg*x_scale
     
     thisExp.addData('fixR1', fixColorIdx_Run1[Trial_run1-1])
     text_2.setColor(currFix, colorSpace='rgb')
@@ -1643,10 +1645,10 @@ for thisPrac_trials_run2 in prac_trials_run2:
     else:
         if prac2_fixColSwitch[pTrial_run2-1] == 0:
             currFix = currFix
-        elif  currFix == 'pink':
-            currFix = 'orange'
-        elif currFix == 'orange':
-            currFix = 'pink'
+        elif  currFix == 'white':
+            currFix = 'black'
+        elif currFix == 'white':
+            currFix = 'black'
     a = 1.25 # min ITI
     b = 1.75 # max ITI
     fixDur = (b-a) * random()+a
@@ -1655,13 +1657,13 @@ for thisPrac_trials_run2 in prac_trials_run2:
         xPosition = 0
     elif expInfo['position'] == '2':
         if side == 'left':
-            xPosition = -(width*x_scale)
+            xPosition = -(width4deg*x_scale)
         elif side == 'right':
-            xPosition = width*x_scale
+            xPosition = width4deg*x_scale
     elif expInfo['position'] == '1':
-        xPosition = -(width*x_scale)
+        xPosition = -(width4deg*x_scale)
     elif expInfo['position'] == '3':
-        xPosition = width*x_scale
+        xPosition = width4deg*x_scale
     
     thisExp.addData('fixpR2', prac2_fixColSwitch[pTrial_run2-1])
     text_3.setColor(currFix, colorSpace='rgb')
@@ -2105,10 +2107,10 @@ for thisTrials_run2 in trials_run2:
     else:
         if fixColorIdx_Run2[Trial_run2-1] == 0:
             currFix = currFix
-        elif currFix == 'pink':
-            currFix = 'orange'
-        elif currFix == 'orange':
-            currFix = 'pink'
+        elif currFix == 'white':
+            currFix = 'black'
+        elif currFix == 'white':
+            currFix = 'black'
             
     a = 1.25 # min ITI
     b = 1.75 # max ITI
@@ -2118,13 +2120,13 @@ for thisTrials_run2 in trials_run2:
         xPosition = 0
     elif expInfo['position'] == '2':
         if side == 'left':
-            xPosition = -(width*x_scale)
+            xPosition = -(width4deg*x_scale)
         elif side == 'right':
-            xPosition = width*x_scale
+            xPosition = width4deg*x_scale
     elif expInfo['position'] == '1':
-        xPosition = -(width*x_scale)
+        xPosition = -(width4deg*x_scale)
     elif expInfo['position'] == '3':
-        xPosition = width*x_scale
+        xPosition = width4deg*x_scale
     
     thisExp.addData('fixR2', fixColorIdx_Run2[Trial_run2-1])
     text_4.setColor(currFix, colorSpace='rgb')

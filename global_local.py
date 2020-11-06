@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2020.2.4),
-    on Sun Oct 25 13:46:37 2020
+    on Thu Nov  5 23:02:28 2020
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -107,8 +107,10 @@ else:
     vsize=1
 
 # h = tan(degrees = 2) x (distance = 49.53)
-height = 3.459
-width = 3.459
+height = 1.7296*2
+width = 1.7296*2
+width3deg = 2.5958
+width4deg = 1.7296*2
 text_top = visual.TextStim(win=win, name='text_top',
     text='Resize this image to match the size of a credit card with arrow keys',
     font='Arial',
@@ -135,7 +137,7 @@ ccimage = visual.ImageStim(
 # Initialize components for Routine "pracInstruct"
 pracInstructClock = core.Clock()
 
-fixColor_opts = ["orange", "pink"];
+fixColor_opts = ["black", "white"];
 shuffle(fixColor_opts);
 prac1_fixColSwitch = [0,0,0,1];
 shuffle(prac1_fixColSwitch);
@@ -191,9 +193,18 @@ elif expInfo['design']=='4':
     instructions_run1 = 'Designs/design4_run1.png'
     cond_file_run1 = 'Designs/design4_run1.csv'
 
-rand8Idx = [0,1,2,3,4,5,6,7];
-shuffle(rand8Idx)
-rand4rows_run1 = rand8Idx[0:4]
+if expInfo['position']=='2':
+    rand8Idx = [0,1,2,3,4,5,6,7];
+    shuffle(rand8Idx)
+    randRows_run1 = rand8Idx[0:4]
+elif expInfo['position']=='1':
+    rand4Idx = [0,1,2,3];
+    shuffle(rand4Idx)
+    randRows_run1 = rand4Idx
+elif expInfo['position']=='3':
+    rand4Idx = [4,5,6,7];
+    shuffle(rand4Idx)
+    randRows_run1 = rand4Idx
 Pinstructions_imageR1 = visual.ImageStim(
     win=win,
     name='Pinstructions_imageR1', 
@@ -201,7 +212,7 @@ Pinstructions_imageR1 = visual.ImageStim(
     ori=0, pos=(0, 0), size=(0.75*1.5, 0.75),
     color=[1,1,1], colorSpace='rgb', opacity=1,
     flipHoriz=False, flipVert=False,
-    texRes=512, interpolate=True, depth=-1.0)
+    texRes=512, interpolate=True, depth=-2.0)
 key_resp = keyboard.Keyboard()
 
 # Initialize components for Routine "pracFixR1"
@@ -272,6 +283,13 @@ Total_run1 = 96
 
 Trial_run2 = 1
 Total_run2 = 96
+
+if expInfo['position']=='2':
+    positionRows = [0,1,2,3,4,5,6,7]
+if expInfo['position']=='1':
+    positionRows = [0,1,2,3]
+if expInfo['position']=='3':
+    positionRows = [4,5,6,7]
 instructions_imageR1 = visual.ImageStim(
     win=win,
     name='instructions_imageR1', 
@@ -328,9 +346,18 @@ elif expInfo['design']=='4':
     instructions_run2 =  'Designs/design4_run2.png'
     cond_file_run2 = 'Designs/design4_run2.csv'
 
-rand8Idx = [0,1,2,3,4,5,6,7];
-shuffle(rand8Idx)
-rand4rows_run2 = rand8Idx[0:4]
+if expInfo['position']=='2':
+    rand8Idx = [0,1,2,3,4,5,6,7];
+    shuffle(rand8Idx)
+    randRows_run2 = rand8Idx[0:4]
+elif expInfo['position']=='1':
+    rand4Idx = [0,1,2,3];
+    shuffle(rand4Idx)
+    randRows_run2 = rand4Idx
+elif expInfo['position']=='3':
+    rand4Idx = [4,5,6,7];
+    shuffle(rand4Idx)
+    randRows_run2 = rand4Idx
 Pinstructions_imageR2 = visual.ImageStim(
     win=win,
     name='Pinstructions_imageR2', 
@@ -552,12 +579,6 @@ for thisComponent in screen_scaleComponents:
 thisExp.addData('X Scale',x_scale)
 thisExp.addData('Y Scale',y_scale)
 
-thisExp.addData('text_top.started', text_top.tStartRefresh)
-thisExp.addData('text_top.stopped', text_top.tStopRefresh)
-thisExp.addData('text_bottom.started', text_bottom.tStartRefresh)
-thisExp.addData('text_bottom.stopped', text_bottom.tStopRefresh)
-thisExp.addData('ccimage.started', ccimage.tStartRefresh)
-thisExp.addData('ccimage.stopped', ccimage.tStopRefresh)
 # the Routine "screen_scale" was not non-slip safe, so reset the non-slip timer
 routineTimer.reset()
 
@@ -643,8 +664,6 @@ while continueRoutine:
 for thisComponent in pracInstructComponents:
     if hasattr(thisComponent, "setAutoDraw"):
         thisComponent.setAutoDraw(False)
-thisExp.addData('start_exp_text.started', start_exp_text.tStartRefresh)
-thisExp.addData('start_exp_text.stopped', start_exp_text.tStopRefresh)
 # the Routine "pracInstruct" was not non-slip safe, so reset the non-slip timer
 routineTimer.reset()
 
@@ -731,15 +750,13 @@ while continueRoutine:
 for thisComponent in prac_instr_run1Components:
     if hasattr(thisComponent, "setAutoDraw"):
         thisComponent.setAutoDraw(False)
-thisExp.addData('Pinstructions_imageR1.started', Pinstructions_imageR1.tStartRefresh)
-thisExp.addData('Pinstructions_imageR1.stopped', Pinstructions_imageR1.tStopRefresh)
 # the Routine "prac_instr_run1" was not non-slip safe, so reset the non-slip timer
 routineTimer.reset()
 
 # set up handler to look after randomisation of conditions etc
 prac_trials_run1 = data.TrialHandler(nReps=1, method='random', 
     extraInfo=expInfo, originPath=-1,
-    trialList=data.importConditions(cond_file_run1, selection=rand4rows_run1),
+    trialList=data.importConditions(cond_file_run1, selection=randRows_run1),
     seed=None, name='prac_trials_run1')
 thisExp.addLoop(prac_trials_run1)  # add the loop to the experiment
 thisPrac_trials_run1 = prac_trials_run1.trialList[0]  # so we can initialise stimuli with some values
@@ -764,10 +781,10 @@ for thisPrac_trials_run1 in prac_trials_run1:
     else:
         if prac1_fixColSwitch[pTrial_run1-1] == 0:
             currFix = currFix
-        elif currFix == 'pink':
-            currFix = 'orange'
-        elif currFix == 'orange':
-            currFix = 'pink'
+        elif currFix == 'white':
+            currFix = 'black'
+        elif currFix == 'white':
+            currFix = 'black'
      
     a = 1.25 # min ITI
     b = 1.75 # max ITI
@@ -777,13 +794,13 @@ for thisPrac_trials_run1 in prac_trials_run1:
         xPosition = 0
     elif expInfo['position'] == '2':
         if side == 'left':
-            xPosition = -(width*x_scale)
+            xPosition = -(width4deg*x_scale)
         elif side == 'right':
-            xPosition = width*x_scale
+            xPosition = width4deg*x_scale
     elif expInfo['position'] == '1':
-        xPosition = -(width*x_scale)
+        xPosition = -(width4deg*x_scale)
     elif expInfo['position'] == '3':
-        xPosition = width*x_scale
+        xPosition = width4deg*x_scale
     
     thisExp.addData('fixpR1', prac1_fixColSwitch[pTrial_run1-1])
     text.setColor(currFix, colorSpace='rgb')
@@ -881,16 +898,12 @@ for thisPrac_trials_run1 in prac_trials_run1:
         if hasattr(thisComponent, "setAutoDraw"):
             thisComponent.setAutoDraw(False)
     pTrial_run1 = pTrial_run1 + 1
-    prac_trials_run1.addData('text.started', text.tStartRefresh)
-    prac_trials_run1.addData('text.stopped', text.tStopRefresh)
     # check responses
     if fix_respP1_1.keys in ['', [], None]:  # No response was made
         fix_respP1_1.keys = None
     prac_trials_run1.addData('fix_respP1_1.keys',fix_respP1_1.keys)
     if fix_respP1_1.keys != None:  # we had a response
         prac_trials_run1.addData('fix_respP1_1.rt', fix_respP1_1.rt)
-    prac_trials_run1.addData('fix_respP1_1.started', fix_respP1_1.tStartRefresh)
-    prac_trials_run1.addData('fix_respP1_1.stopped', fix_respP1_1.tStopRefresh)
     # the Routine "pracFixR1" was not non-slip safe, so reset the non-slip timer
     routineTimer.reset()
     
@@ -1017,10 +1030,6 @@ for thisPrac_trials_run1 in prac_trials_run1:
     for thisComponent in prac_imgComponents:
         if hasattr(thisComponent, "setAutoDraw"):
             thisComponent.setAutoDraw(False)
-    prac_trials_run1.addData('text_5.started', text_5.tStartRefresh)
-    prac_trials_run1.addData('text_5.stopped', text_5.tStopRefresh)
-    prac_trials_run1.addData('prac_image.started', prac_image.tStartRefresh)
-    prac_trials_run1.addData('prac_image.stopped', prac_image.tStopRefresh)
     # check responses
     if prac_resp.keys in ['', [], None]:  # No response was made
         prac_resp.keys = None
@@ -1034,16 +1043,12 @@ for thisPrac_trials_run1 in prac_trials_run1:
     prac_trials_run1.addData('prac_resp.corr', prac_resp.corr)
     if prac_resp.keys != None:  # we had a response
         prac_trials_run1.addData('prac_resp.rt', prac_resp.rt)
-    prac_trials_run1.addData('prac_resp.started', prac_resp.tStartRefresh)
-    prac_trials_run1.addData('prac_resp.stopped', prac_resp.tStopRefresh)
     # check responses
     if prac_fix_resp_2.keys in ['', [], None]:  # No response was made
         prac_fix_resp_2.keys = None
     prac_trials_run1.addData('prac_fix_resp_2.keys',prac_fix_resp_2.keys)
     if prac_fix_resp_2.keys != None:  # we had a response
         prac_trials_run1.addData('prac_fix_resp_2.rt', prac_fix_resp_2.rt)
-    prac_trials_run1.addData('prac_fix_resp_2.started', prac_fix_resp_2.tStartRefresh)
-    prac_trials_run1.addData('prac_fix_resp_2.stopped', prac_fix_resp_2.tStopRefresh)
     # the Routine "prac_img" was not non-slip safe, so reset the non-slip timer
     routineTimer.reset()
     
@@ -1121,8 +1126,6 @@ for thisPrac_trials_run1 in prac_trials_run1:
     for thisComponent in FeedbackComponents:
         if hasattr(thisComponent, "setAutoDraw"):
             thisComponent.setAutoDraw(False)
-    prac_trials_run1.addData('imFeedback.started', imFeedback.tStartRefresh)
-    prac_trials_run1.addData('imFeedback.stopped', imFeedback.tStopRefresh)
     thisExp.nextEntry()
     
 # completed 1 repeats of 'prac_trials_run1'
@@ -1211,15 +1214,13 @@ while continueRoutine:
 for thisComponent in trial_instr_run1Components:
     if hasattr(thisComponent, "setAutoDraw"):
         thisComponent.setAutoDraw(False)
-thisExp.addData('instructions_imageR1.started', instructions_imageR1.tStartRefresh)
-thisExp.addData('instructions_imageR1.stopped', instructions_imageR1.tStopRefresh)
 # the Routine "trial_instr_run1" was not non-slip safe, so reset the non-slip timer
 routineTimer.reset()
 
 # set up handler to look after randomisation of conditions etc
 trials_run1 = data.TrialHandler(nReps=12, method='fullRandom', 
     extraInfo=expInfo, originPath=-1,
-    trialList=data.importConditions(cond_file_run1),
+    trialList=data.importConditions(cond_file_run1, selection=positionRows),
     seed=None, name='trials_run1')
 thisExp.addLoop(trials_run1)  # add the loop to the experiment
 thisTrials_run1 = trials_run1.trialList[0]  # so we can initialise stimuli with some values
@@ -1243,10 +1244,10 @@ for thisTrials_run1 in trials_run1:
     else:
         if fixColorIdx_Run1[Trial_run1-1] == 0:
             currFix = currFix
-        elif currFix == 'pink':
-            currFix = 'orange'
-        elif currFix == 'orange':
-            currFix = 'pink'
+        elif currFix == 'white':
+            currFix = 'black'
+        elif currFix == 'white':
+            currFix = 'black'
     
     a = 1.25 # min ITI
     b = 1.75 # max ITI
@@ -1256,13 +1257,13 @@ for thisTrials_run1 in trials_run1:
         xPosition = 0
     elif expInfo['position'] == '2':
         if side == 'left':
-            xPosition = -(width*x_scale)
+            xPosition = -(width4deg*x_scale)
         elif side == 'right':
-            xPosition = width*x_scale
+            xPosition = width4deg*x_scale
     elif expInfo['position'] == '1':
-        xPosition = -(width*x_scale)
+        xPosition = -(width4deg*x_scale)
     elif expInfo['position'] == '3':
-        xPosition = width*x_scale
+        xPosition = width4deg*x_scale
     
     thisExp.addData('fixR1', fixColorIdx_Run1[Trial_run1-1])
     text_2.setColor(currFix, colorSpace='rgb')
@@ -1613,15 +1614,13 @@ while continueRoutine:
 for thisComponent in prac_instr_run2Components:
     if hasattr(thisComponent, "setAutoDraw"):
         thisComponent.setAutoDraw(False)
-thisExp.addData('Pinstructions_imageR2.started', Pinstructions_imageR2.tStartRefresh)
-thisExp.addData('Pinstructions_imageR2.stopped', Pinstructions_imageR2.tStopRefresh)
 # the Routine "prac_instr_run2" was not non-slip safe, so reset the non-slip timer
 routineTimer.reset()
 
 # set up handler to look after randomisation of conditions etc
 prac_trials_run2 = data.TrialHandler(nReps=1, method='random', 
     extraInfo=expInfo, originPath=-1,
-    trialList=data.importConditions(cond_file_run2, selection=rand4rows_run2),
+    trialList=data.importConditions(cond_file_run2, selection=randRows_run2),
     seed=None, name='prac_trials_run2')
 thisExp.addLoop(prac_trials_run2)  # add the loop to the experiment
 thisPrac_trials_run2 = prac_trials_run2.trialList[0]  # so we can initialise stimuli with some values
@@ -1646,10 +1645,10 @@ for thisPrac_trials_run2 in prac_trials_run2:
     else:
         if prac2_fixColSwitch[pTrial_run2-1] == 0:
             currFix = currFix
-        elif  currFix == 'pink':
-            currFix = 'orange'
-        elif currFix == 'orange':
-            currFix = 'pink'
+        elif  currFix == 'white':
+            currFix = 'black'
+        elif currFix == 'white':
+            currFix = 'black'
     a = 1.25 # min ITI
     b = 1.75 # max ITI
     fixDur = (b-a) * random()+a
@@ -1658,13 +1657,13 @@ for thisPrac_trials_run2 in prac_trials_run2:
         xPosition = 0
     elif expInfo['position'] == '2':
         if side == 'left':
-            xPosition = -(width*x_scale)
+            xPosition = -(width4deg*x_scale)
         elif side == 'right':
-            xPosition = width*x_scale
+            xPosition = width4deg*x_scale
     elif expInfo['position'] == '1':
-        xPosition = -(width*x_scale)
+        xPosition = -(width4deg*x_scale)
     elif expInfo['position'] == '3':
-        xPosition = width*x_scale
+        xPosition = width4deg*x_scale
     
     thisExp.addData('fixpR2', prac2_fixColSwitch[pTrial_run2-1])
     text_3.setColor(currFix, colorSpace='rgb')
@@ -1762,16 +1761,12 @@ for thisPrac_trials_run2 in prac_trials_run2:
         if hasattr(thisComponent, "setAutoDraw"):
             thisComponent.setAutoDraw(False)
     pTrial_run2 = pTrial_run2 + 1
-    prac_trials_run2.addData('text_3.started', text_3.tStartRefresh)
-    prac_trials_run2.addData('text_3.stopped', text_3.tStopRefresh)
     # check responses
     if fix_respP2_1.keys in ['', [], None]:  # No response was made
         fix_respP2_1.keys = None
     prac_trials_run2.addData('fix_respP2_1.keys',fix_respP2_1.keys)
     if fix_respP2_1.keys != None:  # we had a response
         prac_trials_run2.addData('fix_respP2_1.rt', fix_respP2_1.rt)
-    prac_trials_run2.addData('fix_respP2_1.started', fix_respP2_1.tStartRefresh)
-    prac_trials_run2.addData('fix_respP2_1.stopped', fix_respP2_1.tStopRefresh)
     # the Routine "pracFixR2" was not non-slip safe, so reset the non-slip timer
     routineTimer.reset()
     
@@ -1898,10 +1893,6 @@ for thisPrac_trials_run2 in prac_trials_run2:
     for thisComponent in prac_imgComponents:
         if hasattr(thisComponent, "setAutoDraw"):
             thisComponent.setAutoDraw(False)
-    prac_trials_run2.addData('text_5.started', text_5.tStartRefresh)
-    prac_trials_run2.addData('text_5.stopped', text_5.tStopRefresh)
-    prac_trials_run2.addData('prac_image.started', prac_image.tStartRefresh)
-    prac_trials_run2.addData('prac_image.stopped', prac_image.tStopRefresh)
     # check responses
     if prac_resp.keys in ['', [], None]:  # No response was made
         prac_resp.keys = None
@@ -1915,16 +1906,12 @@ for thisPrac_trials_run2 in prac_trials_run2:
     prac_trials_run2.addData('prac_resp.corr', prac_resp.corr)
     if prac_resp.keys != None:  # we had a response
         prac_trials_run2.addData('prac_resp.rt', prac_resp.rt)
-    prac_trials_run2.addData('prac_resp.started', prac_resp.tStartRefresh)
-    prac_trials_run2.addData('prac_resp.stopped', prac_resp.tStopRefresh)
     # check responses
     if prac_fix_resp_2.keys in ['', [], None]:  # No response was made
         prac_fix_resp_2.keys = None
     prac_trials_run2.addData('prac_fix_resp_2.keys',prac_fix_resp_2.keys)
     if prac_fix_resp_2.keys != None:  # we had a response
         prac_trials_run2.addData('prac_fix_resp_2.rt', prac_fix_resp_2.rt)
-    prac_trials_run2.addData('prac_fix_resp_2.started', prac_fix_resp_2.tStartRefresh)
-    prac_trials_run2.addData('prac_fix_resp_2.stopped', prac_fix_resp_2.tStopRefresh)
     # the Routine "prac_img" was not non-slip safe, so reset the non-slip timer
     routineTimer.reset()
     
@@ -2002,8 +1989,6 @@ for thisPrac_trials_run2 in prac_trials_run2:
     for thisComponent in FeedbackComponents:
         if hasattr(thisComponent, "setAutoDraw"):
             thisComponent.setAutoDraw(False)
-    prac_trials_run2.addData('imFeedback.started', imFeedback.tStartRefresh)
-    prac_trials_run2.addData('imFeedback.stopped', imFeedback.tStopRefresh)
     thisExp.nextEntry()
     
 # completed 1 repeats of 'prac_trials_run2'
@@ -2092,15 +2077,13 @@ while continueRoutine:
 for thisComponent in trial_instr_run2Components:
     if hasattr(thisComponent, "setAutoDraw"):
         thisComponent.setAutoDraw(False)
-thisExp.addData('instructions_imageR2.started', instructions_imageR2.tStartRefresh)
-thisExp.addData('instructions_imageR2.stopped', instructions_imageR2.tStopRefresh)
 # the Routine "trial_instr_run2" was not non-slip safe, so reset the non-slip timer
 routineTimer.reset()
 
 # set up handler to look after randomisation of conditions etc
 trials_run2 = data.TrialHandler(nReps=12, method='fullRandom', 
     extraInfo=expInfo, originPath=-1,
-    trialList=data.importConditions(cond_file_run2),
+    trialList=data.importConditions(cond_file_run2, selection=positionRows),
     seed=None, name='trials_run2')
 thisExp.addLoop(trials_run2)  # add the loop to the experiment
 thisTrials_run2 = trials_run2.trialList[0]  # so we can initialise stimuli with some values
@@ -2124,10 +2107,10 @@ for thisTrials_run2 in trials_run2:
     else:
         if fixColorIdx_Run2[Trial_run2-1] == 0:
             currFix = currFix
-        elif currFix == 'pink':
-            currFix = 'orange'
-        elif currFix == 'orange':
-            currFix = 'pink'
+        elif currFix == 'white':
+            currFix = 'black'
+        elif currFix == 'white':
+            currFix = 'black'
             
     a = 1.25 # min ITI
     b = 1.75 # max ITI
@@ -2137,13 +2120,13 @@ for thisTrials_run2 in trials_run2:
         xPosition = 0
     elif expInfo['position'] == '2':
         if side == 'left':
-            xPosition = -(width*x_scale)
+            xPosition = -(width4deg*x_scale)
         elif side == 'right':
-            xPosition = width*x_scale
+            xPosition = width4deg*x_scale
     elif expInfo['position'] == '1':
-        xPosition = -(width*x_scale)
+        xPosition = -(width4deg*x_scale)
     elif expInfo['position'] == '3':
-        xPosition = width*x_scale
+        xPosition = width4deg*x_scale
     
     thisExp.addData('fixR2', fixColorIdx_Run2[Trial_run2-1])
     text_4.setColor(currFix, colorSpace='rgb')
@@ -2477,8 +2460,6 @@ while continueRoutine and routineTimer.getTime() > 0:
 for thisComponent in EndScreenComponents:
     if hasattr(thisComponent, "setAutoDraw"):
         thisComponent.setAutoDraw(False)
-thisExp.addData('allDone.started', allDone.tStartRefresh)
-thisExp.addData('allDone.stopped', allDone.tStopRefresh)
 
 # Flip one final time so any remaining win.callOnFlip() 
 # and win.timeOnFlip() tasks get executed before quitting
