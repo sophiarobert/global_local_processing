@@ -55,6 +55,9 @@ const prac_trials_run1LoopScheduler = new Scheduler(psychoJS);
 flowScheduler.add(prac_trials_run1LoopBegin, prac_trials_run1LoopScheduler);
 flowScheduler.add(prac_trials_run1LoopScheduler);
 flowScheduler.add(prac_trials_run1LoopEnd);
+flowScheduler.add(transition2trialsRoutineBegin());
+flowScheduler.add(transition2trialsRoutineEachFrame());
+flowScheduler.add(transition2trialsRoutineEnd());
 flowScheduler.add(trial_instr_run1RoutineBegin());
 flowScheduler.add(trial_instr_run1RoutineEachFrame());
 flowScheduler.add(trial_instr_run1RoutineEnd());
@@ -69,6 +72,9 @@ const prac_trials_run2LoopScheduler = new Scheduler(psychoJS);
 flowScheduler.add(prac_trials_run2LoopBegin, prac_trials_run2LoopScheduler);
 flowScheduler.add(prac_trials_run2LoopScheduler);
 flowScheduler.add(prac_trials_run2LoopEnd);
+flowScheduler.add(transition2trialsRoutineBegin());
+flowScheduler.add(transition2trialsRoutineEachFrame());
+flowScheduler.add(transition2trialsRoutineEnd());
 flowScheduler.add(trial_instr_run2RoutineBegin());
 flowScheduler.add(trial_instr_run2RoutineEachFrame());
 flowScheduler.add(trial_instr_run2RoutineEnd());
@@ -170,6 +176,9 @@ var prac_resp;
 var prac_fix_resp_2;
 var FeedbackClock;
 var imFeedback;
+var transition2trialsClock;
+var text_7;
+var key_resp_5;
 var trial_instr_run1Clock;
 var Trial_run1;
 var Total_run1;
@@ -445,6 +454,21 @@ function experimentInit() {
     flipHoriz : false, flipVert : false,
     texRes : 512, interpolate : true, depth : -1.0 
   });
+  // Initialize components for Routine "transition2trials"
+  transition2trialsClock = new util.Clock();
+  text_7 = new visual.TextStim({
+    win: psychoJS.window,
+    name: 'text_7',
+    text: 'Great Job!\n\nNow we are going to play the game. \n\nPress Space to see the instructions\n\n',
+    font: 'Arial',
+    units: undefined, 
+    pos: [0, 0], height: 0.05,  wrapWidth: undefined, ori: 0,
+    color: new util.Color('black'),  opacity: 1,
+    depth: 0.0 
+  });
+  
+  key_resp_5 = new core.Keyboard({psychoJS: psychoJS, clock: new util.Clock(), waitForStart: true});
+  
   // Initialize components for Routine "trial_instr_run1"
   trial_instr_run1Clock = new util.Clock();
   if ((expInfo["design"] === "1")) {
@@ -634,6 +658,21 @@ function experimentInit() {
     flipHoriz : false, flipVert : false,
     texRes : 512, interpolate : true, depth : -1.0 
   });
+  // Initialize components for Routine "transition2trials"
+  transition2trialsClock = new util.Clock();
+  text_7 = new visual.TextStim({
+    win: psychoJS.window,
+    name: 'text_7',
+    text: 'Great Job!\n\nNow we are going to play the game. \n\nPress Space to see the instructions\n\n',
+    font: 'Arial',
+    units: undefined, 
+    pos: [0, 0], height: 0.05,  wrapWidth: undefined, ori: 0,
+    color: new util.Color('black'),  opacity: 1,
+    depth: 0.0 
+  });
+  
+  key_resp_5 = new core.Keyboard({psychoJS: psychoJS, clock: new util.Clock(), waitForStart: true});
+  
   // Initialize components for Routine "trial_instr_run2"
   trial_instr_run2Clock = new util.Clock();
   if ((expInfo["design"] === "1")) {
@@ -1718,6 +1757,117 @@ function FeedbackRoutineEnd(snapshot) {
         thisComponent.setAutoDraw(false);
       }
     }
+    return Scheduler.Event.NEXT;
+  };
+}
+
+
+var _key_resp_5_allKeys;
+var transition2trialsComponents;
+function transition2trialsRoutineBegin(snapshot) {
+  return function () {
+    //------Prepare to start Routine 'transition2trials'-------
+    t = 0;
+    transition2trialsClock.reset(); // clock
+    frameN = -1;
+    // update component parameters for each repeat
+    key_resp_5.keys = undefined;
+    key_resp_5.rt = undefined;
+    _key_resp_5_allKeys = [];
+    // keep track of which components have finished
+    transition2trialsComponents = [];
+    transition2trialsComponents.push(text_7);
+    transition2trialsComponents.push(key_resp_5);
+    
+    for (const thisComponent of transition2trialsComponents)
+      if ('status' in thisComponent)
+        thisComponent.status = PsychoJS.Status.NOT_STARTED;
+    
+    return Scheduler.Event.NEXT;
+  };
+}
+
+
+function transition2trialsRoutineEachFrame(snapshot) {
+  return function () {
+    //------Loop for each frame of Routine 'transition2trials'-------
+    let continueRoutine = true; // until we're told otherwise
+    // get current time
+    t = transition2trialsClock.getTime();
+    frameN = frameN + 1;// number of completed frames (so 0 is the first frame)
+    // update/draw components on each frame
+    
+    // *text_7* updates
+    if (t >= 0.0 && text_7.status === PsychoJS.Status.NOT_STARTED) {
+      // keep track of start time/frame for later
+      text_7.tStart = t;  // (not accounting for frame time here)
+      text_7.frameNStart = frameN;  // exact frame index
+      
+      text_7.setAutoDraw(true);
+    }
+
+    
+    // *key_resp_5* updates
+    if (t >= 1 && key_resp_5.status === PsychoJS.Status.NOT_STARTED) {
+      // keep track of start time/frame for later
+      key_resp_5.tStart = t;  // (not accounting for frame time here)
+      key_resp_5.frameNStart = frameN;  // exact frame index
+      
+      // keyboard checking is just starting
+      psychoJS.window.callOnFlip(function() { key_resp_5.clock.reset(); });  // t=0 on next screen flip
+      psychoJS.window.callOnFlip(function() { key_resp_5.start(); }); // start on screen flip
+      psychoJS.window.callOnFlip(function() { key_resp_5.clearEvents(); });
+    }
+
+    if (key_resp_5.status === PsychoJS.Status.STARTED) {
+      let theseKeys = key_resp_5.getKeys({keyList: ['space'], waitRelease: false});
+      _key_resp_5_allKeys = _key_resp_5_allKeys.concat(theseKeys);
+      if (_key_resp_5_allKeys.length > 0) {
+        key_resp_5.keys = _key_resp_5_allKeys[_key_resp_5_allKeys.length - 1].name;  // just the last key pressed
+        key_resp_5.rt = _key_resp_5_allKeys[_key_resp_5_allKeys.length - 1].rt;
+        // a response ends the routine
+        continueRoutine = false;
+      }
+    }
+    
+    // check for quit (typically the Esc key)
+    if (psychoJS.experiment.experimentEnded || psychoJS.eventManager.getKeys({keyList:['escape']}).length > 0) {
+      return quitPsychoJS('The [Escape] key was pressed. Goodbye!', false);
+    }
+    
+    // check if the Routine should terminate
+    if (!continueRoutine) {  // a component has requested a forced-end of Routine
+      return Scheduler.Event.NEXT;
+    }
+    
+    continueRoutine = false;  // reverts to True if at least one component still running
+    for (const thisComponent of transition2trialsComponents)
+      if ('status' in thisComponent && thisComponent.status !== PsychoJS.Status.FINISHED) {
+        continueRoutine = true;
+        break;
+      }
+    
+    // refresh the screen if continuing
+    if (continueRoutine) {
+      return Scheduler.Event.FLIP_REPEAT;
+    } else {
+      return Scheduler.Event.NEXT;
+    }
+  };
+}
+
+
+function transition2trialsRoutineEnd(snapshot) {
+  return function () {
+    //------Ending Routine 'transition2trials'-------
+    for (const thisComponent of transition2trialsComponents) {
+      if (typeof thisComponent.setAutoDraw === 'function') {
+        thisComponent.setAutoDraw(false);
+      }
+    }
+    // the Routine "transition2trials" was not non-slip safe, so reset the non-slip timer
+    routineTimer.reset();
+    
     return Scheduler.Event.NEXT;
   };
 }
