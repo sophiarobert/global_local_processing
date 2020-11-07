@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2020.2.4),
-    on Fri Nov  6 18:33:24 2020
+    on Fri Nov  6 21:38:36 2020
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -209,7 +209,7 @@ Pinstructions_imageR1 = visual.ImageStim(
     win=win,
     name='Pinstructions_imageR1', 
     image='sin', mask=None,
-    ori=0, pos=(0, 0), size=(0.75*1.5, 0.75),
+    ori=0, pos=(0, 0), size=(0.75*1.75, 0.75),
     color=[1,1,1], colorSpace='rgb', opacity=1,
     flipHoriz=False, flipVert=False,
     texRes=512, interpolate=True, depth=-2.0)
@@ -266,7 +266,7 @@ imFeedback = visual.ImageStim(
 # Initialize components for Routine "transition2trials"
 transition2trialsClock = core.Clock()
 text_7 = visual.TextStim(win=win, name='text_7',
-    text='Great Job!\n\nNow we are going to play the game. \n\nPress Space to see the instructions\n\n',
+    text='Great Job!\n\nNow we are going to play the real game. \n\nPress Space to see the instructions\n\n',
     font='Arial',
     pos=(0, 0), height=0.05, wrapWidth=None, ori=0, 
     color='black', colorSpace='rgb', opacity=1, 
@@ -373,7 +373,7 @@ Pinstructions_imageR2 = visual.ImageStim(
     win=win,
     name='Pinstructions_imageR2', 
     image='sin', mask=None,
-    ori=0, pos=(0, 0), size=(0.75*1.5, 0.75),
+    ori=0, pos=(0, 0), size=(0.75*1.75, 0.75),
     color=[1,1,1], colorSpace='rgb', opacity=1,
     flipHoriz=False, flipVert=False,
     texRes=512, interpolate=True, depth=-1.0)
@@ -424,7 +424,7 @@ imFeedback = visual.ImageStim(
 # Initialize components for Routine "transition2trials"
 transition2trialsClock = core.Clock()
 text_7 = visual.TextStim(win=win, name='text_7',
-    text='Great Job!\n\nNow we are going to play the game. \n\nPress Space to see the instructions\n\n',
+    text='Great Job!\n\nNow we are going to play the real game. \n\nPress Space to see the instructions\n\n',
     font='Arial',
     pos=(0, 0), height=0.05, wrapWidth=None, ori=0, 
     color='black', colorSpace='rgb', opacity=1, 

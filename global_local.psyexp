@@ -253,7 +253,7 @@
         <Param name="ori" updates="constant" val="0" valType="code"/>
         <Param name="pos" updates="constant" val="(0, 0)" valType="code"/>
         <Param name="saveStartStop" updates="None" val="False" valType="bool"/>
-        <Param name="size" updates="constant" val="(0.75*1.5, 0.75)" valType="code"/>
+        <Param name="size" updates="constant" val="(0.75*1.75, 0.75)" valType="code"/>
         <Param name="startEstim" updates="None" val="" valType="code"/>
         <Param name="startType" updates="None" val="time (s)" valType="str"/>
         <Param name="startVal" updates="None" val="0.0" valType="code"/>
@@ -717,7 +717,7 @@
         <Param name="ori" updates="constant" val="0" valType="code"/>
         <Param name="pos" updates="constant" val="(0, 0)" valType="code"/>
         <Param name="saveStartStop" updates="None" val="False" valType="bool"/>
-        <Param name="size" updates="constant" val="(0.75*1.5, 0.75)" valType="code"/>
+        <Param name="size" updates="constant" val="(0.75*1.75, 0.75)" valType="code"/>
         <Param name="startEstim" updates="None" val="" valType="code"/>
         <Param name="startType" updates="None" val="time (s)" valType="str"/>
         <Param name="startVal" updates="None" val="0.0" valType="code"/>
@@ -978,7 +978,7 @@
         <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
         <Param name="stopVal" updates="constant" val="" valType="code"/>
         <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
-        <Param name="text" updates="constant" val="Great Job!&amp;#10;&amp;#10;Now we are going to play the game. &amp;#10;&amp;#10;Press Space to see the instructions&amp;#10;&amp;#10;" valType="extendedStr"/>
+        <Param name="text" updates="constant" val="Great Job!&amp;#10;&amp;#10;Now we are going to play the real game. &amp;#10;&amp;#10;Press Space to see the instructions&amp;#10;&amp;#10;" valType="extendedStr"/>
         <Param name="units" updates="None" val="from exp settings" valType="str"/>
         <Param name="wrapWidth" updates="constant" val="" valType="code"/>
       </TextComponent>

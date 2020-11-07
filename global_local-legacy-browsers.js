@@ -380,7 +380,7 @@ function experimentInit() {
     win : psychoJS.window,
     name : 'Pinstructions_imageR1', units : undefined, 
     image : undefined, mask : undefined,
-    ori : 0, pos : [0, 0], size : [(0.75 * 1.5), 0.75],
+    ori : 0, pos : [0, 0], size : [(0.75 * 1.75), 0.75],
     color : new util.Color([1, 1, 1]), opacity : 1,
     flipHoriz : false, flipVert : false,
     texRes : 512, interpolate : true, depth : -2.0 
@@ -449,7 +449,7 @@ function experimentInit() {
   text_7 = new visual.TextStim({
     win: psychoJS.window,
     name: 'text_7',
-    text: 'Great Job!\n\nNow we are going to play the game. \n\nPress Space to see the instructions\n\n',
+    text: 'Great Job!\n\nNow we are going to play the real game. \n\nPress Space to see the instructions\n\n',
     font: 'Arial',
     units: undefined, 
     pos: [0, 0], height: 0.05,  wrapWidth: undefined, ori: 0,
@@ -589,7 +589,7 @@ function experimentInit() {
     win : psychoJS.window,
     name : 'Pinstructions_imageR2', units : undefined, 
     image : undefined, mask : undefined,
-    ori : 0, pos : [0, 0], size : [(0.75 * 1.5), 0.75],
+    ori : 0, pos : [0, 0], size : [(0.75 * 1.75), 0.75],
     color : new util.Color([1, 1, 1]), opacity : 1,
     flipHoriz : false, flipVert : false,
     texRes : 512, interpolate : true, depth : -1.0 
@@ -653,7 +653,7 @@ function experimentInit() {
   text_7 = new visual.TextStim({
     win: psychoJS.window,
     name: 'text_7',
-    text: 'Great Job!\n\nNow we are going to play the game. \n\nPress Space to see the instructions\n\n',
+    text: 'Great Job!\n\nNow we are going to play the real game. \n\nPress Space to see the instructions\n\n',
     font: 'Arial',
     units: undefined, 
     pos: [0, 0], height: 0.05,  wrapWidth: undefined, ori: 0,
