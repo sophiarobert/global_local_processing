@@ -1592,6 +1592,7 @@ function pracInstruct3RoutineEnd(snapshot) {
 
 
 var left_right;
+var rand_side;
 var xPosition;
 var hand_hold_ex;
 var handHoldCorr;
@@ -1608,6 +1609,7 @@ function hand_hold_instrRoutineBegin(snapshot) {
     frameN = -1;
     // update component parameters for each repeat
     left_right = "";
+    rand_side = "";
     if ((expInfo["position"] === "0")) {
         xPosition = 0;
     } else {
