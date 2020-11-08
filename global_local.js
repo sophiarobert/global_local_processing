@@ -323,9 +323,6 @@ function experimentInit() {
   {name: ("Designs/design2_run2.csv"), path:("Designs/design2_run2.csv")},
   {name: ("Designs/design3_run2.csv"), path:("Designs/design3_run2.csv")},
   {name: ("Designs/design4_run2.csv"), path:("Designs/design4_run2.csv")},
-  {name: ("Designs/prac_instr1.png"), path:("Designs/prac_instr1.png")},
-  {name: ("Designs/prac_instr2.png"), path:("Designs/prac_instr2.png")},
-  {name: ("Designs/prac_instr3.png"), path:("Designs/prac_instr3.png")},
   {name: ("Designs/hand_hold_global_corr.png"), path:("Designs/hand_hold_global_corr.png")},
   {name: ("Designs/hand_hold_global_incorr.png"), path:("Designs/hand_hold_global_incorr.png")},
   {name: ("Designs/hand_hold_local_corr.png"), path:("Designs/hand_hold_local_corr.png")},
@@ -411,7 +408,7 @@ function experimentInit() {
   prac_instr1 = new visual.ImageStim({
     win : psychoJS.window,
     name : 'prac_instr1', units : undefined, 
-    image : 'Designs/prac_instr1.png', mask : undefined,
+    image : undefined, mask : undefined,
     ori : 0, pos : [0, 0], size : [(0.75 * 1.77), 0.75],
     color : new util.Color([1, 1, 1]), opacity : 1,
     flipHoriz : false, flipVert : false,
@@ -1275,6 +1272,7 @@ function pracInstructRoutineBegin(snapshot) {
     // update component parameters for each repeat
     hand_hold_run = 1;
     
+    prac_instr1.setImage('Designs/prac_instr1.png');
     start_exp_press.keys = undefined;
     start_exp_press.rt = undefined;
     _start_exp_press_allKeys = [];
