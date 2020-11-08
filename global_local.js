@@ -1651,6 +1651,8 @@ function hand_hold_instrRoutineBegin(snapshot) {
         hand_hold_feedbackcorr = hand_hold_feedback2corr;
         hand_hold_feedbackincorr = hand_hold_feedback2incorr;
     }
+    console.log(hand_hold_run);
+    console.log(hold_hand_img);
     
     image_2.setImage(hand_hold_ex);
     key_resp_9.keys = undefined;
