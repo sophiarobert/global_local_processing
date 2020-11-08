@@ -297,6 +297,14 @@ function experimentInit() {
   {name: ("Designs/design2_run2.png"), path:("Designs/design2_run2.png")},
   {name: ("Designs/design3_run2.png"), path:("Designs/design3_run2.png")},
   {name: ("Designs/design4_run2.png"), path:("Designs/design4_run2.png")},
+  {name: ("Designs/design1_run1_ex.png"), path:("Designs/design1_run1_ex.png")},
+  {name: ("Designs/design2_run1_ex.png"), path:("Designs/design2_run1_ex.png")},
+  {name: ("Designs/design3_run1_ex.png"), path:("Designs/design3_run1_ex.png")},
+  {name: ("Designs/design4_run1_ex.png"), path:("Designs/design4_run1_ex.png")},
+  {name: ("Designs/design1_run2_ex.png"), path:("Designs/design1_run2_ex.png")},
+  {name: ("Designs/design2_run2_ex.png"), path:("Designs/design2_run2_ex.png")},
+  {name: ("Designs/design3_run2_ex.png"), path:("Designs/design3_run2_ex.png")},
+  {name: ("Designs/design4_run2_ex.png"), path:("Designs/design4_run2_ex.png")},
   {name: ("Designs/design1_run1.csv"), path:("Designs/design1_run1.csv")},
   {name: ("Designs/design2_run1.csv"), path:("Designs/design2_run1.csv")},
   {name: ("Designs/design3_run1.csv"), path:("Designs/design3_run1.csv")},
@@ -304,7 +312,14 @@ function experimentInit() {
   {name: ("Designs/design1_run2.csv"), path:("Designs/design1_run2.csv")},
   {name: ("Designs/design2_run2.csv"), path:("Designs/design2_run2.csv")},
   {name: ("Designs/design3_run2.csv"), path:("Designs/design3_run2.csv")},
-  {name: ("Designs/design4_run2.csv"), path:("Designs/design4_run2.csv")}]);
+  {name: ("Designs/design4_run2.csv"), path:("Designs/design4_run2.csv")},
+  {name: ("Designs/prac_instr1.png"), path:("Designs/prac_instr1.png")},
+  {name: ("Designs/prac_instr2.png"), path:("Designs/prac_instr2.png")},
+  {name: ("Designs/prac_instr3.png"), path:("Designs/prac_instr3.png")},
+  {name: ("Designs/hand_hold_global_corr.png"), path:("Designs/hand_hold_global_corr.png")},
+  {name: ("Designs/hand_hold_global_incorr.png"), path:("Designs/hand_hold_global_incorr.png")},
+  {name: ("Designs/hand_hold_local_corr.png"), path:("Designs/hand_hold_local_corr.png")},
+  {name: ("Designs/hand_hold_local_incorr.png"), path:("Designs/hand_hold_local_incorr.png")}]);
   
   expInfo['OS'] = window.navigator.platform;
   expInfo['xResolution'] = screen.width;
