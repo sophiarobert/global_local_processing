@@ -148,8 +148,8 @@
         <Param name="Before JS Experiment" updates="constant" val="" valType="extendedCode"/>
         <Param name="Begin Experiment" updates="constant" val="&amp;#10;fixColor_opts = [&quot;black&quot;, &quot;white&quot;];&amp;#10;shuffle(fixColor_opts);&amp;#10;prac1_fixColSwitch = [0,0,0,1];&amp;#10;shuffle(prac1_fixColSwitch);&amp;#10;prac2_fixColSwitch = [0,0,0,1];&amp;#10;shuffle(prac2_fixColSwitch);&amp;#10;fixColorIdx_Run1 =  [0, 0, 0, 0, 0, 0, 0, 1, &amp;#10;                                   0, 0, 0, 0, 0, 0, 0, 1, &amp;#10;                                   0, 0, 0, 0, 0, 0, 0, 1, &amp;#10;                                   0, 0, 0, 0, 0, 0, 0, 1, &amp;#10;                                   0, 0, 0, 0, 0, 0, 0, 1, &amp;#10;                                   0, 0, 0, 0, 0, 0, 0, 1, &amp;#10;                                   0, 0, 0, 0, 0, 0, 0, 1, &amp;#10;                                   0, 0, 0, 0, 0, 0, 0, 1, &amp;#10;                                   0, 0, 0, 0, 0, 0, 0, 1, &amp;#10;                                   0, 0, 0, 0, 0, 0, 0, 1, &amp;#10;                                   0, 0, 0, 0, 0, 0, 0, 1,&amp;#10;                                   0, 0, 0, 0, 0, 0, 0, 1];&amp;#10;shuffle(fixColorIdx_Run1);&amp;#10;fixColorIdx_Run2 = [0, 0, 0, 0, 0, 0, 0, 1, &amp;#10;                                   0, 0, 0, 0, 0, 0, 0, 1, &amp;#10;                                   0, 0, 0, 0, 0, 0, 0, 1, &amp;#10;                                   0, 0, 0, 0, 0, 0, 0, 1, &amp;#10;                                   0, 0, 0, 0, 0, 0, 0, 1, &amp;#10;                                   0, 0, 0, 0, 0, 0, 0, 1, &amp;#10;                                   0, 0, 0, 0, 0, 0, 0, 1, &amp;#10;                                   0, 0, 0, 0, 0, 0, 0, 1, &amp;#10;                                   0, 0, 0, 0, 0, 0, 0, 1, &amp;#10;                                   0, 0, 0, 0, 0, 0, 0, 1, &amp;#10;                                   0, 0, 0, 0, 0, 0, 0, 1,&amp;#10;                                   0, 0, 0, 0, 0, 0, 0, 1];&amp;#10;shuffle(fixColorIdx_Run2);" valType="extendedCode"/>
         <Param name="Begin JS Experiment" updates="constant" val="fixColor_opts = [&quot;black&quot;, &quot;white&quot;];&amp;#10;shuffle(fixColor_opts);&amp;#10;prac1_fixColSwitch = [0, 0, 0, 1];&amp;#10;shuffle(prac1_fixColSwitch);&amp;#10;prac2_fixColSwitch = [0, 0, 0, 1];&amp;#10;shuffle(prac2_fixColSwitch);&amp;#10;fixColorIdx_Run1 = [0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1];&amp;#10;shuffle(fixColorIdx_Run1);&amp;#10;fixColorIdx_Run2 = [0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1];&amp;#10;shuffle(fixColorIdx_Run2);&amp;#10;" valType="extendedCode"/>
-        <Param name="Begin JS Routine" updates="constant" val="" valType="extendedCode"/>
-        <Param name="Begin Routine" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Begin JS Routine" updates="constant" val="hand_hold_run = 1;&amp;#10;" valType="extendedCode"/>
+        <Param name="Begin Routine" updates="constant" val="hand_hold_run = 1" valType="extendedCode"/>
         <Param name="Code Type" updates="None" val="Auto-&gt;JS" valType="str"/>
         <Param name="Each Frame" updates="constant" val="" valType="extendedCode"/>
         <Param name="Each JS Frame" updates="constant" val="" valType="extendedCode"/>
@@ -160,30 +160,31 @@
         <Param name="disabled" updates="None" val="False" valType="bool"/>
         <Param name="name" updates="None" val="code_2" valType="code"/>
       </CodeComponent>
-      <TextComponent name="start_exp_text">
-        <Param name="color" updates="constant" val="black" valType="str"/>
+      <ImageComponent name="prac_instr1">
+        <Param name="color" updates="constant" val="$[1,1,1]" valType="str"/>
         <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
         <Param name="disabled" updates="None" val="False" valType="bool"/>
         <Param name="durationEstim" updates="None" val="" valType="code"/>
-        <Param name="flip" updates="constant" val="" valType="str"/>
-        <Param name="font" updates="constant" val="Arial" valType="str"/>
-        <Param name="languageStyle" updates="None" val="LTR" valType="str"/>
-        <Param name="letterHeight" updates="constant" val="0.05" valType="code"/>
-        <Param name="name" updates="None" val="start_exp_text" valType="code"/>
+        <Param name="flipHoriz" updates="constant" val="False" valType="bool"/>
+        <Param name="flipVert" updates="constant" val="False" valType="bool"/>
+        <Param name="image" updates="constant" val="Designs/prac_instr1.png" valType="str"/>
+        <Param name="interpolate" updates="constant" val="linear" valType="str"/>
+        <Param name="mask" updates="constant" val="None" valType="str"/>
+        <Param name="name" updates="None" val="prac_instr1" valType="code"/>
         <Param name="opacity" updates="constant" val="1" valType="code"/>
         <Param name="ori" updates="constant" val="0" valType="code"/>
         <Param name="pos" updates="constant" val="(0, 0)" valType="code"/>
         <Param name="saveStartStop" updates="None" val="False" valType="bool"/>
+        <Param name="size" updates="constant" val="(0.75*1.77, 0.75)" valType="code"/>
         <Param name="startEstim" updates="None" val="" valType="code"/>
         <Param name="startType" updates="None" val="time (s)" valType="str"/>
         <Param name="startVal" updates="None" val="0.0" valType="code"/>
         <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
         <Param name="stopVal" updates="constant" val="" valType="code"/>
         <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
-        <Param name="text" updates="constant" val="You will play two games. &amp;#10;Before you start, let’s do some practice!&amp;#10;&amp;#10;Are you ready? &amp;#10;Press Space to start practice!" valType="extendedStr"/>
+        <Param name="texture resolution" updates="constant" val="512" valType="code"/>
         <Param name="units" updates="None" val="from exp settings" valType="str"/>
-        <Param name="wrapWidth" updates="constant" val="" valType="code"/>
-      </TextComponent>
+      </ImageComponent>
       <KeyboardComponent name="start_exp_press">
         <Param name="allowedKeys" updates="constant" val="'space'," valType="code"/>
         <Param name="correctAns" updates="constant" val="" valType="str"/>
@@ -195,7 +196,7 @@
         <Param name="saveStartStop" updates="None" val="False" valType="bool"/>
         <Param name="startEstim" updates="None" val="" valType="code"/>
         <Param name="startType" updates="None" val="time (s)" valType="str"/>
-        <Param name="startVal" updates="None" val="1" valType="code"/>
+        <Param name="startVal" updates="None" val="0.3" valType="code"/>
         <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
         <Param name="stopVal" updates="constant" val="" valType="code"/>
         <Param name="store" updates="constant" val="nothing" valType="str"/>
@@ -288,9 +289,9 @@
         <Param name="Before JS Experiment" updates="constant" val="" valType="extendedCode"/>
         <Param name="Begin Experiment" updates="constant" val="pTrial_run1 = 1&amp;#10;pracTotal_run1 = 4&amp;#10;&amp;#10;pTrial_run2 = 1&amp;#10;pracTotal_run2 = 4&amp;#10;" valType="extendedCode"/>
         <Param name="Begin JS Experiment" updates="constant" val="pTrial_run1 = 1;&amp;#10;pracTotal_run1 = 4;&amp;#10;pTrial_run2 = 1;&amp;#10;pracTotal_run2 = 4;&amp;#10;" valType="extendedCode"/>
-        <Param name="Begin JS Routine" updates="constant" val="trialMsg = (((&quot;Practice: &quot; + pTrial_run1.toString()) + &quot; of &quot;) + pracTotal_run1.toString());&amp;#10;if (((pTrial_run1 - 1) === 0)) {&amp;#10;    currFix = fixColor_opts[0];&amp;#10;} else {&amp;#10;    if ((prac1_fixColSwitch[(pTrial_run1 - 1)] === 0)) {&amp;#10;        currFix = currFix;&amp;#10;    } else {&amp;#10;        if ((currFix === &quot;white&quot;)) {&amp;#10;            currFix = &quot;black&quot;;&amp;#10;        } else {&amp;#10;            if ((currFix === &quot;white&quot;)) {&amp;#10;                currFix = &quot;black&quot;;&amp;#10;            }&amp;#10;        }&amp;#10;    }&amp;#10;}&amp;#10;a = 1.25;&amp;#10;b = 1.75;&amp;#10;fixDur = (((b - a) * random()) + a);&amp;#10;if ((expInfo[&quot;position&quot;] === &quot;0&quot;)) {&amp;#10;    xPosition = 0;&amp;#10;} else {&amp;#10;    if ((expInfo[&quot;position&quot;] === &quot;2&quot;)) {&amp;#10;        if ((side === &quot;left&quot;)) {&amp;#10;            xPosition = (- (width4deg * x_scale));&amp;#10;        } else {&amp;#10;            if ((side === &quot;right&quot;)) {&amp;#10;                xPosition = (width4deg * x_scale);&amp;#10;            }&amp;#10;        }&amp;#10;    } else {&amp;#10;        if ((expInfo[&quot;position&quot;] === &quot;1&quot;)) {&amp;#10;            xPosition = (- (width4deg * x_scale));&amp;#10;        } else {&amp;#10;            if ((expInfo[&quot;position&quot;] === &quot;3&quot;)) {&amp;#10;                xPosition = (width4deg * x_scale);&amp;#10;            }&amp;#10;        }&amp;#10;    }&amp;#10;}&amp;#10;thisExp.addData(&quot;fixpR1&quot;, prac1_fixColSwitch[(pTrial_run1 - 1)]);&amp;#10;" valType="extendedCode"/>
-        <Param name="Begin Routine" updates="constant" val="trialMsg = &quot;Practice: &quot; + str(pTrial_run1) + ' of ' + str(pracTotal_run1)&amp;#10;if pTrial_run1-1 == 0:&amp;#10;    currFix = fixColor_opts[0]&amp;#10;else:&amp;#10;    if prac1_fixColSwitch[pTrial_run1-1] == 0:&amp;#10;        currFix = currFix&amp;#10;    elif currFix == 'white':&amp;#10;        currFix = 'black'&amp;#10;    elif currFix == 'white':&amp;#10;        currFix = 'black'&amp;#10; &amp;#10;a = 1.25 # min ITI&amp;#10;b = 1.75 # max ITI&amp;#10;fixDur = (b-a) * random()+a&amp;#10;&amp;#10;if expInfo['position'] == '0':&amp;#10;    xPosition = 0&amp;#10;elif expInfo['position'] == '2':&amp;#10;    if side == 'left':&amp;#10;        xPosition = -(width4deg*x_scale)&amp;#10;    elif side == 'right':&amp;#10;        xPosition = width4deg*x_scale&amp;#10;elif expInfo['position'] == '1':&amp;#10;    xPosition = -(width4deg*x_scale)&amp;#10;elif expInfo['position'] == '3':&amp;#10;    xPosition = width4deg*x_scale&amp;#10;&amp;#10;thisExp.addData('fixpR1', prac1_fixColSwitch[pTrial_run1-1])" valType="extendedCode"/>
-        <Param name="Code Type" updates="None" val="Auto-&gt;JS" valType="str"/>
+        <Param name="Begin JS Routine" updates="constant" val="trialMsg = (((&quot;Practice: &quot; + pTrial_run1.toString()) + &quot; of &quot;) + pracTotal_run1.toString());&amp;#10;if (((pTrial_run1 - 1) === 0)) {&amp;#10;    currFix = fixColor_opts[0];&amp;#10;    corrfixResp = undefined;&amp;#10;} else {&amp;#10;    if ((prac1_fixColSwitch[(pTrial_run1 - 1)] === 1)) {&amp;#10;        if ((currFix === &quot;white&quot;)) {&amp;#10;            currFix = &quot;black&quot;;&amp;#10;            corrfixResp = &quot;space&quot;;&amp;#10;        } else {&amp;#10;            if ((currFix === &quot;black&quot;)) {&amp;#10;                currFix = &quot;white&quot;;&amp;#10;                corrfixResp = &quot;space&quot;;&amp;#10;            }&amp;#10;        }&amp;#10;    } else {&amp;#10;        currFix = currFix;&amp;#10;        corrfixResp = undefined;&amp;#10;    }&amp;#10;}&amp;#10;a = 1.25;&amp;#10;b = 1.75;&amp;#10;fixDur = (((b - a) * random()) + a);&amp;#10;if ((expInfo[&quot;position&quot;] === &quot;0&quot;)) {&amp;#10;    xPosition = 0;&amp;#10;} else {&amp;#10;    if ((expInfo[&quot;position&quot;] === &quot;2&quot;)) {&amp;#10;        if ((side === &quot;left&quot;)) {&amp;#10;            xPosition = (- (width4deg * x_scale));&amp;#10;        } else {&amp;#10;            if ((side === &quot;right&quot;)) {&amp;#10;                xPosition = (width4deg * x_scale);&amp;#10;            }&amp;#10;        }&amp;#10;    } else {&amp;#10;        if ((expInfo[&quot;position&quot;] === &quot;1&quot;)) {&amp;#10;            xPosition = (- (width4deg * x_scale));&amp;#10;        } else {&amp;#10;            if ((expInfo[&quot;position&quot;] === &quot;3&quot;)) {&amp;#10;                xPosition = (width4deg * x_scale);&amp;#10;            }&amp;#10;        }&amp;#10;    }&amp;#10;}&amp;#10;thisExp.addData(&quot;fixpR1&quot;, prac1_fixColSwitch[(pTrial_run1 - 1)]);&amp;#10;" valType="extendedCode"/>
+        <Param name="Begin Routine" updates="constant" val="trialMsg = &quot;Practice: &quot; + str(pTrial_run1) + ' of ' + str(pracTotal_run1)&amp;#10;if pTrial_run1-1 == 0:&amp;#10;    currFix = fixColor_opts[0]&amp;#10;    corrfixResp = None&amp;#10;else:&amp;#10;    if prac1_fixColSwitch[pTrial_run1-1] == 1:&amp;#10;        if currFix == 'white':&amp;#10;            currFix = 'black'&amp;#10;            corrfixResp = 'space'&amp;#10;        elif currFix == 'black':&amp;#10;            currFix = 'white'&amp;#10;            corrfixResp = 'space'&amp;#10;    else:&amp;#10;        currFix = currFix&amp;#10;        corrfixResp = None&amp;#10;a = 1.25 # min ITI&amp;#10;b = 1.75 # max ITI&amp;#10;fixDur = (b-a) * random()+a&amp;#10;&amp;#10;if expInfo['position'] == '0':&amp;#10;    xPosition = 0&amp;#10;elif expInfo['position'] == '2':&amp;#10;    if side == 'left':&amp;#10;        xPosition = -(width4deg*x_scale)&amp;#10;    elif side == 'right':&amp;#10;        xPosition = width4deg*x_scale&amp;#10;elif expInfo['position'] == '1':&amp;#10;    xPosition = -(width4deg*x_scale)&amp;#10;elif expInfo['position'] == '3':&amp;#10;    xPosition = width4deg*x_scale&amp;#10;&amp;#10;thisExp.addData('fixpR1', prac1_fixColSwitch[pTrial_run1-1])" valType="extendedCode"/>
+        <Param name="Code Type" updates="None" val="Both" valType="str"/>
         <Param name="Each Frame" updates="constant" val="" valType="extendedCode"/>
         <Param name="Each JS Frame" updates="constant" val="" valType="extendedCode"/>
         <Param name="End Experiment" updates="constant" val="" valType="extendedCode"/>
@@ -324,24 +325,6 @@
         <Param name="units" updates="None" val="from exp settings" valType="str"/>
         <Param name="wrapWidth" updates="constant" val="" valType="code"/>
       </TextComponent>
-      <KeyboardComponent name="fix_respP1_1">
-        <Param name="allowedKeys" updates="constant" val="'space'," valType="code"/>
-        <Param name="correctAns" updates="constant" val="" valType="str"/>
-        <Param name="disabled" updates="None" val="False" valType="bool"/>
-        <Param name="discard previous" updates="constant" val="True" valType="bool"/>
-        <Param name="durationEstim" updates="None" val="" valType="code"/>
-        <Param name="forceEndRoutine" updates="constant" val="False" valType="bool"/>
-        <Param name="name" updates="None" val="fix_respP1_1" valType="code"/>
-        <Param name="saveStartStop" updates="None" val="False" valType="bool"/>
-        <Param name="startEstim" updates="None" val="" valType="code"/>
-        <Param name="startType" updates="None" val="time (s)" valType="str"/>
-        <Param name="startVal" updates="None" val="0.0" valType="code"/>
-        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
-        <Param name="stopVal" updates="constant" val="$fixDur" valType="code"/>
-        <Param name="store" updates="constant" val="last key" valType="str"/>
-        <Param name="storeCorrect" updates="constant" val="False" valType="bool"/>
-        <Param name="syncScreenRefresh" updates="constant" val="True" valType="bool"/>
-      </KeyboardComponent>
     </Routine>
     <Routine name="prac_img">
       <TextComponent name="text_5">
@@ -362,7 +345,7 @@
         <Param name="startType" updates="None" val="time (s)" valType="str"/>
         <Param name="startVal" updates="None" val="0.0" valType="code"/>
         <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
-        <Param name="stopVal" updates="constant" val="" valType="code"/>
+        <Param name="stopVal" updates="constant" val="4" valType="code"/>
         <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
         <Param name="text" updates="constant" val="+" valType="extendedStr"/>
         <Param name="units" updates="None" val="from exp settings" valType="str"/>
@@ -388,7 +371,7 @@
         <Param name="startType" updates="None" val="time (s)" valType="str"/>
         <Param name="startVal" updates="None" val="0.0" valType="code"/>
         <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
-        <Param name="stopVal" updates="constant" val="" valType="code"/>
+        <Param name="stopVal" updates="constant" val="4" valType="code"/>
         <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
         <Param name="texture resolution" updates="constant" val="512" valType="code"/>
         <Param name="units" updates="None" val="from exp settings" valType="str"/>
@@ -399,34 +382,34 @@
         <Param name="disabled" updates="None" val="False" valType="bool"/>
         <Param name="discard previous" updates="constant" val="True" valType="bool"/>
         <Param name="durationEstim" updates="None" val="" valType="code"/>
-        <Param name="forceEndRoutine" updates="constant" val="True" valType="bool"/>
+        <Param name="forceEndRoutine" updates="constant" val="False" valType="bool"/>
         <Param name="name" updates="None" val="prac_resp" valType="code"/>
         <Param name="saveStartStop" updates="None" val="False" valType="bool"/>
         <Param name="startEstim" updates="None" val="" valType="code"/>
         <Param name="startType" updates="None" val="time (s)" valType="str"/>
         <Param name="startVal" updates="None" val="0.0" valType="code"/>
         <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
-        <Param name="stopVal" updates="constant" val="" valType="code"/>
+        <Param name="stopVal" updates="constant" val="4" valType="code"/>
         <Param name="store" updates="constant" val="last key" valType="str"/>
         <Param name="storeCorrect" updates="constant" val="True" valType="bool"/>
         <Param name="syncScreenRefresh" updates="constant" val="True" valType="bool"/>
       </KeyboardComponent>
-      <KeyboardComponent name="prac_fix_resp_2">
+      <KeyboardComponent name="prac_fix_resp">
         <Param name="allowedKeys" updates="constant" val="'space'," valType="code"/>
-        <Param name="correctAns" updates="constant" val="" valType="str"/>
+        <Param name="correctAns" updates="constant" val="$corrfixResp" valType="str"/>
         <Param name="disabled" updates="None" val="False" valType="bool"/>
-        <Param name="discard previous" updates="constant" val="True" valType="bool"/>
+        <Param name="discard previous" updates="constant" val="False" valType="bool"/>
         <Param name="durationEstim" updates="None" val="" valType="code"/>
         <Param name="forceEndRoutine" updates="constant" val="False" valType="bool"/>
-        <Param name="name" updates="None" val="prac_fix_resp_2" valType="code"/>
+        <Param name="name" updates="None" val="prac_fix_resp" valType="code"/>
         <Param name="saveStartStop" updates="None" val="False" valType="bool"/>
         <Param name="startEstim" updates="None" val="" valType="code"/>
         <Param name="startType" updates="None" val="time (s)" valType="str"/>
         <Param name="startVal" updates="None" val="0.0" valType="code"/>
         <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
-        <Param name="stopVal" updates="constant" val="" valType="code"/>
+        <Param name="stopVal" updates="constant" val="4" valType="code"/>
         <Param name="store" updates="constant" val="last key" valType="str"/>
-        <Param name="storeCorrect" updates="constant" val="False" valType="bool"/>
+        <Param name="storeCorrect" updates="constant" val="True" valType="bool"/>
         <Param name="syncScreenRefresh" updates="constant" val="True" valType="bool"/>
       </KeyboardComponent>
     </Routine>
@@ -436,8 +419,8 @@
         <Param name="Before JS Experiment" updates="constant" val="" valType="extendedCode"/>
         <Param name="Begin Experiment" updates="constant" val="" valType="extendedCode"/>
         <Param name="Begin JS Experiment" updates="constant" val="" valType="extendedCode"/>
-        <Param name="Begin JS Routine" updates="constant" val="feedIM = &quot;&quot;;&amp;#10;if ((prac_resp.keys === corr)) {&amp;#10;    feedIM = &quot;Stimuli/greenCheck.png&quot;;&amp;#10;} else {&amp;#10;    if ((prac_resp.keys !== corr)) {&amp;#10;        feedIM = &quot;Stimuli/redWrong.png&quot;;&amp;#10;    }&amp;#10;}&amp;#10;" valType="extendedCode"/>
-        <Param name="Begin Routine" updates="constant" val="feedIM =''&amp;#10;if prac_resp.keys == corr:&amp;#10;    feedIM = 'Stimuli/greenCheck.png'&amp;#10;    &amp;#10;elif prac_resp.keys != corr:&amp;#10;    feedIM = 'Stimuli/redWrong.png'&amp;#10;" valType="extendedCode"/>
+        <Param name="Begin JS Routine" updates="constant" val="feedIM = &quot;&quot;;&amp;#10;if ((prac_resp.keys === corr)) {&amp;#10;    if ((prac_fix_resp.keys === corrfixResp)) {&amp;#10;        feedIM = &quot;Stimuli/greenCheck.png&quot;;&amp;#10;        prac_msg = &quot;Well done!&quot;;&amp;#10;    } else {&amp;#10;        if ((prac_fix_resp.keys !== corrfixResp)) {&amp;#10;            feedIM = &quot;Stimuli/redWrong.png&quot;;&amp;#10;            prac_msg = &quot;Oops, your picture response was right but the cross response was wrong.&quot;;&amp;#10;        }&amp;#10;    }&amp;#10;} else {&amp;#10;    if ((prac_resp.keys !== corr)) {&amp;#10;        if ((prac_fix_resp.keys === corrfixResp)) {&amp;#10;            feedIM = &quot;Stimuli/redWrong.png&quot;;&amp;#10;            prac_msg = &quot;Oops, your cross response was right but the picture response was wrong.&quot;;&amp;#10;        } else {&amp;#10;            if ((prac_fix_resp.keys !== corrfixResp)) {&amp;#10;                feedIM = &quot;Stimuli/redWrong.png&quot;;&amp;#10;                prac_msg = &quot;Oops, both responses were wrong.&quot;;&amp;#10;            }&amp;#10;        }&amp;#10;    }&amp;#10;}&amp;#10;" valType="extendedCode"/>
+        <Param name="Begin Routine" updates="constant" val="feedIM =''&amp;#10;if prac_resp.keys == corr: &amp;#10;    if prac_fix_resp.keys == corrfixResp:&amp;#10;        feedIM = 'Stimuli/greenCheck.png'&amp;#10;        prac_msg = 'Well done!'&amp;#10;    elif prac_fix_resp.keys != corrfixResp:&amp;#10;        feedIM = 'Stimuli/redWrong.png'&amp;#10;        prac_msg = 'Oops, your picture response was right but the cross response was wrong.'&amp;#10;elif prac_resp.keys != corr:&amp;#10;    if prac_fix_resp.keys == corrfixResp:&amp;#10;        feedIM = 'Stimuli/redWrong.png'&amp;#10;        prac_msg = 'Oops, your cross response was right but the picture response was wrong.'&amp;#10;    elif prac_fix_resp.keys != corrfixResp:&amp;#10;        feedIM = 'Stimuli/redWrong.png'&amp;#10;        prac_msg = 'Oops, both responses were wrong.'" valType="extendedCode"/>
         <Param name="Code Type" updates="None" val="Auto-&gt;JS" valType="str"/>
         <Param name="Each Frame" updates="constant" val="" valType="extendedCode"/>
         <Param name="Each JS Frame" updates="constant" val="" valType="extendedCode"/>
@@ -463,16 +446,40 @@
         <Param name="ori" updates="constant" val="0" valType="code"/>
         <Param name="pos" updates="constant" val="(0, 0)" valType="code"/>
         <Param name="saveStartStop" updates="None" val="False" valType="bool"/>
-        <Param name="size" updates="constant" val="(0.5, 0.5)" valType="code"/>
+        <Param name="size" updates="constant" val="(0.25, 0.25)" valType="code"/>
         <Param name="startEstim" updates="None" val="" valType="code"/>
         <Param name="startType" updates="None" val="time (s)" valType="str"/>
         <Param name="startVal" updates="None" val="0.0" valType="code"/>
         <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
-        <Param name="stopVal" updates="constant" val="1.0" valType="code"/>
+        <Param name="stopVal" updates="constant" val="2" valType="code"/>
         <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
         <Param name="texture resolution" updates="constant" val="512" valType="code"/>
         <Param name="units" updates="None" val="from exp settings" valType="str"/>
       </ImageComponent>
+      <TextComponent name="feedback_msg">
+        <Param name="color" updates="constant" val="black" valType="str"/>
+        <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="flip" updates="constant" val="" valType="str"/>
+        <Param name="font" updates="constant" val="Arial" valType="str"/>
+        <Param name="languageStyle" updates="None" val="LTR" valType="str"/>
+        <Param name="letterHeight" updates="constant" val="0.05" valType="code"/>
+        <Param name="name" updates="None" val="feedback_msg" valType="code"/>
+        <Param name="opacity" updates="constant" val="1" valType="code"/>
+        <Param name="ori" updates="constant" val="0" valType="code"/>
+        <Param name="pos" updates="constant" val="(0, -0.25)" valType="code"/>
+        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="stopVal" updates="constant" val="2" valType="code"/>
+        <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
+        <Param name="text" updates="set every repeat" val="$prac_msg" valType="extendedStr"/>
+        <Param name="units" updates="None" val="from exp settings" valType="str"/>
+        <Param name="wrapWidth" updates="constant" val="" valType="code"/>
+      </TextComponent>
     </Routine>
     <Routine name="trial_instr_run1">
       <CodeComponent name="code_6">
@@ -542,8 +549,8 @@
         <Param name="Before JS Experiment" updates="constant" val="" valType="extendedCode"/>
         <Param name="Begin Experiment" updates="constant" val="" valType="extendedCode"/>
         <Param name="Begin JS Experiment" updates="constant" val="" valType="extendedCode"/>
-        <Param name="Begin JS Routine" updates="constant" val="if (((Trial_run1 - 1) === 0)) {&amp;#10;    currFix = fixColor_opts[0];&amp;#10;} else {&amp;#10;    if ((fixColorIdx_Run1[(Trial_run1 - 1)] === 0)) {&amp;#10;        currFix = currFix;&amp;#10;    } else {&amp;#10;        if ((currFix === &quot;white&quot;)) {&amp;#10;            currFix = &quot;black&quot;;&amp;#10;        } else {&amp;#10;            if ((currFix === &quot;white&quot;)) {&amp;#10;                currFix = &quot;black&quot;;&amp;#10;            }&amp;#10;        }&amp;#10;    }&amp;#10;}&amp;#10;a = 1.25;&amp;#10;b = 1.75;&amp;#10;fixDur = (((b - a) * random()) + a);&amp;#10;if ((expInfo[&quot;position&quot;] === &quot;0&quot;)) {&amp;#10;    xPosition = 0;&amp;#10;} else {&amp;#10;    if ((expInfo[&quot;position&quot;] === &quot;2&quot;)) {&amp;#10;        if ((side === &quot;left&quot;)) {&amp;#10;            xPosition = (- (width4deg * x_scale));&amp;#10;        } else {&amp;#10;            if ((side === &quot;right&quot;)) {&amp;#10;                xPosition = (width4deg * x_scale);&amp;#10;            }&amp;#10;        }&amp;#10;    } else {&amp;#10;        if ((expInfo[&quot;position&quot;] === &quot;1&quot;)) {&amp;#10;            xPosition = (- (width4deg * x_scale));&amp;#10;        } else {&amp;#10;            if ((expInfo[&quot;position&quot;] === &quot;3&quot;)) {&amp;#10;                xPosition = (width4deg * x_scale);&amp;#10;            }&amp;#10;        }&amp;#10;    }&amp;#10;}&amp;#10;thisExp.addData(&quot;fixR1&quot;, fixColorIdx_Run1[(Trial_run1 - 1)]);&amp;#10;" valType="extendedCode"/>
-        <Param name="Begin Routine" updates="constant" val="if Trial_run1-1 == 0:&amp;#10;    currFix = fixColor_opts[0]&amp;#10;else:&amp;#10;    if fixColorIdx_Run1[Trial_run1-1] == 0:&amp;#10;        currFix = currFix&amp;#10;    elif currFix == 'white':&amp;#10;        currFix = 'black'&amp;#10;    elif currFix == 'white':&amp;#10;        currFix = 'black'&amp;#10;&amp;#10;a = 1.25 # min ITI&amp;#10;b = 1.75 # max ITI&amp;#10;fixDur = (b-a) * random()+a&amp;#10;&amp;#10;if expInfo['position'] == '0':&amp;#10;    xPosition = 0&amp;#10;elif expInfo['position'] == '2':&amp;#10;    if side == 'left':&amp;#10;        xPosition = -(width4deg*x_scale)&amp;#10;    elif side == 'right':&amp;#10;        xPosition = width4deg*x_scale&amp;#10;elif expInfo['position'] == '1':&amp;#10;    xPosition = -(width4deg*x_scale)&amp;#10;elif expInfo['position'] == '3':&amp;#10;    xPosition = width4deg*x_scale&amp;#10;&amp;#10;thisExp.addData('fixR1', fixColorIdx_Run1[Trial_run1-1])" valType="extendedCode"/>
+        <Param name="Begin JS Routine" updates="constant" val="if (((Trial_run1 - 1) === 0)) {&amp;#10;    currFix = fixColor_opts[0];&amp;#10;} else {&amp;#10;    if ((fixColorIdx_Run1[(Trial_run1 - 1)] === 0)) {&amp;#10;        currFix = currFix;&amp;#10;    } else {&amp;#10;        if ((fixColorIdx_Run1[(Trial_run1 - 1)] === 1)) {&amp;#10;            if ((currFix === &quot;white&quot;)) {&amp;#10;                currFix = &quot;black&quot;;&amp;#10;            } else {&amp;#10;                if ((currFix === &quot;black&quot;)) {&amp;#10;                    currFix = &quot;white&quot;;&amp;#10;                }&amp;#10;            }&amp;#10;        }&amp;#10;    }&amp;#10;}&amp;#10;a = 1.25;&amp;#10;b = 1.75;&amp;#10;fixDur = (((b - a) * random()) + a);&amp;#10;if ((expInfo[&quot;position&quot;] === &quot;0&quot;)) {&amp;#10;    xPosition = 0;&amp;#10;} else {&amp;#10;    if ((expInfo[&quot;position&quot;] === &quot;2&quot;)) {&amp;#10;        if ((side === &quot;left&quot;)) {&amp;#10;            xPosition = (- (width4deg * x_scale));&amp;#10;        } else {&amp;#10;            if ((side === &quot;right&quot;)) {&amp;#10;                xPosition = (width4deg * x_scale);&amp;#10;            }&amp;#10;        }&amp;#10;    } else {&amp;#10;        if ((expInfo[&quot;position&quot;] === &quot;1&quot;)) {&amp;#10;            xPosition = (- (width4deg * x_scale));&amp;#10;        } else {&amp;#10;            if ((expInfo[&quot;position&quot;] === &quot;3&quot;)) {&amp;#10;                xPosition = (width4deg * x_scale);&amp;#10;            }&amp;#10;        }&amp;#10;    }&amp;#10;}&amp;#10;thisExp.addData(&quot;fixR1&quot;, fixColorIdx_Run1[(Trial_run1 - 1)]);&amp;#10;" valType="extendedCode"/>
+        <Param name="Begin Routine" updates="constant" val="if Trial_run1-1 == 0:&amp;#10;    currFix = fixColor_opts[0]&amp;#10;else:&amp;#10;    if fixColorIdx_Run1[Trial_run1-1] == 0:&amp;#10;        currFix = currFix&amp;#10;    elif fixColorIdx_Run1[Trial_run1-1] == 1:&amp;#10;        if currFix == 'white':&amp;#10;            currFix = 'black'&amp;#10;        elif currFix == 'black':&amp;#10;            currFix = 'white'&amp;#10;&amp;#10;a = 1.25 # min ITI&amp;#10;b = 1.75 # max ITI&amp;#10;fixDur = (b-a) * random()+a&amp;#10;&amp;#10;if expInfo['position'] == '0':&amp;#10;    xPosition = 0&amp;#10;elif expInfo['position'] == '2':&amp;#10;    if side == 'left':&amp;#10;        xPosition = -(width4deg*x_scale)&amp;#10;    elif side == 'right':&amp;#10;        xPosition = width4deg*x_scale&amp;#10;elif expInfo['position'] == '1':&amp;#10;    xPosition = -(width4deg*x_scale)&amp;#10;elif expInfo['position'] == '3':&amp;#10;    xPosition = width4deg*x_scale&amp;#10;&amp;#10;thisExp.addData('fixR1', fixColorIdx_Run1[Trial_run1-1])" valType="extendedCode"/>
         <Param name="Code Type" updates="None" val="Auto-&gt;JS" valType="str"/>
         <Param name="Each Frame" updates="constant" val="" valType="extendedCode"/>
         <Param name="Each JS Frame" updates="constant" val="" valType="extendedCode"/>
@@ -752,9 +759,9 @@
         <Param name="Before JS Experiment" updates="constant" val="" valType="extendedCode"/>
         <Param name="Begin Experiment" updates="constant" val="" valType="extendedCode"/>
         <Param name="Begin JS Experiment" updates="constant" val="" valType="extendedCode"/>
-        <Param name="Begin JS Routine" updates="constant" val="trialMsg = (((&quot;Practice: &quot; + pTrial_run2.toString()) + &quot; of &quot;) + pracTotal_run2.toString());&amp;#10;if (((pTrial_run2 - 1) === 0)) {&amp;#10;    currFix = fixColor_opts[0];&amp;#10;} else {&amp;#10;    if ((prac2_fixColSwitch[(pTrial_run2 - 1)] === 0)) {&amp;#10;        currFix = currFix;&amp;#10;    } else {&amp;#10;        if ((currFix === &quot;white&quot;)) {&amp;#10;            currFix = &quot;black&quot;;&amp;#10;        } else {&amp;#10;            if ((currFix === &quot;white&quot;)) {&amp;#10;                currFix = &quot;black&quot;;&amp;#10;            }&amp;#10;        }&amp;#10;    }&amp;#10;}&amp;#10;a = 1.25;&amp;#10;b = 1.75;&amp;#10;fixDur = (((b - a) * random()) + a);&amp;#10;if ((expInfo[&quot;position&quot;] === &quot;0&quot;)) {&amp;#10;    xPosition = 0;&amp;#10;} else {&amp;#10;    if ((expInfo[&quot;position&quot;] === &quot;2&quot;)) {&amp;#10;        if ((side === &quot;left&quot;)) {&amp;#10;            xPosition = (- (width4deg * x_scale));&amp;#10;        } else {&amp;#10;            if ((side === &quot;right&quot;)) {&amp;#10;                xPosition = (width4deg * x_scale);&amp;#10;            }&amp;#10;        }&amp;#10;    } else {&amp;#10;        if ((expInfo[&quot;position&quot;] === &quot;1&quot;)) {&amp;#10;            xPosition = (- (width4deg * x_scale));&amp;#10;        } else {&amp;#10;            if ((expInfo[&quot;position&quot;] === &quot;3&quot;)) {&amp;#10;                xPosition = (width4deg * x_scale);&amp;#10;            }&amp;#10;        }&amp;#10;    }&amp;#10;}&amp;#10;thisExp.addData(&quot;fixpR2&quot;, prac2_fixColSwitch[(pTrial_run2 - 1)]);&amp;#10;" valType="extendedCode"/>
-        <Param name="Begin Routine" updates="constant" val="trialMsg = &quot;Practice: &quot; + str(pTrial_run2) + ' of ' + str(pracTotal_run2)&amp;#10;if pTrial_run2-1 == 0:&amp;#10;    currFix = fixColor_opts[0]&amp;#10;else:&amp;#10;    if prac2_fixColSwitch[pTrial_run2-1] == 0:&amp;#10;        currFix = currFix&amp;#10;    elif  currFix == 'white':&amp;#10;        currFix = 'black'&amp;#10;    elif currFix == 'white':&amp;#10;        currFix = 'black'&amp;#10;a = 1.25 # min ITI&amp;#10;b = 1.75 # max ITI&amp;#10;fixDur = (b-a) * random()+a&amp;#10;&amp;#10;if expInfo['position'] == '0':&amp;#10;    xPosition = 0&amp;#10;elif expInfo['position'] == '2':&amp;#10;    if side == 'left':&amp;#10;        xPosition = -(width4deg*x_scale)&amp;#10;    elif side == 'right':&amp;#10;        xPosition = width4deg*x_scale&amp;#10;elif expInfo['position'] == '1':&amp;#10;    xPosition = -(width4deg*x_scale)&amp;#10;elif expInfo['position'] == '3':&amp;#10;    xPosition = width4deg*x_scale&amp;#10;&amp;#10;thisExp.addData('fixpR2', prac2_fixColSwitch[pTrial_run2-1])" valType="extendedCode"/>
-        <Param name="Code Type" updates="None" val="Auto-&gt;JS" valType="str"/>
+        <Param name="Begin JS Routine" updates="constant" val="trialMsg = (((&quot;Practice: &quot; + pTrial_run2.toString()) + &quot; of &quot;) + pracTotal_run2.toString());&amp;#10;if (((pTrial_run2 - 1) === 0)) {&amp;#10;    currFix = fixColor_opts[0];&amp;#10;    corrfixResp = undefined;&amp;#10;} else {&amp;#10;    if ((prac2_fixColSwitch[(pTrial_run2 - 1)] === 0)) {&amp;#10;        currFix = currFix;&amp;#10;        corrfixResp = undefined;&amp;#10;    } else {&amp;#10;        if ((prac2_fixColSwitch[(pTrial_run2 - 1)] === 1)) {&amp;#10;            if ((currFix === &quot;white&quot;)) {&amp;#10;                currFix = &quot;black&quot;;&amp;#10;                corrfixResp = &quot;space&quot;;&amp;#10;            } else {&amp;#10;                if ((currFix === &quot;black&quot;)) {&amp;#10;                    currFix = &quot;white&quot;;&amp;#10;                    corrfixResp = &quot;space&quot;;&amp;#10;                }&amp;#10;            }&amp;#10;        }&amp;#10;    }&amp;#10;}&amp;#10;a = 1.25;&amp;#10;b = 1.75;&amp;#10;fixDur = (((b - a) * random()) + a);&amp;#10;if ((expInfo[&quot;position&quot;] === &quot;0&quot;)) {&amp;#10;    xPosition = 0;&amp;#10;} else {&amp;#10;    if ((expInfo[&quot;position&quot;] === &quot;2&quot;)) {&amp;#10;        if ((side === &quot;left&quot;)) {&amp;#10;            xPosition = (- (width4deg * x_scale));&amp;#10;        } else {&amp;#10;            if ((side === &quot;right&quot;)) {&amp;#10;                xPosition = (width4deg * x_scale);&amp;#10;            }&amp;#10;        }&amp;#10;    } else {&amp;#10;        if ((expInfo[&quot;position&quot;] === &quot;1&quot;)) {&amp;#10;            xPosition = (- (width4deg * x_scale));&amp;#10;        } else {&amp;#10;            if ((expInfo[&quot;position&quot;] === &quot;3&quot;)) {&amp;#10;                xPosition = (width4deg * x_scale);&amp;#10;            }&amp;#10;        }&amp;#10;    }&amp;#10;}&amp;#10;thisExp.addData(&quot;fixpR2&quot;, prac2_fixColSwitch[(pTrial_run2 - 1)]);&amp;#10;" valType="extendedCode"/>
+        <Param name="Begin Routine" updates="constant" val="trialMsg = &quot;Practice: &quot; + str(pTrial_run2) + ' of ' + str(pracTotal_run2)&amp;#10;if pTrial_run2-1 == 0:&amp;#10;    currFix = fixColor_opts[0]&amp;#10;    corrfixResp = None&amp;#10;else:&amp;#10;    if prac2_fixColSwitch[pTrial_run2-1] == 0:&amp;#10;        currFix = currFix&amp;#10;        corrfixResp = None&amp;#10;    elif  prac2_fixColSwitch[pTrial_run2-1] == 1:&amp;#10;        if currFix == 'white':&amp;#10;            currFix = 'black'&amp;#10;            corrfixResp = 'space'&amp;#10;        elif currFix == 'black':&amp;#10;            currFix = 'white'&amp;#10;            corrfixResp = 'space'&amp;#10;a = 1.25 # min ITI&amp;#10;b = 1.75 # max ITI&amp;#10;fixDur = (b-a) * random()+a&amp;#10;&amp;#10;if expInfo['position'] == '0':&amp;#10;    xPosition = 0&amp;#10;elif expInfo['position'] == '2':&amp;#10;    if side == 'left':&amp;#10;        xPosition = -(width4deg*x_scale)&amp;#10;    elif side == 'right':&amp;#10;        xPosition = width4deg*x_scale&amp;#10;elif expInfo['position'] == '1':&amp;#10;    xPosition = -(width4deg*x_scale)&amp;#10;elif expInfo['position'] == '3':&amp;#10;    xPosition = width4deg*x_scale&amp;#10;&amp;#10;thisExp.addData('fixpR2', prac2_fixColSwitch[pTrial_run2-1])" valType="extendedCode"/>
+        <Param name="Code Type" updates="None" val="Both" valType="str"/>
         <Param name="Each Frame" updates="constant" val="" valType="extendedCode"/>
         <Param name="Each JS Frame" updates="constant" val="" valType="extendedCode"/>
         <Param name="End Experiment" updates="constant" val="" valType="extendedCode"/>
@@ -876,8 +883,8 @@
         <Param name="Before JS Experiment" updates="constant" val="" valType="extendedCode"/>
         <Param name="Begin Experiment" updates="constant" val="" valType="extendedCode"/>
         <Param name="Begin JS Experiment" updates="constant" val="" valType="extendedCode"/>
-        <Param name="Begin JS Routine" updates="constant" val="if (((Trial_run2 - 1) === 0)) {&amp;#10;    currFix = fixColor_opts[0];&amp;#10;} else {&amp;#10;    if ((fixColorIdx_Run2[(Trial_run2 - 1)] === 0)) {&amp;#10;        currFix = currFix;&amp;#10;    } else {&amp;#10;        if ((currFix === &quot;white&quot;)) {&amp;#10;            currFix = &quot;black&quot;;&amp;#10;        } else {&amp;#10;            if ((currFix === &quot;white&quot;)) {&amp;#10;                currFix = &quot;black&quot;;&amp;#10;            }&amp;#10;        }&amp;#10;    }&amp;#10;}&amp;#10;a = 1.25;&amp;#10;b = 1.75;&amp;#10;fixDur = (((b - a) * random()) + a);&amp;#10;if ((expInfo[&quot;position&quot;] === &quot;0&quot;)) {&amp;#10;    xPosition = 0;&amp;#10;} else {&amp;#10;    if ((expInfo[&quot;position&quot;] === &quot;2&quot;)) {&amp;#10;        if ((side === &quot;left&quot;)) {&amp;#10;            xPosition = (- (width4deg * x_scale));&amp;#10;        } else {&amp;#10;            if ((side === &quot;right&quot;)) {&amp;#10;                xPosition = (width4deg * x_scale);&amp;#10;            }&amp;#10;        }&amp;#10;    } else {&amp;#10;        if ((expInfo[&quot;position&quot;] === &quot;1&quot;)) {&amp;#10;            xPosition = (- (width4deg * x_scale));&amp;#10;        } else {&amp;#10;            if ((expInfo[&quot;position&quot;] === &quot;3&quot;)) {&amp;#10;                xPosition = (width4deg * x_scale);&amp;#10;            }&amp;#10;        }&amp;#10;    }&amp;#10;}&amp;#10;thisExp.addData(&quot;fixR2&quot;, fixColorIdx_Run2[(Trial_run2 - 1)]);&amp;#10;" valType="extendedCode"/>
-        <Param name="Begin Routine" updates="constant" val="if Trial_run2-1 == 0:&amp;#10;    currFix = fixColor_opts[0]&amp;#10;else:&amp;#10;    if fixColorIdx_Run2[Trial_run2-1] == 0:&amp;#10;        currFix = currFix&amp;#10;    elif currFix == 'white':&amp;#10;        currFix = 'black'&amp;#10;    elif currFix == 'white':&amp;#10;        currFix = 'black'&amp;#10;        &amp;#10;a = 1.25 # min ITI&amp;#10;b = 1.75 # max ITI&amp;#10;fixDur = (b-a) * random()+a&amp;#10;&amp;#10;if expInfo['position'] == '0':&amp;#10;    xPosition = 0&amp;#10;elif expInfo['position'] == '2':&amp;#10;    if side == 'left':&amp;#10;        xPosition = -(width4deg*x_scale)&amp;#10;    elif side == 'right':&amp;#10;        xPosition = width4deg*x_scale&amp;#10;elif expInfo['position'] == '1':&amp;#10;    xPosition = -(width4deg*x_scale)&amp;#10;elif expInfo['position'] == '3':&amp;#10;    xPosition = width4deg*x_scale&amp;#10;&amp;#10;thisExp.addData('fixR2', fixColorIdx_Run2[Trial_run2-1])" valType="extendedCode"/>
+        <Param name="Begin JS Routine" updates="constant" val="if (((Trial_run2 - 1) === 0)) {&amp;#10;    currFix = fixColor_opts[0];&amp;#10;} else {&amp;#10;    if ((fixColorIdx_Run2[(Trial_run2 - 1)] === 0)) {&amp;#10;        currFix = currFix;&amp;#10;    } else {&amp;#10;        if ((fixColorIdx_Run2[(Trial_run2 - 1)] === 0)) {&amp;#10;            if ((currFix === &quot;white&quot;)) {&amp;#10;                currFix = &quot;black&quot;;&amp;#10;            } else {&amp;#10;                if ((currFix === &quot;white&quot;)) {&amp;#10;                    currFix = &quot;black&quot;;&amp;#10;                }&amp;#10;            }&amp;#10;        }&amp;#10;    }&amp;#10;}&amp;#10;a = 1.25;&amp;#10;b = 1.75;&amp;#10;fixDur = (((b - a) * random()) + a);&amp;#10;if ((expInfo[&quot;position&quot;] === &quot;0&quot;)) {&amp;#10;    xPosition = 0;&amp;#10;} else {&amp;#10;    if ((expInfo[&quot;position&quot;] === &quot;2&quot;)) {&amp;#10;        if ((side === &quot;left&quot;)) {&amp;#10;            xPosition = (- (width4deg * x_scale));&amp;#10;        } else {&amp;#10;            if ((side === &quot;right&quot;)) {&amp;#10;                xPosition = (width4deg * x_scale);&amp;#10;            }&amp;#10;        }&amp;#10;    } else {&amp;#10;        if ((expInfo[&quot;position&quot;] === &quot;1&quot;)) {&amp;#10;            xPosition = (- (width4deg * x_scale));&amp;#10;        } else {&amp;#10;            if ((expInfo[&quot;position&quot;] === &quot;3&quot;)) {&amp;#10;                xPosition = (width4deg * x_scale);&amp;#10;            }&amp;#10;        }&amp;#10;    }&amp;#10;}&amp;#10;thisExp.addData(&quot;fixR2&quot;, fixColorIdx_Run2[(Trial_run2 - 1)]);&amp;#10;" valType="extendedCode"/>
+        <Param name="Begin Routine" updates="constant" val="if Trial_run2-1 == 0:&amp;#10;    currFix = fixColor_opts[0]&amp;#10;else:&amp;#10;    if fixColorIdx_Run2[Trial_run2-1] == 0:&amp;#10;        currFix = currFix&amp;#10;    elif fixColorIdx_Run2[Trial_run2-1] == 0:&amp;#10;        if currFix == 'white':&amp;#10;            currFix = 'black'&amp;#10;        elif currFix == 'white':&amp;#10;            currFix = 'black'&amp;#10;&amp;#10;a = 1.25 # min ITI&amp;#10;b = 1.75 # max ITI&amp;#10;fixDur = (b-a) * random()+a&amp;#10;&amp;#10;if expInfo['position'] == '0':&amp;#10;    xPosition = 0&amp;#10;elif expInfo['position'] == '2':&amp;#10;    if side == 'left':&amp;#10;        xPosition = -(width4deg*x_scale)&amp;#10;    elif side == 'right':&amp;#10;        xPosition = width4deg*x_scale&amp;#10;elif expInfo['position'] == '1':&amp;#10;    xPosition = -(width4deg*x_scale)&amp;#10;elif expInfo['position'] == '3':&amp;#10;    xPosition = width4deg*x_scale&amp;#10;&amp;#10;thisExp.addData('fixR2', fixColorIdx_Run2[Trial_run2-1])" valType="extendedCode"/>
         <Param name="Code Type" updates="None" val="Auto-&gt;JS" valType="str"/>
         <Param name="Each Frame" updates="constant" val="" valType="extendedCode"/>
         <Param name="Each JS Frame" updates="constant" val="" valType="extendedCode"/>
@@ -978,7 +985,7 @@
         <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
         <Param name="stopVal" updates="constant" val="" valType="code"/>
         <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
-        <Param name="text" updates="constant" val="Great Job!&amp;#10;&amp;#10;Now we are going to play the real game. &amp;#10;&amp;#10;Press Space to see the instructions&amp;#10;&amp;#10;" valType="extendedStr"/>
+        <Param name="text" updates="constant" val="Great Job!&amp;#10;&amp;#10;Now we are going to play the real game. &amp;#10;&amp;#10;Press Space to see the instructions again.&amp;#10;&amp;#10;" valType="extendedStr"/>
         <Param name="units" updates="None" val="from exp settings" valType="str"/>
         <Param name="wrapWidth" updates="constant" val="" valType="code"/>
       </TextComponent>
@@ -1001,10 +1008,343 @@
         <Param name="syncScreenRefresh" updates="constant" val="True" valType="bool"/>
       </KeyboardComponent>
     </Routine>
+    <Routine name="routine_1"/>
+    <Routine name="pracInstruct2">
+      <ImageComponent name="prac_instr2">
+        <Param name="color" updates="constant" val="$[1,1,1]" valType="str"/>
+        <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="flipHoriz" updates="constant" val="False" valType="bool"/>
+        <Param name="flipVert" updates="constant" val="False" valType="bool"/>
+        <Param name="image" updates="constant" val="Designs/prac_instr2.png" valType="str"/>
+        <Param name="interpolate" updates="constant" val="linear" valType="str"/>
+        <Param name="mask" updates="constant" val="None" valType="str"/>
+        <Param name="name" updates="None" val="prac_instr2" valType="code"/>
+        <Param name="opacity" updates="constant" val="1" valType="code"/>
+        <Param name="ori" updates="constant" val="0" valType="code"/>
+        <Param name="pos" updates="constant" val="(0, 0)" valType="code"/>
+        <Param name="saveStartStop" updates="None" val="False" valType="bool"/>
+        <Param name="size" updates="constant" val="(0.75*1.77, 0.75)" valType="code"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="stopVal" updates="constant" val="" valType="code"/>
+        <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
+        <Param name="texture resolution" updates="constant" val="512" valType="code"/>
+        <Param name="units" updates="None" val="from exp settings" valType="str"/>
+      </ImageComponent>
+      <KeyboardComponent name="key_resp_6">
+        <Param name="allowedKeys" updates="constant" val="'space'" valType="code"/>
+        <Param name="correctAns" updates="constant" val="" valType="str"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="discard previous" updates="constant" val="True" valType="bool"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="forceEndRoutine" updates="constant" val="True" valType="bool"/>
+        <Param name="name" updates="None" val="key_resp_6" valType="code"/>
+        <Param name="saveStartStop" updates="None" val="False" valType="bool"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="0.3" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="stopVal" updates="constant" val="" valType="code"/>
+        <Param name="store" updates="constant" val="nothing" valType="str"/>
+        <Param name="storeCorrect" updates="constant" val="False" valType="bool"/>
+        <Param name="syncScreenRefresh" updates="constant" val="True" valType="bool"/>
+      </KeyboardComponent>
+    </Routine>
+    <Routine name="pracInstruct3">
+      <ImageComponent name="prac_instr3">
+        <Param name="color" updates="constant" val="$[1,1,1]" valType="str"/>
+        <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="flipHoriz" updates="constant" val="False" valType="bool"/>
+        <Param name="flipVert" updates="constant" val="False" valType="bool"/>
+        <Param name="image" updates="constant" val="Designs/prac_instr3.png" valType="str"/>
+        <Param name="interpolate" updates="constant" val="linear" valType="str"/>
+        <Param name="mask" updates="constant" val="None" valType="str"/>
+        <Param name="name" updates="None" val="prac_instr3" valType="code"/>
+        <Param name="opacity" updates="constant" val="1" valType="code"/>
+        <Param name="ori" updates="constant" val="0" valType="code"/>
+        <Param name="pos" updates="constant" val="(0, 0)" valType="code"/>
+        <Param name="saveStartStop" updates="None" val="False" valType="bool"/>
+        <Param name="size" updates="constant" val="(0.75*1.77, 0.75)" valType="code"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="stopVal" updates="constant" val="" valType="code"/>
+        <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
+        <Param name="texture resolution" updates="constant" val="512" valType="code"/>
+        <Param name="units" updates="None" val="from exp settings" valType="str"/>
+      </ImageComponent>
+      <KeyboardComponent name="key_resp_7">
+        <Param name="allowedKeys" updates="constant" val="'space'" valType="code"/>
+        <Param name="correctAns" updates="constant" val="" valType="str"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="discard previous" updates="constant" val="True" valType="bool"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="forceEndRoutine" updates="constant" val="True" valType="bool"/>
+        <Param name="name" updates="None" val="key_resp_7" valType="code"/>
+        <Param name="saveStartStop" updates="None" val="False" valType="bool"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="0.3" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="stopVal" updates="constant" val="" valType="code"/>
+        <Param name="store" updates="constant" val="nothing" valType="str"/>
+        <Param name="storeCorrect" updates="constant" val="False" valType="bool"/>
+        <Param name="syncScreenRefresh" updates="constant" val="True" valType="bool"/>
+      </KeyboardComponent>
+    </Routine>
+    <Routine name="hand_hold_instr">
+      <CodeComponent name="code_12">
+        <Param name="Before Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Before JS Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Begin Experiment" updates="constant" val="if expInfo['design'] == '1':&amp;#10;    hand_hold_ex1 = 'Designs/design1_run1_ex.png'&amp;#10;    handHoldCorr1 = 'j'&amp;#10;    hold_hand_R1_img = 'Stimuli/HofS2.jpg'&amp;#10;    hand_hold_ex2 = 'Designs/design1_run2_ex.png'&amp;#10;    handHoldCorr2 = 'j'&amp;#10;    hold_hand_R2_img = 'Stimuli/SofH2.jpg'&amp;#10;    hand_hold_feedback1corr = 'Designs/hand_hold_local_corr.png'&amp;#10;    hand_hold_feedback1incorr = 'Designs/hand_hold_local_incorr.png'&amp;#10;    hand_hold_feedback2corr = 'Designs/hand_hold_global_corr.png'&amp;#10;    hand_hold_feedback2incorr = 'Designs/hand_hold_global_incorr.png'    &amp;#10;elif expInfo['design'] == '2':&amp;#10;    hand_hold_ex1 = 'Designs/design2_run1_ex.png'&amp;#10;    handHoldCorr1 = 'j'&amp;#10;    hold_hand_R1_img = 'Stimuli/SofH2.jpg'&amp;#10;    hand_hold_ex2 = 'Designs/design2_run2_ex.png'&amp;#10;    handHoldCorr2 = 'j'&amp;#10;    hold_hand_R2_img = 'Stimuli/HofS2.jpg'&amp;#10;    hand_hold_feedback1corr = 'Designs/hand_hold_global_corr.png'&amp;#10;    hand_hold_feedback1incorr = 'Designs/hand_hold_global_incorr.png'&amp;#10;    hand_hold_feedback2corr = 'Designs/hand_hold_local_corr.png'&amp;#10;    hand_hold_feedback2incorr = 'Designs/hand_hold_local_incorr.png' &amp;#10;elif expInfo['design'] == '3':&amp;#10;    hand_hold_ex1 = 'Designs/design3_run1_ex.png'&amp;#10;    handHoldCorr1 = 'f'&amp;#10;    hold_hand_R1_img = 'Stimuli/SofH2.jpg'&amp;#10;    hand_hold_ex2 = 'Designs/design3_run2_ex.png'&amp;#10;    handHoldCorr2 = 'f'&amp;#10;    hold_hand_R2_img = 'Stimuli/HofS2.jpg'&amp;#10;    hand_hold_feedback1corr = 'Designs/hand_hold_global_corr.png'&amp;#10;    hand_hold_feedback1incorr = 'Designs/hand_hold_global_incorr.png'&amp;#10;    hand_hold_feedback2corr = 'Designs/hand_hold_local_corr.png'&amp;#10;    hand_hold_feedback2incorr = 'Designs/hand_hold_local_incorr.png'    &amp;#10;elif expInfo['design'] == '4':&amp;#10;    hand_hold_ex1 = 'Designs/design4_run1_ex.png'&amp;#10;    handHoldCorr1 = 'f'&amp;#10;    hold_hand_R1_img = 'Stimuli/HofS2.jpg'&amp;#10;    hand_hold_ex2 = 'Designs/design4_run2_ex.png'&amp;#10;    handHoldCorr2 = 'f'&amp;#10;    hold_hand_R2_img = 'Stimuli/SofH2.jpg'&amp;#10;    hand_hold_feedback1corr = 'Designs/hand_hold_local_corr.png'&amp;#10;    hand_hold_feedback1incorr = 'Designs/hand_hold_local_incorr.png'&amp;#10;    hand_hold_feedback2corr = 'Designs/hand_hold_global_corr.png'&amp;#10;    hand_hold_feedback2incorr = 'Designs/hand_hold_global_incorr.png' " valType="extendedCode"/>
+        <Param name="Begin JS Experiment" updates="constant" val="if ((expInfo[&quot;design&quot;] === &quot;1&quot;)) {&amp;#10;    hand_hold_ex1 = &quot;Designs/design1_run1_ex.png&quot;;&amp;#10;    handHoldCorr1 = &quot;j&quot;;&amp;#10;    hold_hand_R1_img = &quot;Stimuli/HofS2.jpg&quot;;&amp;#10;    hand_hold_ex2 = &quot;Designs/design1_run2_ex.png&quot;;&amp;#10;    handHoldCorr2 = &quot;j&quot;;&amp;#10;    hold_hand_R2_img = &quot;Stimuli/SofH2.jpg&quot;;&amp;#10;    hand_hold_feedback1corr = &quot;Designs/hand_hold_local_corr.png&quot;;&amp;#10;    hand_hold_feedback1incorr = &quot;Designs/hand_hold_local_incorr.png&quot;;&amp;#10;    hand_hold_feedback2corr = &quot;Designs/hand_hold_global_corr.png&quot;;&amp;#10;    hand_hold_feedback2incorr = &quot;Designs/hand_hold_global_incorr.png&quot;;&amp;#10;} else {&amp;#10;    if ((expInfo[&quot;design&quot;] === &quot;2&quot;)) {&amp;#10;        hand_hold_ex1 = &quot;Designs/design2_run1_ex.png&quot;;&amp;#10;        handHoldCorr1 = &quot;j&quot;;&amp;#10;        hold_hand_R1_img = &quot;Stimuli/SofH2.jpg&quot;;&amp;#10;        hand_hold_ex2 = &quot;Designs/design2_run2_ex.png&quot;;&amp;#10;        handHoldCorr2 = &quot;j&quot;;&amp;#10;        hold_hand_R2_img = &quot;Stimuli/HofS2.jpg&quot;;&amp;#10;        hand_hold_feedback1corr = &quot;Designs/hand_hold_global_corr.png&quot;;&amp;#10;        hand_hold_feedback1incorr = &quot;Designs/hand_hold_global_incorr.png&quot;;&amp;#10;        hand_hold_feedback2corr = &quot;Designs/hand_hold_local_corr.png&quot;;&amp;#10;        hand_hold_feedback2incorr = &quot;Designs/hand_hold_local_incorr.png&quot;;&amp;#10;    } else {&amp;#10;        if ((expInfo[&quot;design&quot;] === &quot;3&quot;)) {&amp;#10;            hand_hold_ex1 = &quot;Designs/design3_run1_ex.png&quot;;&amp;#10;            handHoldCorr1 = &quot;f&quot;;&amp;#10;            hold_hand_R1_img = &quot;Stimuli/SofH2.jpg&quot;;&amp;#10;            hand_hold_ex2 = &quot;Designs/design3_run2_ex.png&quot;;&amp;#10;            handHoldCorr2 = &quot;f&quot;;&amp;#10;            hold_hand_R2_img = &quot;Stimuli/HofS2.jpg&quot;;&amp;#10;            hand_hold_feedback1corr = &quot;Designs/hand_hold_global_corr.png&quot;;&amp;#10;            hand_hold_feedback1incorr = &quot;Designs/hand_hold_global_incorr.png&quot;;&amp;#10;            hand_hold_feedback2corr = &quot;Designs/hand_hold_local_corr.png&quot;;&amp;#10;            hand_hold_feedback2incorr = &quot;Designs/hand_hold_local_incorr.png&quot;;&amp;#10;        } else {&amp;#10;            if ((expInfo[&quot;design&quot;] === &quot;4&quot;)) {&amp;#10;                hand_hold_ex1 = &quot;Designs/design4_run1_ex.png&quot;;&amp;#10;                handHoldCorr1 = &quot;f&quot;;&amp;#10;                hold_hand_R1_img = &quot;Stimuli/HofS2.jpg&quot;;&amp;#10;                hand_hold_ex2 = &quot;Designs/design4_run2_ex.png&quot;;&amp;#10;                handHoldCorr2 = &quot;f&quot;;&amp;#10;                hold_hand_R2_img = &quot;Stimuli/SofH2.jpg&quot;;&amp;#10;                hand_hold_feedback1corr = &quot;Designs/hand_hold_local_corr.png&quot;;&amp;#10;                hand_hold_feedback1incorr = &quot;Designs/hand_hold_local_incorr.png&quot;;&amp;#10;                hand_hold_feedback2corr = &quot;Designs/hand_hold_global_corr.png&quot;;&amp;#10;                hand_hold_feedback2incorr = &quot;Designs/hand_hold_global_incorr.png&quot;;&amp;#10;            }&amp;#10;        }&amp;#10;    }&amp;#10;}&amp;#10;" valType="extendedCode"/>
+        <Param name="Begin JS Routine" updates="constant" val="if ((expInfo[&quot;position&quot;] === &quot;0&quot;)) {&amp;#10;    xPosition = 0;&amp;#10;} else {&amp;#10;    if ((expInfo[&quot;position&quot;] === &quot;2&quot;)) {&amp;#10;        left_right = [0, 1];&amp;#10;        shuffle(left_right);&amp;#10;        rand_side = [0];&amp;#10;        if ((rand_side === 0)) {&amp;#10;            xPosition = (- (width4deg * x_scale));&amp;#10;        } else {&amp;#10;            xPosition = (width4deg * x_scale);&amp;#10;        }&amp;#10;    } else {&amp;#10;        if ((expInfo[&quot;position&quot;] === &quot;1&quot;)) {&amp;#10;            xPosition = (- (width4deg * x_scale));&amp;#10;        } else {&amp;#10;            if ((expInfo[&quot;position&quot;] === &quot;3&quot;)) {&amp;#10;                xPosition = (width4deg * x_scale);&amp;#10;            }&amp;#10;        }&amp;#10;    }&amp;#10;}&amp;#10;if ((hand_hold_run === 1)) {&amp;#10;    hand_hold_ex = hand_hold_ex1;&amp;#10;    handHoldCorr = handHoldCorr1;&amp;#10;    hold_hand_img = hold_hand_R1_img;&amp;#10;    hand_hold_feedbackcorr = hand_hold_feedback1corr;&amp;#10;    hand_hold_feedbackincorr = hand_hold_feedback1incorr;&amp;#10;} else {&amp;#10;    hand_hold_ex = hand_hold_ex2;&amp;#10;    handHoldCorr = handHoldCorr2;&amp;#10;    hold_hand_img = hold_hand_R2_img;&amp;#10;    hand_hold_feedbackcorr = hand_hold_feedback2corr;&amp;#10;    hand_hold_feedbackincorr = hand_hold_feedback2incorr;&amp;#10;}&amp;#10;" valType="extendedCode"/>
+        <Param name="Begin Routine" updates="constant" val="if expInfo['position'] == '0':&amp;#10;    xPosition = 0&amp;#10;elif expInfo['position'] == '2':&amp;#10;    left_right = [0,1]&amp;#10;    shuffle(left_right)&amp;#10;    rand_side = [0]&amp;#10;    if rand_side == 0: #left&amp;#10;        xPosition = -(width4deg*x_scale)&amp;#10;    else: #right&amp;#10;        xPosition = width4deg*x_scale&amp;#10;elif expInfo['position'] == '1':&amp;#10;    xPosition = -(width4deg*x_scale)&amp;#10;elif expInfo['position'] == '3':&amp;#10;    xPosition = width4deg*x_scale&amp;#10;&amp;#10;if hand_hold_run == 1:&amp;#10;    hand_hold_ex = hand_hold_ex1&amp;#10;    handHoldCorr = handHoldCorr1&amp;#10;    hold_hand_img = hold_hand_R1_img&amp;#10;    hand_hold_feedbackcorr = hand_hold_feedback1corr&amp;#10;    hand_hold_feedbackincorr = hand_hold_feedback1incorr&amp;#10;else:&amp;#10;    hand_hold_ex = hand_hold_ex2&amp;#10;    handHoldCorr = handHoldCorr2&amp;#10;    hold_hand_img = hold_hand_R2_img&amp;#10;    hand_hold_feedbackcorr = hand_hold_feedback2corr&amp;#10;    hand_hold_feedbackincorr = hand_hold_feedback2incorr" valType="extendedCode"/>
+        <Param name="Code Type" updates="None" val="Auto-&gt;JS" valType="str"/>
+        <Param name="Each Frame" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Each JS Frame" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End JS Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End JS Routine" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End Routine" updates="constant" val="" valType="extendedCode"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="name" updates="None" val="code_12" valType="code"/>
+      </CodeComponent>
+      <ImageComponent name="image_2">
+        <Param name="color" updates="constant" val="$[1,1,1]" valType="str"/>
+        <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="flipHoriz" updates="constant" val="False" valType="bool"/>
+        <Param name="flipVert" updates="constant" val="False" valType="bool"/>
+        <Param name="image" updates="set every repeat" val="$hand_hold_ex" valType="str"/>
+        <Param name="interpolate" updates="constant" val="linear" valType="str"/>
+        <Param name="mask" updates="constant" val="None" valType="str"/>
+        <Param name="name" updates="None" val="image_2" valType="code"/>
+        <Param name="opacity" updates="constant" val="1" valType="code"/>
+        <Param name="ori" updates="constant" val="0" valType="code"/>
+        <Param name="pos" updates="constant" val="(0, 0)" valType="code"/>
+        <Param name="saveStartStop" updates="None" val="False" valType="bool"/>
+        <Param name="size" updates="constant" val="(0.75*1.77, 0.75)" valType="code"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="stopVal" updates="constant" val="" valType="code"/>
+        <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
+        <Param name="texture resolution" updates="constant" val="512" valType="code"/>
+        <Param name="units" updates="None" val="from exp settings" valType="str"/>
+      </ImageComponent>
+      <KeyboardComponent name="key_resp_9">
+        <Param name="allowedKeys" updates="constant" val="'space'" valType="code"/>
+        <Param name="correctAns" updates="constant" val="" valType="str"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="discard previous" updates="constant" val="True" valType="bool"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="forceEndRoutine" updates="constant" val="True" valType="bool"/>
+        <Param name="name" updates="None" val="key_resp_9" valType="code"/>
+        <Param name="saveStartStop" updates="None" val="False" valType="bool"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="stopVal" updates="constant" val="" valType="code"/>
+        <Param name="store" updates="constant" val="nothing" valType="str"/>
+        <Param name="storeCorrect" updates="constant" val="False" valType="bool"/>
+        <Param name="syncScreenRefresh" updates="constant" val="True" valType="bool"/>
+      </KeyboardComponent>
+    </Routine>
+    <Routine name="btwn_trial_GJ">
+      <CodeComponent name="code">
+        <Param name="Before Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Before JS Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Begin Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Begin JS Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Begin JS Routine" updates="constant" val="hand_hold_run = 2;&amp;#10;" valType="extendedCode"/>
+        <Param name="Begin Routine" updates="constant" val="hand_hold_run = 2" valType="extendedCode"/>
+        <Param name="Code Type" updates="None" val="Auto-&gt;JS" valType="str"/>
+        <Param name="Each Frame" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Each JS Frame" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End JS Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End JS Routine" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End Routine" updates="constant" val="" valType="extendedCode"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="name" updates="None" val="code" valType="code"/>
+      </CodeComponent>
+      <ImageComponent name="image_4">
+        <Param name="color" updates="constant" val="$[1,1,1]" valType="str"/>
+        <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="flipHoriz" updates="constant" val="False" valType="bool"/>
+        <Param name="flipVert" updates="constant" val="False" valType="bool"/>
+        <Param name="image" updates="constant" val="Designs/baby_dory_GJ.png" valType="str"/>
+        <Param name="interpolate" updates="constant" val="linear" valType="str"/>
+        <Param name="mask" updates="constant" val="None" valType="str"/>
+        <Param name="name" updates="None" val="image_4" valType="code"/>
+        <Param name="opacity" updates="constant" val="1" valType="code"/>
+        <Param name="ori" updates="constant" val="0" valType="code"/>
+        <Param name="pos" updates="constant" val="(0, 0)" valType="code"/>
+        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
+        <Param name="size" updates="constant" val="(0.5, 0.5*1.83)" valType="code"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="stopVal" updates="constant" val="1.0" valType="code"/>
+        <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
+        <Param name="texture resolution" updates="constant" val="512" valType="code"/>
+        <Param name="units" updates="None" val="from exp settings" valType="str"/>
+      </ImageComponent>
+    </Routine>
+    <Routine name="hand_hold_trial">
+      <TextComponent name="text_8">
+        <Param name="color" updates="constant" val="white" valType="str"/>
+        <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="flip" updates="constant" val="" valType="str"/>
+        <Param name="font" updates="constant" val="Arial" valType="str"/>
+        <Param name="languageStyle" updates="None" val="LTR" valType="str"/>
+        <Param name="letterHeight" updates="constant" val="0.05" valType="code"/>
+        <Param name="name" updates="None" val="text_8" valType="code"/>
+        <Param name="opacity" updates="constant" val="1" valType="code"/>
+        <Param name="ori" updates="constant" val="0" valType="code"/>
+        <Param name="pos" updates="constant" val="(0, 0)" valType="code"/>
+        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="stopVal" updates="constant" val="" valType="code"/>
+        <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
+        <Param name="text" updates="constant" val="+" valType="extendedStr"/>
+        <Param name="units" updates="None" val="from exp settings" valType="str"/>
+        <Param name="wrapWidth" updates="constant" val="" valType="code"/>
+      </TextComponent>
+      <ImageComponent name="image">
+        <Param name="color" updates="constant" val="$[1,1,1]" valType="str"/>
+        <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="flipHoriz" updates="constant" val="False" valType="bool"/>
+        <Param name="flipVert" updates="constant" val="False" valType="bool"/>
+        <Param name="image" updates="set every repeat" val="$hold_hand_img" valType="str"/>
+        <Param name="interpolate" updates="constant" val="linear" valType="str"/>
+        <Param name="mask" updates="constant" val="None" valType="str"/>
+        <Param name="name" updates="None" val="image" valType="code"/>
+        <Param name="opacity" updates="constant" val="1" valType="code"/>
+        <Param name="ori" updates="constant" val="0" valType="code"/>
+        <Param name="pos" updates="set every repeat" val="$(xPosition, 0)" valType="code"/>
+        <Param name="saveStartStop" updates="None" val="False" valType="bool"/>
+        <Param name="size" updates="set every repeat" val="$(width*x_scale, height*y_scale)" valType="code"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="stopVal" updates="constant" val="" valType="code"/>
+        <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
+        <Param name="texture resolution" updates="constant" val="512" valType="code"/>
+        <Param name="units" updates="None" val="from exp settings" valType="str"/>
+      </ImageComponent>
+      <KeyboardComponent name="hand_hold_resp">
+        <Param name="allowedKeys" updates="constant" val="'f','j'" valType="code"/>
+        <Param name="correctAns" updates="constant" val="$handHoldCorr" valType="str"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="discard previous" updates="constant" val="True" valType="bool"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="forceEndRoutine" updates="constant" val="True" valType="bool"/>
+        <Param name="name" updates="None" val="hand_hold_resp" valType="code"/>
+        <Param name="saveStartStop" updates="None" val="False" valType="bool"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="stopVal" updates="constant" val="" valType="code"/>
+        <Param name="store" updates="constant" val="last key" valType="str"/>
+        <Param name="storeCorrect" updates="constant" val="True" valType="bool"/>
+        <Param name="syncScreenRefresh" updates="constant" val="True" valType="bool"/>
+      </KeyboardComponent>
+    </Routine>
+    <Routine name="hand_hold_feedback">
+      <CodeComponent name="code_13">
+        <Param name="Before Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Before JS Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Begin Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Begin JS Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Begin JS Routine" updates="constant" val="feedHHim = &quot;&quot;;&amp;#10;if ((hand_hold_run === 1)) {&amp;#10;    if ((hand_hold_resp.keys === handHoldCorr1)) {&amp;#10;        feedHHim = hand_hold_feedback1corr;&amp;#10;    } else {&amp;#10;        if ((hand_hold_resp.keys !== handHoldCorr1)) {&amp;#10;            feedHHim = hand_hold_feedback1incorr;&amp;#10;        }&amp;#10;    }&amp;#10;} else {&amp;#10;    if ((hand_hold_resp.keys === handHoldCorr2)) {&amp;#10;        feedHHim = hand_hold_feedback2corr;&amp;#10;    } else {&amp;#10;        if ((hand_hold_resp.keys !== handHoldCorr2)) {&amp;#10;            feedHHim = hand_hold_feedback2incorr;&amp;#10;        }&amp;#10;    }&amp;#10;}&amp;#10;" valType="extendedCode"/>
+        <Param name="Begin Routine" updates="constant" val="feedHHim=''&amp;#10;if hand_hold_run == 1:&amp;#10;    if hand_hold_resp.keys == handHoldCorr1:&amp;#10;        feedHHim = hand_hold_feedback1corr&amp;#10;    elif hand_hold_resp.keys != handHoldCorr1:&amp;#10;        feedHHim = hand_hold_feedback1incorr&amp;#10;else:&amp;#10;    if hand_hold_resp.keys == handHoldCorr2:&amp;#10;        feedHHim = hand_hold_feedback2corr&amp;#10;    elif hand_hold_resp.keys != handHoldCorr2:&amp;#10;        feedHHim = hand_hold_feedback2incorr" valType="extendedCode"/>
+        <Param name="Code Type" updates="None" val="Auto-&gt;JS" valType="str"/>
+        <Param name="Each Frame" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Each JS Frame" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End JS Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End JS Routine" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End Routine" updates="constant" val="" valType="extendedCode"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="name" updates="None" val="code_13" valType="code"/>
+      </CodeComponent>
+      <ImageComponent name="image_3">
+        <Param name="color" updates="constant" val="$[1,1,1]" valType="str"/>
+        <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="flipHoriz" updates="constant" val="False" valType="bool"/>
+        <Param name="flipVert" updates="constant" val="False" valType="bool"/>
+        <Param name="image" updates="set every frame" val="$feedHHim" valType="str"/>
+        <Param name="interpolate" updates="constant" val="linear" valType="str"/>
+        <Param name="mask" updates="constant" val="None" valType="str"/>
+        <Param name="name" updates="None" val="image_3" valType="code"/>
+        <Param name="opacity" updates="constant" val="1" valType="code"/>
+        <Param name="ori" updates="constant" val="0" valType="code"/>
+        <Param name="pos" updates="constant" val="(0, 0)" valType="code"/>
+        <Param name="saveStartStop" updates="None" val="False" valType="bool"/>
+        <Param name="size" updates="constant" val="(0.75*1.77, 0.75)" valType="code"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="stopVal" updates="constant" val="" valType="code"/>
+        <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
+        <Param name="texture resolution" updates="constant" val="512" valType="code"/>
+        <Param name="units" updates="None" val="from exp settings" valType="str"/>
+      </ImageComponent>
+      <KeyboardComponent name="key_resp_8">
+        <Param name="allowedKeys" updates="constant" val="'space'" valType="code"/>
+        <Param name="correctAns" updates="constant" val="" valType="str"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="discard previous" updates="constant" val="True" valType="bool"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="forceEndRoutine" updates="constant" val="True" valType="bool"/>
+        <Param name="name" updates="None" val="key_resp_8" valType="code"/>
+        <Param name="saveStartStop" updates="None" val="False" valType="bool"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="1" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="stopVal" updates="constant" val="" valType="code"/>
+        <Param name="store" updates="constant" val="nothing" valType="str"/>
+        <Param name="storeCorrect" updates="constant" val="False" valType="bool"/>
+        <Param name="syncScreenRefresh" updates="constant" val="True" valType="bool"/>
+      </KeyboardComponent>
+    </Routine>
   </Routines>
   <Flow>
     <Routine name="screen_scale"/>
     <Routine name="pracInstruct"/>
+    <Routine name="pracInstruct2"/>
+    <Routine name="pracInstruct3"/>
+    <Routine name="hand_hold_instr"/>
+    <Routine name="hand_hold_trial"/>
+    <Routine name="hand_hold_feedback"/>
     <Routine name="prac_instr_run1"/>
     <LoopInitiator loopType="TrialHandler" name="prac_trials_run1">
       <Param name="Selected rows" updates="None" val="$randRows_run1" valType="str"/>
@@ -1037,6 +1377,10 @@
     <Routine name="trialFixR1"/>
     <Routine name="trial_img"/>
     <LoopTerminator name="trials_run1"/>
+    <Routine name="btwn_trial_GJ"/>
+    <Routine name="hand_hold_instr"/>
+    <Routine name="hand_hold_trial"/>
+    <Routine name="hand_hold_feedback"/>
     <Routine name="prac_instr_run2"/>
     <LoopInitiator loopType="TrialHandler" name="prac_trials_run2">
       <Param name="Selected rows" updates="None" val="$randRows_run2" valType="str"/>

@@ -48,6 +48,21 @@ flowScheduler.add(screen_scaleRoutineEnd());
 flowScheduler.add(pracInstructRoutineBegin());
 flowScheduler.add(pracInstructRoutineEachFrame());
 flowScheduler.add(pracInstructRoutineEnd());
+flowScheduler.add(pracInstruct2RoutineBegin());
+flowScheduler.add(pracInstruct2RoutineEachFrame());
+flowScheduler.add(pracInstruct2RoutineEnd());
+flowScheduler.add(pracInstruct3RoutineBegin());
+flowScheduler.add(pracInstruct3RoutineEachFrame());
+flowScheduler.add(pracInstruct3RoutineEnd());
+flowScheduler.add(hand_hold_instrRoutineBegin());
+flowScheduler.add(hand_hold_instrRoutineEachFrame());
+flowScheduler.add(hand_hold_instrRoutineEnd());
+flowScheduler.add(hand_hold_trialRoutineBegin());
+flowScheduler.add(hand_hold_trialRoutineEachFrame());
+flowScheduler.add(hand_hold_trialRoutineEnd());
+flowScheduler.add(hand_hold_feedbackRoutineBegin());
+flowScheduler.add(hand_hold_feedbackRoutineEachFrame());
+flowScheduler.add(hand_hold_feedbackRoutineEnd());
 flowScheduler.add(prac_instr_run1RoutineBegin());
 flowScheduler.add(prac_instr_run1RoutineEachFrame());
 flowScheduler.add(prac_instr_run1RoutineEnd());
@@ -65,6 +80,18 @@ const trials_run1LoopScheduler = new Scheduler(psychoJS);
 flowScheduler.add(trials_run1LoopBegin, trials_run1LoopScheduler);
 flowScheduler.add(trials_run1LoopScheduler);
 flowScheduler.add(trials_run1LoopEnd);
+flowScheduler.add(btwn_trial_GJRoutineBegin());
+flowScheduler.add(btwn_trial_GJRoutineEachFrame());
+flowScheduler.add(btwn_trial_GJRoutineEnd());
+flowScheduler.add(hand_hold_instrRoutineBegin());
+flowScheduler.add(hand_hold_instrRoutineEachFrame());
+flowScheduler.add(hand_hold_instrRoutineEnd());
+flowScheduler.add(hand_hold_trialRoutineBegin());
+flowScheduler.add(hand_hold_trialRoutineEachFrame());
+flowScheduler.add(hand_hold_trialRoutineEnd());
+flowScheduler.add(hand_hold_feedbackRoutineBegin());
+flowScheduler.add(hand_hold_feedbackRoutineEachFrame());
+flowScheduler.add(hand_hold_feedbackRoutineEnd());
 flowScheduler.add(prac_instr_run2RoutineBegin());
 flowScheduler.add(prac_instr_run2RoutineEachFrame());
 flowScheduler.add(prac_instr_run2RoutineEnd());
@@ -94,7 +121,12 @@ psychoJS.start({
   expName: expName,
   expInfo: expInfo,
   resources: [
-    {'name': 'bankcard.png', 'path': 'bankcard.png'}
+    {'name': 'Designs/baby_dory_GJ.png', 'path': 'Designs/baby_dory_GJ.png'},
+    {'name': 'Designs/baby_squirt_GJ.png', 'path': 'Designs/baby_squirt_GJ.png'},
+    {'name': 'Designs/prac_instr2.png', 'path': 'Designs/prac_instr2.png'},
+    {'name': 'bankcard.png', 'path': 'bankcard.png'},
+    {'name': 'Designs/prac_instr1.png', 'path': 'Designs/prac_instr1.png'},
+    {'name': 'Designs/prac_instr3.png', 'path': 'Designs/prac_instr3.png'}
   ]
 });
 
@@ -153,8 +185,34 @@ var prac1_fixColSwitch;
 var prac2_fixColSwitch;
 var fixColorIdx_Run1;
 var fixColorIdx_Run2;
-var start_exp_text;
+var prac_instr1;
 var start_exp_press;
+var pracInstruct2Clock;
+var prac_instr2;
+var key_resp_6;
+var pracInstruct3Clock;
+var prac_instr3;
+var key_resp_7;
+var hand_hold_instrClock;
+var hand_hold_ex1;
+var handHoldCorr1;
+var hold_hand_R1_img;
+var hand_hold_ex2;
+var handHoldCorr2;
+var hold_hand_R2_img;
+var hand_hold_feedback1corr;
+var hand_hold_feedback1incorr;
+var hand_hold_feedback2corr;
+var hand_hold_feedback2incorr;
+var image_2;
+var key_resp_9;
+var hand_hold_trialClock;
+var text_8;
+var image;
+var hand_hold_resp;
+var hand_hold_feedbackClock;
+var image_3;
+var key_resp_8;
 var prac_instr_run1Clock;
 var instructions_run1;
 var cond_file_run1;
@@ -168,14 +226,14 @@ var pracTotal_run1;
 var pTrial_run2;
 var pracTotal_run2;
 var text;
-var fix_respP1_1;
 var prac_imgClock;
 var text_5;
 var prac_image;
 var prac_resp;
-var prac_fix_resp_2;
+var prac_fix_resp;
 var FeedbackClock;
 var imFeedback;
+var feedback_msg;
 var transition2trialsClock;
 var text_7;
 var key_resp_5;
@@ -195,6 +253,8 @@ var text_6;
 var trial_image;
 var trial_resp;
 var fix_resp_2;
+var btwn_trial_GJClock;
+var image_4;
 var prac_instr_run2Clock;
 var instructions_run2;
 var cond_file_run2;
@@ -211,7 +271,7 @@ var trialFixR2Clock;
 var text_4;
 var fix_resp2_1;
 var EndScreenClock;
-var allDone;
+var image_5;
 var globalClock;
 var routineTimer;
 function experimentInit() {
@@ -333,18 +393,144 @@ function experimentInit() {
   fixColorIdx_Run2 = [0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1];
   shuffle(fixColorIdx_Run2);
   
-  start_exp_text = new visual.TextStim({
+  prac_instr1 = new visual.ImageStim({
+    win : psychoJS.window,
+    name : 'prac_instr1', units : undefined, 
+    image : 'Designs/prac_instr1.png', mask : undefined,
+    ori : 0, pos : [0, 0], size : [(0.75 * 1.77), 0.75],
+    color : new util.Color([1, 1, 1]), opacity : 1,
+    flipHoriz : false, flipVert : false,
+    texRes : 512, interpolate : true, depth : -1.0 
+  });
+  start_exp_press = new core.Keyboard({psychoJS: psychoJS, clock: new util.Clock(), waitForStart: true});
+  
+  // Initialize components for Routine "pracInstruct2"
+  pracInstruct2Clock = new util.Clock();
+  prac_instr2 = new visual.ImageStim({
+    win : psychoJS.window,
+    name : 'prac_instr2', units : undefined, 
+    image : 'Designs/prac_instr2.png', mask : undefined,
+    ori : 0, pos : [0, 0], size : [(0.75 * 1.77), 0.75],
+    color : new util.Color([1, 1, 1]), opacity : 1,
+    flipHoriz : false, flipVert : false,
+    texRes : 512, interpolate : true, depth : 0.0 
+  });
+  key_resp_6 = new core.Keyboard({psychoJS: psychoJS, clock: new util.Clock(), waitForStart: true});
+  
+  // Initialize components for Routine "pracInstruct3"
+  pracInstruct3Clock = new util.Clock();
+  prac_instr3 = new visual.ImageStim({
+    win : psychoJS.window,
+    name : 'prac_instr3', units : undefined, 
+    image : 'Designs/prac_instr3.png', mask : undefined,
+    ori : 0, pos : [0, 0], size : [(0.75 * 1.77), 0.75],
+    color : new util.Color([1, 1, 1]), opacity : 1,
+    flipHoriz : false, flipVert : false,
+    texRes : 512, interpolate : true, depth : 0.0 
+  });
+  key_resp_7 = new core.Keyboard({psychoJS: psychoJS, clock: new util.Clock(), waitForStart: true});
+  
+  // Initialize components for Routine "hand_hold_instr"
+  hand_hold_instrClock = new util.Clock();
+  if ((expInfo["design"] === "1")) {
+      hand_hold_ex1 = "Designs/design1_run1_ex.png";
+      handHoldCorr1 = "j";
+      hold_hand_R1_img = "Stimuli/HofS2.jpg";
+      hand_hold_ex2 = "Designs/design1_run2_ex.png";
+      handHoldCorr2 = "j";
+      hold_hand_R2_img = "Stimuli/SofH2.jpg";
+      hand_hold_feedback1corr = "Designs/hand_hold_local_corr.png";
+      hand_hold_feedback1incorr = "Designs/hand_hold_local_incorr.png";
+      hand_hold_feedback2corr = "Designs/hand_hold_global_corr.png";
+      hand_hold_feedback2incorr = "Designs/hand_hold_global_incorr.png";
+  } else {
+      if ((expInfo["design"] === "2")) {
+          hand_hold_ex1 = "Designs/design2_run1_ex.png";
+          handHoldCorr1 = "j";
+          hold_hand_R1_img = "Stimuli/SofH2.jpg";
+          hand_hold_ex2 = "Designs/design2_run2_ex.png";
+          handHoldCorr2 = "j";
+          hold_hand_R2_img = "Stimuli/HofS2.jpg";
+          hand_hold_feedback1corr = "Designs/hand_hold_global_corr.png";
+          hand_hold_feedback1incorr = "Designs/hand_hold_global_incorr.png";
+          hand_hold_feedback2corr = "Designs/hand_hold_local_corr.png";
+          hand_hold_feedback2incorr = "Designs/hand_hold_local_incorr.png";
+      } else {
+          if ((expInfo["design"] === "3")) {
+              hand_hold_ex1 = "Designs/design3_run1_ex.png";
+              handHoldCorr1 = "f";
+              hold_hand_R1_img = "Stimuli/SofH2.jpg";
+              hand_hold_ex2 = "Designs/design3_run2_ex.png";
+              handHoldCorr2 = "f";
+              hold_hand_R2_img = "Stimuli/HofS2.jpg";
+              hand_hold_feedback1corr = "Designs/hand_hold_global_corr.png";
+              hand_hold_feedback1incorr = "Designs/hand_hold_global_incorr.png";
+              hand_hold_feedback2corr = "Designs/hand_hold_local_corr.png";
+              hand_hold_feedback2incorr = "Designs/hand_hold_local_incorr.png";
+          } else {
+              if ((expInfo["design"] === "4")) {
+                  hand_hold_ex1 = "Designs/design4_run1_ex.png";
+                  handHoldCorr1 = "f";
+                  hold_hand_R1_img = "Stimuli/HofS2.jpg";
+                  hand_hold_ex2 = "Designs/design4_run2_ex.png";
+                  handHoldCorr2 = "f";
+                  hold_hand_R2_img = "Stimuli/SofH2.jpg";
+                  hand_hold_feedback1corr = "Designs/hand_hold_local_corr.png";
+                  hand_hold_feedback1incorr = "Designs/hand_hold_local_incorr.png";
+                  hand_hold_feedback2corr = "Designs/hand_hold_global_corr.png";
+                  hand_hold_feedback2incorr = "Designs/hand_hold_global_incorr.png";
+              }
+          }
+      }
+  }
+  
+  image_2 = new visual.ImageStim({
+    win : psychoJS.window,
+    name : 'image_2', units : undefined, 
+    image : undefined, mask : undefined,
+    ori : 0, pos : [0, 0], size : [(0.75 * 1.77), 0.75],
+    color : new util.Color([1, 1, 1]), opacity : 1,
+    flipHoriz : false, flipVert : false,
+    texRes : 512, interpolate : true, depth : -1.0 
+  });
+  key_resp_9 = new core.Keyboard({psychoJS: psychoJS, clock: new util.Clock(), waitForStart: true});
+  
+  // Initialize components for Routine "hand_hold_trial"
+  hand_hold_trialClock = new util.Clock();
+  text_8 = new visual.TextStim({
     win: psychoJS.window,
-    name: 'start_exp_text',
-    text: 'You will play two games. \nBefore you start, let’s do some practice!\n\nAre you ready? \nPress Space to start practice!',
+    name: 'text_8',
+    text: '+',
     font: 'Arial',
     units: undefined, 
     pos: [0, 0], height: 0.05,  wrapWidth: undefined, ori: 0,
-    color: new util.Color('black'),  opacity: 1,
-    depth: -1.0 
+    color: new util.Color('white'),  opacity: 1,
+    depth: 0.0 
   });
   
-  start_exp_press = new core.Keyboard({psychoJS: psychoJS, clock: new util.Clock(), waitForStart: true});
+  image = new visual.ImageStim({
+    win : psychoJS.window,
+    name : 'image', units : undefined, 
+    image : undefined, mask : undefined,
+    ori : 0, pos : [0, 0], size : 1.0,
+    color : new util.Color([1, 1, 1]), opacity : 1,
+    flipHoriz : false, flipVert : false,
+    texRes : 512, interpolate : true, depth : -1.0 
+  });
+  hand_hold_resp = new core.Keyboard({psychoJS: psychoJS, clock: new util.Clock(), waitForStart: true});
+  
+  // Initialize components for Routine "hand_hold_feedback"
+  hand_hold_feedbackClock = new util.Clock();
+  image_3 = new visual.ImageStim({
+    win : psychoJS.window,
+    name : 'image_3', units : undefined, 
+    image : undefined, mask : undefined,
+    ori : 0, pos : [0, 0], size : [(0.75 * 1.77), 0.75],
+    color : new util.Color([1, 1, 1]), opacity : 1,
+    flipHoriz : false, flipVert : false,
+    texRes : 512, interpolate : true, depth : -1.0 
+  });
+  key_resp_8 = new core.Keyboard({psychoJS: psychoJS, clock: new util.Clock(), waitForStart: true});
   
   // Initialize components for Routine "prac_instr_run1"
   prac_instr_run1Clock = new util.Clock();
@@ -415,8 +601,6 @@ function experimentInit() {
     depth: -1.0 
   });
   
-  fix_respP1_1 = new core.Keyboard({psychoJS: psychoJS, clock: new util.Clock(), waitForStart: true});
-  
   // Initialize components for Routine "prac_img"
   prac_imgClock = new util.Clock();
   text_5 = new visual.TextStim({
@@ -441,7 +625,7 @@ function experimentInit() {
   });
   prac_resp = new core.Keyboard({psychoJS: psychoJS, clock: new util.Clock(), waitForStart: true});
   
-  prac_fix_resp_2 = new core.Keyboard({psychoJS: psychoJS, clock: new util.Clock(), waitForStart: true});
+  prac_fix_resp = new core.Keyboard({psychoJS: psychoJS, clock: new util.Clock(), waitForStart: true});
   
   // Initialize components for Routine "Feedback"
   FeedbackClock = new util.Clock();
@@ -449,17 +633,28 @@ function experimentInit() {
     win : psychoJS.window,
     name : 'imFeedback', units : undefined, 
     image : undefined, mask : undefined,
-    ori : 0, pos : [0, 0], size : [0.5, 0.5],
+    ori : 0, pos : [0, 0], size : [0.25, 0.25],
     color : new util.Color([1, 1, 1]), opacity : 1,
     flipHoriz : false, flipVert : false,
     texRes : 512, interpolate : true, depth : -1.0 
   });
+  feedback_msg = new visual.TextStim({
+    win: psychoJS.window,
+    name: 'feedback_msg',
+    text: 'default text',
+    font: 'Arial',
+    units: undefined, 
+    pos: [0, (- 0.25)], height: 0.05,  wrapWidth: undefined, ori: 0,
+    color: new util.Color('black'),  opacity: 1,
+    depth: -2.0 
+  });
+  
   // Initialize components for Routine "transition2trials"
   transition2trialsClock = new util.Clock();
   text_7 = new visual.TextStim({
     win: psychoJS.window,
     name: 'text_7',
-    text: 'Great Job!\n\nNow we are going to play the real game. \n\nPress Space to see the instructions\n\n',
+    text: 'Great Job!\n\nNow we are going to play the real game. \n\nPress Space to see the instructions again.\n\n',
     font: 'Arial',
     units: undefined, 
     pos: [0, 0], height: 0.05,  wrapWidth: undefined, ori: 0,
@@ -508,7 +703,7 @@ function experimentInit() {
     win : psychoJS.window,
     name : 'instructions_imageR1', units : undefined, 
     image : undefined, mask : undefined,
-    ori : 0, pos : [0, 0], size : [(0.75 * 1.5), 0.75],
+    ori : 0, pos : [0, 0], size : [(0.75 * 1.77), 0.75],
     color : new util.Color([1, 1, 1]), opacity : 1,
     flipHoriz : false, flipVert : false,
     texRes : 512, interpolate : true, depth : -1.0 
@@ -556,6 +751,119 @@ function experimentInit() {
   
   fix_resp_2 = new core.Keyboard({psychoJS: psychoJS, clock: new util.Clock(), waitForStart: true});
   
+  // Initialize components for Routine "btwn_trial_GJ"
+  btwn_trial_GJClock = new util.Clock();
+  image_4 = new visual.ImageStim({
+    win : psychoJS.window,
+    name : 'image_4', units : undefined, 
+    image : 'Designs/baby_dory_GJ.png', mask : undefined,
+    ori : 0, pos : [0, 0], size : [0.4, (0.4 * 1.83)],
+    color : new util.Color([1, 1, 1]), opacity : 1,
+    flipHoriz : false, flipVert : false,
+    texRes : 512, interpolate : true, depth : -1.0 
+  });
+  // Initialize components for Routine "hand_hold_instr"
+  hand_hold_instrClock = new util.Clock();
+  if ((expInfo["design"] === "1")) {
+      hand_hold_ex1 = "Designs/design1_run1_ex.png";
+      handHoldCorr1 = "j";
+      hold_hand_R1_img = "Stimuli/HofS2.jpg";
+      hand_hold_ex2 = "Designs/design1_run2_ex.png";
+      handHoldCorr2 = "j";
+      hold_hand_R2_img = "Stimuli/SofH2.jpg";
+      hand_hold_feedback1corr = "Designs/hand_hold_local_corr.png";
+      hand_hold_feedback1incorr = "Designs/hand_hold_local_incorr.png";
+      hand_hold_feedback2corr = "Designs/hand_hold_global_corr.png";
+      hand_hold_feedback2incorr = "Designs/hand_hold_global_incorr.png";
+  } else {
+      if ((expInfo["design"] === "2")) {
+          hand_hold_ex1 = "Designs/design2_run1_ex.png";
+          handHoldCorr1 = "j";
+          hold_hand_R1_img = "Stimuli/SofH2.jpg";
+          hand_hold_ex2 = "Designs/design2_run2_ex.png";
+          handHoldCorr2 = "j";
+          hold_hand_R2_img = "Stimuli/HofS2.jpg";
+          hand_hold_feedback1corr = "Designs/hand_hold_global_corr.png";
+          hand_hold_feedback1incorr = "Designs/hand_hold_global_incorr.png";
+          hand_hold_feedback2corr = "Designs/hand_hold_local_corr.png";
+          hand_hold_feedback2incorr = "Designs/hand_hold_local_incorr.png";
+      } else {
+          if ((expInfo["design"] === "3")) {
+              hand_hold_ex1 = "Designs/design3_run1_ex.png";
+              handHoldCorr1 = "f";
+              hold_hand_R1_img = "Stimuli/SofH2.jpg";
+              hand_hold_ex2 = "Designs/design3_run2_ex.png";
+              handHoldCorr2 = "f";
+              hold_hand_R2_img = "Stimuli/HofS2.jpg";
+              hand_hold_feedback1corr = "Designs/hand_hold_global_corr.png";
+              hand_hold_feedback1incorr = "Designs/hand_hold_global_incorr.png";
+              hand_hold_feedback2corr = "Designs/hand_hold_local_corr.png";
+              hand_hold_feedback2incorr = "Designs/hand_hold_local_incorr.png";
+          } else {
+              if ((expInfo["design"] === "4")) {
+                  hand_hold_ex1 = "Designs/design4_run1_ex.png";
+                  handHoldCorr1 = "f";
+                  hold_hand_R1_img = "Stimuli/HofS2.jpg";
+                  hand_hold_ex2 = "Designs/design4_run2_ex.png";
+                  handHoldCorr2 = "f";
+                  hold_hand_R2_img = "Stimuli/SofH2.jpg";
+                  hand_hold_feedback1corr = "Designs/hand_hold_local_corr.png";
+                  hand_hold_feedback1incorr = "Designs/hand_hold_local_incorr.png";
+                  hand_hold_feedback2corr = "Designs/hand_hold_global_corr.png";
+                  hand_hold_feedback2incorr = "Designs/hand_hold_global_incorr.png";
+              }
+          }
+      }
+  }
+  
+  image_2 = new visual.ImageStim({
+    win : psychoJS.window,
+    name : 'image_2', units : undefined, 
+    image : undefined, mask : undefined,
+    ori : 0, pos : [0, 0], size : [(0.75 * 1.77), 0.75],
+    color : new util.Color([1, 1, 1]), opacity : 1,
+    flipHoriz : false, flipVert : false,
+    texRes : 512, interpolate : true, depth : -1.0 
+  });
+  key_resp_9 = new core.Keyboard({psychoJS: psychoJS, clock: new util.Clock(), waitForStart: true});
+  
+  // Initialize components for Routine "hand_hold_trial"
+  hand_hold_trialClock = new util.Clock();
+  text_8 = new visual.TextStim({
+    win: psychoJS.window,
+    name: 'text_8',
+    text: '+',
+    font: 'Arial',
+    units: undefined, 
+    pos: [0, 0], height: 0.05,  wrapWidth: undefined, ori: 0,
+    color: new util.Color('white'),  opacity: 1,
+    depth: 0.0 
+  });
+  
+  image = new visual.ImageStim({
+    win : psychoJS.window,
+    name : 'image', units : undefined, 
+    image : undefined, mask : undefined,
+    ori : 0, pos : [0, 0], size : 1.0,
+    color : new util.Color([1, 1, 1]), opacity : 1,
+    flipHoriz : false, flipVert : false,
+    texRes : 512, interpolate : true, depth : -1.0 
+  });
+  hand_hold_resp = new core.Keyboard({psychoJS: psychoJS, clock: new util.Clock(), waitForStart: true});
+  
+  // Initialize components for Routine "hand_hold_feedback"
+  hand_hold_feedbackClock = new util.Clock();
+  image_3 = new visual.ImageStim({
+    win : psychoJS.window,
+    name : 'image_3', units : undefined, 
+    image : undefined, mask : undefined,
+    ori : 0, pos : [0, 0], size : [(0.75 * 1.77), 0.75],
+    color : new util.Color([1, 1, 1]), opacity : 1,
+    flipHoriz : false, flipVert : false,
+    texRes : 512, interpolate : true, depth : -1.0 
+  });
+  key_resp_8 = new core.Keyboard({psychoJS: psychoJS, clock: new util.Clock(), waitForStart: true});
+  
   // Initialize components for Routine "prac_instr_run2"
   prac_instr_run2Clock = new util.Clock();
   if ((expInfo["design"] === "1")) {
@@ -599,7 +907,7 @@ function experimentInit() {
     win : psychoJS.window,
     name : 'Pinstructions_imageR2', units : undefined, 
     image : undefined, mask : undefined,
-    ori : 0, pos : [0, 0], size : [(0.75 * 1.75), 0.75],
+    ori : 0, pos : [0, 0], size : [(0.75 * 1.77), 0.75],
     color : new util.Color([1, 1, 1]), opacity : 1,
     flipHoriz : false, flipVert : false,
     texRes : 512, interpolate : true, depth : -1.0 
@@ -645,7 +953,7 @@ function experimentInit() {
   });
   prac_resp = new core.Keyboard({psychoJS: psychoJS, clock: new util.Clock(), waitForStart: true});
   
-  prac_fix_resp_2 = new core.Keyboard({psychoJS: psychoJS, clock: new util.Clock(), waitForStart: true});
+  prac_fix_resp = new core.Keyboard({psychoJS: psychoJS, clock: new util.Clock(), waitForStart: true});
   
   // Initialize components for Routine "Feedback"
   FeedbackClock = new util.Clock();
@@ -653,17 +961,28 @@ function experimentInit() {
     win : psychoJS.window,
     name : 'imFeedback', units : undefined, 
     image : undefined, mask : undefined,
-    ori : 0, pos : [0, 0], size : [0.5, 0.5],
+    ori : 0, pos : [0, 0], size : [0.25, 0.25],
     color : new util.Color([1, 1, 1]), opacity : 1,
     flipHoriz : false, flipVert : false,
     texRes : 512, interpolate : true, depth : -1.0 
   });
+  feedback_msg = new visual.TextStim({
+    win: psychoJS.window,
+    name: 'feedback_msg',
+    text: 'default text',
+    font: 'Arial',
+    units: undefined, 
+    pos: [0, (- 0.25)], height: 0.05,  wrapWidth: undefined, ori: 0,
+    color: new util.Color('black'),  opacity: 1,
+    depth: -2.0 
+  });
+  
   // Initialize components for Routine "transition2trials"
   transition2trialsClock = new util.Clock();
   text_7 = new visual.TextStim({
     win: psychoJS.window,
     name: 'text_7',
-    text: 'Great Job!\n\nNow we are going to play the real game. \n\nPress Space to see the instructions\n\n',
+    text: 'Great Job!\n\nNow we are going to play the real game. \n\nPress Space to see the instructions again.\n\n',
     font: 'Arial',
     units: undefined, 
     pos: [0, 0], height: 0.05,  wrapWidth: undefined, ori: 0,
@@ -699,7 +1018,7 @@ function experimentInit() {
     win : psychoJS.window,
     name : 'instructions_imageR2', units : undefined, 
     image : undefined, mask : undefined,
-    ori : 0, pos : [0, 0], size : [(0.75 * 1.5), 0.75],
+    ori : 0, pos : [0, 0], size : [(0.75 * 1.77), 0.75],
     color : new util.Color([1, 1, 1]), opacity : 1,
     flipHoriz : false, flipVert : false,
     texRes : 512, interpolate : true, depth : -1.0 
@@ -749,17 +1068,15 @@ function experimentInit() {
   
   // Initialize components for Routine "EndScreen"
   EndScreenClock = new util.Clock();
-  allDone = new visual.TextStim({
-    win: psychoJS.window,
-    name: 'allDone',
-    text: 'You are all done. Thank you!',
-    font: 'Arial',
-    units: undefined, 
-    pos: [0, 0], height: 0.1,  wrapWidth: undefined, ori: 0,
-    color: new util.Color('black'),  opacity: 1,
-    depth: 0.0 
+  image_5 = new visual.ImageStim({
+    win : psychoJS.window,
+    name : 'image_5', units : undefined, 
+    image : 'Designs/baby_squirt_GJ.png', mask : undefined,
+    ori : 0, pos : [0, 0], size : [(0.5 * 1.6), 0.5],
+    color : new util.Color([1, 1, 1]), opacity : 1,
+    flipHoriz : false, flipVert : false,
+    texRes : 512, interpolate : true, depth : 0.0 
   });
-  
   // Create some handy timers
   globalClock = new util.Clock();  // to track the time since experiment started
   routineTimer = new util.CountdownTimer();  // to track time remaining of each (non-slip) routine
@@ -931,6 +1248,7 @@ function screen_scaleRoutineEnd(snapshot) {
 }
 
 
+var hand_hold_run;
 var _start_exp_press_allKeys;
 var pracInstructComponents;
 function pracInstructRoutineBegin(snapshot) {
@@ -940,12 +1258,14 @@ function pracInstructRoutineBegin(snapshot) {
     pracInstructClock.reset(); // clock
     frameN = -1;
     // update component parameters for each repeat
+    hand_hold_run = 1;
+    
     start_exp_press.keys = undefined;
     start_exp_press.rt = undefined;
     _start_exp_press_allKeys = [];
     // keep track of which components have finished
     pracInstructComponents = [];
-    pracInstructComponents.push(start_exp_text);
+    pracInstructComponents.push(prac_instr1);
     pracInstructComponents.push(start_exp_press);
     
     for (const thisComponent of pracInstructComponents)
@@ -966,18 +1286,18 @@ function pracInstructRoutineEachFrame(snapshot) {
     frameN = frameN + 1;// number of completed frames (so 0 is the first frame)
     // update/draw components on each frame
     
-    // *start_exp_text* updates
-    if (t >= 0.0 && start_exp_text.status === PsychoJS.Status.NOT_STARTED) {
+    // *prac_instr1* updates
+    if (t >= 0.0 && prac_instr1.status === PsychoJS.Status.NOT_STARTED) {
       // keep track of start time/frame for later
-      start_exp_text.tStart = t;  // (not accounting for frame time here)
-      start_exp_text.frameNStart = frameN;  // exact frame index
+      prac_instr1.tStart = t;  // (not accounting for frame time here)
+      prac_instr1.frameNStart = frameN;  // exact frame index
       
-      start_exp_text.setAutoDraw(true);
+      prac_instr1.setAutoDraw(true);
     }
 
     
     // *start_exp_press* updates
-    if (t >= 1 && start_exp_press.status === PsychoJS.Status.NOT_STARTED) {
+    if (t >= 0.3 && start_exp_press.status === PsychoJS.Status.NOT_STARTED) {
       // keep track of start time/frame for later
       start_exp_press.tStart = t;  // (not accounting for frame time here)
       start_exp_press.frameNStart = frameN;  // exact frame index
@@ -1035,6 +1355,665 @@ function pracInstructRoutineEnd(snapshot) {
       }
     }
     // the Routine "pracInstruct" was not non-slip safe, so reset the non-slip timer
+    routineTimer.reset();
+    
+    return Scheduler.Event.NEXT;
+  };
+}
+
+
+var _key_resp_6_allKeys;
+var pracInstruct2Components;
+function pracInstruct2RoutineBegin(snapshot) {
+  return function () {
+    //------Prepare to start Routine 'pracInstruct2'-------
+    t = 0;
+    pracInstruct2Clock.reset(); // clock
+    frameN = -1;
+    // update component parameters for each repeat
+    key_resp_6.keys = undefined;
+    key_resp_6.rt = undefined;
+    _key_resp_6_allKeys = [];
+    // keep track of which components have finished
+    pracInstruct2Components = [];
+    pracInstruct2Components.push(prac_instr2);
+    pracInstruct2Components.push(key_resp_6);
+    
+    for (const thisComponent of pracInstruct2Components)
+      if ('status' in thisComponent)
+        thisComponent.status = PsychoJS.Status.NOT_STARTED;
+    
+    return Scheduler.Event.NEXT;
+  };
+}
+
+
+function pracInstruct2RoutineEachFrame(snapshot) {
+  return function () {
+    //------Loop for each frame of Routine 'pracInstruct2'-------
+    let continueRoutine = true; // until we're told otherwise
+    // get current time
+    t = pracInstruct2Clock.getTime();
+    frameN = frameN + 1;// number of completed frames (so 0 is the first frame)
+    // update/draw components on each frame
+    
+    // *prac_instr2* updates
+    if (t >= 0.0 && prac_instr2.status === PsychoJS.Status.NOT_STARTED) {
+      // keep track of start time/frame for later
+      prac_instr2.tStart = t;  // (not accounting for frame time here)
+      prac_instr2.frameNStart = frameN;  // exact frame index
+      
+      prac_instr2.setAutoDraw(true);
+    }
+
+    
+    // *key_resp_6* updates
+    if (t >= 0.3 && key_resp_6.status === PsychoJS.Status.NOT_STARTED) {
+      // keep track of start time/frame for later
+      key_resp_6.tStart = t;  // (not accounting for frame time here)
+      key_resp_6.frameNStart = frameN;  // exact frame index
+      
+      // keyboard checking is just starting
+      psychoJS.window.callOnFlip(function() { key_resp_6.clock.reset(); });  // t=0 on next screen flip
+      psychoJS.window.callOnFlip(function() { key_resp_6.start(); }); // start on screen flip
+      psychoJS.window.callOnFlip(function() { key_resp_6.clearEvents(); });
+    }
+
+    if (key_resp_6.status === PsychoJS.Status.STARTED) {
+      let theseKeys = key_resp_6.getKeys({keyList: ['space'], waitRelease: false});
+      _key_resp_6_allKeys = _key_resp_6_allKeys.concat(theseKeys);
+      if (_key_resp_6_allKeys.length > 0) {
+        key_resp_6.keys = _key_resp_6_allKeys[_key_resp_6_allKeys.length - 1].name;  // just the last key pressed
+        key_resp_6.rt = _key_resp_6_allKeys[_key_resp_6_allKeys.length - 1].rt;
+        // a response ends the routine
+        continueRoutine = false;
+      }
+    }
+    
+    // check for quit (typically the Esc key)
+    if (psychoJS.experiment.experimentEnded || psychoJS.eventManager.getKeys({keyList:['escape']}).length > 0) {
+      return quitPsychoJS('The [Escape] key was pressed. Goodbye!', false);
+    }
+    
+    // check if the Routine should terminate
+    if (!continueRoutine) {  // a component has requested a forced-end of Routine
+      return Scheduler.Event.NEXT;
+    }
+    
+    continueRoutine = false;  // reverts to True if at least one component still running
+    for (const thisComponent of pracInstruct2Components)
+      if ('status' in thisComponent && thisComponent.status !== PsychoJS.Status.FINISHED) {
+        continueRoutine = true;
+        break;
+      }
+    
+    // refresh the screen if continuing
+    if (continueRoutine) {
+      return Scheduler.Event.FLIP_REPEAT;
+    } else {
+      return Scheduler.Event.NEXT;
+    }
+  };
+}
+
+
+function pracInstruct2RoutineEnd(snapshot) {
+  return function () {
+    //------Ending Routine 'pracInstruct2'-------
+    for (const thisComponent of pracInstruct2Components) {
+      if (typeof thisComponent.setAutoDraw === 'function') {
+        thisComponent.setAutoDraw(false);
+      }
+    }
+    // the Routine "pracInstruct2" was not non-slip safe, so reset the non-slip timer
+    routineTimer.reset();
+    
+    return Scheduler.Event.NEXT;
+  };
+}
+
+
+var _key_resp_7_allKeys;
+var pracInstruct3Components;
+function pracInstruct3RoutineBegin(snapshot) {
+  return function () {
+    //------Prepare to start Routine 'pracInstruct3'-------
+    t = 0;
+    pracInstruct3Clock.reset(); // clock
+    frameN = -1;
+    // update component parameters for each repeat
+    key_resp_7.keys = undefined;
+    key_resp_7.rt = undefined;
+    _key_resp_7_allKeys = [];
+    // keep track of which components have finished
+    pracInstruct3Components = [];
+    pracInstruct3Components.push(prac_instr3);
+    pracInstruct3Components.push(key_resp_7);
+    
+    for (const thisComponent of pracInstruct3Components)
+      if ('status' in thisComponent)
+        thisComponent.status = PsychoJS.Status.NOT_STARTED;
+    
+    return Scheduler.Event.NEXT;
+  };
+}
+
+
+function pracInstruct3RoutineEachFrame(snapshot) {
+  return function () {
+    //------Loop for each frame of Routine 'pracInstruct3'-------
+    let continueRoutine = true; // until we're told otherwise
+    // get current time
+    t = pracInstruct3Clock.getTime();
+    frameN = frameN + 1;// number of completed frames (so 0 is the first frame)
+    // update/draw components on each frame
+    
+    // *prac_instr3* updates
+    if (t >= 0.0 && prac_instr3.status === PsychoJS.Status.NOT_STARTED) {
+      // keep track of start time/frame for later
+      prac_instr3.tStart = t;  // (not accounting for frame time here)
+      prac_instr3.frameNStart = frameN;  // exact frame index
+      
+      prac_instr3.setAutoDraw(true);
+    }
+
+    
+    // *key_resp_7* updates
+    if (t >= 0.3 && key_resp_7.status === PsychoJS.Status.NOT_STARTED) {
+      // keep track of start time/frame for later
+      key_resp_7.tStart = t;  // (not accounting for frame time here)
+      key_resp_7.frameNStart = frameN;  // exact frame index
+      
+      // keyboard checking is just starting
+      psychoJS.window.callOnFlip(function() { key_resp_7.clock.reset(); });  // t=0 on next screen flip
+      psychoJS.window.callOnFlip(function() { key_resp_7.start(); }); // start on screen flip
+      psychoJS.window.callOnFlip(function() { key_resp_7.clearEvents(); });
+    }
+
+    if (key_resp_7.status === PsychoJS.Status.STARTED) {
+      let theseKeys = key_resp_7.getKeys({keyList: ['space'], waitRelease: false});
+      _key_resp_7_allKeys = _key_resp_7_allKeys.concat(theseKeys);
+      if (_key_resp_7_allKeys.length > 0) {
+        key_resp_7.keys = _key_resp_7_allKeys[_key_resp_7_allKeys.length - 1].name;  // just the last key pressed
+        key_resp_7.rt = _key_resp_7_allKeys[_key_resp_7_allKeys.length - 1].rt;
+        // a response ends the routine
+        continueRoutine = false;
+      }
+    }
+    
+    // check for quit (typically the Esc key)
+    if (psychoJS.experiment.experimentEnded || psychoJS.eventManager.getKeys({keyList:['escape']}).length > 0) {
+      return quitPsychoJS('The [Escape] key was pressed. Goodbye!', false);
+    }
+    
+    // check if the Routine should terminate
+    if (!continueRoutine) {  // a component has requested a forced-end of Routine
+      return Scheduler.Event.NEXT;
+    }
+    
+    continueRoutine = false;  // reverts to True if at least one component still running
+    for (const thisComponent of pracInstruct3Components)
+      if ('status' in thisComponent && thisComponent.status !== PsychoJS.Status.FINISHED) {
+        continueRoutine = true;
+        break;
+      }
+    
+    // refresh the screen if continuing
+    if (continueRoutine) {
+      return Scheduler.Event.FLIP_REPEAT;
+    } else {
+      return Scheduler.Event.NEXT;
+    }
+  };
+}
+
+
+function pracInstruct3RoutineEnd(snapshot) {
+  return function () {
+    //------Ending Routine 'pracInstruct3'-------
+    for (const thisComponent of pracInstruct3Components) {
+      if (typeof thisComponent.setAutoDraw === 'function') {
+        thisComponent.setAutoDraw(false);
+      }
+    }
+    // the Routine "pracInstruct3" was not non-slip safe, so reset the non-slip timer
+    routineTimer.reset();
+    
+    return Scheduler.Event.NEXT;
+  };
+}
+
+
+var xPosition;
+var hand_hold_ex;
+var handHoldCorr;
+var hold_hand_img;
+var hand_hold_feedbackcorr;
+var hand_hold_feedbackincorr;
+var _key_resp_9_allKeys;
+var hand_hold_instrComponents;
+function hand_hold_instrRoutineBegin(snapshot) {
+  return function () {
+    //------Prepare to start Routine 'hand_hold_instr'-------
+    t = 0;
+    hand_hold_instrClock.reset(); // clock
+    frameN = -1;
+    // update component parameters for each repeat
+    if ((expInfo["position"] === "0")) {
+        xPosition = 0;
+    } else {
+        if ((expInfo["position"] === "2")) {
+            left_right = [0, 1];
+            shuffle(left_right);
+            rand_side = [0];
+            if ((rand_side === 0)) {
+                xPosition = (- (width4deg * x_scale));
+            } else {
+                xPosition = (width4deg * x_scale);
+            }
+        } else {
+            if ((expInfo["position"] === "1")) {
+                xPosition = (- (width4deg * x_scale));
+            } else {
+                if ((expInfo["position"] === "3")) {
+                    xPosition = (width4deg * x_scale);
+                }
+            }
+        }
+    }
+    if ((hand_hold_run === 1)) {
+        hand_hold_ex = hand_hold_ex1;
+        handHoldCorr = handHoldCorr1;
+        hold_hand_img = hold_hand_R1_img;
+        hand_hold_feedbackcorr = hand_hold_feedback1corr;
+        hand_hold_feedbackincorr = hand_hold_feedback1incorr;
+    } else {
+        hand_hold_ex = hand_hold_ex2;
+        handHoldCorr = handHoldCorr2;
+        hold_hand_img = hold_hand_R2_img;
+        hand_hold_feedbackcorr = hand_hold_feedback2corr;
+        hand_hold_feedbackincorr = hand_hold_feedback2incorr;
+    }
+    
+    image_2.setImage(hand_hold_ex);
+    key_resp_9.keys = undefined;
+    key_resp_9.rt = undefined;
+    _key_resp_9_allKeys = [];
+    // keep track of which components have finished
+    hand_hold_instrComponents = [];
+    hand_hold_instrComponents.push(image_2);
+    hand_hold_instrComponents.push(key_resp_9);
+    
+    for (const thisComponent of hand_hold_instrComponents)
+      if ('status' in thisComponent)
+        thisComponent.status = PsychoJS.Status.NOT_STARTED;
+    
+    return Scheduler.Event.NEXT;
+  };
+}
+
+
+function hand_hold_instrRoutineEachFrame(snapshot) {
+  return function () {
+    //------Loop for each frame of Routine 'hand_hold_instr'-------
+    let continueRoutine = true; // until we're told otherwise
+    // get current time
+    t = hand_hold_instrClock.getTime();
+    frameN = frameN + 1;// number of completed frames (so 0 is the first frame)
+    // update/draw components on each frame
+    
+    // *image_2* updates
+    if (t >= 0.0 && image_2.status === PsychoJS.Status.NOT_STARTED) {
+      // keep track of start time/frame for later
+      image_2.tStart = t;  // (not accounting for frame time here)
+      image_2.frameNStart = frameN;  // exact frame index
+      
+      image_2.setAutoDraw(true);
+    }
+
+    
+    // *key_resp_9* updates
+    if (t >= 0.0 && key_resp_9.status === PsychoJS.Status.NOT_STARTED) {
+      // keep track of start time/frame for later
+      key_resp_9.tStart = t;  // (not accounting for frame time here)
+      key_resp_9.frameNStart = frameN;  // exact frame index
+      
+      // keyboard checking is just starting
+      psychoJS.window.callOnFlip(function() { key_resp_9.clock.reset(); });  // t=0 on next screen flip
+      psychoJS.window.callOnFlip(function() { key_resp_9.start(); }); // start on screen flip
+      psychoJS.window.callOnFlip(function() { key_resp_9.clearEvents(); });
+    }
+
+    if (key_resp_9.status === PsychoJS.Status.STARTED) {
+      let theseKeys = key_resp_9.getKeys({keyList: ['space'], waitRelease: false});
+      _key_resp_9_allKeys = _key_resp_9_allKeys.concat(theseKeys);
+      if (_key_resp_9_allKeys.length > 0) {
+        key_resp_9.keys = _key_resp_9_allKeys[_key_resp_9_allKeys.length - 1].name;  // just the last key pressed
+        key_resp_9.rt = _key_resp_9_allKeys[_key_resp_9_allKeys.length - 1].rt;
+        // a response ends the routine
+        continueRoutine = false;
+      }
+    }
+    
+    // check for quit (typically the Esc key)
+    if (psychoJS.experiment.experimentEnded || psychoJS.eventManager.getKeys({keyList:['escape']}).length > 0) {
+      return quitPsychoJS('The [Escape] key was pressed. Goodbye!', false);
+    }
+    
+    // check if the Routine should terminate
+    if (!continueRoutine) {  // a component has requested a forced-end of Routine
+      return Scheduler.Event.NEXT;
+    }
+    
+    continueRoutine = false;  // reverts to True if at least one component still running
+    for (const thisComponent of hand_hold_instrComponents)
+      if ('status' in thisComponent && thisComponent.status !== PsychoJS.Status.FINISHED) {
+        continueRoutine = true;
+        break;
+      }
+    
+    // refresh the screen if continuing
+    if (continueRoutine) {
+      return Scheduler.Event.FLIP_REPEAT;
+    } else {
+      return Scheduler.Event.NEXT;
+    }
+  };
+}
+
+
+function hand_hold_instrRoutineEnd(snapshot) {
+  return function () {
+    //------Ending Routine 'hand_hold_instr'-------
+    for (const thisComponent of hand_hold_instrComponents) {
+      if (typeof thisComponent.setAutoDraw === 'function') {
+        thisComponent.setAutoDraw(false);
+      }
+    }
+    // the Routine "hand_hold_instr" was not non-slip safe, so reset the non-slip timer
+    routineTimer.reset();
+    
+    return Scheduler.Event.NEXT;
+  };
+}
+
+
+var _hand_hold_resp_allKeys;
+var hand_hold_trialComponents;
+function hand_hold_trialRoutineBegin(snapshot) {
+  return function () {
+    //------Prepare to start Routine 'hand_hold_trial'-------
+    t = 0;
+    hand_hold_trialClock.reset(); // clock
+    frameN = -1;
+    // update component parameters for each repeat
+    image.setPos([xPosition, 0]);
+    image.setSize([(width * x_scale), (height * y_scale)]);
+    image.setImage(hold_hand_img);
+    hand_hold_resp.keys = undefined;
+    hand_hold_resp.rt = undefined;
+    _hand_hold_resp_allKeys = [];
+    // keep track of which components have finished
+    hand_hold_trialComponents = [];
+    hand_hold_trialComponents.push(text_8);
+    hand_hold_trialComponents.push(image);
+    hand_hold_trialComponents.push(hand_hold_resp);
+    
+    for (const thisComponent of hand_hold_trialComponents)
+      if ('status' in thisComponent)
+        thisComponent.status = PsychoJS.Status.NOT_STARTED;
+    
+    return Scheduler.Event.NEXT;
+  };
+}
+
+
+function hand_hold_trialRoutineEachFrame(snapshot) {
+  return function () {
+    //------Loop for each frame of Routine 'hand_hold_trial'-------
+    let continueRoutine = true; // until we're told otherwise
+    // get current time
+    t = hand_hold_trialClock.getTime();
+    frameN = frameN + 1;// number of completed frames (so 0 is the first frame)
+    // update/draw components on each frame
+    
+    // *text_8* updates
+    if (t >= 0.0 && text_8.status === PsychoJS.Status.NOT_STARTED) {
+      // keep track of start time/frame for later
+      text_8.tStart = t;  // (not accounting for frame time here)
+      text_8.frameNStart = frameN;  // exact frame index
+      
+      text_8.setAutoDraw(true);
+    }
+
+    
+    // *image* updates
+    if (t >= 0.0 && image.status === PsychoJS.Status.NOT_STARTED) {
+      // keep track of start time/frame for later
+      image.tStart = t;  // (not accounting for frame time here)
+      image.frameNStart = frameN;  // exact frame index
+      
+      image.setAutoDraw(true);
+    }
+
+    
+    // *hand_hold_resp* updates
+    if (t >= 0.0 && hand_hold_resp.status === PsychoJS.Status.NOT_STARTED) {
+      // keep track of start time/frame for later
+      hand_hold_resp.tStart = t;  // (not accounting for frame time here)
+      hand_hold_resp.frameNStart = frameN;  // exact frame index
+      
+      // keyboard checking is just starting
+      psychoJS.window.callOnFlip(function() { hand_hold_resp.clock.reset(); });  // t=0 on next screen flip
+      psychoJS.window.callOnFlip(function() { hand_hold_resp.start(); }); // start on screen flip
+      psychoJS.window.callOnFlip(function() { hand_hold_resp.clearEvents(); });
+    }
+
+    if (hand_hold_resp.status === PsychoJS.Status.STARTED) {
+      let theseKeys = hand_hold_resp.getKeys({keyList: ['f', 'j'], waitRelease: false});
+      _hand_hold_resp_allKeys = _hand_hold_resp_allKeys.concat(theseKeys);
+      if (_hand_hold_resp_allKeys.length > 0) {
+        hand_hold_resp.keys = _hand_hold_resp_allKeys[_hand_hold_resp_allKeys.length - 1].name;  // just the last key pressed
+        hand_hold_resp.rt = _hand_hold_resp_allKeys[_hand_hold_resp_allKeys.length - 1].rt;
+        // was this correct?
+        if (hand_hold_resp.keys == handHoldCorr) {
+            hand_hold_resp.corr = 1;
+        } else {
+            hand_hold_resp.corr = 0;
+        }
+        // a response ends the routine
+        continueRoutine = false;
+      }
+    }
+    
+    // check for quit (typically the Esc key)
+    if (psychoJS.experiment.experimentEnded || psychoJS.eventManager.getKeys({keyList:['escape']}).length > 0) {
+      return quitPsychoJS('The [Escape] key was pressed. Goodbye!', false);
+    }
+    
+    // check if the Routine should terminate
+    if (!continueRoutine) {  // a component has requested a forced-end of Routine
+      return Scheduler.Event.NEXT;
+    }
+    
+    continueRoutine = false;  // reverts to True if at least one component still running
+    for (const thisComponent of hand_hold_trialComponents)
+      if ('status' in thisComponent && thisComponent.status !== PsychoJS.Status.FINISHED) {
+        continueRoutine = true;
+        break;
+      }
+    
+    // refresh the screen if continuing
+    if (continueRoutine) {
+      return Scheduler.Event.FLIP_REPEAT;
+    } else {
+      return Scheduler.Event.NEXT;
+    }
+  };
+}
+
+
+function hand_hold_trialRoutineEnd(snapshot) {
+  return function () {
+    //------Ending Routine 'hand_hold_trial'-------
+    for (const thisComponent of hand_hold_trialComponents) {
+      if (typeof thisComponent.setAutoDraw === 'function') {
+        thisComponent.setAutoDraw(false);
+      }
+    }
+    // was no response the correct answer?!
+    if (hand_hold_resp.keys === undefined) {
+      if (['None','none',undefined].includes(handHoldCorr)) {
+         hand_hold_resp.corr = 1;  // correct non-response
+      } else {
+         hand_hold_resp.corr = 0;  // failed to respond (incorrectly)
+      }
+    }
+    // store data for thisExp (ExperimentHandler)
+    psychoJS.experiment.addData('hand_hold_resp.keys', hand_hold_resp.keys);
+    psychoJS.experiment.addData('hand_hold_resp.corr', hand_hold_resp.corr);
+    if (typeof hand_hold_resp.keys !== 'undefined') {  // we had a response
+        psychoJS.experiment.addData('hand_hold_resp.rt', hand_hold_resp.rt);
+        routineTimer.reset();
+        }
+    
+    hand_hold_resp.stop();
+    // the Routine "hand_hold_trial" was not non-slip safe, so reset the non-slip timer
+    routineTimer.reset();
+    
+    return Scheduler.Event.NEXT;
+  };
+}
+
+
+var feedHHim;
+var _key_resp_8_allKeys;
+var hand_hold_feedbackComponents;
+function hand_hold_feedbackRoutineBegin(snapshot) {
+  return function () {
+    //------Prepare to start Routine 'hand_hold_feedback'-------
+    t = 0;
+    hand_hold_feedbackClock.reset(); // clock
+    frameN = -1;
+    // update component parameters for each repeat
+    feedHHim = "";
+    if ((hand_hold_run === 1)) {
+        if ((hand_hold_resp.keys === handHoldCorr1)) {
+            feedHHim = hand_hold_feedback1corr;
+        } else {
+            if ((hand_hold_resp.keys !== handHoldCorr1)) {
+                feedHHim = hand_hold_feedback1incorr;
+            }
+        }
+    } else {
+        if ((hand_hold_resp.keys === handHoldCorr2)) {
+            feedHHim = hand_hold_feedback2corr;
+        } else {
+            if ((hand_hold_resp.keys !== handHoldCorr2)) {
+                feedHHim = hand_hold_feedback2incorr;
+            }
+        }
+    }
+    
+    key_resp_8.keys = undefined;
+    key_resp_8.rt = undefined;
+    _key_resp_8_allKeys = [];
+    // keep track of which components have finished
+    hand_hold_feedbackComponents = [];
+    hand_hold_feedbackComponents.push(image_3);
+    hand_hold_feedbackComponents.push(key_resp_8);
+    
+    for (const thisComponent of hand_hold_feedbackComponents)
+      if ('status' in thisComponent)
+        thisComponent.status = PsychoJS.Status.NOT_STARTED;
+    
+    return Scheduler.Event.NEXT;
+  };
+}
+
+
+function hand_hold_feedbackRoutineEachFrame(snapshot) {
+  return function () {
+    //------Loop for each frame of Routine 'hand_hold_feedback'-------
+    let continueRoutine = true; // until we're told otherwise
+    // get current time
+    t = hand_hold_feedbackClock.getTime();
+    frameN = frameN + 1;// number of completed frames (so 0 is the first frame)
+    // update/draw components on each frame
+    
+    // *image_3* updates
+    if (t >= 0.0 && image_3.status === PsychoJS.Status.NOT_STARTED) {
+      // keep track of start time/frame for later
+      image_3.tStart = t;  // (not accounting for frame time here)
+      image_3.frameNStart = frameN;  // exact frame index
+      
+      image_3.setAutoDraw(true);
+    }
+
+    
+    if (image_3.status === PsychoJS.Status.STARTED){ // only update if being drawn
+      image_3.setImage(feedHHim);
+    }
+    
+    // *key_resp_8* updates
+    if (t >= 1 && key_resp_8.status === PsychoJS.Status.NOT_STARTED) {
+      // keep track of start time/frame for later
+      key_resp_8.tStart = t;  // (not accounting for frame time here)
+      key_resp_8.frameNStart = frameN;  // exact frame index
+      
+      // keyboard checking is just starting
+      psychoJS.window.callOnFlip(function() { key_resp_8.clock.reset(); });  // t=0 on next screen flip
+      psychoJS.window.callOnFlip(function() { key_resp_8.start(); }); // start on screen flip
+      psychoJS.window.callOnFlip(function() { key_resp_8.clearEvents(); });
+    }
+
+    if (key_resp_8.status === PsychoJS.Status.STARTED) {
+      let theseKeys = key_resp_8.getKeys({keyList: ['space'], waitRelease: false});
+      _key_resp_8_allKeys = _key_resp_8_allKeys.concat(theseKeys);
+      if (_key_resp_8_allKeys.length > 0) {
+        key_resp_8.keys = _key_resp_8_allKeys[_key_resp_8_allKeys.length - 1].name;  // just the last key pressed
+        key_resp_8.rt = _key_resp_8_allKeys[_key_resp_8_allKeys.length - 1].rt;
+        // a response ends the routine
+        continueRoutine = false;
+      }
+    }
+    
+    // check for quit (typically the Esc key)
+    if (psychoJS.experiment.experimentEnded || psychoJS.eventManager.getKeys({keyList:['escape']}).length > 0) {
+      return quitPsychoJS('The [Escape] key was pressed. Goodbye!', false);
+    }
+    
+    // check if the Routine should terminate
+    if (!continueRoutine) {  // a component has requested a forced-end of Routine
+      return Scheduler.Event.NEXT;
+    }
+    
+    continueRoutine = false;  // reverts to True if at least one component still running
+    for (const thisComponent of hand_hold_feedbackComponents)
+      if ('status' in thisComponent && thisComponent.status !== PsychoJS.Status.FINISHED) {
+        continueRoutine = true;
+        break;
+      }
+    
+    // refresh the screen if continuing
+    if (continueRoutine) {
+      return Scheduler.Event.FLIP_REPEAT;
+    } else {
+      return Scheduler.Event.NEXT;
+    }
+  };
+}
+
+
+function hand_hold_feedbackRoutineEnd(snapshot) {
+  return function () {
+    //------Ending Routine 'hand_hold_feedback'-------
+    for (const thisComponent of hand_hold_feedbackComponents) {
+      if (typeof thisComponent.setAutoDraw === 'function') {
+        thisComponent.setAutoDraw(false);
+      }
+    }
+    // the Routine "hand_hold_feedback" was not non-slip safe, so reset the non-slip timer
     routineTimer.reset();
     
     return Scheduler.Event.NEXT;
@@ -1311,11 +2290,10 @@ function trials_run2LoopEnd() {
 
 var trialMsg;
 var currFix;
+var corrfixResp;
 var a;
 var b;
 var fixDur;
-var xPosition;
-var _fix_respP1_1_allKeys;
 var pracFixR1Components;
 function pracFixR1RoutineBegin(snapshot) {
   return function () {
@@ -1327,17 +2305,21 @@ function pracFixR1RoutineBegin(snapshot) {
     trialMsg = ((("Practice: " + pTrial_run1.toString()) + " of ") + pracTotal_run1.toString());
     if (((pTrial_run1 - 1) === 0)) {
         currFix = fixColor_opts[0];
+        corrfixResp = undefined;
     } else {
-        if ((prac1_fixColSwitch[(pTrial_run1 - 1)] === 0)) {
-            currFix = currFix;
-        } else {
+        if ((prac1_fixColSwitch[(pTrial_run1 - 1)] === 1)) {
             if ((currFix === "white")) {
                 currFix = "black";
+                corrfixResp = "space";
             } else {
-                if ((currFix === "white")) {
-                    currFix = "black";
+                if ((currFix === "black")) {
+                    currFix = "white";
+                    corrfixResp = "space";
                 }
             }
+        } else {
+            currFix = currFix;
+            corrfixResp = undefined;
         }
     }
     a = 1.25;
@@ -1367,13 +2349,9 @@ function pracFixR1RoutineBegin(snapshot) {
     thisExp.addData("fixpR1", prac1_fixColSwitch[(pTrial_run1 - 1)]);
     
     text.setColor(new util.Color(currFix));
-    fix_respP1_1.keys = undefined;
-    fix_respP1_1.rt = undefined;
-    _fix_respP1_1_allKeys = [];
     // keep track of which components have finished
     pracFixR1Components = [];
     pracFixR1Components.push(text);
-    pracFixR1Components.push(fix_respP1_1);
     
     for (const thisComponent of pracFixR1Components)
       if ('status' in thisComponent)
@@ -1407,33 +2385,6 @@ function pracFixR1RoutineEachFrame(snapshot) {
     if (text.status === PsychoJS.Status.STARTED && t >= frameRemains) {
       text.setAutoDraw(false);
     }
-    
-    // *fix_respP1_1* updates
-    if (t >= 0.0 && fix_respP1_1.status === PsychoJS.Status.NOT_STARTED) {
-      // keep track of start time/frame for later
-      fix_respP1_1.tStart = t;  // (not accounting for frame time here)
-      fix_respP1_1.frameNStart = frameN;  // exact frame index
-      
-      // keyboard checking is just starting
-      psychoJS.window.callOnFlip(function() { fix_respP1_1.clock.reset(); });  // t=0 on next screen flip
-      psychoJS.window.callOnFlip(function() { fix_respP1_1.start(); }); // start on screen flip
-      psychoJS.window.callOnFlip(function() { fix_respP1_1.clearEvents(); });
-    }
-
-    frameRemains = 0.0 + fixDur - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
-    if (fix_respP1_1.status === PsychoJS.Status.STARTED && t >= frameRemains) {
-      fix_respP1_1.status = PsychoJS.Status.FINISHED;
-  }
-
-    if (fix_respP1_1.status === PsychoJS.Status.STARTED) {
-      let theseKeys = fix_respP1_1.getKeys({keyList: ['space'], waitRelease: false});
-      _fix_respP1_1_allKeys = _fix_respP1_1_allKeys.concat(theseKeys);
-      if (_fix_respP1_1_allKeys.length > 0) {
-        fix_respP1_1.keys = _fix_respP1_1_allKeys[_fix_respP1_1_allKeys.length - 1].name;  // just the last key pressed
-        fix_respP1_1.rt = _fix_respP1_1_allKeys[_fix_respP1_1_allKeys.length - 1].rt;
-      }
-    }
-    
     // check for quit (typically the Esc key)
     if (psychoJS.experiment.experimentEnded || psychoJS.eventManager.getKeys({keyList:['escape']}).length > 0) {
       return quitPsychoJS('The [Escape] key was pressed. Goodbye!', false);
@@ -1471,12 +2422,6 @@ function pracFixR1RoutineEnd(snapshot) {
     }
     pTrial_run1 = (pTrial_run1 + 1);
     
-    psychoJS.experiment.addData('fix_respP1_1.keys', fix_respP1_1.keys);
-    if (typeof fix_respP1_1.keys !== 'undefined') {  // we had a response
-        psychoJS.experiment.addData('fix_respP1_1.rt', fix_respP1_1.rt);
-        }
-    
-    fix_respP1_1.stop();
     // the Routine "pracFixR1" was not non-slip safe, so reset the non-slip timer
     routineTimer.reset();
     
@@ -1486,7 +2431,7 @@ function pracFixR1RoutineEnd(snapshot) {
 
 
 var _prac_resp_allKeys;
-var _prac_fix_resp_2_allKeys;
+var _prac_fix_resp_allKeys;
 var prac_imgComponents;
 function prac_imgRoutineBegin(snapshot) {
   return function () {
@@ -1494,6 +2439,7 @@ function prac_imgRoutineBegin(snapshot) {
     t = 0;
     prac_imgClock.reset(); // clock
     frameN = -1;
+    routineTimer.add(4.000000);
     // update component parameters for each repeat
     text_5.setColor(new util.Color(currFix));
     prac_image.setPos([xPosition, 0]);
@@ -1502,15 +2448,15 @@ function prac_imgRoutineBegin(snapshot) {
     prac_resp.keys = undefined;
     prac_resp.rt = undefined;
     _prac_resp_allKeys = [];
-    prac_fix_resp_2.keys = undefined;
-    prac_fix_resp_2.rt = undefined;
-    _prac_fix_resp_2_allKeys = [];
+    prac_fix_resp.keys = undefined;
+    prac_fix_resp.rt = undefined;
+    _prac_fix_resp_allKeys = [];
     // keep track of which components have finished
     prac_imgComponents = [];
     prac_imgComponents.push(text_5);
     prac_imgComponents.push(prac_image);
     prac_imgComponents.push(prac_resp);
-    prac_imgComponents.push(prac_fix_resp_2);
+    prac_imgComponents.push(prac_fix_resp);
     
     for (const thisComponent of prac_imgComponents)
       if ('status' in thisComponent)
@@ -1539,6 +2485,10 @@ function prac_imgRoutineEachFrame(snapshot) {
       text_5.setAutoDraw(true);
     }
 
+    frameRemains = 0.0 + 4 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
+    if (text_5.status === PsychoJS.Status.STARTED && t >= frameRemains) {
+      text_5.setAutoDraw(false);
+    }
     
     // *prac_image* updates
     if (t >= 0.0 && prac_image.status === PsychoJS.Status.NOT_STARTED) {
@@ -1549,6 +2499,10 @@ function prac_imgRoutineEachFrame(snapshot) {
       prac_image.setAutoDraw(true);
     }
 
+    frameRemains = 0.0 + 4 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
+    if (prac_image.status === PsychoJS.Status.STARTED && t >= frameRemains) {
+      prac_image.setAutoDraw(false);
+    }
     
     // *prac_resp* updates
     if (t >= 0.0 && prac_resp.status === PsychoJS.Status.NOT_STARTED) {
@@ -1562,6 +2516,11 @@ function prac_imgRoutineEachFrame(snapshot) {
       psychoJS.window.callOnFlip(function() { prac_resp.clearEvents(); });
     }
 
+    frameRemains = 0.0 + 4 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
+    if (prac_resp.status === PsychoJS.Status.STARTED && t >= frameRemains) {
+      prac_resp.status = PsychoJS.Status.FINISHED;
+  }
+
     if (prac_resp.status === PsychoJS.Status.STARTED) {
       let theseKeys = prac_resp.getKeys({keyList: ['f', 'j'], waitRelease: false});
       _prac_resp_allKeys = _prac_resp_allKeys.concat(theseKeys);
@@ -1574,30 +2533,38 @@ function prac_imgRoutineEachFrame(snapshot) {
         } else {
             prac_resp.corr = 0;
         }
-        // a response ends the routine
-        continueRoutine = false;
       }
     }
     
     
-    // *prac_fix_resp_2* updates
-    if (t >= 0.0 && prac_fix_resp_2.status === PsychoJS.Status.NOT_STARTED) {
+    // *prac_fix_resp* updates
+    if (t >= 0.0 && prac_fix_resp.status === PsychoJS.Status.NOT_STARTED) {
       // keep track of start time/frame for later
-      prac_fix_resp_2.tStart = t;  // (not accounting for frame time here)
-      prac_fix_resp_2.frameNStart = frameN;  // exact frame index
+      prac_fix_resp.tStart = t;  // (not accounting for frame time here)
+      prac_fix_resp.frameNStart = frameN;  // exact frame index
       
       // keyboard checking is just starting
-      psychoJS.window.callOnFlip(function() { prac_fix_resp_2.clock.reset(); });  // t=0 on next screen flip
-      psychoJS.window.callOnFlip(function() { prac_fix_resp_2.start(); }); // start on screen flip
-      psychoJS.window.callOnFlip(function() { prac_fix_resp_2.clearEvents(); });
+      psychoJS.window.callOnFlip(function() { prac_fix_resp.clock.reset(); });  // t=0 on next screen flip
+      psychoJS.window.callOnFlip(function() { prac_fix_resp.start(); }); // start on screen flip
     }
 
-    if (prac_fix_resp_2.status === PsychoJS.Status.STARTED) {
-      let theseKeys = prac_fix_resp_2.getKeys({keyList: ['space'], waitRelease: false});
-      _prac_fix_resp_2_allKeys = _prac_fix_resp_2_allKeys.concat(theseKeys);
-      if (_prac_fix_resp_2_allKeys.length > 0) {
-        prac_fix_resp_2.keys = _prac_fix_resp_2_allKeys[_prac_fix_resp_2_allKeys.length - 1].name;  // just the last key pressed
-        prac_fix_resp_2.rt = _prac_fix_resp_2_allKeys[_prac_fix_resp_2_allKeys.length - 1].rt;
+    frameRemains = 0.0 + 4 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
+    if (prac_fix_resp.status === PsychoJS.Status.STARTED && t >= frameRemains) {
+      prac_fix_resp.status = PsychoJS.Status.FINISHED;
+  }
+
+    if (prac_fix_resp.status === PsychoJS.Status.STARTED) {
+      let theseKeys = prac_fix_resp.getKeys({keyList: ['space'], waitRelease: false});
+      _prac_fix_resp_allKeys = _prac_fix_resp_allKeys.concat(theseKeys);
+      if (_prac_fix_resp_allKeys.length > 0) {
+        prac_fix_resp.keys = _prac_fix_resp_allKeys[_prac_fix_resp_allKeys.length - 1].name;  // just the last key pressed
+        prac_fix_resp.rt = _prac_fix_resp_allKeys[_prac_fix_resp_allKeys.length - 1].rt;
+        // was this correct?
+        if (prac_fix_resp.keys == corrfixResp) {
+            prac_fix_resp.corr = 1;
+        } else {
+            prac_fix_resp.corr = 0;
+        }
       }
     }
     
@@ -1619,7 +2586,7 @@ function prac_imgRoutineEachFrame(snapshot) {
       }
     
     // refresh the screen if continuing
-    if (continueRoutine) {
+    if (continueRoutine && routineTimer.getTime() > 0) {
       return Scheduler.Event.FLIP_REPEAT;
     } else {
       return Scheduler.Event.NEXT;
@@ -1649,25 +2616,32 @@ function prac_imgRoutineEnd(snapshot) {
     psychoJS.experiment.addData('prac_resp.corr', prac_resp.corr);
     if (typeof prac_resp.keys !== 'undefined') {  // we had a response
         psychoJS.experiment.addData('prac_resp.rt', prac_resp.rt);
-        routineTimer.reset();
         }
     
     prac_resp.stop();
-    psychoJS.experiment.addData('prac_fix_resp_2.keys', prac_fix_resp_2.keys);
-    if (typeof prac_fix_resp_2.keys !== 'undefined') {  // we had a response
-        psychoJS.experiment.addData('prac_fix_resp_2.rt', prac_fix_resp_2.rt);
+    // was no response the correct answer?!
+    if (prac_fix_resp.keys === undefined) {
+      if (['None','none',undefined].includes(corrfixResp)) {
+         prac_fix_resp.corr = 1;  // correct non-response
+      } else {
+         prac_fix_resp.corr = 0;  // failed to respond (incorrectly)
+      }
+    }
+    // store data for thisExp (ExperimentHandler)
+    psychoJS.experiment.addData('prac_fix_resp.keys', prac_fix_resp.keys);
+    psychoJS.experiment.addData('prac_fix_resp.corr', prac_fix_resp.corr);
+    if (typeof prac_fix_resp.keys !== 'undefined') {  // we had a response
+        psychoJS.experiment.addData('prac_fix_resp.rt', prac_fix_resp.rt);
         }
     
-    prac_fix_resp_2.stop();
-    // the Routine "prac_img" was not non-slip safe, so reset the non-slip timer
-    routineTimer.reset();
-    
+    prac_fix_resp.stop();
     return Scheduler.Event.NEXT;
   };
 }
 
 
 var feedIM;
+var prac_msg;
 var FeedbackComponents;
 function FeedbackRoutineBegin(snapshot) {
   return function () {
@@ -1675,21 +2649,39 @@ function FeedbackRoutineBegin(snapshot) {
     t = 0;
     FeedbackClock.reset(); // clock
     frameN = -1;
-    routineTimer.add(1.000000);
+    routineTimer.add(2.000000);
     // update component parameters for each repeat
     feedIM = "";
     if ((prac_resp.keys === corr)) {
-        feedIM = "Stimuli/greenCheck.png";
+        if ((prac_fix_resp.keys === corrfixResp)) {
+            feedIM = "Stimuli/greenCheck.png";
+            prac_msg = "Well done!";
+        } else {
+            if ((prac_fix_resp.keys !== corrfixResp)) {
+                feedIM = "Stimuli/redWrong.png";
+                prac_msg = "Oops, your picture response was right but the cross response was wrong.";
+            }
+        }
     } else {
         if ((prac_resp.keys !== corr)) {
-            feedIM = "Stimuli/redWrong.png";
+            if ((prac_fix_resp.keys === corrfixResp)) {
+                feedIM = "Stimuli/redWrong.png";
+                prac_msg = "Oops, your cross response was right but the picture response was wrong.";
+            } else {
+                if ((prac_fix_resp.keys !== corrfixResp)) {
+                    feedIM = "Stimuli/redWrong.png";
+                    prac_msg = "Oops, both responses were wrong.";
+                }
+            }
         }
     }
     
     imFeedback.setImage(feedIM);
+    feedback_msg.setText(prac_msg);
     // keep track of which components have finished
     FeedbackComponents = [];
     FeedbackComponents.push(imFeedback);
+    FeedbackComponents.push(feedback_msg);
     
     for (const thisComponent of FeedbackComponents)
       if ('status' in thisComponent)
@@ -1718,9 +2710,23 @@ function FeedbackRoutineEachFrame(snapshot) {
       imFeedback.setAutoDraw(true);
     }
 
-    frameRemains = 0.0 + 1.0 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
+    frameRemains = 0.0 + 2 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
     if (imFeedback.status === PsychoJS.Status.STARTED && t >= frameRemains) {
       imFeedback.setAutoDraw(false);
+    }
+    
+    // *feedback_msg* updates
+    if (t >= 0.0 && feedback_msg.status === PsychoJS.Status.NOT_STARTED) {
+      // keep track of start time/frame for later
+      feedback_msg.tStart = t;  // (not accounting for frame time here)
+      feedback_msg.frameNStart = frameN;  // exact frame index
+      
+      feedback_msg.setAutoDraw(true);
+    }
+
+    frameRemains = 0.0 + 2 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
+    if (feedback_msg.status === PsychoJS.Status.STARTED && t >= frameRemains) {
+      feedback_msg.setAutoDraw(false);
     }
     // check for quit (typically the Esc key)
     if (psychoJS.experiment.experimentEnded || psychoJS.eventManager.getKeys({keyList:['escape']}).length > 0) {
@@ -2000,11 +3006,13 @@ function trialFixR1RoutineBegin(snapshot) {
         if ((fixColorIdx_Run1[(Trial_run1 - 1)] === 0)) {
             currFix = currFix;
         } else {
-            if ((currFix === "white")) {
-                currFix = "black";
-            } else {
+            if ((fixColorIdx_Run1[(Trial_run1 - 1)] === 1)) {
                 if ((currFix === "white")) {
                     currFix = "black";
+                } else {
+                    if ((currFix === "black")) {
+                        currFix = "white";
+                    }
                 }
             }
         }
@@ -2335,6 +3343,92 @@ function trial_imgRoutineEnd(snapshot) {
 }
 
 
+var btwn_trial_GJComponents;
+function btwn_trial_GJRoutineBegin(snapshot) {
+  return function () {
+    //------Prepare to start Routine 'btwn_trial_GJ'-------
+    t = 0;
+    btwn_trial_GJClock.reset(); // clock
+    frameN = -1;
+    routineTimer.add(1.500000);
+    // update component parameters for each repeat
+    hand_hold_run = 2;
+    
+    // keep track of which components have finished
+    btwn_trial_GJComponents = [];
+    btwn_trial_GJComponents.push(image_4);
+    
+    for (const thisComponent of btwn_trial_GJComponents)
+      if ('status' in thisComponent)
+        thisComponent.status = PsychoJS.Status.NOT_STARTED;
+    
+    return Scheduler.Event.NEXT;
+  };
+}
+
+
+function btwn_trial_GJRoutineEachFrame(snapshot) {
+  return function () {
+    //------Loop for each frame of Routine 'btwn_trial_GJ'-------
+    let continueRoutine = true; // until we're told otherwise
+    // get current time
+    t = btwn_trial_GJClock.getTime();
+    frameN = frameN + 1;// number of completed frames (so 0 is the first frame)
+    // update/draw components on each frame
+    
+    // *image_4* updates
+    if (t >= 0.0 && image_4.status === PsychoJS.Status.NOT_STARTED) {
+      // keep track of start time/frame for later
+      image_4.tStart = t;  // (not accounting for frame time here)
+      image_4.frameNStart = frameN;  // exact frame index
+      
+      image_4.setAutoDraw(true);
+    }
+
+    frameRemains = 0.0 + 1.5 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
+    if (image_4.status === PsychoJS.Status.STARTED && t >= frameRemains) {
+      image_4.setAutoDraw(false);
+    }
+    // check for quit (typically the Esc key)
+    if (psychoJS.experiment.experimentEnded || psychoJS.eventManager.getKeys({keyList:['escape']}).length > 0) {
+      return quitPsychoJS('The [Escape] key was pressed. Goodbye!', false);
+    }
+    
+    // check if the Routine should terminate
+    if (!continueRoutine) {  // a component has requested a forced-end of Routine
+      return Scheduler.Event.NEXT;
+    }
+    
+    continueRoutine = false;  // reverts to True if at least one component still running
+    for (const thisComponent of btwn_trial_GJComponents)
+      if ('status' in thisComponent && thisComponent.status !== PsychoJS.Status.FINISHED) {
+        continueRoutine = true;
+        break;
+      }
+    
+    // refresh the screen if continuing
+    if (continueRoutine && routineTimer.getTime() > 0) {
+      return Scheduler.Event.FLIP_REPEAT;
+    } else {
+      return Scheduler.Event.NEXT;
+    }
+  };
+}
+
+
+function btwn_trial_GJRoutineEnd(snapshot) {
+  return function () {
+    //------Ending Routine 'btwn_trial_GJ'-------
+    for (const thisComponent of btwn_trial_GJComponents) {
+      if (typeof thisComponent.setAutoDraw === 'function') {
+        thisComponent.setAutoDraw(false);
+      }
+    }
+    return Scheduler.Event.NEXT;
+  };
+}
+
+
 var _key_resp_3_allKeys;
 var prac_instr_run2Components;
 function prac_instr_run2RoutineBegin(snapshot) {
@@ -2459,15 +3553,21 @@ function pracFixR2RoutineBegin(snapshot) {
     trialMsg = ((("Practice: " + pTrial_run2.toString()) + " of ") + pracTotal_run2.toString());
     if (((pTrial_run2 - 1) === 0)) {
         currFix = fixColor_opts[0];
+        corrfixResp = undefined;
     } else {
         if ((prac2_fixColSwitch[(pTrial_run2 - 1)] === 0)) {
             currFix = currFix;
+            corrfixResp = undefined;
         } else {
-            if ((currFix === "white")) {
-                currFix = "black";
-            } else {
+            if ((prac2_fixColSwitch[(pTrial_run2 - 1)] === 1)) {
                 if ((currFix === "white")) {
                     currFix = "black";
+                    corrfixResp = "space";
+                } else {
+                    if ((currFix === "black")) {
+                        currFix = "white";
+                        corrfixResp = "space";
+                    }
                 }
             }
         }
@@ -2743,11 +3843,13 @@ function trialFixR2RoutineBegin(snapshot) {
         if ((fixColorIdx_Run2[(Trial_run2 - 1)] === 0)) {
             currFix = currFix;
         } else {
-            if ((currFix === "white")) {
-                currFix = "black";
-            } else {
+            if ((fixColorIdx_Run2[(Trial_run2 - 1)] === 0)) {
                 if ((currFix === "white")) {
                     currFix = "black";
+                } else {
+                    if ((currFix === "white")) {
+                        currFix = "black";
+                    }
                 }
             }
         }
@@ -2903,11 +4005,11 @@ function EndScreenRoutineBegin(snapshot) {
     t = 0;
     EndScreenClock.reset(); // clock
     frameN = -1;
-    routineTimer.add(1.000000);
+    routineTimer.add(2.000000);
     // update component parameters for each repeat
     // keep track of which components have finished
     EndScreenComponents = [];
-    EndScreenComponents.push(allDone);
+    EndScreenComponents.push(image_5);
     
     for (const thisComponent of EndScreenComponents)
       if ('status' in thisComponent)
@@ -2927,18 +4029,18 @@ function EndScreenRoutineEachFrame(snapshot) {
     frameN = frameN + 1;// number of completed frames (so 0 is the first frame)
     // update/draw components on each frame
     
-    // *allDone* updates
-    if (t >= 0.0 && allDone.status === PsychoJS.Status.NOT_STARTED) {
+    // *image_5* updates
+    if (t >= 0.0 && image_5.status === PsychoJS.Status.NOT_STARTED) {
       // keep track of start time/frame for later
-      allDone.tStart = t;  // (not accounting for frame time here)
-      allDone.frameNStart = frameN;  // exact frame index
+      image_5.tStart = t;  // (not accounting for frame time here)
+      image_5.frameNStart = frameN;  // exact frame index
       
-      allDone.setAutoDraw(true);
+      image_5.setAutoDraw(true);
     }
 
-    frameRemains = 0.0 + 1.0 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
-    if (allDone.status === PsychoJS.Status.STARTED && t >= frameRemains) {
-      allDone.setAutoDraw(false);
+    frameRemains = 0.0 + 2 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
+    if (image_5.status === PsychoJS.Status.STARTED && t >= frameRemains) {
+      image_5.setAutoDraw(false);
     }
     // check for quit (typically the Esc key)
     if (psychoJS.experiment.experimentEnded || psychoJS.eventManager.getKeys({keyList:['escape']}).length > 0) {
@@ -3016,6 +4118,12 @@ function quitPsychoJS(message, isCompleted) {
   if (psychoJS.experiment.isEntryEmpty()) {
     psychoJS.experiment.nextEntry();
   }
+  
+  
+  
+  
+  
+  
   
   
   

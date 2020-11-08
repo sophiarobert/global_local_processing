@@ -1,0 +1,5 @@
+﻿runID,imgID,stimLabel,imFile,corr,side,prac_trials_run1.thisRepN,prac_trials_run1.thisTrialN,prac_trials_run1.thisN,prac_trials_run1.thisIndex,X Scale,Y Scale,prac_instr2.started,prac_instr2.stopped,prac_instr3.started,prac_instr3.stopped,fixpR1,prac_resp.keys,prac_resp.corr,prac_resp.rt,prac_fix_resp.keys,prac_fix_resp.corr,feedback_msg.started,feedback_msg.stopped,prac_fix_resp.rt,participant,design,position,date,expName,psychopyVersion,frameRate,
+1,6,smallScongr,Stimuli/SofS2.jpg,j,right,0,0,0,1,0.05,0.05,100.72384086402599,None,101.07389951194637,None,1,j,1,0.9735274800332263,None,1,108.75688048102893,None,,,1,2,2020_Nov_07_1431,global_local,2020.2.4,None,
+1,2,smallHcongr,Stimuli/HofH2.jpg,f,right,0,1,1,0,,,,,,,0,f,1,1.149722920032218,None,1,116.02398143999744,None,,,1,2,2020_Nov_07_1431,global_local,2020.2.4,None,
+1,4,smallHincon,Stimuli/SofH2.jpg,f,right,0,2,2,2,,,,,,,0,f,1,1.2753979919943959,space,0,123.47597000002861,None,1.0523442110279575,,1,2,2020_Nov_07_1431,global_local,2020.2.4,None,
+,,,,,,,,,,,,,,,,0,,,,,,,,,,,,,,,,
