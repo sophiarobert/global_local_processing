@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2020.2.4),
-    on Sat Nov  7 18:42:46 2020
+    on Sat Nov  7 19:34:48 2020
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -172,7 +172,7 @@ shuffle(fixColorIdx_Run2);
 prac_instr1 = visual.ImageStim(
     win=win,
     name='prac_instr1', 
-    image='Designs/prac_instr1.png', mask=None,
+    image='sin', mask=None,
     ori=0, pos=(0, 0), size=(0.75*1.77, 0.75),
     color=[1,1,1], colorSpace='rgb', opacity=1,
     flipHoriz=False, flipVert=False,
@@ -423,7 +423,7 @@ instructions_imageR1 = visual.ImageStim(
     win=win,
     name='instructions_imageR1', 
     image='sin', mask=None,
-    ori=0, pos=(0, 0), size=(0.75*1.5, 0.75),
+    ori=0, pos=(0, 0), size=(0.75*1.77, 0.75),
     color=[1,1,1], colorSpace='rgb', opacity=1,
     flipHoriz=False, flipVert=False,
     texRes=512, interpolate=True, depth=-1.0)
@@ -466,7 +466,7 @@ image_4 = visual.ImageStim(
     win=win,
     name='image_4', 
     image='Designs/baby_dory_GJ.png', mask=None,
-    ori=0, pos=(0, 0), size=(0.5, 0.5*1.83),
+    ori=0, pos=(0, 0), size=(0.4, 0.4*1.83),
     color=[1,1,1], colorSpace='rgb', opacity=1,
     flipHoriz=False, flipVert=False,
     texRes=512, interpolate=True, depth=-1.0)
@@ -589,7 +589,7 @@ Pinstructions_imageR2 = visual.ImageStim(
     win=win,
     name='Pinstructions_imageR2', 
     image='sin', mask=None,
-    ori=0, pos=(0, 0), size=(0.75*1.75, 0.75),
+    ori=0, pos=(0, 0), size=(0.75*1.77, 0.75),
     color=[1,1,1], colorSpace='rgb', opacity=1,
     flipHoriz=False, flipVert=False,
     texRes=512, interpolate=True, depth=-1.0)
@@ -673,7 +673,7 @@ instructions_imageR2 = visual.ImageStim(
     win=win,
     name='instructions_imageR2', 
     image='sin', mask=None,
-    ori=0, pos=(0, 0), size=(0.75*1.5, 0.75),
+    ori=0, pos=(0, 0), size=(0.75*1.77, 0.75),
     color=[1,1,1], colorSpace='rgb', opacity=1,
     flipHoriz=False, flipVert=False,
     texRes=512, interpolate=True, depth=-1.0)
@@ -712,13 +712,14 @@ fix_resp_2 = keyboard.Keyboard()
 
 # Initialize components for Routine "EndScreen"
 EndScreenClock = core.Clock()
-allDone = visual.TextStim(win=win, name='allDone',
-    text='You are all done. Thank you!',
-    font='Arial',
-    pos=(0, 0), height=0.1, wrapWidth=None, ori=0, 
-    color='black', colorSpace='rgb', opacity=1, 
-    languageStyle='LTR',
-    depth=0.0);
+image_5 = visual.ImageStim(
+    win=win,
+    name='image_5', 
+    image='Designs/baby_squirt_GJ.png', mask=None,
+    ori=0, pos=(0, 0), size=(0.5*1.6, 0.5),
+    color=[1,1,1], colorSpace='rgb', opacity=1,
+    flipHoriz=False, flipVert=False,
+    texRes=512, interpolate=True, depth=0.0)
 
 # Create some handy timers
 globalClock = core.Clock()  # to track the time since experiment started
@@ -831,6 +832,7 @@ routineTimer.reset()
 continueRoutine = True
 # update component parameters for each repeat
 hand_hold_run = 1
+prac_instr1.setImage('Designs/prac_instr1.png')
 start_exp_press.keys = []
 start_exp_press.rt = []
 _start_exp_press_allKeys = []
@@ -1086,6 +1088,8 @@ routineTimer.reset()
 # ------Prepare to start Routine "hand_hold_instr"-------
 continueRoutine = True
 # update component parameters for each repeat
+left_right=''
+rand_side=''
 if expInfo['position'] == '0':
     xPosition = 0
 elif expInfo['position'] == '2':
@@ -2401,7 +2405,7 @@ for thisTrials_run1 in trials_run1:
 
 # ------Prepare to start Routine "btwn_trial_GJ"-------
 continueRoutine = True
-routineTimer.add(1.000000)
+routineTimer.add(1.500000)
 # update component parameters for each repeat
 hand_hold_run = 2
 # keep track of which components have finished
@@ -2438,7 +2442,7 @@ while continueRoutine and routineTimer.getTime() > 0:
         image_4.setAutoDraw(True)
     if image_4.status == STARTED:
         # is it time to stop? (based on global clock, using actual start)
-        if tThisFlipGlobal > image_4.tStartRefresh + 1.0-frameTolerance:
+        if tThisFlipGlobal > image_4.tStartRefresh + 1.5-frameTolerance:
             # keep track of stop time/frame for later
             image_4.tStop = t  # not accounting for scr refresh
             image_4.frameNStop = frameN  # exact frame index
@@ -2472,6 +2476,8 @@ thisExp.addData('image_4.stopped', image_4.tStopRefresh)
 # ------Prepare to start Routine "hand_hold_instr"-------
 continueRoutine = True
 # update component parameters for each repeat
+left_right=''
+rand_side=''
 if expInfo['position'] == '0':
     xPosition = 0
 elif expInfo['position'] == '2':
@@ -3824,10 +3830,10 @@ for thisTrials_run2 in trials_run2:
 
 # ------Prepare to start Routine "EndScreen"-------
 continueRoutine = True
-routineTimer.add(1.000000)
+routineTimer.add(2.000000)
 # update component parameters for each repeat
 # keep track of which components have finished
-EndScreenComponents = [allDone]
+EndScreenComponents = [image_5]
 for thisComponent in EndScreenComponents:
     thisComponent.tStart = None
     thisComponent.tStop = None
@@ -3850,22 +3856,22 @@ while continueRoutine and routineTimer.getTime() > 0:
     frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
     # update/draw components on each frame
     
-    # *allDone* updates
-    if allDone.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+    # *image_5* updates
+    if image_5.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
         # keep track of start time/frame for later
-        allDone.frameNStart = frameN  # exact frame index
-        allDone.tStart = t  # local t and not account for scr refresh
-        allDone.tStartRefresh = tThisFlipGlobal  # on global time
-        win.timeOnFlip(allDone, 'tStartRefresh')  # time at next scr refresh
-        allDone.setAutoDraw(True)
-    if allDone.status == STARTED:
+        image_5.frameNStart = frameN  # exact frame index
+        image_5.tStart = t  # local t and not account for scr refresh
+        image_5.tStartRefresh = tThisFlipGlobal  # on global time
+        win.timeOnFlip(image_5, 'tStartRefresh')  # time at next scr refresh
+        image_5.setAutoDraw(True)
+    if image_5.status == STARTED:
         # is it time to stop? (based on global clock, using actual start)
-        if tThisFlipGlobal > allDone.tStartRefresh + 1.0-frameTolerance:
+        if tThisFlipGlobal > image_5.tStartRefresh + 2-frameTolerance:
             # keep track of stop time/frame for later
-            allDone.tStop = t  # not accounting for scr refresh
-            allDone.frameNStop = frameN  # exact frame index
-            win.timeOnFlip(allDone, 'tStopRefresh')  # time at next scr refresh
-            allDone.setAutoDraw(False)
+            image_5.tStop = t  # not accounting for scr refresh
+            image_5.frameNStop = frameN  # exact frame index
+            win.timeOnFlip(image_5, 'tStopRefresh')  # time at next scr refresh
+            image_5.setAutoDraw(False)
     
     # check for quit (typically the Esc key)
     if endExpNow or defaultKeyboard.getKeys(keyList=["escape"]):
@@ -3888,6 +3894,8 @@ while continueRoutine and routineTimer.getTime() > 0:
 for thisComponent in EndScreenComponents:
     if hasattr(thisComponent, "setAutoDraw"):
         thisComponent.setAutoDraw(False)
+thisExp.addData('image_5.started', image_5.tStartRefresh)
+thisExp.addData('image_5.stopped', image_5.tStopRefresh)
 
 # Flip one final time so any remaining win.callOnFlip() 
 # and win.timeOnFlip() tasks get executed before quitting

@@ -1915,20 +1915,16 @@ function hand_hold_feedbackRoutineBegin(snapshot) {
     // update component parameters for each repeat
     feedHHim = "";
     if ((hand_hold_run === 1)) {
-        if ((hand_hold_resp.keys === handHoldCorr1)) {
+        if ((hand_hold_resp.keys === handHoldCorr)) {
             feedHHim = hand_hold_feedback1corr;
         } else {
-            if ((hand_hold_resp.keys !== handHoldCorr1)) {
-                feedHHim = hand_hold_feedback1incorr;
-            }
+            feedHHim = hand_hold_feedback1incorr;
         }
     } else {
-        if ((hand_hold_resp.keys === handHoldCorr2)) {
+        if ((hand_hold_resp.keys === handHoldCorr)) {
             feedHHim = hand_hold_feedback2corr;
         } else {
-            if ((hand_hold_resp.keys !== handHoldCorr2)) {
-                feedHHim = hand_hold_feedback2incorr;
-            }
+            feedHHim = hand_hold_feedback2incorr;
         }
     }
     
