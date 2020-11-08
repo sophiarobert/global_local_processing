@@ -1927,7 +1927,9 @@ function hand_hold_feedbackRoutineBegin(snapshot) {
             feedHHim = hand_hold_feedback2incorr;
         }
     }
+    console.log(feedHHim);
     
+    image_3.setImage(feedHHim);
     key_resp_8.keys = undefined;
     key_resp_8.rt = undefined;
     _key_resp_8_allKeys = [];
@@ -1964,10 +1966,6 @@ function hand_hold_feedbackRoutineEachFrame(snapshot) {
       image_3.setAutoDraw(true);
     }
 
-    
-    if (image_3.status === PsychoJS.Status.STARTED){ // only update if being drawn
-      image_3.setImage(feedHHim);
-    }
     
     // *key_resp_8* updates
     if (t >= 1 && key_resp_8.status === PsychoJS.Status.NOT_STARTED) {
