@@ -1645,8 +1645,6 @@ function hand_hold_instrRoutineBegin(snapshot) {
         hand_hold_feedbackcorr = hand_hold_feedback2corr;
         hand_hold_feedbackincorr = hand_hold_feedback2incorr;
     }
-    console.log(hand_hold_run);
-    console.log(hold_hand_img);
     
     image_2.setImage(hand_hold_ex);
     key_resp_9.keys = undefined;
@@ -1912,6 +1910,10 @@ function hand_hold_feedbackRoutineBegin(snapshot) {
     frameN = -1;
     // update component parameters for each repeat
     feedHHim = "";
+    console.log(hand_hold_run);
+    console.log(hand_hold_resp.keys);
+    console.log(handHoldCorr);
+    console.log(hand_hold_feedback1corr);
     if ((hand_hold_run === 1)) {
         if ((hand_hold_resp.keys === handHoldCorr)) {
             feedHHim = hand_hold_feedback1corr;
