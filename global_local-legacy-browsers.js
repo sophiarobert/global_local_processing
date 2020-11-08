@@ -1591,6 +1591,7 @@ function pracInstruct3RoutineEnd(snapshot) {
 }
 
 
+var left_right;
 var xPosition;
 var hand_hold_ex;
 var handHoldCorr;
@@ -1606,6 +1607,7 @@ function hand_hold_instrRoutineBegin(snapshot) {
     hand_hold_instrClock.reset(); // clock
     frameN = -1;
     // update component parameters for each repeat
+    left_right = "";
     if ((expInfo["position"] === "0")) {
         xPosition = 0;
     } else {
