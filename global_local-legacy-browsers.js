@@ -111,12 +111,12 @@ psychoJS.start({
   expName: expName,
   expInfo: expInfo,
   resources: [
-    {'name': 'Designs/baby_dory_GJ.png', 'path': 'Designs/baby_dory_GJ.png'},
-    {'name': 'Designs/baby_squirt_GJ.png', 'path': 'Designs/baby_squirt_GJ.png'},
     {'name': 'Designs/prac_instr2.png', 'path': 'Designs/prac_instr2.png'},
+    {'name': 'Designs/baby_dory_GJ.png', 'path': 'Designs/baby_dory_GJ.png'},
     {'name': 'bankcard.png', 'path': 'bankcard.png'},
     {'name': 'Designs/prac_instr1.png', 'path': 'Designs/prac_instr1.png'},
-    {'name': 'Designs/prac_instr3.png', 'path': 'Designs/prac_instr3.png'}
+    {'name': 'Designs/prac_instr3.png', 'path': 'Designs/prac_instr3.png'},
+    {'name': 'Designs/baby_squirt_GJ.png', 'path': 'Designs/baby_squirt_GJ.png'}
   ]
 });
 
@@ -3871,7 +3871,7 @@ function trialFixR2RoutineBegin(snapshot) {
         if ((fixColorIdx_Run2[(Trial_run2 - 1)] === 0)) {
             currFix = currFix;
         } else {
-            if ((fixColorIdx_Run2[(Trial_run2 - 1)] === 0)) {
+            if ((fixColorIdx_Run2[(Trial_run2 - 1)] === 1)) {
                 if ((currFix === "white")) {
                     currFix = "black";
                 } else {
