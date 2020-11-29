@@ -146,6 +146,8 @@ psychoJS.start({
 
 psychoJS.experimentLogger.setLevel(core.Logger.ServerLevel.DEBUG);
 
+
+var frameDur;
 function updateInfo() {
   expInfo['date'] = util.MonotonicClock.getDateStr();  // add a simple timestamp
   expInfo['expName'] = expName;
@@ -165,6 +167,129 @@ function updateInfo() {
   return Scheduler.Event.NEXT;
 }
 
+
+var screen_scaleClock;
+var thisExp;
+var win;
+var event;
+var shuffle;
+var webbrowser;
+var random;
+var randint;
+var round;
+var oldt;
+var x_size;
+var y_size;
+var screen_height;
+var x_scale;
+var y_scale;
+var dbase;
+var unittext;
+var vsize;
+var height;
+var width;
+var width3deg;
+var width4deg;
+var text_top;
+var text_bottom;
+var ccimage;
+var pracInstructClock;
+var fixColor_opts;
+var pfS1;
+var prac1_fixColSwitch;
+var pfS2;
+var prac2_fixColSwitch;
+var fixColorIdx_Run1;
+var fixColorIdx_Run2;
+var prac_instr1;
+var start_exp_press;
+var pracInstruct2Clock;
+var prac_instr2;
+var key_resp_6;
+var pracInstruct3Clock;
+var prac_instr3;
+var key_resp_7;
+var hand_hold_instrClock;
+var hand_hold_ex1;
+var handHoldCorr1;
+var hold_hand_R1_img;
+var hand_hold_ex2;
+var handHoldCorr2;
+var hold_hand_R2_img;
+var hand_hold_feedback1corr;
+var hand_hold_feedback1incorr;
+var hand_hold_feedback2corr;
+var hand_hold_feedback2incorr;
+var image_2;
+var key_resp_9;
+var hand_hold_trialClock;
+var text_8;
+var image;
+var hand_hold_resp;
+var hand_hold_feedbackClock;
+var image_3;
+var key_resp_8;
+var prac_instr_run1Clock;
+var instructions_run1;
+var cond_file_run1;
+var rand8Idx;
+var randRows_run1;
+var Pinstructions_imageR1;
+var key_resp;
+var pracFixR1Clock;
+var pTrial_run1;
+var pracTotal_run1;
+var pTrial_run2;
+var pracTotal_run2;
+var text;
+var prac_imgClock;
+var text_5;
+var prac_image;
+var prac_resp;
+var prac_fix_resp;
+var FeedbackClock;
+var imFeedback;
+var feedback_msg;
+var transition2trialsClock;
+var text_7;
+var key_resp_5;
+var trial_instr_run1Clock;
+var Trial_run1;
+var Total_run1;
+var Trial_run2;
+var Total_run2;
+var positionRows;
+var instructions_imageR1;
+var key_resp_2;
+var trialFixR1Clock;
+var text_2;
+var fix_resp1_1;
+var trial_imgClock;
+var text_6;
+var trial_image;
+var trial_resp;
+var fix_resp_2;
+var btwn_trial_GJClock;
+var image_4;
+var prac_instr_run2Clock;
+var instructions_run2;
+var cond_file_run2;
+var randRows_run2;
+var Pinstructions_imageR2;
+var key_resp_3;
+var pracFixR2Clock;
+var text_3;
+var fix_respP2_1;
+var trial_instr_run2Clock;
+var instructions_imageR2;
+var key_resp_4;
+var trialFixR2Clock;
+var text_4;
+var fix_resp2_1;
+var EndScreenClock;
+var image_5;
+var globalClock;
+var routineTimer;
 function experimentInit() {
   // Initialize components for Routine "screen_scale"
   screen_scaleClock = new util.Clock();
@@ -298,19 +423,18 @@ function experimentInit() {
       }
       return array
   }
-  fixColor_opts = ["black", "white"];
-  shuffle(fixColor_opts);
+  fixColor_opts = shuffle_array(["black", "white"]);
   pfS1 = [0, 1];
   prac1_fixColSwitch = [0, shuffle_array(pfS1), 0].flat();
   pfS2 = [0, 1];
   prac2_fixColSwitch = [0, shuffle_array(pfS2), 0].flat();
   console.log(prac2_fixColSwitch)
   if ((Number.parseInt(expInfo["position"]) === 2)) {
-      fixColorIdx_Run1 = [shuffle_array([1, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 1]), shuffle_array([1, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 1)].flat();
-      fixColorIdx_Run2 = [shuffle_array([1, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 1]), shuffle_array([1, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 1)].flat();
+      fixColorIdx_Run1 = [shuffle_array([1, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 1]), shuffle_array([1, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 1])].flat();
+      fixColorIdx_Run2 = [shuffle_array([1, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 1]), shuffle_array([1, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 1])].flat();
   } else {
-      fixColorIdx_Run1 = [shuffle_array([1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0]), shuffle_array([1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)].flat();
-      fixColorIdx_Run2 = [shuffle_array([1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0]), shuffle_array([1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)].flat();
+      fixColorIdx_Run1 = [shuffle_array([1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0]), shuffle_array([1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0])].flat();
+      fixColorIdx_Run2 = [shuffle_array([1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0]), shuffle_array([1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0])].flat();
       console.log(fixColorIdx_Run1)
   }
   
@@ -1166,6 +1290,10 @@ function experimentInit() {
   return Scheduler.Event.NEXT;
 }
 
+
+var t;
+var frameN;
+var screen_scaleComponents;
 function screen_scaleRoutineBegin(snapshot) {
   return function () {
     //------Prepare to start Routine 'screen_scale'-------
@@ -1187,6 +1315,11 @@ function screen_scaleRoutineBegin(snapshot) {
   };
 }
 
+
+var _pj;
+var keys;
+var dscale;
+var continueRoutine;
 function screen_scaleRoutineEachFrame(snapshot) {
   return function () {
     //------Loop for each frame of Routine 'screen_scale'-------
@@ -1301,6 +1434,7 @@ function screen_scaleRoutineEachFrame(snapshot) {
   };
 }
 
+
 function screen_scaleRoutineEnd(snapshot) {
   return function () {
     //------Ending Routine 'screen_scale'-------
@@ -1319,6 +1453,10 @@ function screen_scaleRoutineEnd(snapshot) {
   };
 }
 
+
+var hand_hold_run;
+var _start_exp_press_allKeys;
+var pracInstructComponents;
 function pracInstructRoutineBegin(snapshot) {
   return function () {
     //------Prepare to start Routine 'pracInstruct'-------
@@ -1344,6 +1482,7 @@ function pracInstructRoutineBegin(snapshot) {
     return Scheduler.Event.NEXT;
   };
 }
+
 
 function pracInstructRoutineEachFrame(snapshot) {
   return function () {
@@ -1413,6 +1552,7 @@ function pracInstructRoutineEachFrame(snapshot) {
   };
 }
 
+
 function pracInstructRoutineEnd(snapshot) {
   return function () {
     //------Ending Routine 'pracInstruct'-------
@@ -1428,6 +1568,9 @@ function pracInstructRoutineEnd(snapshot) {
   };
 }
 
+
+var _key_resp_6_allKeys;
+var pracInstruct2Components;
 function pracInstruct2RoutineBegin(snapshot) {
   return function () {
     //------Prepare to start Routine 'pracInstruct2'-------
@@ -1450,6 +1593,7 @@ function pracInstruct2RoutineBegin(snapshot) {
     return Scheduler.Event.NEXT;
   };
 }
+
 
 function pracInstruct2RoutineEachFrame(snapshot) {
   return function () {
@@ -1519,6 +1663,7 @@ function pracInstruct2RoutineEachFrame(snapshot) {
   };
 }
 
+
 function pracInstruct2RoutineEnd(snapshot) {
   return function () {
     //------Ending Routine 'pracInstruct2'-------
@@ -1534,6 +1679,9 @@ function pracInstruct2RoutineEnd(snapshot) {
   };
 }
 
+
+var _key_resp_7_allKeys;
+var pracInstruct3Components;
 function pracInstruct3RoutineBegin(snapshot) {
   return function () {
     //------Prepare to start Routine 'pracInstruct3'-------
@@ -1556,6 +1704,7 @@ function pracInstruct3RoutineBegin(snapshot) {
     return Scheduler.Event.NEXT;
   };
 }
+
 
 function pracInstruct3RoutineEachFrame(snapshot) {
   return function () {
@@ -1625,6 +1774,7 @@ function pracInstruct3RoutineEachFrame(snapshot) {
   };
 }
 
+
 function pracInstruct3RoutineEnd(snapshot) {
   return function () {
     //------Ending Routine 'pracInstruct3'-------
@@ -1640,6 +1790,17 @@ function pracInstruct3RoutineEnd(snapshot) {
   };
 }
 
+
+var left_right;
+var rand_side;
+var xPosition;
+var hand_hold_ex;
+var handHoldCorr;
+var hold_hand_img;
+var hand_hold_feedbackcorr;
+var hand_hold_feedbackincorr;
+var _key_resp_9_allKeys;
+var hand_hold_instrComponents;
 function hand_hold_instrRoutineBegin(snapshot) {
   return function () {
     //------Prepare to start Routine 'hand_hold_instr'-------
@@ -1701,6 +1862,7 @@ function hand_hold_instrRoutineBegin(snapshot) {
     return Scheduler.Event.NEXT;
   };
 }
+
 
 function hand_hold_instrRoutineEachFrame(snapshot) {
   return function () {
@@ -1770,6 +1932,7 @@ function hand_hold_instrRoutineEachFrame(snapshot) {
   };
 }
 
+
 function hand_hold_instrRoutineEnd(snapshot) {
   return function () {
     //------Ending Routine 'hand_hold_instr'-------
@@ -1785,6 +1948,9 @@ function hand_hold_instrRoutineEnd(snapshot) {
   };
 }
 
+
+var _hand_hold_resp_allKeys;
+var hand_hold_trialComponents;
 function hand_hold_trialRoutineBegin(snapshot) {
   return function () {
     //------Prepare to start Routine 'hand_hold_trial'-------
@@ -1811,6 +1977,7 @@ function hand_hold_trialRoutineBegin(snapshot) {
     return Scheduler.Event.NEXT;
   };
 }
+
 
 function hand_hold_trialRoutineEachFrame(snapshot) {
   return function () {
@@ -1896,6 +2063,7 @@ function hand_hold_trialRoutineEachFrame(snapshot) {
   };
 }
 
+
 function hand_hold_trialRoutineEnd(snapshot) {
   return function () {
     //------Ending Routine 'hand_hold_trial'-------
@@ -1928,6 +2096,10 @@ function hand_hold_trialRoutineEnd(snapshot) {
   };
 }
 
+
+var feedHHim;
+var _key_resp_8_allKeys;
+var hand_hold_feedbackComponents;
 function hand_hold_feedbackRoutineBegin(snapshot) {
   return function () {
     //------Prepare to start Routine 'hand_hold_feedback'-------
@@ -1971,6 +2143,7 @@ function hand_hold_feedbackRoutineBegin(snapshot) {
     return Scheduler.Event.NEXT;
   };
 }
+
 
 function hand_hold_feedbackRoutineEachFrame(snapshot) {
   return function () {
@@ -2040,6 +2213,7 @@ function hand_hold_feedbackRoutineEachFrame(snapshot) {
   };
 }
 
+
 function hand_hold_feedbackRoutineEnd(snapshot) {
   return function () {
     //------Ending Routine 'hand_hold_feedback'-------
@@ -2055,6 +2229,9 @@ function hand_hold_feedbackRoutineEnd(snapshot) {
   };
 }
 
+
+var _key_resp_allKeys;
+var prac_instr_run1Components;
 function prac_instr_run1RoutineBegin(snapshot) {
   return function () {
     //------Prepare to start Routine 'prac_instr_run1'-------
@@ -2078,6 +2255,7 @@ function prac_instr_run1RoutineBegin(snapshot) {
     return Scheduler.Event.NEXT;
   };
 }
+
 
 function prac_instr_run1RoutineEachFrame(snapshot) {
   return function () {
@@ -2147,6 +2325,7 @@ function prac_instr_run1RoutineEachFrame(snapshot) {
   };
 }
 
+
 function prac_instr_run1RoutineEnd(snapshot) {
   return function () {
     //------Ending Routine 'prac_instr_run1'-------
@@ -2162,6 +2341,9 @@ function prac_instr_run1RoutineEnd(snapshot) {
   };
 }
 
+
+var prac_trials_run1;
+var currentLoop;
 function prac_trials_run1LoopBegin(prac_trials_run1LoopScheduler) {
   // set up handler to look after randomisation of conditions etc
   prac_trials_run1 = new TrialHandler({
@@ -2193,12 +2375,15 @@ function prac_trials_run1LoopBegin(prac_trials_run1LoopScheduler) {
   return Scheduler.Event.NEXT;
 }
 
+
 function prac_trials_run1LoopEnd() {
   psychoJS.experiment.removeLoop(prac_trials_run1);
 
   return Scheduler.Event.NEXT;
 }
 
+
+var trials_run1;
 function trials_run1LoopBegin(trials_run1LoopScheduler) {
   // set up handler to look after randomisation of conditions etc
   trials_run1 = new TrialHandler({
@@ -2227,12 +2412,15 @@ function trials_run1LoopBegin(trials_run1LoopScheduler) {
   return Scheduler.Event.NEXT;
 }
 
+
 function trials_run1LoopEnd() {
   psychoJS.experiment.removeLoop(trials_run1);
 
   return Scheduler.Event.NEXT;
 }
 
+
+var prac_trials_run2;
 function prac_trials_run2LoopBegin(prac_trials_run2LoopScheduler) {
   // set up handler to look after randomisation of conditions etc
   prac_trials_run2 = new TrialHandler({
@@ -2264,12 +2452,15 @@ function prac_trials_run2LoopBegin(prac_trials_run2LoopScheduler) {
   return Scheduler.Event.NEXT;
 }
 
+
 function prac_trials_run2LoopEnd() {
   psychoJS.experiment.removeLoop(prac_trials_run2);
 
   return Scheduler.Event.NEXT;
 }
 
+
+var trials_run2;
 function trials_run2LoopBegin(trials_run2LoopScheduler) {
   // set up handler to look after randomisation of conditions etc
   trials_run2 = new TrialHandler({
@@ -2298,12 +2489,15 @@ function trials_run2LoopBegin(trials_run2LoopScheduler) {
   return Scheduler.Event.NEXT;
 }
 
+
 function trials_run2LoopEnd() {
   psychoJS.experiment.removeLoop(trials_run2);
 
   return Scheduler.Event.NEXT;
 }
 
+
+var trials_run3;
 function trials_run3LoopBegin(trials_run3LoopScheduler) {
   // set up handler to look after randomisation of conditions etc
   trials_run3 = new TrialHandler({
@@ -2332,12 +2526,15 @@ function trials_run3LoopBegin(trials_run3LoopScheduler) {
   return Scheduler.Event.NEXT;
 }
 
+
 function trials_run3LoopEnd() {
   psychoJS.experiment.removeLoop(trials_run3);
 
   return Scheduler.Event.NEXT;
 }
 
+
+var trials_run4;
 function trials_run4LoopBegin(trials_run4LoopScheduler) {
   // set up handler to look after randomisation of conditions etc
   trials_run4 = new TrialHandler({
@@ -2366,12 +2563,21 @@ function trials_run4LoopBegin(trials_run4LoopScheduler) {
   return Scheduler.Event.NEXT;
 }
 
+
 function trials_run4LoopEnd() {
   psychoJS.experiment.removeLoop(trials_run4);
 
   return Scheduler.Event.NEXT;
 }
 
+
+var trialMsg;
+var currFix;
+var corrfixResp;
+var a;
+var b;
+var fixDur;
+var pracFixR1Components;
 function pracFixR1RoutineBegin(snapshot) {
   return function () {
     //------Prepare to start Routine 'pracFixR1'-------
@@ -2438,6 +2644,8 @@ function pracFixR1RoutineBegin(snapshot) {
   };
 }
 
+
+var frameRemains;
 function pracFixR1RoutineEachFrame(snapshot) {
   return function () {
     //------Loop for each frame of Routine 'pracFixR1'-------
@@ -2486,6 +2694,7 @@ function pracFixR1RoutineEachFrame(snapshot) {
   };
 }
 
+
 function pracFixR1RoutineEnd(snapshot) {
   return function () {
     //------Ending Routine 'pracFixR1'-------
@@ -2503,6 +2712,10 @@ function pracFixR1RoutineEnd(snapshot) {
   };
 }
 
+
+var _prac_resp_allKeys;
+var _prac_fix_resp_allKeys;
+var prac_imgComponents;
 function prac_imgRoutineBegin(snapshot) {
   return function () {
     //------Prepare to start Routine 'prac_img'-------
@@ -2535,6 +2748,7 @@ function prac_imgRoutineBegin(snapshot) {
     return Scheduler.Event.NEXT;
   };
 }
+
 
 function prac_imgRoutineEachFrame(snapshot) {
   return function () {
@@ -2663,6 +2877,7 @@ function prac_imgRoutineEachFrame(snapshot) {
   };
 }
 
+
 function prac_imgRoutineEnd(snapshot) {
   return function () {
     //------Ending Routine 'prac_img'-------
@@ -2707,6 +2922,10 @@ function prac_imgRoutineEnd(snapshot) {
   };
 }
 
+
+var feedIM;
+var prac_msg;
+var FeedbackComponents;
 function FeedbackRoutineBegin(snapshot) {
   return function () {
     //------Prepare to start Routine 'Feedback'-------
@@ -2754,6 +2973,7 @@ function FeedbackRoutineBegin(snapshot) {
     return Scheduler.Event.NEXT;
   };
 }
+
 
 function FeedbackRoutineEachFrame(snapshot) {
   return function () {
@@ -2817,6 +3037,7 @@ function FeedbackRoutineEachFrame(snapshot) {
   };
 }
 
+
 function FeedbackRoutineEnd(snapshot) {
   return function () {
     //------Ending Routine 'Feedback'-------
@@ -2829,6 +3050,9 @@ function FeedbackRoutineEnd(snapshot) {
   };
 }
 
+
+var _key_resp_5_allKeys;
+var transition2trialsComponents;
 function transition2trialsRoutineBegin(snapshot) {
   return function () {
     //------Prepare to start Routine 'transition2trials'-------
@@ -2851,6 +3075,7 @@ function transition2trialsRoutineBegin(snapshot) {
     return Scheduler.Event.NEXT;
   };
 }
+
 
 function transition2trialsRoutineEachFrame(snapshot) {
   return function () {
@@ -2920,6 +3145,7 @@ function transition2trialsRoutineEachFrame(snapshot) {
   };
 }
 
+
 function transition2trialsRoutineEnd(snapshot) {
   return function () {
     //------Ending Routine 'transition2trials'-------
@@ -2935,6 +3161,9 @@ function transition2trialsRoutineEnd(snapshot) {
   };
 }
 
+
+var _key_resp_2_allKeys;
+var trial_instr_run1Components;
 function trial_instr_run1RoutineBegin(snapshot) {
   return function () {
     //------Prepare to start Routine 'trial_instr_run1'-------
@@ -2958,6 +3187,7 @@ function trial_instr_run1RoutineBegin(snapshot) {
     return Scheduler.Event.NEXT;
   };
 }
+
 
 function trial_instr_run1RoutineEachFrame(snapshot) {
   return function () {
@@ -3027,6 +3257,7 @@ function trial_instr_run1RoutineEachFrame(snapshot) {
   };
 }
 
+
 function trial_instr_run1RoutineEnd(snapshot) {
   return function () {
     //------Ending Routine 'trial_instr_run1'-------
@@ -3042,6 +3273,9 @@ function trial_instr_run1RoutineEnd(snapshot) {
   };
 }
 
+
+var _fix_resp1_1_allKeys;
+var trialFixR1Components;
 function trialFixR1RoutineBegin(snapshot) {
   return function () {
     //------Prepare to start Routine 'trialFixR1'-------
@@ -3108,6 +3342,7 @@ function trialFixR1RoutineBegin(snapshot) {
     return Scheduler.Event.NEXT;
   };
 }
+
 
 function trialFixR1RoutineEachFrame(snapshot) {
   return function () {
@@ -3184,6 +3419,7 @@ function trialFixR1RoutineEachFrame(snapshot) {
   };
 }
 
+
 function trialFixR1RoutineEnd(snapshot) {
   return function () {
     //------Ending Routine 'trialFixR1'-------
@@ -3207,6 +3443,10 @@ function trialFixR1RoutineEnd(snapshot) {
   };
 }
 
+
+var _trial_resp_allKeys;
+var _fix_resp_2_allKeys;
+var trial_imgComponents;
 function trial_imgRoutineBegin(snapshot) {
   return function () {
     //------Prepare to start Routine 'trial_img'-------
@@ -3238,6 +3478,7 @@ function trial_imgRoutineBegin(snapshot) {
     return Scheduler.Event.NEXT;
   };
 }
+
 
 function trial_imgRoutineEachFrame(snapshot) {
   return function () {
@@ -3345,6 +3586,7 @@ function trial_imgRoutineEachFrame(snapshot) {
   };
 }
 
+
 function trial_imgRoutineEnd(snapshot) {
   return function () {
     //------Ending Routine 'trial_img'-------
@@ -3383,6 +3625,8 @@ function trial_imgRoutineEnd(snapshot) {
   };
 }
 
+
+var btwn_trial_GJComponents;
 function btwn_trial_GJRoutineBegin(snapshot) {
   return function () {
     //------Prepare to start Routine 'btwn_trial_GJ'-------
@@ -3404,6 +3648,7 @@ function btwn_trial_GJRoutineBegin(snapshot) {
     return Scheduler.Event.NEXT;
   };
 }
+
 
 function btwn_trial_GJRoutineEachFrame(snapshot) {
   return function () {
@@ -3453,6 +3698,7 @@ function btwn_trial_GJRoutineEachFrame(snapshot) {
   };
 }
 
+
 function btwn_trial_GJRoutineEnd(snapshot) {
   return function () {
     //------Ending Routine 'btwn_trial_GJ'-------
@@ -3465,6 +3711,9 @@ function btwn_trial_GJRoutineEnd(snapshot) {
   };
 }
 
+
+var _key_resp_3_allKeys;
+var prac_instr_run2Components;
 function prac_instr_run2RoutineBegin(snapshot) {
   return function () {
     //------Prepare to start Routine 'prac_instr_run2'-------
@@ -3488,6 +3737,7 @@ function prac_instr_run2RoutineBegin(snapshot) {
     return Scheduler.Event.NEXT;
   };
 }
+
 
 function prac_instr_run2RoutineEachFrame(snapshot) {
   return function () {
@@ -3557,6 +3807,7 @@ function prac_instr_run2RoutineEachFrame(snapshot) {
   };
 }
 
+
 function prac_instr_run2RoutineEnd(snapshot) {
   return function () {
     //------Ending Routine 'prac_instr_run2'-------
@@ -3572,6 +3823,9 @@ function prac_instr_run2RoutineEnd(snapshot) {
   };
 }
 
+
+var _fix_respP2_1_allKeys;
+var pracFixR2Components;
 function pracFixR2RoutineBegin(snapshot) {
   return function () {
     //------Prepare to start Routine 'pracFixR2'-------
@@ -3643,6 +3897,7 @@ function pracFixR2RoutineBegin(snapshot) {
     return Scheduler.Event.NEXT;
   };
 }
+
 
 function pracFixR2RoutineEachFrame(snapshot) {
   return function () {
@@ -3719,6 +3974,7 @@ function pracFixR2RoutineEachFrame(snapshot) {
   };
 }
 
+
 function pracFixR2RoutineEnd(snapshot) {
   return function () {
     //------Ending Routine 'pracFixR2'-------
@@ -3742,6 +3998,9 @@ function pracFixR2RoutineEnd(snapshot) {
   };
 }
 
+
+var _key_resp_4_allKeys;
+var trial_instr_run2Components;
 function trial_instr_run2RoutineBegin(snapshot) {
   return function () {
     //------Prepare to start Routine 'trial_instr_run2'-------
@@ -3765,6 +4024,7 @@ function trial_instr_run2RoutineBegin(snapshot) {
     return Scheduler.Event.NEXT;
   };
 }
+
 
 function trial_instr_run2RoutineEachFrame(snapshot) {
   return function () {
@@ -3834,6 +4094,7 @@ function trial_instr_run2RoutineEachFrame(snapshot) {
   };
 }
 
+
 function trial_instr_run2RoutineEnd(snapshot) {
   return function () {
     //------Ending Routine 'trial_instr_run2'-------
@@ -3849,6 +4110,9 @@ function trial_instr_run2RoutineEnd(snapshot) {
   };
 }
 
+
+var _fix_resp2_1_allKeys;
+var trialFixR2Components;
 function trialFixR2RoutineBegin(snapshot) {
   return function () {
     //------Prepare to start Routine 'trialFixR2'-------
@@ -3915,6 +4179,7 @@ function trialFixR2RoutineBegin(snapshot) {
     return Scheduler.Event.NEXT;
   };
 }
+
 
 function trialFixR2RoutineEachFrame(snapshot) {
   return function () {
@@ -3991,6 +4256,7 @@ function trialFixR2RoutineEachFrame(snapshot) {
   };
 }
 
+
 function trialFixR2RoutineEnd(snapshot) {
   return function () {
     //------Ending Routine 'trialFixR2'-------
@@ -4014,6 +4280,8 @@ function trialFixR2RoutineEnd(snapshot) {
   };
 }
 
+
+var EndScreenComponents;
 function EndScreenRoutineBegin(snapshot) {
   return function () {
     //------Prepare to start Routine 'EndScreen'-------
@@ -4033,6 +4301,7 @@ function EndScreenRoutineBegin(snapshot) {
     return Scheduler.Event.NEXT;
   };
 }
+
 
 function EndScreenRoutineEachFrame(snapshot) {
   return function () {
@@ -4082,6 +4351,7 @@ function EndScreenRoutineEachFrame(snapshot) {
   };
 }
 
+
 function EndScreenRoutineEnd(snapshot) {
   return function () {
     //------Ending Routine 'EndScreen'-------
@@ -4093,6 +4363,7 @@ function EndScreenRoutineEnd(snapshot) {
     return Scheduler.Event.NEXT;
   };
 }
+
 
 function endLoopIteration(scheduler, snapshot) {
   // ------Prepare for next entry------
@@ -4116,12 +4387,14 @@ function endLoopIteration(scheduler, snapshot) {
   };
 }
 
+
 function importConditions(currentLoop) {
   return function () {
     psychoJS.importAttributes(currentLoop.getCurrentTrial());
     return Scheduler.Event.NEXT;
     };
 }
+
 
 function quitPsychoJS(message, isCompleted) {
   // Check for and save orphaned data
