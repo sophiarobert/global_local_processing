@@ -99,6 +99,20 @@ const trials_run2LoopScheduler = new Scheduler(psychoJS);
 flowScheduler.add(trials_run2LoopBegin, trials_run2LoopScheduler);
 flowScheduler.add(trials_run2LoopScheduler);
 flowScheduler.add(trials_run2LoopEnd);
+flowScheduler.add(trial_instr_run1RoutineBegin());
+flowScheduler.add(trial_instr_run1RoutineEachFrame());
+flowScheduler.add(trial_instr_run1RoutineEnd());
+const trials_run3LoopScheduler = new Scheduler(psychoJS);
+flowScheduler.add(trials_run3LoopBegin, trials_run3LoopScheduler);
+flowScheduler.add(trials_run3LoopScheduler);
+flowScheduler.add(trials_run3LoopEnd);
+flowScheduler.add(trial_instr_run2RoutineBegin());
+flowScheduler.add(trial_instr_run2RoutineEachFrame());
+flowScheduler.add(trial_instr_run2RoutineEnd());
+const trials_run4LoopScheduler = new Scheduler(psychoJS);
+flowScheduler.add(trials_run4LoopBegin, trials_run4LoopScheduler);
+flowScheduler.add(trials_run4LoopScheduler);
+flowScheduler.add(trials_run4LoopEnd);
 flowScheduler.add(EndScreenRoutineBegin());
 flowScheduler.add(EndScreenRoutineEachFrame());
 flowScheduler.add(EndScreenRoutineEnd());
@@ -390,10 +404,17 @@ function experimentInit() {
   shuffle(prac1_fixColSwitch);
   prac2_fixColSwitch = [0, 0, 0, 1];
   shuffle(prac2_fixColSwitch);
-  fixColorIdx_Run1 = [1, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 1];
-  shuffle(fixColorIdx_Run1);
-  fixColorIdx_Run2 = [1, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 1];
-  shuffle(fixColorIdx_Run2);
+  if ((Number.parseInt(expInfo["position"]) === 2)) {
+      fixColorIdx_Run1 = [1, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 1];
+      shuffle(fixColorIdx_Run1);
+      fixColorIdx_Run2 = [1, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 1];
+      shuffle(fixColorIdx_Run2);
+  } else {
+      fixColorIdx_Run1 = [1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0];
+      shuffle(fixColorIdx_Run1);
+      fixColorIdx_Run2 = [1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0];
+      shuffle(fixColorIdx_Run2);
+  }
   
   prac_instr1 = new visual.ImageStim({
     win : psychoJS.window,
@@ -690,7 +711,7 @@ function experimentInit() {
   Trial_run1 = 1;
   Total_run1 = 96;
   Trial_run2 = 1;
-  Total_run2 = 96;
+  Total_run2 = (96 / 2);
   if ((expInfo["position"] === "2")) {
       positionRows = [0, 1, 2, 3, 4, 5, 6, 7];
   }
@@ -993,6 +1014,167 @@ function experimentInit() {
   });
   
   key_resp_5 = new core.Keyboard({psychoJS: psychoJS, clock: new util.Clock(), waitForStart: true});
+  
+  // Initialize components for Routine "trial_instr_run2"
+  trial_instr_run2Clock = new util.Clock();
+  if ((expInfo["design"] === "1")) {
+      instructions_run2 = "Designs/design1_run2.png";
+      cond_file_run2 = "Designs/design1_run2.csv";
+  } else {
+      if ((expInfo["design"] === "2")) {
+          instructions_run2 = "Designs/design2_run2.png";
+          cond_file_run2 = "Designs/design2_run2.csv";
+      } else {
+          if ((expInfo["design"] === "3")) {
+              instructions_run2 = "Designs/design3_run2.png";
+              cond_file_run2 = "Designs/design3_run2.csv";
+          } else {
+              if ((expInfo["design"] === "4")) {
+                  instructions_run2 = "Designs/design4_run2.png";
+                  cond_file_run2 = "Designs/design4_run2.csv";
+              }
+          }
+      }
+  }
+  
+  instructions_imageR2 = new visual.ImageStim({
+    win : psychoJS.window,
+    name : 'instructions_imageR2', units : undefined, 
+    image : undefined, mask : undefined,
+    ori : 0, pos : [0, 0], size : [(0.75 * 1.77), 0.75],
+    color : new util.Color([1, 1, 1]), opacity : 1,
+    flipHoriz : false, flipVert : false,
+    texRes : 512, interpolate : true, depth : -1.0 
+  });
+  key_resp_4 = new core.Keyboard({psychoJS: psychoJS, clock: new util.Clock(), waitForStart: true});
+  
+  // Initialize components for Routine "trialFixR2"
+  trialFixR2Clock = new util.Clock();
+  text_4 = new visual.TextStim({
+    win: psychoJS.window,
+    name: 'text_4',
+    text: '+',
+    font: 'Arial',
+    units: undefined, 
+    pos: [0, 0], height: 0.05,  wrapWidth: undefined, ori: 0,
+    color: new util.Color('white'),  opacity: 1,
+    depth: -1.0 
+  });
+  
+  fix_resp2_1 = new core.Keyboard({psychoJS: psychoJS, clock: new util.Clock(), waitForStart: true});
+  
+  // Initialize components for Routine "trial_img"
+  trial_imgClock = new util.Clock();
+  text_6 = new visual.TextStim({
+    win: psychoJS.window,
+    name: 'text_6',
+    text: '+',
+    font: 'Arial',
+    units: undefined, 
+    pos: [0, 0], height: 0.05,  wrapWidth: undefined, ori: 0,
+    color: new util.Color('white'),  opacity: 1,
+    depth: 0.0 
+  });
+  
+  trial_image = new visual.ImageStim({
+    win : psychoJS.window,
+    name : 'trial_image', units : undefined, 
+    image : undefined, mask : undefined,
+    ori : 0, pos : [0, 0], size : 1.0,
+    color : new util.Color([1, 1, 1]), opacity : 1,
+    flipHoriz : false, flipVert : false,
+    texRes : 512, interpolate : true, depth : -1.0 
+  });
+  trial_resp = new core.Keyboard({psychoJS: psychoJS, clock: new util.Clock(), waitForStart: true});
+  
+  fix_resp_2 = new core.Keyboard({psychoJS: psychoJS, clock: new util.Clock(), waitForStart: true});
+  
+  // Initialize components for Routine "trial_instr_run1"
+  trial_instr_run1Clock = new util.Clock();
+  if ((expInfo["design"] === "1")) {
+      instructions_run1 = "Designs/design1_run1.png";
+      cond_file_run1 = "Designs/design1_run1.csv";
+  } else {
+      if ((expInfo["design"] === "2")) {
+          instructions_run1 = "Designs/design2_run1.png";
+          cond_file_run1 = "Designs/design2_run1.csv";
+      } else {
+          if ((expInfo["design"] === "3")) {
+              instructions_run1 = "Designs/design3_run1.png";
+              cond_file_run1 = "Designs/design3_run1.csv";
+          } else {
+              if ((expInfo["design"] === "4")) {
+                  instructions_run1 = "Designs/design4_run1.png";
+                  cond_file_run1 = "Designs/design4_run1.csv";
+              }
+          }
+      }
+  }
+  Trial_run1 = 1;
+  Total_run1 = 96;
+  Trial_run2 = 1;
+  Total_run2 = (96 / 2);
+  if ((expInfo["position"] === "2")) {
+      positionRows = [0, 1, 2, 3, 4, 5, 6, 7];
+  }
+  if ((expInfo["position"] === "1")) {
+      positionRows = [0, 1, 2, 3];
+  }
+  if ((expInfo["position"] === "3")) {
+      positionRows = [4, 5, 6, 7];
+  }
+  
+  instructions_imageR1 = new visual.ImageStim({
+    win : psychoJS.window,
+    name : 'instructions_imageR1', units : undefined, 
+    image : undefined, mask : undefined,
+    ori : 0, pos : [0, 0], size : [(0.75 * 1.77), 0.75],
+    color : new util.Color([1, 1, 1]), opacity : 1,
+    flipHoriz : false, flipVert : false,
+    texRes : 512, interpolate : true, depth : -1.0 
+  });
+  key_resp_2 = new core.Keyboard({psychoJS: psychoJS, clock: new util.Clock(), waitForStart: true});
+  
+  // Initialize components for Routine "trialFixR1"
+  trialFixR1Clock = new util.Clock();
+  text_2 = new visual.TextStim({
+    win: psychoJS.window,
+    name: 'text_2',
+    text: '+',
+    font: 'Arial',
+    units: undefined, 
+    pos: [0, 0], height: 0.05,  wrapWidth: undefined, ori: 0,
+    color: new util.Color('white'),  opacity: 1,
+    depth: -1.0 
+  });
+  
+  fix_resp1_1 = new core.Keyboard({psychoJS: psychoJS, clock: new util.Clock(), waitForStart: true});
+  
+  // Initialize components for Routine "trial_img"
+  trial_imgClock = new util.Clock();
+  text_6 = new visual.TextStim({
+    win: psychoJS.window,
+    name: 'text_6',
+    text: '+',
+    font: 'Arial',
+    units: undefined, 
+    pos: [0, 0], height: 0.05,  wrapWidth: undefined, ori: 0,
+    color: new util.Color('white'),  opacity: 1,
+    depth: 0.0 
+  });
+  
+  trial_image = new visual.ImageStim({
+    win : psychoJS.window,
+    name : 'trial_image', units : undefined, 
+    image : undefined, mask : undefined,
+    ori : 0, pos : [0, 0], size : 1.0,
+    color : new util.Color([1, 1, 1]), opacity : 1,
+    flipHoriz : false, flipVert : false,
+    texRes : 512, interpolate : true, depth : -1.0 
+  });
+  trial_resp = new core.Keyboard({psychoJS: psychoJS, clock: new util.Clock(), waitForStart: true});
+  
+  fix_resp_2 = new core.Keyboard({psychoJS: psychoJS, clock: new util.Clock(), waitForStart: true});
   
   // Initialize components for Routine "trial_instr_run2"
   trial_instr_run2Clock = new util.Clock();
@@ -2193,7 +2375,7 @@ function trials_run1LoopBegin(trials_run1LoopScheduler) {
   // set up handler to look after randomisation of conditions etc
   trials_run1 = new TrialHandler({
     psychoJS: psychoJS,
-    nReps: 12, method: TrialHandler.Method.FULLRANDOM,
+    nReps: 6, method: TrialHandler.Method.FULLRANDOM,
     extraInfo: expInfo, originPath: undefined,
     trialList: TrialHandler.importConditions(psychoJS.serverManager, cond_file_run1, positionRows),
     seed: undefined, name: 'trials_run1'
@@ -2272,7 +2454,7 @@ function trials_run2LoopBegin(trials_run2LoopScheduler) {
   // set up handler to look after randomisation of conditions etc
   trials_run2 = new TrialHandler({
     psychoJS: psychoJS,
-    nReps: 12, method: TrialHandler.Method.FULLRANDOM,
+    nReps: 6, method: TrialHandler.Method.FULLRANDOM,
     extraInfo: expInfo, originPath: undefined,
     trialList: TrialHandler.importConditions(psychoJS.serverManager, cond_file_run2, positionRows),
     seed: undefined, name: 'trials_run2'
@@ -2300,6 +2482,82 @@ function trials_run2LoopBegin(trials_run2LoopScheduler) {
 
 function trials_run2LoopEnd() {
   psychoJS.experiment.removeLoop(trials_run2);
+
+  return Scheduler.Event.NEXT;
+}
+
+
+var trials_run3;
+function trials_run3LoopBegin(trials_run3LoopScheduler) {
+  // set up handler to look after randomisation of conditions etc
+  trials_run3 = new TrialHandler({
+    psychoJS: psychoJS,
+    nReps: 6, method: TrialHandler.Method.FULLRANDOM,
+    extraInfo: expInfo, originPath: undefined,
+    trialList: TrialHandler.importConditions(psychoJS.serverManager, cond_file_run1, positionRows),
+    seed: undefined, name: 'trials_run3'
+  });
+  psychoJS.experiment.addLoop(trials_run3); // add the loop to the experiment
+  currentLoop = trials_run3;  // we're now the current loop
+
+  // Schedule all the trials in the trialList:
+  trials_run3.forEach(function() {
+    const snapshot = trials_run3.getSnapshot();
+
+    trials_run3LoopScheduler.add(importConditions(snapshot));
+    trials_run3LoopScheduler.add(trialFixR1RoutineBegin(snapshot));
+    trials_run3LoopScheduler.add(trialFixR1RoutineEachFrame(snapshot));
+    trials_run3LoopScheduler.add(trialFixR1RoutineEnd(snapshot));
+    trials_run3LoopScheduler.add(trial_imgRoutineBegin(snapshot));
+    trials_run3LoopScheduler.add(trial_imgRoutineEachFrame(snapshot));
+    trials_run3LoopScheduler.add(trial_imgRoutineEnd(snapshot));
+    trials_run3LoopScheduler.add(endLoopIteration(trials_run3LoopScheduler, snapshot));
+  });
+
+  return Scheduler.Event.NEXT;
+}
+
+
+function trials_run3LoopEnd() {
+  psychoJS.experiment.removeLoop(trials_run3);
+
+  return Scheduler.Event.NEXT;
+}
+
+
+var trials_run4;
+function trials_run4LoopBegin(trials_run4LoopScheduler) {
+  // set up handler to look after randomisation of conditions etc
+  trials_run4 = new TrialHandler({
+    psychoJS: psychoJS,
+    nReps: 6, method: TrialHandler.Method.FULLRANDOM,
+    extraInfo: expInfo, originPath: undefined,
+    trialList: TrialHandler.importConditions(psychoJS.serverManager, cond_file_run2, positionRows),
+    seed: undefined, name: 'trials_run4'
+  });
+  psychoJS.experiment.addLoop(trials_run4); // add the loop to the experiment
+  currentLoop = trials_run4;  // we're now the current loop
+
+  // Schedule all the trials in the trialList:
+  trials_run4.forEach(function() {
+    const snapshot = trials_run4.getSnapshot();
+
+    trials_run4LoopScheduler.add(importConditions(snapshot));
+    trials_run4LoopScheduler.add(trialFixR2RoutineBegin(snapshot));
+    trials_run4LoopScheduler.add(trialFixR2RoutineEachFrame(snapshot));
+    trials_run4LoopScheduler.add(trialFixR2RoutineEnd(snapshot));
+    trials_run4LoopScheduler.add(trial_imgRoutineBegin(snapshot));
+    trials_run4LoopScheduler.add(trial_imgRoutineEachFrame(snapshot));
+    trials_run4LoopScheduler.add(trial_imgRoutineEnd(snapshot));
+    trials_run4LoopScheduler.add(endLoopIteration(trials_run4LoopScheduler, snapshot));
+  });
+
+  return Scheduler.Event.NEXT;
+}
+
+
+function trials_run4LoopEnd() {
+  psychoJS.experiment.removeLoop(trials_run4);
 
   return Scheduler.Event.NEXT;
 }
@@ -2672,22 +2930,22 @@ function FeedbackRoutineBegin(snapshot) {
     // update component parameters for each repeat
     feedIM = "";
     if ((prac_resp.keys === corr)) {
-        if ((prac_fix_resp.keys === corrfixResp)) {
+        if ((prac_fix_resp.corr === 1)) {
             feedIM = "Stimuli/greenCheck.png";
             prac_msg = "Well done!";
         } else {
-            if ((prac_fix_resp.keys !== corrfixResp)) {
+            if ((prac_fix_resp.corr !== 1)) {
                 feedIM = "Stimuli/redWrong.png";
                 prac_msg = "Oops, your picture response was right but the cross response was wrong.";
             }
         }
     } else {
         if ((prac_resp.keys !== corr)) {
-            if ((prac_fix_resp.keys === corrfixResp)) {
+            if ((prac_fix_resp.corr === 1)) {
                 feedIM = "Stimuli/redWrong.png";
                 prac_msg = "Oops, your cross response was right but the picture response was wrong.";
             } else {
-                if ((prac_fix_resp.keys !== corrfixResp)) {
+                if ((prac_fix_resp.keys !== 1)) {
                     feedIM = "Stimuli/redWrong.png";
                     prac_msg = "Oops, both responses were wrong.";
                 }
@@ -3875,8 +4133,8 @@ function trialFixR2RoutineBegin(snapshot) {
                 if ((currFix === "white")) {
                     currFix = "black";
                 } else {
-                    if ((currFix === "white")) {
-                        currFix = "black";
+                    if ((currFix === "black")) {
+                        currFix = "white";
                     }
                 }
             }
@@ -3885,10 +4143,10 @@ function trialFixR2RoutineBegin(snapshot) {
     a = 1.25;
     b = 1.75;
     fixDur = (((b - a) * random()) + a);
-    if ((expInfo["position"] === "0")) {
+    if ((Number.parseInt(expInfo["position"]) === 0)) {
         xPosition = 0;
     } else {
-        if ((expInfo["position"] === "2")) {
+        if ((Number.parseInt(expInfo["position"]) === 2)) {
             if ((side === "left")) {
                 xPosition = (- (width4deg * x_scale));
             } else {
@@ -3897,10 +4155,10 @@ function trialFixR2RoutineBegin(snapshot) {
                 }
             }
         } else {
-            if ((expInfo["position"] === "1")) {
+            if ((Number.parseInt(expInfo["position"]) === 1)) {
                 xPosition = (- (width4deg * x_scale));
             } else {
-                if ((expInfo["position"] === "3")) {
+                if ((expInfo["position"] === 3)) {
                     xPosition = (width4deg * x_scale);
                 }
             }
