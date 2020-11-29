@@ -111,12 +111,12 @@ psychoJS.start({
   expName: expName,
   expInfo: expInfo,
   resources: [
-    {'name': 'Designs/prac_instr2.png', 'path': 'Designs/prac_instr2.png'},
-    {'name': 'Designs/baby_dory_GJ.png', 'path': 'Designs/baby_dory_GJ.png'},
-    {'name': 'bankcard.png', 'path': 'bankcard.png'},
-    {'name': 'Designs/prac_instr1.png', 'path': 'Designs/prac_instr1.png'},
     {'name': 'Designs/prac_instr3.png', 'path': 'Designs/prac_instr3.png'},
-    {'name': 'Designs/baby_squirt_GJ.png', 'path': 'Designs/baby_squirt_GJ.png'}
+    {'name': 'Designs/baby_squirt_GJ.png', 'path': 'Designs/baby_squirt_GJ.png'},
+    {'name': 'bankcard.png', 'path': 'bankcard.png'},
+    {'name': 'Designs/baby_dory_GJ.png', 'path': 'Designs/baby_dory_GJ.png'},
+    {'name': 'Designs/prac_instr2.png', 'path': 'Designs/prac_instr2.png'},
+    {'name': 'Designs/prac_instr1.png', 'path': 'Designs/prac_instr1.png'}
   ]
 });
 
@@ -348,8 +348,8 @@ function experimentInit() {
   }
   height = (1.7296 * 2);
   width = (1.7296 * 2);
-  width3deg = 2.5958;
-  width4deg = (1.7296 * 2);
+  width3deg = 3.47618705978;
+  width4deg = 3.47618705978;
   
   text_top = new visual.TextStim({
     win: psychoJS.window,
@@ -390,9 +390,9 @@ function experimentInit() {
   shuffle(prac1_fixColSwitch);
   prac2_fixColSwitch = [0, 0, 0, 1];
   shuffle(prac2_fixColSwitch);
-  fixColorIdx_Run1 = [0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1];
+  fixColorIdx_Run1 = [1, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 1];
   shuffle(fixColorIdx_Run1);
-  fixColorIdx_Run2 = [0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1];
+  fixColorIdx_Run2 = [1, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 1];
   shuffle(fixColorIdx_Run2);
   
   prac_instr1 = new visual.ImageStim({
