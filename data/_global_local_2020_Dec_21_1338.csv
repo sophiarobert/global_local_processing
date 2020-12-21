@@ -1,0 +1,6 @@
+﻿runID,imgID,stimLabel,imFile,corr,side,repeats.thisRepN,repeats.thisTrialN,repeats.thisN,repeats.thisIndex,prac_trials_run1.thisRepN,prac_trials_run1.thisTrialN,prac_trials_run1.thisN,prac_trials_run1.thisIndex,X Scale,Y Scale,text_8.started,text_8.stopped,hand_hold_resp.keys,hand_hold_resp.corr,hand_hold_resp.rt,fixpR1,prac_resp.keys,prac_resp.corr,prac_resp.rt,prac_fix_resp.keys,prac_fix_resp.corr,feedback_msg.started,feedback_msg.stopped,prac_fix_resp.rt,participant,design,position,date,expName,psychopyVersion,frameRate,
+,,,,,,,,,,,,,,0.05,0.05,27.3941480522044,None,f,0,1.3298881202936172,,,,,,,,,,,1,2,2020_Dec_21_1338,global_local,2020.2.4,None,
+1,1,smallHcongr,Stimuli/HofH2.jpg,f,left,0,0,0,0,0,0,0,0,,,,,,,,0,f,1,0.9657814693637192,None,1,36.3126763459295,None,,,1,2,2020_Dec_21_1338,global_local,2020.2.4,None,
+1,7,smallSincon,Stimuli/HofS2.jpg,j,left,0,0,0,0,0,1,1,1,,,,,,,,0,f,0,2.063381380867213,None,1,43.99599767290056,None,,,1,2,2020_Dec_21_1338,global_local,2020.2.4,None,
+1,4,smallHincon,Stimuli/SofH2.jpg,f,right,0,0,0,0,0,2,2,2,,,,,,,,1,f,1,1.7234449880197644,space,1,51.360438286326826,None,0.616720852907747,,1,2,2020_Dec_21_1338,global_local,2020.2.4,None,
+1,8,smallSincon,Stimuli/HofS2.jpg,j,right,0,0,0,0,0,3,3,3,,,,,,,,0,None,0,,space,0,59.013011476024985,None,3.9077652413398027,,1,2,2020_Dec_21_1338,global_local,2020.2.4,None,
