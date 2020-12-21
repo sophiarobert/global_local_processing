@@ -3131,7 +3131,7 @@ function FeedbackRoutineBegin(snapshot) {
         }
     } else {
         if ((prac_resp.keys !== corr)) {
-            if ((prac_resp.keys === null)) {
+            if ((prac_resp.keys === undefined)) {
                 feedIM = "Stimuli/redWrong.png";
                 numIncorr_miss = (numIncorr_miss + 1);
                 if ((corrfixResp === "space")) {
