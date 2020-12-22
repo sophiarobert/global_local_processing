@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2020.2.4),
-    on Mon Dec 21 16:11:24 2020
+    on Tue Dec 22 16:19:23 2020
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -588,19 +588,6 @@ elif expInfo['design']=='3':
 elif expInfo['design']=='4':
     instructions_run2 =  'Designs/design4_run2.png'
     cond_file_run2 = 'Designs/design4_run2.csv'
-
-if expInfo['position']=='2':
-    rand8Idx = [0,1,2,3,4,5,6,7];
-    shuffle(rand8Idx)
-    randRows_run2 = rand8Idx[0:4]
-elif expInfo['position']=='1':
-    rand4Idx = [0,1,2,3];
-    shuffle(rand4Idx)
-    randRows_run2 = rand4Idx
-elif expInfo['position']=='3':
-    rand4Idx = [4,5,6,7];
-    shuffle(rand4Idx)
-    randRows_run2 = rand4Idx
 Pinstructions_imageR2 = visual.ImageStim(
     win=win,
     name='Pinstructions_imageR2', 
@@ -1674,7 +1661,7 @@ for thisComponent in prac_instr_run1Components:
 routineTimer.reset()
 
 # set up handler to look after randomisation of conditions etc
-repeats = data.TrialHandler(nReps=10, method='sequential', 
+repeats = data.TrialHandler(nReps=4, method='sequential', 
     extraInfo=expInfo, originPath=-1,
     trialList=[None],
     seed=None, name='repeats')
@@ -2085,9 +2072,9 @@ for thisRepeat in repeats:
                 numIncorr_fix = numIncorr_fix + 1
                 feedIM = 'Stimuli/redWrong.png'
                 if corrfixResp == 'space':
-                    prac_msg = 'Oops, you missed the cross response.'
+                    prac_msg = 'Oops, you missed the cross change.'
                 else:
-                    prac_msg = 'Oops, you pressed space when there was no fix change.'
+                    prac_msg = 'Oops, you pressed space when the cross didn\'t change.'
         elif prac_resp.keys != corr:
             if prac_resp.keys == None:
                feedIM = 'Stimuli/redWrong.png'
@@ -2300,7 +2287,7 @@ for thisRepeat in repeats:
             thisComponent.setAutoDraw(False)
     # the Routine "checkPrac1" was not non-slip safe, so reset the non-slip timer
     routineTimer.reset()
-# completed 10 repeats of 'repeats'
+# completed 4 repeats of 'repeats'
 
 
 # ------Prepare to start Routine "trial_instr_run1"-------
@@ -3199,7 +3186,7 @@ for thisComponent in prac_instr_run2Components:
 routineTimer.reset()
 
 # set up handler to look after randomisation of conditions etc
-repeats2 = data.TrialHandler(nReps=5, method='sequential', 
+repeats2 = data.TrialHandler(nReps=4, method='sequential', 
     extraInfo=expInfo, originPath=-1,
     trialList=[None],
     seed=None, name='repeats2')
@@ -3333,16 +3320,16 @@ for thisRepeats2 in repeats2:
         b = 1.75 # max ITI
         fixDur = (b-a) * random()+a
         
-        if expInfo['position'] == '0':
+        if (expInfo['position']) == 0:
             xPosition = 0
-        elif expInfo['position'] == '2':
+        elif int(expInfo['position']) == 2:
             if side == 'left':
                 xPosition = -(width4deg*x_scale)
             elif side == 'right':
                 xPosition = width4deg*x_scale
-        elif expInfo['position'] == '1':
+        elif int(expInfo['position']) == 1:
             xPosition = -(width4deg*x_scale)
-        elif expInfo['position'] == '3':
+        elif int(expInfo['position']) == 3:
             xPosition = width4deg*x_scale
         
         thisExp.addData('fixpR2', prac2_fixColSwitch[pTrial_run2-1])
@@ -3647,9 +3634,9 @@ for thisRepeats2 in repeats2:
                 numIncorr_fix = numIncorr_fix + 1
                 feedIM = 'Stimuli/redWrong.png'
                 if corrfixResp == 'space':
-                    prac_msg = 'Oops, you missed the cross response.'
+                    prac_msg = 'Oops, you missed the cross change.'
                 else:
-                    prac_msg = 'Oops, you pressed space when there was no fix change.'
+                    prac_msg = 'Oops, you pressed space when the cross didn\'t change.'
         elif prac_resp.keys != corr:
             if prac_resp.keys == None:
                feedIM = 'Stimuli/redWrong.png'
@@ -3767,17 +3754,17 @@ for thisRepeats2 in repeats2:
     continueRoutine = True
     # update component parameters for each repeat
     if (numIncorr_fix + numIncorr_miss + numIncorr_img) < 3 and (numIncorr_fix != 2):
+        prac_feedback = 'Great job! You are now ready for the real game. \nPress Space to see the instructions again.'
         repeats2.finished = True
-        prac_feedback = 'Great Job! \n Now we are going to play the real game. \n Press Space to see the instructions again.'
     else:
         if numIncorr_fix > 1 and numIncorr_img < 2 and numIncorr_miss < 2:
-            prac_feedback = 'Good job! \nYou missed ' + str(numIncorr_fix) + ' of the fix changes. \n In the real game, make sure you press Space as soon as you see it change!\n\n Let\'s try some more practice. \n Press Space to start.'
-        elif numIncorr_img > 1 and numIncorr_fix < 2 and numIncorr_miss < 2:
-            prac_feedback = 'Good job! \nYou missed ' + str(numIncorr_img) + ' of the images. \n Sometimes the big letter and the little letters are different. \nMake sure you focus on the right ones and press the right keys! \n\nLet\'s try some more practice. \n Press Space to start.'
-        elif numIncorr_miss > 0 and numIncorr_img < 2 and numIncorr_fix < 2:
-            prac_feedback = 'You missed ' + str(numIncorr_miss) + ' of the trials because the time was up. That\'s ok, in the real game the image will stay on, but try to go as fast as you can. \n\n Press Space to practice more.'
+            prac_feedback = 'Good job with the pictures! \n You missed ' + str(numIncorr_fix) + ' of the two fix changes. \n In the real game, make sure you press Space as soon as you see it change!\n\n Let\'s try some more practice. \n Press Space to start.'
+        elif numIncorr_fix < 2 and numIncorr_img > 1 and numIncorr_miss < 2:
+            prac_feedback = 'Good job, you got ' + str(2-numIncorr_fix) + ' of the 2 fix changes! \nYou missed ' + str(numIncorr_img) + ' of the pictures. \n Sometimes the big letter and the little letters are different. \nMake sure you focus on the right ones and press the right keys! \n\nLet\'s try some more practice. \n Press Space to start.'
+        elif numIncorr_fix < 2 and numIncorr_img < 2 and numIncorr_miss > 1:
+            prac_feedback = 'You missed ' + str(numIncorr_miss) + ' of the trials because the time was up. That\'s ok, in the real game the pictures will stay on, but try to go as fast as you can. \n\n Press Space to practice more.'
         else:
-            prac_feedback = 'Let\'s try one more round of practice. \n\n Press Space to begin.'
+            prac_feedback = 'Nice try! You missed ' + str(numIncorr_img) + ' of the picture responses, ' + str(numIncorr_fix) + ' of the two fix changes, and ' + str(numIncorr_miss) + ' trials went by too fast. \n\nLet\'s try another round of practice. \nPress Space to start.'
     text_9.setText(prac_feedback)
     key_resp_10.keys = []
     key_resp_10.rt = []
@@ -3866,7 +3853,7 @@ for thisRepeats2 in repeats2:
         repeats2.addData('key_resp_10.rt', key_resp_10.rt)
     # the Routine "checkPrac2" was not non-slip safe, so reset the non-slip timer
     routineTimer.reset()
-# completed 5 repeats of 'repeats2'
+# completed 4 repeats of 'repeats2'
 
 
 # ------Prepare to start Routine "trial_instr_run2"-------

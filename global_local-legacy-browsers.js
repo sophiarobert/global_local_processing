@@ -125,12 +125,12 @@ psychoJS.start({
   expName: expName,
   expInfo: expInfo,
   resources: [
-    {'name': 'Designs/baby_squirt_GJ.png', 'path': 'Designs/baby_squirt_GJ.png'},
-    {'name': 'Designs/prac_instr1.png', 'path': 'Designs/prac_instr1.png'},
-    {'name': 'Designs/prac_instr2.png', 'path': 'Designs/prac_instr2.png'},
     {'name': 'Designs/baby_dory_GJ.png', 'path': 'Designs/baby_dory_GJ.png'},
+    {'name': 'bankcard.png', 'path': 'bankcard.png'},
+    {'name': 'Designs/prac_instr1.png', 'path': 'Designs/prac_instr1.png'},
     {'name': 'Designs/prac_instr3.png', 'path': 'Designs/prac_instr3.png'},
-    {'name': 'bankcard.png', 'path': 'bankcard.png'}
+    {'name': 'Designs/baby_squirt_GJ.png', 'path': 'Designs/baby_squirt_GJ.png'},
+    {'name': 'Designs/prac_instr2.png', 'path': 'Designs/prac_instr2.png'}
   ]
 });
 
@@ -2329,7 +2329,7 @@ function repeatsLoopBegin(repeatsLoopScheduler) {
   // set up handler to look after randomisation of conditions etc
   repeats = new TrialHandler({
     psychoJS: psychoJS,
-    nReps: 10, method: TrialHandler.Method.SEQUENTIAL,
+    nReps: 4, method: TrialHandler.Method.SEQUENTIAL,
     extraInfo: expInfo, originPath: undefined,
     trialList: undefined,
     seed: undefined, name: 'repeats'
@@ -2450,7 +2450,7 @@ function repeats2LoopBegin(repeats2LoopScheduler) {
   // set up handler to look after randomisation of conditions etc
   repeats2 = new TrialHandler({
     psychoJS: psychoJS,
-    nReps: 5, method: TrialHandler.Method.SEQUENTIAL,
+    nReps: 4, method: TrialHandler.Method.SEQUENTIAL,
     extraInfo: expInfo, originPath: undefined,
     trialList: undefined,
     seed: undefined, name: 'repeats2'
@@ -3124,9 +3124,9 @@ function FeedbackRoutineBegin(snapshot) {
             numIncorr_fix = (numIncorr_fix + 1);
             feedIM = "Stimuli/redWrong.png";
             if ((corrfixResp === "space")) {
-                prac_msg = "Oops, you missed the cross response.";
+                prac_msg = "Oops, you missed the cross change.";
             } else {
-                prac_msg = "Oops, you pressed space when there was no fix change.";
+                prac_msg = "Oops, you pressed space when the cross didn't change.";
             }
         }
     } else {
