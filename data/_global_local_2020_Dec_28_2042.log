@@ -1,0 +1,270 @@
+7.5477 	INFO 	Loaded monitor calibration from ['2020_09_20 15:42']
+9.8164 	WARNING 	Couldn't measure a consistent frame rate.
+  - Is your graphics card set to sync to vertical blank?
+  - Are you running other processes on your computer?
+
+9.8169 	EXP 	Created window1 = Window(allowGUI=False, allowStencil=False, args=UNKNOWN, autoLog=True, bitsMode=UNKNOWN, blendMode='avg', bpc=(8, 8, 8), color=array([0., 0., 0.]), colorSpace='rgb', depthBits=8, fullscr=<method-wrapper '__getattribute__' of attributeSetter object at 0x1551c09e8>, gamma=None, gammaErrorPolicy='raise', kwargs=UNKNOWN, lms=UNKNOWN, monitor=<psychopy.monitors.calibTools.Monitor object at 0x155d919b0>, multiSample=False, name='window1', numSamples=2, pos=[448.0, 280.0], screen=0, size=array([3584, 2240]), stencilBits=0, stereo=False, units='height', useFBO=True, useRetina=True, viewOri=0.0, viewPos=None, viewScale=None, waitBlanking=True, winType='pyglet')
+9.8171 	EXP 	window1: mouseVisible = True
+9.8172 	EXP 	window1: recordFrameIntervals = False
+9.9830 	EXP 	window1: recordFrameIntervals = True
+11.6496 	WARNING 	Couldn't measure a consistent frame rate.
+  - Is your graphics card set to sync to vertical blank?
+  - Are you running other processes on your computer?
+
+12.1235 	EXP 	Created text_top = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=-2.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='text_top', opacity=1.0, ori=0, pos=array([0. , 0.3]), rgb=array([0., 0., 0.]), text=str(...), units='height', win=Window(...), wrapWidth=1)
+12.1305 	EXP 	Created text_bottom = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=-3.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='text_bottom', opacity=1.0, ori=0, pos=array([ 0. , -0.3]), rgb=array([0., 0., 0.]), text='Press Space when you’re finished', units='height', win=Window(...), wrapWidth=1)
+12.1539 	EXP 	Created ccimage = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-4.0, flipHoriz=False, flipVert=False, image='bankcard.png', interpolate=True, mask=None, maskParams=None, name='ccimage', opacity=1.0, ori=0.0, pos=array([0., 0.]), size=array([0.428 , 0.2699]), texRes=512, units='height', win=Window(...))
+12.1556 	EXP 	Created prac_instr1 = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, image='sin', interpolate=True, mask=None, maskParams=None, name='prac_instr1', opacity=1.0, ori=0.0, pos=array([0., 0.]), size=array([1.3275, 0.75  ]), texRes=512, units='height', win=Window(...))
+12.5722 	EXP 	Created prac_instr2 = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, image='Designs/prac_instr2.png', interpolate=True, mask=None, maskParams=None, name='prac_instr2', opacity=1.0, ori=0.0, pos=array([0., 0.]), size=array([1.3275, 0.75  ]), texRes=512, units='height', win=Window(...))
+12.9800 	EXP 	Created prac_instr3 = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, image='Designs/prac_instr3.png', interpolate=True, mask=None, maskParams=None, name='prac_instr3', opacity=1.0, ori=0.0, pos=array([0., 0.]), size=array([1.3275, 0.75  ]), texRes=512, units='height', win=Window(...))
+13.3705 	EXP 	Created image_2 = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, image='sin', interpolate=True, mask=None, maskParams=None, name='image_2', opacity=1.0, ori=0.0, pos=array([0., 0.]), size=array([1.3275, 0.75  ]), texRes=512, units='height', win=Window(...))
+13.7596 	EXP 	Created text_8 = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color='white', colorSpace='named', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='text_8', opacity=1.0, ori=0, pos=array([0., 0.]), rgb=array([255., 255., 255.]), text='+', units='height', win=Window(...), wrapWidth=1)
+13.7610 	EXP 	Created image = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, image='sin', interpolate=True, mask=None, maskParams=None, name='image', opacity=1.0, ori=0.0, pos=array([0., 0.]), size=array([1., 1.]), texRes=512, units='height', win=Window(...))
+14.1424 	EXP 	Created image_3 = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, image='sin', interpolate=True, mask=None, maskParams=None, name='image_3', opacity=1.0, ori=0.0, pos=array([0., 0.]), size=array([1.3275, 0.75  ]), texRes=512, units='height', win=Window(...))
+14.5217 	EXP 	Created Pinstructions_imageR1 = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, image='sin', interpolate=True, mask=None, maskParams=None, name='Pinstructions_imageR1', opacity=1.0, ori=0.0, pos=array([0., 0.]), size=array([1.3125, 0.75  ]), texRes=512, units='height', win=Window(...))
+14.9098 	EXP 	Created text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color='white', colorSpace='named', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='text', opacity=1.0, ori=0, pos=array([0., 0.]), rgb=array([255., 255., 255.]), text='+', units='height', win=Window(...), wrapWidth=1)
+14.9109 	EXP 	Created text_5 = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color='white', colorSpace='named', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='text_5', opacity=1.0, ori=0, pos=array([0., 0.]), rgb=array([255., 255., 255.]), text='+', units='height', win=Window(...), wrapWidth=1)
+14.9121 	EXP 	Created prac_image = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, image='sin', interpolate=True, mask=None, maskParams=None, name='prac_image', opacity=1.0, ori=0.0, pos=array([0., 0.]), size=array([1., 1.]), texRes=512, units='height', win=Window(...))
+15.6860 	EXP 	Created imFeedback = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, image='sin', interpolate=True, mask=None, maskParams=None, name='imFeedback', opacity=1.0, ori=0.0, pos=array([0., 0.]), size=array([0.25, 0.25]), texRes=512, units='height', win=Window(...))
+15.6897 	EXP 	Created feedback_msg = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=-2.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='feedback_msg', opacity=1.0, ori=0, pos=array([ 0.  , -0.25]), rgb=array([0., 0., 0.]), text='default text', units='height', win=Window(...), wrapWidth=1)
+15.6917 	EXP 	Created text_7 = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='text_7', opacity=1.0, ori=0, pos=array([0., 0.]), rgb=array([0., 0., 0.]), text='default text', units='height', win=Window(...), wrapWidth=1)
+16.0725 	EXP 	Created instructions_imageR1 = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, image='sin', interpolate=True, mask=None, maskParams=None, name='instructions_imageR1', opacity=1.0, ori=0.0, pos=array([0., 0.]), size=array([1.3275, 0.75  ]), texRes=512, units='height', win=Window(...))
+16.4567 	EXP 	Created text_2 = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color='white', colorSpace='named', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='text_2', opacity=1.0, ori=0, pos=array([0., 0.]), rgb=array([255., 255., 255.]), text='+', units='height', win=Window(...), wrapWidth=1)
+16.8316 	EXP 	Created text_6 = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color='white', colorSpace='named', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='text_6', opacity=1.0, ori=0, pos=array([0., 0.]), rgb=array([255., 255., 255.]), text='+', units='height', win=Window(...), wrapWidth=1)
+16.8328 	EXP 	Created trial_image = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, image='sin', interpolate=True, mask=None, maskParams=None, name='trial_image', opacity=1.0, ori=0.0, pos=array([0., 0.]), size=array([1., 1.]), texRes=512, units='height', win=Window(...))
+17.6139 	EXP 	Created image_4 = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, image='Designs/baby_dory_GJ.png', interpolate=True, mask=None, maskParams=None, name='image_4', opacity=1.0, ori=0.0, pos=array([0., 0.]), size=array([0.4  , 0.732]), texRes=512, units='height', win=Window(...))
+17.6157 	EXP 	Created text_10 = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=-2.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='text_10', opacity=1.0, ori=0, pos=array([ 0., -1.]), rgb=array([0., 0., 0.]), text='default text', units='height', win=Window(...), wrapWidth=1)
+17.6169 	EXP 	Created image_2 = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, image='sin', interpolate=True, mask=None, maskParams=None, name='image_2', opacity=1.0, ori=0.0, pos=array([0., 0.]), size=array([1.3275, 0.75  ]), texRes=512, units='height', win=Window(...))
+18.0017 	EXP 	Created text_8 = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color='white', colorSpace='named', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='text_8', opacity=1.0, ori=0, pos=array([0., 0.]), rgb=array([255., 255., 255.]), text='+', units='height', win=Window(...), wrapWidth=1)
+18.0028 	EXP 	Created image = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, image='sin', interpolate=True, mask=None, maskParams=None, name='image', opacity=1.0, ori=0.0, pos=array([0., 0.]), size=array([1., 1.]), texRes=512, units='height', win=Window(...))
+18.3852 	EXP 	Created image_3 = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, image='sin', interpolate=True, mask=None, maskParams=None, name='image_3', opacity=1.0, ori=0.0, pos=array([0., 0.]), size=array([1.3275, 0.75  ]), texRes=512, units='height', win=Window(...))
+18.7716 	EXP 	Created Pinstructions_imageR2 = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, image='sin', interpolate=True, mask=None, maskParams=None, name='Pinstructions_imageR2', opacity=1.0, ori=0.0, pos=array([0., 0.]), size=array([1.3275, 0.75  ]), texRes=512, units='height', win=Window(...))
+19.1577 	EXP 	Created text_3 = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color='white', colorSpace='named', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='text_3', opacity=1.0, ori=0, pos=array([0., 0.]), rgb=array([255., 255., 255.]), text='+', units='height', win=Window(...), wrapWidth=1)
+19.5415 	EXP 	Created text_5 = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color='white', colorSpace='named', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='text_5', opacity=1.0, ori=0, pos=array([0., 0.]), rgb=array([255., 255., 255.]), text='+', units='height', win=Window(...), wrapWidth=1)
+19.5428 	EXP 	Created prac_image = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, image='sin', interpolate=True, mask=None, maskParams=None, name='prac_image', opacity=1.0, ori=0.0, pos=array([0., 0.]), size=array([1., 1.]), texRes=512, units='height', win=Window(...))
+20.3052 	EXP 	Created imFeedback = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, image='sin', interpolate=True, mask=None, maskParams=None, name='imFeedback', opacity=1.0, ori=0.0, pos=array([0., 0.]), size=array([0.25, 0.25]), texRes=512, units='height', win=Window(...))
+20.3078 	EXP 	Created feedback_msg = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=-2.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='feedback_msg', opacity=1.0, ori=0, pos=array([ 0.  , -0.25]), rgb=array([0., 0., 0.]), text='default text', units='height', win=Window(...), wrapWidth=1)
+20.3094 	EXP 	Created text_9 = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='text_9', opacity=1.0, ori=0, pos=array([0., 0.]), rgb=array([0., 0., 0.]), text='default text', units='height', win=Window(...), wrapWidth=1)
+20.7011 	EXP 	Created instructions_imageR2 = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, image='sin', interpolate=True, mask=None, maskParams=None, name='instructions_imageR2', opacity=1.0, ori=0.0, pos=array([0., 0.]), size=array([1.3275, 0.75  ]), texRes=512, units='height', win=Window(...))
+21.0834 	EXP 	Created text_4 = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color='white', colorSpace='named', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='text_4', opacity=1.0, ori=0, pos=array([0., 0.]), rgb=array([255., 255., 255.]), text='+', units='height', win=Window(...), wrapWidth=1)
+21.4705 	EXP 	Created text_6 = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color='white', colorSpace='named', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='text_6', opacity=1.0, ori=0, pos=array([0., 0.]), rgb=array([255., 255., 255.]), text='+', units='height', win=Window(...), wrapWidth=1)
+21.4717 	EXP 	Created trial_image = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, image='sin', interpolate=True, mask=None, maskParams=None, name='trial_image', opacity=1.0, ori=0.0, pos=array([0., 0.]), size=array([1., 1.]), texRes=512, units='height', win=Window(...))
+22.2582 	EXP 	Created image_4 = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, image='Designs/baby_dory_GJ.png', interpolate=True, mask=None, maskParams=None, name='image_4', opacity=1.0, ori=0.0, pos=array([0., 0.]), size=array([0.4  , 0.732]), texRes=512, units='height', win=Window(...))
+22.2603 	EXP 	Created text_10 = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=-2.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='text_10', opacity=1.0, ori=0, pos=array([ 0., -1.]), rgb=array([0., 0., 0.]), text='default text', units='height', win=Window(...), wrapWidth=1)
+22.2617 	EXP 	Created instructions_imageR1 = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, image='sin', interpolate=True, mask=None, maskParams=None, name='instructions_imageR1', opacity=1.0, ori=0.0, pos=array([0., 0.]), size=array([1.3275, 0.75  ]), texRes=512, units='height', win=Window(...))
+22.6430 	EXP 	Created text_2 = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color='white', colorSpace='named', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='text_2', opacity=1.0, ori=0, pos=array([0., 0.]), rgb=array([255., 255., 255.]), text='+', units='height', win=Window(...), wrapWidth=1)
+23.0212 	EXP 	Created text_6 = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color='white', colorSpace='named', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='text_6', opacity=1.0, ori=0, pos=array([0., 0.]), rgb=array([255., 255., 255.]), text='+', units='height', win=Window(...), wrapWidth=1)
+23.0224 	EXP 	Created trial_image = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, image='sin', interpolate=True, mask=None, maskParams=None, name='trial_image', opacity=1.0, ori=0.0, pos=array([0., 0.]), size=array([1., 1.]), texRes=512, units='height', win=Window(...))
+23.8021 	EXP 	Created image_4 = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, image='Designs/baby_dory_GJ.png', interpolate=True, mask=None, maskParams=None, name='image_4', opacity=1.0, ori=0.0, pos=array([0., 0.]), size=array([0.4  , 0.732]), texRes=512, units='height', win=Window(...))
+23.8042 	EXP 	Created text_10 = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=-2.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='text_10', opacity=1.0, ori=0, pos=array([ 0., -1.]), rgb=array([0., 0., 0.]), text='default text', units='height', win=Window(...), wrapWidth=1)
+23.8055 	EXP 	Created instructions_imageR2 = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, image='sin', interpolate=True, mask=None, maskParams=None, name='instructions_imageR2', opacity=1.0, ori=0.0, pos=array([0., 0.]), size=array([1.3275, 0.75  ]), texRes=512, units='height', win=Window(...))
+24.1802 	EXP 	Created text_4 = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color='white', colorSpace='named', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='text_4', opacity=1.0, ori=0, pos=array([0., 0.]), rgb=array([255., 255., 255.]), text='+', units='height', win=Window(...), wrapWidth=1)
+24.5608 	EXP 	Created text_6 = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color='white', colorSpace='named', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='text_6', opacity=1.0, ori=0, pos=array([0., 0.]), rgb=array([255., 255., 255.]), text='+', units='height', win=Window(...), wrapWidth=1)
+24.5620 	EXP 	Created trial_image = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, image='sin', interpolate=True, mask=None, maskParams=None, name='trial_image', opacity=1.0, ori=0.0, pos=array([0., 0.]), size=array([1., 1.]), texRes=512, units='height', win=Window(...))
+25.3507 	EXP 	Created image_5 = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, image='Designs/baby_squirt_GJ.png', interpolate=True, mask=None, maskParams=None, name='image_5', opacity=1.0, ori=0.0, pos=array([0., 0.]), size=array([0.8, 0.5]), texRes=512, units='height', win=Window(...))
+25.3951 	WARNING 	t of last frame was 13745.72ms (=1/0)
+25.3951 	EXP 	text_top: autoDraw = True
+25.3951 	EXP 	text_bottom: autoDraw = True
+25.3951 	EXP 	ccimage: autoDraw = True
+25.4179 	WARNING 	t of last frame was 22.76ms (=1/43)
+26.4525 	DATA 	Keypress: space
+26.4974 	WARNING 	t of last frame was 48.69ms (=1/20)
+26.4974 	EXP 	ccimage: size = [0.42800000000000005, 0.2699]
+26.4974 	EXP 	text_top: autoDraw = False
+26.4974 	EXP 	text_bottom: autoDraw = False
+26.4974 	EXP 	ccimage: autoDraw = False
+26.4974 	EXP 	prac_instr1: image = 'Designs/prac_instr1.png'
+26.4974 	EXP 	prac_instr1: autoDraw = True
+26.5178 	WARNING 	t of last frame was 20.34ms (=1/49)
+26.7718 	DATA 	Keypress: space
+27.0516 	DATA 	Keypress: space
+27.0662 	EXP 	prac_instr1: autoDraw = False
+27.0662 	EXP 	prac_instr2: autoDraw = True
+27.3170 	DATA 	Keypress: space
+27.6193 	DATA 	Keypress: space
+27.6329 	EXP 	prac_instr2: autoDraw = False
+27.6329 	EXP 	prac_instr3: autoDraw = True
+27.9005 	DATA 	Keypress: space
+28.4914 	DATA 	Keypress: space
+28.5082 	WARNING 	Multiple dropped frames have occurred - I'll stop bothering you about them!
+28.5079 	EXP 	prac_instr3: autoDraw = False
+28.5079 	EXP 	image_2: image = 'Designs/design1_run1_ex.png'
+28.5079 	EXP 	image_2: autoDraw = True
+28.9930 	DATA 	Keypress: space
+28.9996 	EXP 	image_2: autoDraw = False
+28.9996 	EXP 	image: pos = array([0.17380935, 0.        ])
+28.9996 	EXP 	image: size = array([0.17296, 0.17296])
+28.9996 	EXP 	image: image = 'Stimuli/HofS2.jpg'
+28.9996 	EXP 	text_8: autoDraw = True
+28.9996 	EXP 	image: autoDraw = True
+30.0246 	DATA 	Keypress: j
+30.0333 	EXP 	text_8: autoDraw = False
+30.0333 	EXP 	image: autoDraw = False
+30.0333 	EXP 	image_3: image = 'Designs/hand_hold_local_corr.png'
+30.0333 	EXP 	image_3: autoDraw = True
+30.1340 	DATA 	Keypress: space
+30.9355 	DATA 	Keypress: space
+32.2751 	DATA 	Keypress: space
+32.2916 	EXP 	image_3: autoDraw = False
+32.2916 	EXP 	Pinstructions_imageR1: image = 'Designs/design1_run1.png'
+32.2916 	EXP 	Pinstructions_imageR1: autoDraw = True
+32.6515 	DATA 	Keypress: space
+33.0022 	DATA 	Keypress: space
+34.2997 	EXP 	Created sequence: sequential, trialTypes=1, nReps=4, seed=None
+34.2999 	EXP 	New trial (rep=0, index=0): None
+34.3055 	DEBUG 	Read csv file with pandas: Designs/design1_run1.csv
+34.3079 	DEBUG 	Clearing unnamed columns from Designs/design1_run1.csv
+34.3088 	EXP 	Imported Designs/design1_run1.csv as conditions, 6 conditions, 6 params
+34.3091 	EXP 	Created sequence: random, trialTypes=6, nReps=1, seed=None
+34.3094 	EXP 	New trial (rep=0, index=0): OrderedDict([('runID', 1), ('imgID', 8), ('stimLabel', 'smallSincon'), ('imFile', 'Stimuli/HofS2.jpg'), ('corr', 'j'), ('side', 'right')])
+34.3115 	DATA 	Keypress: space
+34.3172 	EXP 	Pinstructions_imageR1: autoDraw = False
+34.3172 	EXP 	text: color = 'white (named)'
+34.3172 	EXP 	text: autoDraw = True
+35.7165 	EXP 	text: autoDraw = False
+35.7165 	EXP 	text: autoDraw = False
+35.7165 	EXP 	text_5: color = 'white (named)'
+35.7165 	EXP 	prac_image: pos = array([0.17380935, 0.        ])
+35.7165 	EXP 	prac_image: size = array([0.17296, 0.17296])
+35.7165 	EXP 	prac_image: image = 'Stimuli/HofS2.jpg'
+35.7165 	EXP 	text_5: autoDraw = True
+35.7165 	EXP 	prac_image: autoDraw = True
+38.2523 	DATA 	Keypress: j
+39.7351 	EXP 	text_5: autoDraw = False
+39.7351 	EXP 	prac_image: autoDraw = False
+39.7351 	EXP 	text_5: autoDraw = False
+39.7351 	EXP 	prac_image: autoDraw = False
+39.7351 	EXP 	imFeedback: image = 'Stimuli/greenCheck.png'
+39.7351 	EXP 	feedback_msg: text = 'Well done!'
+39.7351 	EXP 	imFeedback: autoDraw = True
+39.7351 	EXP 	feedback_msg: autoDraw = True
+41.7196 	EXP 	New trial (rep=0, index=1): OrderedDict([('runID', 1), ('imgID', 4), ('stimLabel', 'smallHincon'), ('imFile', 'Stimuli/SofH2.jpg'), ('corr', 'f'), ('side', 'right')])
+41.7333 	EXP 	imFeedback: autoDraw = False
+41.7333 	EXP 	feedback_msg: autoDraw = False
+41.7333 	EXP 	text: color = 'black (named)'
+41.7333 	EXP 	text: autoDraw = True
+43.0499 	EXP 	text: autoDraw = False
+43.0499 	EXP 	text: autoDraw = False
+43.0499 	EXP 	text_5: color = 'black (named)'
+43.0499 	EXP 	prac_image: pos = array([0.17380935, 0.        ])
+43.0499 	EXP 	prac_image: size = array([0.17296, 0.17296])
+43.0499 	EXP 	prac_image: image = 'Stimuli/SofH2.jpg'
+43.0499 	EXP 	text_5: autoDraw = True
+43.0499 	EXP 	prac_image: autoDraw = True
+44.2548 	DATA 	Keypress: f
+44.5851 	DATA 	Keypress: space
+47.0499 	EXP 	text_5: autoDraw = False
+47.0499 	EXP 	prac_image: autoDraw = False
+47.0499 	EXP 	imFeedback: image = 'Stimuli/greenCheck.png'
+47.0499 	EXP 	feedback_msg: text = 'Well done!'
+47.0499 	EXP 	imFeedback: autoDraw = True
+47.0499 	EXP 	feedback_msg: autoDraw = True
+49.0343 	EXP 	New trial (rep=0, index=2): OrderedDict([('runID', 1), ('imgID', 2), ('stimLabel', 'smallHcongr'), ('imFile', 'Stimuli/HofH2.jpg'), ('corr', 'f'), ('side', 'right')])
+49.0501 	EXP 	imFeedback: autoDraw = False
+49.0501 	EXP 	feedback_msg: autoDraw = False
+49.0501 	EXP 	text: color = 'black (named)'
+49.0501 	EXP 	text: autoDraw = True
+50.7834 	EXP 	text: autoDraw = False
+50.7834 	EXP 	text: autoDraw = False
+50.7834 	EXP 	text_5: color = 'black (named)'
+50.7834 	EXP 	prac_image: pos = array([0.17380935, 0.        ])
+50.7834 	EXP 	prac_image: size = array([0.17296, 0.17296])
+50.7834 	EXP 	prac_image: image = 'Stimuli/HofH2.jpg'
+50.7834 	EXP 	text_5: autoDraw = True
+50.7834 	EXP 	prac_image: autoDraw = True
+54.2385 	DATA 	Keypress: f
+54.7833 	EXP 	text_5: autoDraw = False
+54.7833 	EXP 	prac_image: autoDraw = False
+54.7833 	EXP 	text_5: autoDraw = False
+54.7833 	EXP 	prac_image: autoDraw = False
+54.7833 	EXP 	imFeedback: image = 'Stimuli/greenCheck.png'
+54.7833 	EXP 	feedback_msg: text = 'Well done!'
+54.7833 	EXP 	imFeedback: autoDraw = True
+54.7833 	EXP 	feedback_msg: autoDraw = True
+56.7677 	EXP 	New trial (rep=0, index=3): OrderedDict([('runID', 1), ('imgID', 7), ('stimLabel', 'smallSincon'), ('imFile', 'Stimuli/HofS2.jpg'), ('corr', 'j'), ('side', 'left')])
+56.7834 	EXP 	imFeedback: autoDraw = False
+56.7834 	EXP 	feedback_msg: autoDraw = False
+56.7834 	EXP 	imFeedback: autoDraw = False
+56.7834 	EXP 	feedback_msg: autoDraw = False
+56.7834 	EXP 	text: color = 'black (named)'
+56.7834 	EXP 	text: autoDraw = True
+58.1667 	EXP 	text: autoDraw = False
+58.1667 	EXP 	text: autoDraw = False
+58.1667 	EXP 	text_5: color = 'black (named)'
+58.1667 	EXP 	prac_image: pos = array([-0.17380935,  0.        ])
+58.1667 	EXP 	prac_image: size = array([0.17296, 0.17296])
+58.1667 	EXP 	prac_image: image = 'Stimuli/HofS2.jpg'
+58.1667 	EXP 	text_5: autoDraw = True
+58.1667 	EXP 	prac_image: autoDraw = True
+61.1870 	DATA 	Keypress: j
+62.1668 	EXP 	text_5: autoDraw = False
+62.1668 	EXP 	prac_image: autoDraw = False
+62.1668 	EXP 	imFeedback: image = 'Stimuli/greenCheck.png'
+62.1668 	EXP 	feedback_msg: text = 'Well done!'
+62.1668 	EXP 	imFeedback: autoDraw = True
+62.1668 	EXP 	feedback_msg: autoDraw = True
+64.1530 	EXP 	New trial (rep=0, index=4): OrderedDict([('runID', 1), ('imgID', 3), ('stimLabel', 'smallHincon'), ('imFile', 'Stimuli/SofH2.jpg'), ('corr', 'f'), ('side', 'left')])
+64.1666 	EXP 	imFeedback: autoDraw = False
+64.1666 	EXP 	feedback_msg: autoDraw = False
+64.1666 	EXP 	text: color = 'white (named)'
+64.1666 	EXP 	text: autoDraw = True
+65.9168 	EXP 	text: autoDraw = False
+65.9168 	EXP 	text: autoDraw = False
+65.9168 	EXP 	text_5: color = 'white (named)'
+65.9168 	EXP 	prac_image: pos = array([-0.17380935,  0.        ])
+65.9168 	EXP 	prac_image: size = array([0.17296, 0.17296])
+65.9168 	EXP 	prac_image: image = 'Stimuli/SofH2.jpg'
+65.9168 	EXP 	text_5: autoDraw = True
+65.9168 	EXP 	prac_image: autoDraw = True
+68.1188 	DATA 	Keypress: f
+69.9354 	EXP 	text_5: autoDraw = False
+69.9354 	EXP 	prac_image: autoDraw = False
+69.9354 	EXP 	text_5: autoDraw = False
+69.9354 	EXP 	prac_image: autoDraw = False
+69.9354 	EXP 	imFeedback: image = 'Stimuli/redWrong.png'
+69.9354 	EXP 	feedback_msg: text = 'Oops, you missed the cross change.'
+69.9354 	EXP 	imFeedback: autoDraw = True
+69.9354 	EXP 	feedback_msg: autoDraw = True
+71.9200 	EXP 	New trial (rep=0, index=5): OrderedDict([('runID', 1), ('imgID', 1), ('stimLabel', 'smallHcongr'), ('imFile', 'Stimuli/HofH2.jpg'), ('corr', 'f'), ('side', 'left')])
+71.9338 	EXP 	imFeedback: autoDraw = False
+71.9338 	EXP 	feedback_msg: autoDraw = False
+71.9338 	EXP 	text: color = 'white (named)'
+71.9338 	EXP 	text: autoDraw = True
+73.6502 	EXP 	text: autoDraw = False
+73.6502 	EXP 	text: autoDraw = False
+73.6502 	EXP 	text_5: color = 'white (named)'
+73.6502 	EXP 	prac_image: pos = array([-0.17380935,  0.        ])
+73.6502 	EXP 	prac_image: size = array([0.17296, 0.17296])
+73.6502 	EXP 	prac_image: image = 'Stimuli/HofH2.jpg'
+73.6502 	EXP 	text_5: autoDraw = True
+73.6502 	EXP 	prac_image: autoDraw = True
+75.2526 	DATA 	Keypress: f
+77.6500 	EXP 	text_5: autoDraw = False
+77.6500 	EXP 	prac_image: autoDraw = False
+77.6500 	EXP 	text_5: autoDraw = False
+77.6500 	EXP 	prac_image: autoDraw = False
+77.6500 	EXP 	imFeedback: image = 'Stimuli/greenCheck.png'
+77.6500 	EXP 	feedback_msg: text = 'Well done!'
+77.6500 	EXP 	imFeedback: autoDraw = True
+77.6500 	EXP 	feedback_msg: autoDraw = True
+79.6689 	EXP 	imFeedback: autoDraw = False
+79.6689 	EXP 	feedback_msg: autoDraw = False
+79.6689 	EXP 	text_7: text = 'Great job! You are now ready for the real game. \nPress Space to see the instructions again.'
+79.6689 	EXP 	text_7: autoDraw = True
+84.8443 	DATA 	Keypress: space
+84.8656 	EXP 	text_7: autoDraw = False
+84.8656 	EXP 	instructions_imageR1: image = 'Designs/design1_run1.png'
+84.8656 	EXP 	instructions_imageR1: autoDraw = True
+91.7196 	DEBUG 	Read csv file with pandas: Designs/design1_run1.csv
+91.7208 	DEBUG 	Clearing unnamed columns from Designs/design1_run1.csv
+91.7216 	EXP 	Imported Designs/design1_run1.csv as conditions, 8 conditions, 6 params
+91.7219 	EXP 	Created sequence: fullRandom, trialTypes=8, nReps=6, seed=None
+91.7223 	EXP 	New trial (rep=0, index=0): OrderedDict([('runID', 1), ('imgID', 2), ('stimLabel', 'smallHcongr'), ('imFile', 'Stimuli/HofH2.jpg'), ('corr', 'f'), ('side', 'right')])
+91.7243 	DATA 	Keypress: space
+91.7335 	EXP 	instructions_imageR1: autoDraw = False
+91.7335 	EXP 	text_2: color = 'white (named)'
+91.7335 	EXP 	text_2: autoDraw = True
+93.5900 	EXP 	window1: mouseVisible = True
+93.5933 	DEBUG 	Saving data for global_local ExperimentHandler
+93.5942 	INFO 	saved data to /Users/sophia/Documents/PycharmProjects/Global_Local_Study/data/_global_local_2020_Dec_28_2042.psydat
+93.5952 	INFO 	saved data to '/Users/sophia/Documents/PycharmProjects/Global_Local_Study/data/_global_local_2020_Dec_28_2042.csv'
