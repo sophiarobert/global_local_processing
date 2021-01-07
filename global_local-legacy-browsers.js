@@ -412,9 +412,9 @@ function experimentInit() {
       return array
   }
   fixColor_opts = shuffle_array(["black", "white"]);
-  pfS1 = [0, 1];
+  pfS1 = [0, 1, 0, 1];
   prac1_fixColSwitch = [0, shuffle_array(pfS1), 0].flat();
-  pfS2 = [0, 1];
+  pfS2 = [0, 1, 0, 1];
   prac2_fixColSwitch = [0, shuffle_array(pfS2), 0].flat();
   console.log(prac2_fixColSwitch)
   if ((Number.parseInt(expInfo["position"]) === 2)) {
@@ -3590,12 +3590,10 @@ function trialFixR1RoutineBegin(snapshot) {
         xPosition = 0;
     } else {
         if ((Number.parseInt(expInfo["position"]) === 2)) {
-            if ((side === "left")) {
+            if ((runType === 1)) {
                 xPosition = (- (width4deg * x_scale));
             } else {
-                if ((side === "right")) {
-                    xPosition = (width4deg * x_scale);
-                }
+                xPosition = (width4deg * x_scale);
             }
         } else {
             if ((Number.parseInt(expInfo["position"]) === 1)) {
