@@ -3939,7 +3939,7 @@ function btwn_trial_GJRoutineBegin(snapshot) {
     // update component parameters for each repeat
     feedback_msg = "";
     hand_hold_run = 2;
-    total_fix = Number.parseInt((sum(fixColorIdx_Run1) / 2));
+    total_fix = Number.parseInt((math.sum(fixColorIdx_Run1) / 2));
     feedback_msg = (((("You caught " + (total_fix - incorr_fix).toString()) + " of the ") + total_fix.toString()) + " cross changes.");
     
     text_10.setText(feedback_msg);
