@@ -908,19 +908,19 @@ function experimentInit() {
   
   // Initialize components for Routine "prac_instr_run2"
   prac_instr_run2Clock = new util.Clock();
-  if ((expInfo["design"] === "1")) {
+  if ((Number.parseInt(expInfo["design"]) === 1)) {
       instructions_run2 = "Designs/design1_run2.png";
       cond_file_run2 = "Designs/design1_run2.csv";
   } else {
-      if ((expInfo["design"] === "2")) {
+      if ((Number.parseInt(expInfo["design"]) === 2)) {
           instructions_run2 = "Designs/design2_run2.png";
           cond_file_run2 = "Designs/design2_run2.csv";
       } else {
-          if ((expInfo["design"] === "3")) {
+          if ((Number.parseInt(expInfo["design"]) === 3)) {
               instructions_run2 = "Designs/design3_run2.png";
               cond_file_run2 = "Designs/design3_run2.csv";
           } else {
-              if ((expInfo["design"] === "4")) {
+              if ((Number.parseInt(expInfo["design"]) === 4)) {
                   instructions_run2 = "Designs/design4_run2.png";
                   cond_file_run2 = "Designs/design4_run2.csv";
               }
@@ -3925,6 +3925,7 @@ function trial_imgRoutineEnd(snapshot) {
 }
 
 
+var sum;
 var total_fix;
 var btwn_trial_GJComponents;
 function btwn_trial_GJRoutineBegin(snapshot) {
@@ -3937,7 +3938,10 @@ function btwn_trial_GJRoutineBegin(snapshot) {
     // update component parameters for each repeat
     feedback_msg = "";
     hand_hold_run = 2;
-    total_fix = Number.parseInt((Math.sum(fixColorIdx_Run1) / 2));
+    sum = function (arr) {
+    return arr.reduce((a,b)=>a+b)
+    }
+    total_fix = Number.parseInt(sum(fixColorIdx_Run1));
     feedback_msg = (((("You caught " + (total_fix - incorr_fix).toString()) + " of the ") + total_fix.toString()) + " cross changes.");
     
     text_10.setText(feedback_msg);
