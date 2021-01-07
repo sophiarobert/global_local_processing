@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2020.2.4),
-    on Tue Dec 29 09:34:30 2020
+    on Tue Dec 29 12:31:35 2020
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -146,6 +146,7 @@ pfS2 = [0,1,0,1]
 shuffle(pfS2)
 prac2_fixColSwitch = [0]+pfS2+[0];
 
+# shuffling is done better in the online version, same fixes across runs 1, 2, 3, 4
 if int(expInfo['position']) == 2:
     fixColorIdx_Run1 = [1, 0, 0, 0, 0, 0, 0, 1, 
                                     1, 0, 0, 0, 0, 0, 0, 1, 
@@ -423,17 +424,25 @@ elif int(expInfo['design'])==4:
     instructions_run1 =  'Designs/design4_run1.png'
     cond_file_run1 = 'Designs/design4_run1.csv'
 
-Trial_run1 = 1
-Total_run1 = 96/2
 
-Trial_run2 = 1
-Total_run2 = 96/2
 
 if int(expInfo['position'])==2:
+    Trial_run1 = 1
+    Total_run1 = 96
+    Trial_run2 = 1
+    Total_run2 = 96
     positionRows = [0,1,2,3,4,5,6,7]
-if int(expInfo['position'])==1:
+elif int(expInfo['position'])==1:
+    Trial_run1 = 1
+    Total_run1 = 96/2
+    Trial_run2 = 1
+    Total_run2 = 96/2
     positionRows = [0,1,2,3]
-if int(expInfo['position'])==3:
+elif int(expInfo['position'])==3:
+    Trial_run1 = 1
+    Total_run1 = 96/2
+    Trial_run2 = 1
+    Total_run2 = 96/2
     positionRows = [4,5,6,7]
 
 
@@ -480,6 +489,13 @@ fix_resp_2 = keyboard.Keyboard()
 
 # Initialize components for Routine "btwn_trial_GJ"
 btwn_trial_GJClock = core.Clock()
+text_10 = visual.TextStim(win=win, name='text_10',
+    text='default text',
+    font='Arial',
+    pos=(0, 0), height=0.05, wrapWidth=None, ori=0, 
+    color='black', colorSpace='rgb', opacity=1, 
+    languageStyle='LTR',
+    depth=-1.0);
 image_4 = visual.ImageStim(
     win=win,
     name='image_4', 
@@ -487,14 +503,7 @@ image_4 = visual.ImageStim(
     ori=0, pos=(0, 0), size=(0.4, 0.4*1.83),
     color=[1,1,1], colorSpace='rgb', opacity=1,
     flipHoriz=False, flipVert=False,
-    texRes=512, interpolate=True, depth=-1.0)
-text_10 = visual.TextStim(win=win, name='text_10',
-    text='default text',
-    font='Arial',
-    pos=(0, -1), height=0.05, wrapWidth=None, ori=0, 
-    color='black', colorSpace='rgb', opacity=1, 
-    languageStyle='LTR',
-    depth=-2.0);
+    texRes=512, interpolate=True, depth=-2.0)
 
 # Initialize components for Routine "hand_hold_instr"
 hand_hold_instrClock = core.Clock()
@@ -730,6 +739,13 @@ fix_resp_2 = keyboard.Keyboard()
 
 # Initialize components for Routine "btwn_trial_GJ"
 btwn_trial_GJClock = core.Clock()
+text_10 = visual.TextStim(win=win, name='text_10',
+    text='default text',
+    font='Arial',
+    pos=(0, 0), height=0.05, wrapWidth=None, ori=0, 
+    color='black', colorSpace='rgb', opacity=1, 
+    languageStyle='LTR',
+    depth=-1.0);
 image_4 = visual.ImageStim(
     win=win,
     name='image_4', 
@@ -737,14 +753,7 @@ image_4 = visual.ImageStim(
     ori=0, pos=(0, 0), size=(0.4, 0.4*1.83),
     color=[1,1,1], colorSpace='rgb', opacity=1,
     flipHoriz=False, flipVert=False,
-    texRes=512, interpolate=True, depth=-1.0)
-text_10 = visual.TextStim(win=win, name='text_10',
-    text='default text',
-    font='Arial',
-    pos=(0, -1), height=0.05, wrapWidth=None, ori=0, 
-    color='black', colorSpace='rgb', opacity=1, 
-    languageStyle='LTR',
-    depth=-2.0);
+    texRes=512, interpolate=True, depth=-2.0)
 
 # Initialize components for Routine "trial_instr_run1"
 trial_instr_run1Clock = core.Clock()
@@ -761,17 +770,25 @@ elif int(expInfo['design'])==4:
     instructions_run1 =  'Designs/design4_run1.png'
     cond_file_run1 = 'Designs/design4_run1.csv'
 
-Trial_run1 = 1
-Total_run1 = 96/2
 
-Trial_run2 = 1
-Total_run2 = 96/2
 
 if int(expInfo['position'])==2:
+    Trial_run1 = 1
+    Total_run1 = 96
+    Trial_run2 = 1
+    Total_run2 = 96
     positionRows = [0,1,2,3,4,5,6,7]
-if int(expInfo['position'])==1:
+elif int(expInfo['position'])==1:
+    Trial_run1 = 1
+    Total_run1 = 96/2
+    Trial_run2 = 1
+    Total_run2 = 96/2
     positionRows = [0,1,2,3]
-if int(expInfo['position'])==3:
+elif int(expInfo['position'])==3:
+    Trial_run1 = 1
+    Total_run1 = 96/2
+    Trial_run2 = 1
+    Total_run2 = 96/2
     positionRows = [4,5,6,7]
 
 
@@ -818,6 +835,13 @@ fix_resp_2 = keyboard.Keyboard()
 
 # Initialize components for Routine "btwn_trial_GJ"
 btwn_trial_GJClock = core.Clock()
+text_10 = visual.TextStim(win=win, name='text_10',
+    text='default text',
+    font='Arial',
+    pos=(0, 0), height=0.05, wrapWidth=None, ori=0, 
+    color='black', colorSpace='rgb', opacity=1, 
+    languageStyle='LTR',
+    depth=-1.0);
 image_4 = visual.ImageStim(
     win=win,
     name='image_4', 
@@ -825,14 +849,7 @@ image_4 = visual.ImageStim(
     ori=0, pos=(0, 0), size=(0.4, 0.4*1.83),
     color=[1,1,1], colorSpace='rgb', opacity=1,
     flipHoriz=False, flipVert=False,
-    texRes=512, interpolate=True, depth=-1.0)
-text_10 = visual.TextStim(win=win, name='text_10',
-    text='default text',
-    font='Arial',
-    pos=(0, -1), height=0.05, wrapWidth=None, ori=0, 
-    color='black', colorSpace='rgb', opacity=1, 
-    languageStyle='LTR',
-    depth=-2.0);
+    texRes=512, interpolate=True, depth=-2.0)
 
 # Initialize components for Routine "trial_instr_run2"
 trial_instr_run2Clock = core.Clock()
@@ -2745,14 +2762,15 @@ for thisTrials_run1 in trials_run1:
 
 # ------Prepare to start Routine "btwn_trial_GJ"-------
 continueRoutine = True
-routineTimer.add(2.000000)
+routineTimer.add(4.000000)
 # update component parameters for each repeat
+feedback_msg = ''
 hand_hold_run = 2
-total_fix = len(fixColorIdx_Run1[fixColorIdx_Run1==1])
-feedback_msg = 'You caught ' + str(total_fix - incorr_fix) + ' of the ' + str(total_fix) +  ' cross changes. '
+total_fix = int(sum(fixColorIdx_Run1)/2)
+feedback_msg = 'You caught ' + str(total_fix - incorr_fix) + ' of the ' + str(total_fix) +  ' cross changes.'
 text_10.setText(feedback_msg)
 # keep track of which components have finished
-btwn_trial_GJComponents = [image_4, text_10]
+btwn_trial_GJComponents = [text_10, image_4]
 for thisComponent in btwn_trial_GJComponents:
     thisComponent.tStart = None
     thisComponent.tStop = None
@@ -2775,23 +2793,6 @@ while continueRoutine and routineTimer.getTime() > 0:
     frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
     # update/draw components on each frame
     
-    # *image_4* updates
-    if image_4.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
-        # keep track of start time/frame for later
-        image_4.frameNStart = frameN  # exact frame index
-        image_4.tStart = t  # local t and not account for scr refresh
-        image_4.tStartRefresh = tThisFlipGlobal  # on global time
-        win.timeOnFlip(image_4, 'tStartRefresh')  # time at next scr refresh
-        image_4.setAutoDraw(True)
-    if image_4.status == STARTED:
-        # is it time to stop? (based on global clock, using actual start)
-        if tThisFlipGlobal > image_4.tStartRefresh + 2-frameTolerance:
-            # keep track of stop time/frame for later
-            image_4.tStop = t  # not accounting for scr refresh
-            image_4.frameNStop = frameN  # exact frame index
-            win.timeOnFlip(image_4, 'tStopRefresh')  # time at next scr refresh
-            image_4.setAutoDraw(False)
-    
     # *text_10* updates
     if text_10.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
         # keep track of start time/frame for later
@@ -2808,6 +2809,23 @@ while continueRoutine and routineTimer.getTime() > 0:
             text_10.frameNStop = frameN  # exact frame index
             win.timeOnFlip(text_10, 'tStopRefresh')  # time at next scr refresh
             text_10.setAutoDraw(False)
+    
+    # *image_4* updates
+    if image_4.status == NOT_STARTED and tThisFlip >= 2-frameTolerance:
+        # keep track of start time/frame for later
+        image_4.frameNStart = frameN  # exact frame index
+        image_4.tStart = t  # local t and not account for scr refresh
+        image_4.tStartRefresh = tThisFlipGlobal  # on global time
+        win.timeOnFlip(image_4, 'tStartRefresh')  # time at next scr refresh
+        image_4.setAutoDraw(True)
+    if image_4.status == STARTED:
+        # is it time to stop? (based on global clock, using actual start)
+        if tThisFlipGlobal > image_4.tStartRefresh + 2-frameTolerance:
+            # keep track of stop time/frame for later
+            image_4.tStop = t  # not accounting for scr refresh
+            image_4.frameNStop = frameN  # exact frame index
+            win.timeOnFlip(image_4, 'tStopRefresh')  # time at next scr refresh
+            image_4.setAutoDraw(False)
     
     # check for quit (typically the Esc key)
     if endExpNow or defaultKeyboard.getKeys(keyList=["escape"]):
@@ -2830,10 +2848,6 @@ while continueRoutine and routineTimer.getTime() > 0:
 for thisComponent in btwn_trial_GJComponents:
     if hasattr(thisComponent, "setAutoDraw"):
         thisComponent.setAutoDraw(False)
-thisExp.addData('image_4.started', image_4.tStartRefresh)
-thisExp.addData('image_4.stopped', image_4.tStopRefresh)
-thisExp.addData('text_10.started', text_10.tStartRefresh)
-thisExp.addData('text_10.stopped', text_10.tStopRefresh)
 
 # ------Prepare to start Routine "hand_hold_instr"-------
 continueRoutine = True
@@ -4352,14 +4366,15 @@ for thisTrials_run2 in trials_run2:
 
 # ------Prepare to start Routine "btwn_trial_GJ"-------
 continueRoutine = True
-routineTimer.add(2.000000)
+routineTimer.add(4.000000)
 # update component parameters for each repeat
+feedback_msg = ''
 hand_hold_run = 2
-total_fix = len(fixColorIdx_Run1[fixColorIdx_Run1==1])
-feedback_msg = 'You caught ' + str(total_fix - incorr_fix) + ' of the ' + str(total_fix) +  ' cross changes. '
+total_fix = int(sum(fixColorIdx_Run1)/2)
+feedback_msg = 'You caught ' + str(total_fix - incorr_fix) + ' of the ' + str(total_fix) +  ' cross changes.'
 text_10.setText(feedback_msg)
 # keep track of which components have finished
-btwn_trial_GJComponents = [image_4, text_10]
+btwn_trial_GJComponents = [text_10, image_4]
 for thisComponent in btwn_trial_GJComponents:
     thisComponent.tStart = None
     thisComponent.tStop = None
@@ -4382,23 +4397,6 @@ while continueRoutine and routineTimer.getTime() > 0:
     frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
     # update/draw components on each frame
     
-    # *image_4* updates
-    if image_4.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
-        # keep track of start time/frame for later
-        image_4.frameNStart = frameN  # exact frame index
-        image_4.tStart = t  # local t and not account for scr refresh
-        image_4.tStartRefresh = tThisFlipGlobal  # on global time
-        win.timeOnFlip(image_4, 'tStartRefresh')  # time at next scr refresh
-        image_4.setAutoDraw(True)
-    if image_4.status == STARTED:
-        # is it time to stop? (based on global clock, using actual start)
-        if tThisFlipGlobal > image_4.tStartRefresh + 2-frameTolerance:
-            # keep track of stop time/frame for later
-            image_4.tStop = t  # not accounting for scr refresh
-            image_4.frameNStop = frameN  # exact frame index
-            win.timeOnFlip(image_4, 'tStopRefresh')  # time at next scr refresh
-            image_4.setAutoDraw(False)
-    
     # *text_10* updates
     if text_10.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
         # keep track of start time/frame for later
@@ -4415,6 +4413,23 @@ while continueRoutine and routineTimer.getTime() > 0:
             text_10.frameNStop = frameN  # exact frame index
             win.timeOnFlip(text_10, 'tStopRefresh')  # time at next scr refresh
             text_10.setAutoDraw(False)
+    
+    # *image_4* updates
+    if image_4.status == NOT_STARTED and tThisFlip >= 2-frameTolerance:
+        # keep track of start time/frame for later
+        image_4.frameNStart = frameN  # exact frame index
+        image_4.tStart = t  # local t and not account for scr refresh
+        image_4.tStartRefresh = tThisFlipGlobal  # on global time
+        win.timeOnFlip(image_4, 'tStartRefresh')  # time at next scr refresh
+        image_4.setAutoDraw(True)
+    if image_4.status == STARTED:
+        # is it time to stop? (based on global clock, using actual start)
+        if tThisFlipGlobal > image_4.tStartRefresh + 2-frameTolerance:
+            # keep track of stop time/frame for later
+            image_4.tStop = t  # not accounting for scr refresh
+            image_4.frameNStop = frameN  # exact frame index
+            win.timeOnFlip(image_4, 'tStopRefresh')  # time at next scr refresh
+            image_4.setAutoDraw(False)
     
     # check for quit (typically the Esc key)
     if endExpNow or defaultKeyboard.getKeys(keyList=["escape"]):
@@ -4437,10 +4452,6 @@ while continueRoutine and routineTimer.getTime() > 0:
 for thisComponent in btwn_trial_GJComponents:
     if hasattr(thisComponent, "setAutoDraw"):
         thisComponent.setAutoDraw(False)
-thisExp.addData('image_4.started', image_4.tStartRefresh)
-thisExp.addData('image_4.stopped', image_4.tStopRefresh)
-thisExp.addData('text_10.started', text_10.tStartRefresh)
-thisExp.addData('text_10.stopped', text_10.tStopRefresh)
 
 # ------Prepare to start Routine "trial_instr_run1"-------
 continueRoutine = True
@@ -4871,14 +4882,15 @@ for thisTrials_run3 in trials_run3:
 
 # ------Prepare to start Routine "btwn_trial_GJ"-------
 continueRoutine = True
-routineTimer.add(2.000000)
+routineTimer.add(4.000000)
 # update component parameters for each repeat
+feedback_msg = ''
 hand_hold_run = 2
-total_fix = len(fixColorIdx_Run1[fixColorIdx_Run1==1])
-feedback_msg = 'You caught ' + str(total_fix - incorr_fix) + ' of the ' + str(total_fix) +  ' cross changes. '
+total_fix = int(sum(fixColorIdx_Run1)/2)
+feedback_msg = 'You caught ' + str(total_fix - incorr_fix) + ' of the ' + str(total_fix) +  ' cross changes.'
 text_10.setText(feedback_msg)
 # keep track of which components have finished
-btwn_trial_GJComponents = [image_4, text_10]
+btwn_trial_GJComponents = [text_10, image_4]
 for thisComponent in btwn_trial_GJComponents:
     thisComponent.tStart = None
     thisComponent.tStop = None
@@ -4901,23 +4913,6 @@ while continueRoutine and routineTimer.getTime() > 0:
     frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
     # update/draw components on each frame
     
-    # *image_4* updates
-    if image_4.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
-        # keep track of start time/frame for later
-        image_4.frameNStart = frameN  # exact frame index
-        image_4.tStart = t  # local t and not account for scr refresh
-        image_4.tStartRefresh = tThisFlipGlobal  # on global time
-        win.timeOnFlip(image_4, 'tStartRefresh')  # time at next scr refresh
-        image_4.setAutoDraw(True)
-    if image_4.status == STARTED:
-        # is it time to stop? (based on global clock, using actual start)
-        if tThisFlipGlobal > image_4.tStartRefresh + 2-frameTolerance:
-            # keep track of stop time/frame for later
-            image_4.tStop = t  # not accounting for scr refresh
-            image_4.frameNStop = frameN  # exact frame index
-            win.timeOnFlip(image_4, 'tStopRefresh')  # time at next scr refresh
-            image_4.setAutoDraw(False)
-    
     # *text_10* updates
     if text_10.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
         # keep track of start time/frame for later
@@ -4934,6 +4929,23 @@ while continueRoutine and routineTimer.getTime() > 0:
             text_10.frameNStop = frameN  # exact frame index
             win.timeOnFlip(text_10, 'tStopRefresh')  # time at next scr refresh
             text_10.setAutoDraw(False)
+    
+    # *image_4* updates
+    if image_4.status == NOT_STARTED and tThisFlip >= 2-frameTolerance:
+        # keep track of start time/frame for later
+        image_4.frameNStart = frameN  # exact frame index
+        image_4.tStart = t  # local t and not account for scr refresh
+        image_4.tStartRefresh = tThisFlipGlobal  # on global time
+        win.timeOnFlip(image_4, 'tStartRefresh')  # time at next scr refresh
+        image_4.setAutoDraw(True)
+    if image_4.status == STARTED:
+        # is it time to stop? (based on global clock, using actual start)
+        if tThisFlipGlobal > image_4.tStartRefresh + 2-frameTolerance:
+            # keep track of stop time/frame for later
+            image_4.tStop = t  # not accounting for scr refresh
+            image_4.frameNStop = frameN  # exact frame index
+            win.timeOnFlip(image_4, 'tStopRefresh')  # time at next scr refresh
+            image_4.setAutoDraw(False)
     
     # check for quit (typically the Esc key)
     if endExpNow or defaultKeyboard.getKeys(keyList=["escape"]):
@@ -4956,10 +4968,6 @@ while continueRoutine and routineTimer.getTime() > 0:
 for thisComponent in btwn_trial_GJComponents:
     if hasattr(thisComponent, "setAutoDraw"):
         thisComponent.setAutoDraw(False)
-thisExp.addData('image_4.started', image_4.tStartRefresh)
-thisExp.addData('image_4.stopped', image_4.tStopRefresh)
-thisExp.addData('text_10.started', text_10.tStartRefresh)
-thisExp.addData('text_10.stopped', text_10.tStopRefresh)
 
 # ------Prepare to start Routine "trial_instr_run2"-------
 continueRoutine = True

@@ -125,10 +125,10 @@ psychoJS.start({
   expName: expName,
   expInfo: expInfo,
   resources: [
+    {'name': 'Designs/prac_instr3.png', 'path': 'Designs/prac_instr3.png'},
+    {'name': 'Designs/prac_instr1.png', 'path': 'Designs/prac_instr1.png'},
     {'name': 'Designs/baby_dory_GJ.png', 'path': 'Designs/baby_dory_GJ.png'},
     {'name': 'bankcard.png', 'path': 'bankcard.png'},
-    {'name': 'Designs/prac_instr1.png', 'path': 'Designs/prac_instr1.png'},
-    {'name': 'Designs/prac_instr3.png', 'path': 'Designs/prac_instr3.png'},
     {'name': 'Designs/baby_squirt_GJ.png', 'path': 'Designs/baby_squirt_GJ.png'},
     {'name': 'Designs/prac_instr2.png', 'path': 'Designs/prac_instr2.png'}
   ]
@@ -255,8 +255,8 @@ var trial_image;
 var trial_resp;
 var fix_resp_2;
 var btwn_trial_GJClock;
-var image_4;
 var text_10;
+var image_4;
 var prac_instr_run2Clock;
 var instructions_run2;
 var cond_file_run2;
@@ -774,6 +774,17 @@ function experimentInit() {
   
   // Initialize components for Routine "btwn_trial_GJ"
   btwn_trial_GJClock = new util.Clock();
+  text_10 = new visual.TextStim({
+    win: psychoJS.window,
+    name: 'text_10',
+    text: 'default text',
+    font: 'Arial',
+    units: undefined, 
+    pos: [0, 0], height: 0.05,  wrapWidth: undefined, ori: 0,
+    color: new util.Color('black'),  opacity: 1,
+    depth: -1.0 
+  });
+  
   image_4 = new visual.ImageStim({
     win : psychoJS.window,
     name : 'image_4', units : undefined, 
@@ -781,19 +792,8 @@ function experimentInit() {
     ori : 0, pos : [0, 0], size : [0.4, (0.4 * 1.83)],
     color : new util.Color([1, 1, 1]), opacity : 1,
     flipHoriz : false, flipVert : false,
-    texRes : 512, interpolate : true, depth : -1.0 
+    texRes : 512, interpolate : true, depth : -2.0 
   });
-  text_10 = new visual.TextStim({
-    win: psychoJS.window,
-    name: 'text_10',
-    text: 'default text',
-    font: 'Arial',
-    units: undefined, 
-    pos: [0, (- 1)], height: 0.05,  wrapWidth: undefined, ori: 0,
-    color: new util.Color('black'),  opacity: 1,
-    depth: -2.0 
-  });
-  
   // Initialize components for Routine "hand_hold_instr"
   hand_hold_instrClock = new util.Clock();
   if ((expInfo["design"] === "1")) {
@@ -1085,6 +1085,17 @@ function experimentInit() {
   
   // Initialize components for Routine "btwn_trial_GJ"
   btwn_trial_GJClock = new util.Clock();
+  text_10 = new visual.TextStim({
+    win: psychoJS.window,
+    name: 'text_10',
+    text: 'default text',
+    font: 'Arial',
+    units: undefined, 
+    pos: [0, 0], height: 0.05,  wrapWidth: undefined, ori: 0,
+    color: new util.Color('black'),  opacity: 1,
+    depth: -1.0 
+  });
+  
   image_4 = new visual.ImageStim({
     win : psychoJS.window,
     name : 'image_4', units : undefined, 
@@ -1092,19 +1103,8 @@ function experimentInit() {
     ori : 0, pos : [0, 0], size : [0.4, (0.4 * 1.83)],
     color : new util.Color([1, 1, 1]), opacity : 1,
     flipHoriz : false, flipVert : false,
-    texRes : 512, interpolate : true, depth : -1.0 
+    texRes : 512, interpolate : true, depth : -2.0 
   });
-  text_10 = new visual.TextStim({
-    win: psychoJS.window,
-    name: 'text_10',
-    text: 'default text',
-    font: 'Arial',
-    units: undefined, 
-    pos: [0, (- 1)], height: 0.05,  wrapWidth: undefined, ori: 0,
-    color: new util.Color('black'),  opacity: 1,
-    depth: -2.0 
-  });
-  
   // Initialize components for Routine "trial_instr_run1"
   trial_instr_run1Clock = new util.Clock();
   if ((Number.parseInt(expInfo["design"]) === 1)) {
@@ -1204,6 +1204,17 @@ function experimentInit() {
   
   // Initialize components for Routine "btwn_trial_GJ"
   btwn_trial_GJClock = new util.Clock();
+  text_10 = new visual.TextStim({
+    win: psychoJS.window,
+    name: 'text_10',
+    text: 'default text',
+    font: 'Arial',
+    units: undefined, 
+    pos: [0, 0], height: 0.05,  wrapWidth: undefined, ori: 0,
+    color: new util.Color('black'),  opacity: 1,
+    depth: -1.0 
+  });
+  
   image_4 = new visual.ImageStim({
     win : psychoJS.window,
     name : 'image_4', units : undefined, 
@@ -1211,19 +1222,8 @@ function experimentInit() {
     ori : 0, pos : [0, 0], size : [0.4, (0.4 * 1.83)],
     color : new util.Color([1, 1, 1]), opacity : 1,
     flipHoriz : false, flipVert : false,
-    texRes : 512, interpolate : true, depth : -1.0 
+    texRes : 512, interpolate : true, depth : -2.0 
   });
-  text_10 = new visual.TextStim({
-    win: psychoJS.window,
-    name: 'text_10',
-    text: 'default text',
-    font: 'Arial',
-    units: undefined, 
-    pos: [0, (- 1)], height: 0.05,  wrapWidth: undefined, ori: 0,
-    color: new util.Color('black'),  opacity: 1,
-    depth: -2.0 
-  });
-  
   // Initialize components for Routine "trial_instr_run2"
   trial_instr_run2Clock = new util.Clock();
   if ((Number.parseInt(expInfo["design"]) === 1)) {
@@ -3949,17 +3949,18 @@ function btwn_trial_GJRoutineBegin(snapshot) {
     t = 0;
     btwn_trial_GJClock.reset(); // clock
     frameN = -1;
-    routineTimer.add(2.000000);
+    routineTimer.add(4.000000);
     // update component parameters for each repeat
+    feedback_msg = "";
     hand_hold_run = 2;
     total_fix = Number.parseInt((sum(fixColorIdx_Run1) / 2));
-    feedback_msg = (((("You caught " + (total_fix - incorr_fix).toString()) + " of the ") + total_fix.toString()) + " cross changes. ");
+    feedback_msg = (((("You caught " + (total_fix - incorr_fix).toString()) + " of the ") + total_fix.toString()) + " cross changes.");
     
     text_10.setText(feedback_msg);
     // keep track of which components have finished
     btwn_trial_GJComponents = [];
-    btwn_trial_GJComponents.push(image_4);
     btwn_trial_GJComponents.push(text_10);
+    btwn_trial_GJComponents.push(image_4);
     
     btwn_trial_GJComponents.forEach( function(thisComponent) {
       if ('status' in thisComponent)
@@ -3980,20 +3981,6 @@ function btwn_trial_GJRoutineEachFrame(snapshot) {
     frameN = frameN + 1;// number of completed frames (so 0 is the first frame)
     // update/draw components on each frame
     
-    // *image_4* updates
-    if (t >= 0.0 && image_4.status === PsychoJS.Status.NOT_STARTED) {
-      // keep track of start time/frame for later
-      image_4.tStart = t;  // (not accounting for frame time here)
-      image_4.frameNStart = frameN;  // exact frame index
-      
-      image_4.setAutoDraw(true);
-    }
-
-    frameRemains = 0.0 + 2 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
-    if (image_4.status === PsychoJS.Status.STARTED && t >= frameRemains) {
-      image_4.setAutoDraw(false);
-    }
-    
     // *text_10* updates
     if (t >= 0.0 && text_10.status === PsychoJS.Status.NOT_STARTED) {
       // keep track of start time/frame for later
@@ -4006,6 +3993,20 @@ function btwn_trial_GJRoutineEachFrame(snapshot) {
     frameRemains = 0.0 + 2 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
     if (text_10.status === PsychoJS.Status.STARTED && t >= frameRemains) {
       text_10.setAutoDraw(false);
+    }
+    
+    // *image_4* updates
+    if (t >= 2 && image_4.status === PsychoJS.Status.NOT_STARTED) {
+      // keep track of start time/frame for later
+      image_4.tStart = t;  // (not accounting for frame time here)
+      image_4.frameNStart = frameN;  // exact frame index
+      
+      image_4.setAutoDraw(true);
+    }
+
+    frameRemains = 2 + 2 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
+    if (image_4.status === PsychoJS.Status.STARTED && t >= frameRemains) {
+      image_4.setAutoDraw(false);
     }
     // check for quit (typically the Esc key)
     if (psychoJS.experiment.experimentEnded || psychoJS.eventManager.getKeys({keyList:['escape']}).length > 0) {
