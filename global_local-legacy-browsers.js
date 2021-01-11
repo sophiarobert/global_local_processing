@@ -265,6 +265,9 @@ var key_resp_3;
 var pracFixR2Clock;
 var text_3;
 var fix_respP2_1;
+var Feedback2Clock;
+var imFeedback2;
+var text_11;
 var checkPrac2Clock;
 var text_9;
 var key_resp_10;
@@ -464,7 +467,7 @@ function experimentInit() {
   
   // Initialize components for Routine "hand_hold_instr"
   hand_hold_instrClock = new util.Clock();
-  if ((expInfo["design"] === "1")) {
+  if ((Number.parseInt(expInfo["design"]) === 1)) {
       hand_hold_ex1 = "Designs/design1_run1_ex.png";
       handHoldCorr1 = "j";
       hold_hand_R1_img = "Stimuli/HofS2.jpg";
@@ -476,7 +479,7 @@ function experimentInit() {
       hand_hold_feedback2corr = "Designs/hand_hold_global_corr.png";
       hand_hold_feedback2incorr = "Designs/hand_hold_global_incorr.png";
   } else {
-      if ((expInfo["design"] === "2")) {
+      if ((Number.parseInt(expInfo["design"]) === 2)) {
           hand_hold_ex1 = "Designs/design2_run1_ex.png";
           handHoldCorr1 = "j";
           hold_hand_R1_img = "Stimuli/SofH2.jpg";
@@ -488,7 +491,7 @@ function experimentInit() {
           hand_hold_feedback2corr = "Designs/hand_hold_local_corr.png";
           hand_hold_feedback2incorr = "Designs/hand_hold_local_incorr.png";
       } else {
-          if ((expInfo["design"] === "3")) {
+          if ((Number.parseInt(expInfo["design"]) === 3)) {
               hand_hold_ex1 = "Designs/design3_run1_ex.png";
               handHoldCorr1 = "f";
               hold_hand_R1_img = "Stimuli/SofH2.jpg";
@@ -500,7 +503,7 @@ function experimentInit() {
               hand_hold_feedback2corr = "Designs/hand_hold_local_corr.png";
               hand_hold_feedback2incorr = "Designs/hand_hold_local_incorr.png";
           } else {
-              if ((expInfo["design"] === "4")) {
+              if ((expInfo["design"] === 4)) {
                   hand_hold_ex1 = "Designs/design4_run1_ex.png";
                   handHoldCorr1 = "f";
                   hold_hand_R1_img = "Stimuli/HofS2.jpg";
@@ -796,7 +799,7 @@ function experimentInit() {
   });
   // Initialize components for Routine "hand_hold_instr"
   hand_hold_instrClock = new util.Clock();
-  if ((expInfo["design"] === "1")) {
+  if ((Number.parseInt(expInfo["design"]) === 1)) {
       hand_hold_ex1 = "Designs/design1_run1_ex.png";
       handHoldCorr1 = "j";
       hold_hand_R1_img = "Stimuli/HofS2.jpg";
@@ -808,7 +811,7 @@ function experimentInit() {
       hand_hold_feedback2corr = "Designs/hand_hold_global_corr.png";
       hand_hold_feedback2incorr = "Designs/hand_hold_global_incorr.png";
   } else {
-      if ((expInfo["design"] === "2")) {
+      if ((Number.parseInt(expInfo["design"]) === 2)) {
           hand_hold_ex1 = "Designs/design2_run1_ex.png";
           handHoldCorr1 = "j";
           hold_hand_R1_img = "Stimuli/SofH2.jpg";
@@ -820,7 +823,7 @@ function experimentInit() {
           hand_hold_feedback2corr = "Designs/hand_hold_local_corr.png";
           hand_hold_feedback2incorr = "Designs/hand_hold_local_incorr.png";
       } else {
-          if ((expInfo["design"] === "3")) {
+          if ((Number.parseInt(expInfo["design"]) === 3)) {
               hand_hold_ex1 = "Designs/design3_run1_ex.png";
               handHoldCorr1 = "f";
               hold_hand_R1_img = "Stimuli/SofH2.jpg";
@@ -832,7 +835,7 @@ function experimentInit() {
               hand_hold_feedback2corr = "Designs/hand_hold_local_corr.png";
               hand_hold_feedback2incorr = "Designs/hand_hold_local_incorr.png";
           } else {
-              if ((expInfo["design"] === "4")) {
+              if ((expInfo["design"] === 4)) {
                   hand_hold_ex1 = "Designs/design4_run1_ex.png";
                   handHoldCorr1 = "f";
                   hold_hand_R1_img = "Stimuli/HofS2.jpg";
@@ -972,20 +975,20 @@ function experimentInit() {
   
   prac_fix_resp = new core.Keyboard({psychoJS: psychoJS, clock: new util.Clock(), waitForStart: true});
   
-  // Initialize components for Routine "Feedback"
-  FeedbackClock = new util.Clock();
-  imFeedback = new visual.ImageStim({
+  // Initialize components for Routine "Feedback2"
+  Feedback2Clock = new util.Clock();
+  imFeedback2 = new visual.ImageStim({
     win : psychoJS.window,
-    name : 'imFeedback', units : undefined, 
+    name : 'imFeedback2', units : undefined, 
     image : undefined, mask : undefined,
     ori : 0, pos : [0, 0], size : [0.25, 0.25],
     color : new util.Color([1, 1, 1]), opacity : 1,
     flipHoriz : false, flipVert : false,
     texRes : 512, interpolate : true, depth : -1.0 
   });
-  feedback_msg = new visual.TextStim({
+  text_11 = new visual.TextStim({
     win: psychoJS.window,
-    name: 'feedback_msg',
+    name: 'text_11',
     text: 'default text',
     font: 'Arial',
     units: undefined, 
@@ -1840,10 +1843,10 @@ function hand_hold_instrRoutineBegin(snapshot) {
     // update component parameters for each repeat
     left_right = "";
     rand_side = "";
-    if ((expInfo["position"] === "0")) {
+    if ((Number.parseInt(expInfo["position"]) === 0)) {
         xPosition = 0;
     } else {
-        if ((expInfo["position"] === "2")) {
+        if ((Number.parseInt(expInfo["position"]) === 2)) {
             left_right = [0, 1];
             shuffle(left_right);
             rand_side = [0];
@@ -1853,10 +1856,10 @@ function hand_hold_instrRoutineBegin(snapshot) {
                 xPosition = (width4deg * x_scale);
             }
         } else {
-            if ((expInfo["position"] === "1")) {
+            if ((Number.parseInt(expInfo["position"]) === 1)) {
                 xPosition = (- (width4deg * x_scale));
             } else {
-                if ((expInfo["position"] === "3")) {
+                if ((Number.parseInt(expInfo["position"]) === 3)) {
                     xPosition = (width4deg * x_scale);
                 }
             }
@@ -2552,9 +2555,9 @@ function prac_trials_run2LoopBegin(prac_trials_run2LoopScheduler) {
     prac_trials_run2LoopScheduler.add(prac_imgRoutineBegin(snapshot));
     prac_trials_run2LoopScheduler.add(prac_imgRoutineEachFrame(snapshot));
     prac_trials_run2LoopScheduler.add(prac_imgRoutineEnd(snapshot));
-    prac_trials_run2LoopScheduler.add(FeedbackRoutineBegin(snapshot));
-    prac_trials_run2LoopScheduler.add(FeedbackRoutineEachFrame(snapshot));
-    prac_trials_run2LoopScheduler.add(FeedbackRoutineEnd(snapshot));
+    prac_trials_run2LoopScheduler.add(Feedback2RoutineBegin(snapshot));
+    prac_trials_run2LoopScheduler.add(Feedback2RoutineEachFrame(snapshot));
+    prac_trials_run2LoopScheduler.add(Feedback2RoutineEnd(snapshot));
     prac_trials_run2LoopScheduler.add(endLoopIteration(prac_trials_run2LoopScheduler, snapshot));
   });
 
@@ -3171,6 +3174,7 @@ function FeedbackRoutineBegin(snapshot) {
     routineTimer.add(2.000000);
     // update component parameters for each repeat
     feedIM = "";
+    prac_msg = "";
     if ((prac_resp.keys === corr)) {
         if ((prac_fix_resp.corr === 1)) {
             feedIM = "Stimuli/greenCheck.png";
@@ -3215,7 +3219,7 @@ function FeedbackRoutineBegin(snapshot) {
             }
         }
     }
-    feedback_msg.text = prac_msg
+    
     imFeedback.setImage(feedIM);
     feedback_msg.setText(prac_msg);
     // keep track of which components have finished
@@ -3598,9 +3602,17 @@ function trialFixR1RoutineBegin(snapshot) {
     } else {
         if ((Number.parseInt(expInfo["position"]) === 2)) {
             if ((runType === 1)) {
-                xPosition = (- (width4deg * x_scale));
+                if ((rand_side === 0)) {
+                    xPosition = (- (width4deg * x_scale));
+                } else {
+                    xPosition = (width4deg * x_scale);
+                }
             } else {
-                xPosition = (width4deg * x_scale);
+                if ((rand_side === 0)) {
+                    xPosition = (width4deg * x_scale);
+                } else {
+                    xPosition = (- (width4deg * x_scale));
+                }
             }
         } else {
             if ((Number.parseInt(expInfo["position"]) === 1)) {
@@ -4343,6 +4355,157 @@ function pracFixR2RoutineEnd(snapshot) {
 }
 
 
+var feedIM2;
+var prac_msg2;
+var Feedback2Components;
+function Feedback2RoutineBegin(snapshot) {
+  return function () {
+    //------Prepare to start Routine 'Feedback2'-------
+    t = 0;
+    Feedback2Clock.reset(); // clock
+    frameN = -1;
+    routineTimer.add(2.000000);
+    // update component parameters for each repeat
+    feedIM = "";
+    prac_msg = "";
+    if ((prac_resp.keys === corr)) {
+        if ((prac_fix_resp.corr === 1)) {
+            feedIM2 = "Stimuli/greenCheck.png";
+            prac_msg2 = "Well done!";
+        } else {
+            numIncorr_fix = (numIncorr_fix + 1);
+            feedIM2 = "Stimuli/redWrong.png";
+            if ((corrfixResp === "space")) {
+                prac_msg2 = "Oops, you missed the cross change.";
+            } else {
+                prac_msg2 = "Oops, you pressed space when the cross didn't change.";
+            }
+        }
+    } else {
+        if ((prac_resp.keys !== corr)) {
+            if ((prac_resp.keys === undefined)) {
+                feedIM2 = "Stimuli/redWrong.png";
+                numIncorr_miss = (numIncorr_miss + 1);
+                if ((corrfixResp === "space")) {
+                    numIncorr_fix = (numIncorr_fix + 1);
+                }
+                prac_msg2 = "Oops, time ran out. That's ok, try again!";
+            } else {
+                if ((prac_fix_resp.corr === 1)) {
+                    feedIM2 = "Stimuli/redWrong.png";
+                    numIncorr_img = (numIncorr_img + 1);
+                    if ((corrfixResp === "space")) {
+                        prac_msg2 = "Good job! You got pressed space when the cross changed! But the picture response was wrong.";
+                    } else {
+                        prac_msg2 = "Oops, the picture response was wrong.";
+                    }
+                } else {
+                    numIncorr_img = (numIncorr_img + 1);
+                    numIncorr_fix = (numIncorr_fix + 1);
+                    feedIM2 = "Stimuli/redWrong.png";
+                    if ((corrfixResp === "space")) {
+                        prac_msg2 = "Oops, you missed the cross change and the picture response was wrong.";
+                    } else {
+                        prac_msg2 = "Oops, you press space when the cross didn't change and the picture response was wrong.";
+                    }
+                }
+            }
+        }
+    }
+    
+    imFeedback2.setImage(feedIM2);
+    text_11.setText(prac_msg2);
+    // keep track of which components have finished
+    Feedback2Components = [];
+    Feedback2Components.push(imFeedback2);
+    Feedback2Components.push(text_11);
+    
+    Feedback2Components.forEach( function(thisComponent) {
+      if ('status' in thisComponent)
+        thisComponent.status = PsychoJS.Status.NOT_STARTED;
+       });
+    
+    return Scheduler.Event.NEXT;
+  };
+}
+
+
+function Feedback2RoutineEachFrame(snapshot) {
+  return function () {
+    //------Loop for each frame of Routine 'Feedback2'-------
+    let continueRoutine = true; // until we're told otherwise
+    // get current time
+    t = Feedback2Clock.getTime();
+    frameN = frameN + 1;// number of completed frames (so 0 is the first frame)
+    // update/draw components on each frame
+    
+    // *imFeedback2* updates
+    if (t >= 0.0 && imFeedback2.status === PsychoJS.Status.NOT_STARTED) {
+      // keep track of start time/frame for later
+      imFeedback2.tStart = t;  // (not accounting for frame time here)
+      imFeedback2.frameNStart = frameN;  // exact frame index
+      
+      imFeedback2.setAutoDraw(true);
+    }
+
+    frameRemains = 0.0 + 2 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
+    if (imFeedback2.status === PsychoJS.Status.STARTED && t >= frameRemains) {
+      imFeedback2.setAutoDraw(false);
+    }
+    
+    // *text_11* updates
+    if (t >= 0.0 && text_11.status === PsychoJS.Status.NOT_STARTED) {
+      // keep track of start time/frame for later
+      text_11.tStart = t;  // (not accounting for frame time here)
+      text_11.frameNStart = frameN;  // exact frame index
+      
+      text_11.setAutoDraw(true);
+    }
+
+    frameRemains = 0.0 + 2 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
+    if (text_11.status === PsychoJS.Status.STARTED && t >= frameRemains) {
+      text_11.setAutoDraw(false);
+    }
+    // check for quit (typically the Esc key)
+    if (psychoJS.experiment.experimentEnded || psychoJS.eventManager.getKeys({keyList:['escape']}).length > 0) {
+      return quitPsychoJS('The [Escape] key was pressed. Goodbye!', false);
+    }
+    
+    // check if the Routine should terminate
+    if (!continueRoutine) {  // a component has requested a forced-end of Routine
+      return Scheduler.Event.NEXT;
+    }
+    
+    continueRoutine = false;  // reverts to True if at least one component still running
+    Feedback2Components.forEach( function(thisComponent) {
+      if ('status' in thisComponent && thisComponent.status !== PsychoJS.Status.FINISHED) {
+        continueRoutine = true;
+      }
+    });
+    
+    // refresh the screen if continuing
+    if (continueRoutine && routineTimer.getTime() > 0) {
+      return Scheduler.Event.FLIP_REPEAT;
+    } else {
+      return Scheduler.Event.NEXT;
+    }
+  };
+}
+
+
+function Feedback2RoutineEnd(snapshot) {
+  return function () {
+    //------Ending Routine 'Feedback2'-------
+    Feedback2Components.forEach( function(thisComponent) {
+      if (typeof thisComponent.setAutoDraw === 'function') {
+        thisComponent.setAutoDraw(false);
+      }
+    });
+    return Scheduler.Event.NEXT;
+  };
+}
+
+
 var _key_resp_10_allKeys;
 var checkPrac2Components;
 function checkPrac2RoutineBegin(snapshot) {
@@ -4609,9 +4772,11 @@ function trialFixR2RoutineBegin(snapshot) {
     // update component parameters for each repeat
     if (((Trial_run2 - 1) === 0)) {
         currFix = fixColor_opts[0];
+        corrResp = undefined;
     } else {
         if ((fixColorIdx_Run2[(Trial_run2 - 1)] === 0)) {
             currFix = currFix;
+            corrResp = undefined;
         } else {
             if ((fixColorIdx_Run2[(Trial_run2 - 1)] === 1)) {
                 corrResp = "space";
@@ -4632,18 +4797,24 @@ function trialFixR2RoutineBegin(snapshot) {
         xPosition = 0;
     } else {
         if ((Number.parseInt(expInfo["position"]) === 2)) {
-            if ((side === "left")) {
-                xPosition = (- (width4deg * x_scale));
-            } else {
-                if ((side === "right")) {
+            if ((runType === 1)) {
+                if ((rand_side === 0)) {
+                    xPosition = (- (width4deg * x_scale));
+                } else {
                     xPosition = (width4deg * x_scale);
+                }
+            } else {
+                if ((rand_side === 0)) {
+                    xPosition = (width4deg * x_scale);
+                } else {
+                    xPosition = (- (width4deg * x_scale));
                 }
             }
         } else {
             if ((Number.parseInt(expInfo["position"]) === 1)) {
                 xPosition = (- (width4deg * x_scale));
             } else {
-                if ((expInfo["position"] === 3)) {
+                if ((Number.parseInt(expInfo["position"]) === 3)) {
                     xPosition = (width4deg * x_scale);
                 }
             }
@@ -4907,6 +5078,8 @@ function quitPsychoJS(message, isCompleted) {
   if (psychoJS.experiment.isEntryEmpty()) {
     psychoJS.experiment.nextEntry();
   }
+  
+  
   
   
   

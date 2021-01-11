@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2020.2.4),
-    on Mon Jan 11 13:49:03 2021
+    on Mon Jan 11 13:56:49 2021
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -2112,7 +2112,8 @@ for thisRepeat in repeats:
         continueRoutine = True
         routineTimer.add(2.000000)
         # update component parameters for each repeat
-        feedIM =''
+        feedIM=''
+        prac_msg=''
         if prac_resp.keys == corr: 
             if prac_fix_resp.corr == 1:
                 feedIM = 'Stimuli/greenCheck.png'
@@ -2230,8 +2231,6 @@ for thisRepeat in repeats:
         for thisComponent in FeedbackComponents:
             if hasattr(thisComponent, "setAutoDraw"):
                 thisComponent.setAutoDraw(False)
-        prac_trials_run1.addData('feedback_msg.started', feedback_msg.tStartRefresh)
-        prac_trials_run1.addData('feedback_msg.stopped', feedback_msg.tStopRefresh)
         thisExp.nextEntry()
         
     # completed 1 repeats of 'prac_trials_run1'
@@ -3720,7 +3719,8 @@ for thisRepeats2 in repeats2:
         continueRoutine = True
         routineTimer.add(2.000000)
         # update component parameters for each repeat
-        feedIM =''
+        feedIM=''
+        prac_msg=''
         if prac_resp.keys == corr: 
             if prac_fix_resp.corr == 1:
                 feedIM = 'Stimuli/greenCheck.png'
@@ -3838,8 +3838,6 @@ for thisRepeats2 in repeats2:
         for thisComponent in FeedbackComponents:
             if hasattr(thisComponent, "setAutoDraw"):
                 thisComponent.setAutoDraw(False)
-        prac_trials_run2.addData('feedback_msg.started', feedback_msg.tStartRefresh)
-        prac_trials_run2.addData('feedback_msg.stopped', feedback_msg.tStopRefresh)
         thisExp.nextEntry()
         
     # completed 1 repeats of 'prac_trials_run2'
