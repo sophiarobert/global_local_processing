@@ -2690,6 +2690,7 @@ var numIncorr_img;
 var rand4Idx;
 var rand8Idx;
 var randRows_run1;
+var randRows_run2;
 var pTrial_run1;
 var pracTotal_run1;
 var pTrial_run2;
@@ -2711,16 +2712,22 @@ function startPracRoutineBegin(snapshot) {
         rand8Idx = [0, 1, 2, 3, 4, 5, 6, 7];
         shuffle(rand8Idx);
         randRows_run1 = rand8Idx.slice(0, 6);
+        shuffle(rand8Idx);
+        randRows_run2 = rand8Idx.slice(0, 6);
     } else {
         if ((Number.parseInt(expInfo["position"]) === 1)) {
             rand4Idx = [0, 1, 2, 3, 0, 1];
             shuffle(rand4Idx);
             randRows_run1 = rand4Idx;
+            shuffle(rand4Idx);
+            randRows_run2 = rand4Idx;
         } else {
             if ((Number.parseInt(expInfo["position"]) === 3)) {
                 rand4Idx = [4, 5, 6, 7, 4, 5];
                 shuffle(rand4Idx);
                 randRows_run1 = rand4Idx;
+                shuffle(rand4Idx);
+                randRows_run2 = rand4Idx;
             }
         }
     }

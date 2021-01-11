@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2020.2.4),
-    on Thu Jan  7 12:23:22 2021
+    on Mon Jan 11 13:22:19 2021
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -1735,14 +1735,20 @@ for thisRepeat in repeats:
         rand8Idx = [0,1,2,3,4,5,6,7];
         shuffle(rand8Idx)
         randRows_run1 = rand8Idx[0:6]
+        shuffle(rand8Idx)
+        randRows_run2 = rand8Idx[0:6]
     elif int(expInfo['position'])==1:
         rand4Idx = [0,1,2,3,0,1];
         shuffle(rand4Idx)
         randRows_run1 = rand4Idx
+        shuffle(rand4Idx)
+        randRows_run2 = rand4Idx
     elif int(expInfo['position'])==3:
         rand4Idx = [4,5,6,7,4,5];
         shuffle(rand4Idx)
         randRows_run1 = rand4Idx
+        shuffle(rand4Idx)
+        randRows_run2 = rand4Idx
     
     pTrial_run1 = 1
     pracTotal_run1 = 6
@@ -2464,9 +2470,9 @@ for thisTrials_run1 in trials_run1:
     if int(expInfo['position']) == 0:
         xPosition = 0
     elif int(expInfo['position']) == 2:
-        if side == 'left':
+        if runType == 1:
             xPosition = -(width4deg*x_scale)
-        elif side == 'right':
+        else:
             xPosition = width4deg*x_scale
     elif int(expInfo['position']) == 1:
         xPosition = -(width4deg*x_scale)
@@ -3300,14 +3306,20 @@ for thisRepeats2 in repeats2:
         rand8Idx = [0,1,2,3,4,5,6,7];
         shuffle(rand8Idx)
         randRows_run1 = rand8Idx[0:6]
+        shuffle(rand8Idx)
+        randRows_run2 = rand8Idx[0:6]
     elif int(expInfo['position'])==1:
         rand4Idx = [0,1,2,3,0,1];
         shuffle(rand4Idx)
         randRows_run1 = rand4Idx
+        shuffle(rand4Idx)
+        randRows_run2 = rand4Idx
     elif int(expInfo['position'])==3:
         rand4Idx = [4,5,6,7,4,5];
         shuffle(rand4Idx)
         randRows_run1 = rand4Idx
+        shuffle(rand4Idx)
+        randRows_run2 = rand4Idx
     
     pTrial_run1 = 1
     pracTotal_run1 = 6
@@ -4584,9 +4596,9 @@ for thisTrials_run3 in trials_run3:
     if int(expInfo['position']) == 0:
         xPosition = 0
     elif int(expInfo['position']) == 2:
-        if side == 'left':
+        if runType == 1:
             xPosition = -(width4deg*x_scale)
-        elif side == 'right':
+        else:
             xPosition = width4deg*x_scale
     elif int(expInfo['position']) == 1:
         xPosition = -(width4deg*x_scale)
