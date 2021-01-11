@@ -3578,12 +3578,10 @@ function trialFixR1RoutineBegin(snapshot) {
         xPosition = 0;
     } else {
         if ((Number.parseInt(expInfo["position"]) === 2)) {
-            if ((side === "left")) {
+            if ((runType === 1)) {
                 xPosition = (- (width4deg * x_scale));
             } else {
-                if ((side === "right")) {
-                    xPosition = (width4deg * x_scale);
-                }
+                xPosition = (width4deg * x_scale);
             }
         } else {
             if ((Number.parseInt(expInfo["position"]) === 1)) {
@@ -3927,6 +3925,7 @@ function trial_imgRoutineEnd(snapshot) {
 }
 
 
+var sum;
 var total_fix;
 var btwn_trial_GJComponents;
 function btwn_trial_GJRoutineBegin(snapshot) {
@@ -3938,6 +3937,10 @@ function btwn_trial_GJRoutineBegin(snapshot) {
     routineTimer.add(4.000000);
     // update component parameters for each repeat
     feedback_msg = "";
+    sum = function (arr) {
+    return arr.reduce((a,b)=>a+b)
+    }
+    
     hand_hold_run = 2;
     total_fix = Number.parseInt((sum(fixColorIdx_Run1) / 2));
     feedback_msg = (((("You caught " + (total_fix - incorr_fix).toString()) + " of the ") + total_fix.toString()) + " cross changes.");
