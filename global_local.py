@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2020.2.4),
-    on Mon Jan 11 13:22:19 2021
+    on Mon Jan 11 13:49:03 2021
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -3408,7 +3408,7 @@ for thisRepeats2 in repeats2:
                 if currFix == 'white':
                     currFix = 'black'
                     corrfixResp = 'space'
-                elif currFix == 'black':
+                else:
                     currFix = 'white'
                     corrfixResp = 'space'
         a = 1.25 # min ITI
@@ -3418,9 +3418,9 @@ for thisRepeats2 in repeats2:
         if (expInfo['position']) == 0:
             xPosition = 0
         elif int(expInfo['position']) == 2:
-            if side == 'left':
+            if runType == 1:
                 xPosition = -(width4deg*x_scale)
-            elif side == 'right':
+            else:
                 xPosition = width4deg*x_scale
         elif int(expInfo['position']) == 1:
             xPosition = -(width4deg*x_scale)

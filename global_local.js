@@ -3206,7 +3206,7 @@ function FeedbackRoutineBegin(snapshot) {
             }
         }
     }
-    
+    feedback_msg.text = prac_msg
     imFeedback.setImage(feedIM);
     feedback_msg.setText(prac_msg);
     // keep track of which components have finished
@@ -4178,10 +4178,8 @@ function pracFixR2RoutineBegin(snapshot) {
                     currFix = "black";
                     corrfixResp = "space";
                 } else {
-                    if ((currFix === "black")) {
-                        currFix = "white";
-                        corrfixResp = "space";
-                    }
+                    currFix = "white";
+                    corrfixResp = "space";
                 }
             }
         }
@@ -4193,12 +4191,10 @@ function pracFixR2RoutineBegin(snapshot) {
         xPosition = 0;
     } else {
         if ((Number.parseInt(expInfo["position"]) === 2)) {
-            if ((side === "left")) {
+            if ((runType === 1)) {
                 xPosition = (- (width4deg * x_scale));
             } else {
-                if ((side === "right")) {
-                    xPosition = (width4deg * x_scale);
-                }
+                xPosition = (width4deg * x_scale);
             }
         } else {
             if ((Number.parseInt(expInfo["position"]) === 1)) {
