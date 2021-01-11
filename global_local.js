@@ -137,10 +137,10 @@ psychoJS.start({
   resources: [
     {'name': 'Designs/prac_instr3.png', 'path': 'Designs/prac_instr3.png'},
     {'name': 'Designs/prac_instr1.png', 'path': 'Designs/prac_instr1.png'},
-    {'name': 'Designs/baby_dory_GJ.png', 'path': 'Designs/baby_dory_GJ.png'},
     {'name': 'bankcard.png', 'path': 'bankcard.png'},
-    {'name': 'Designs/baby_squirt_GJ.png', 'path': 'Designs/baby_squirt_GJ.png'},
-    {'name': 'Designs/prac_instr2.png', 'path': 'Designs/prac_instr2.png'}
+    {'name': 'Designs/baby_dory_GJ.png', 'path': 'Designs/baby_dory_GJ.png'},
+    {'name': 'Designs/prac_instr2.png', 'path': 'Designs/prac_instr2.png'},
+    {'name': 'Designs/baby_squirt_GJ.png', 'path': 'Designs/baby_squirt_GJ.png'}
   ]
 });
 
@@ -422,9 +422,9 @@ function experimentInit() {
       return array
   }
   fixColor_opts = shuffle_array(["black", "white"]);
-  pfS1 = [0, 1, 0, 1];
+  pfS1 = [0, 1];
   prac1_fixColSwitch = [0, shuffle_array(pfS1), 0].flat();
-  pfS2 = [0, 1, 0, 1];
+  pfS2 = [0, 1];
   prac2_fixColSwitch = [0, shuffle_array(pfS2), 0].flat();
   console.log(prac2_fixColSwitch)
   if ((Number.parseInt(expInfo["position"]) === 2)) {
@@ -908,19 +908,19 @@ function experimentInit() {
   
   // Initialize components for Routine "prac_instr_run2"
   prac_instr_run2Clock = new util.Clock();
-  if ((Number.parseInt(expInfo["design"]) === 1)) {
+  if ((expInfo["design"] === "1")) {
       instructions_run2 = "Designs/design1_run2.png";
       cond_file_run2 = "Designs/design1_run2.csv";
   } else {
-      if ((Number.parseInt(expInfo["design"]) === 2)) {
+      if ((expInfo["design"] === "2")) {
           instructions_run2 = "Designs/design2_run2.png";
           cond_file_run2 = "Designs/design2_run2.csv";
       } else {
-          if ((Number.parseInt(expInfo["design"]) === 3)) {
+          if ((expInfo["design"] === "3")) {
               instructions_run2 = "Designs/design3_run2.png";
               cond_file_run2 = "Designs/design3_run2.csv";
           } else {
-              if ((Number.parseInt(expInfo["design"]) === 4)) {
+              if ((expInfo["design"] === "4")) {
                   instructions_run2 = "Designs/design4_run2.png";
                   cond_file_run2 = "Designs/design4_run2.csv";
               }
@@ -3578,10 +3578,12 @@ function trialFixR1RoutineBegin(snapshot) {
         xPosition = 0;
     } else {
         if ((Number.parseInt(expInfo["position"]) === 2)) {
-            if ((runType === 1)) {
+            if ((side === "left")) {
                 xPosition = (- (width4deg * x_scale));
             } else {
-                xPosition = (width4deg * x_scale);
+                if ((side === "right")) {
+                    xPosition = (width4deg * x_scale);
+                }
             }
         } else {
             if ((Number.parseInt(expInfo["position"]) === 1)) {
@@ -3925,7 +3927,6 @@ function trial_imgRoutineEnd(snapshot) {
 }
 
 
-var sum;
 var total_fix;
 var btwn_trial_GJComponents;
 function btwn_trial_GJRoutineBegin(snapshot) {
@@ -3938,10 +3939,7 @@ function btwn_trial_GJRoutineBegin(snapshot) {
     // update component parameters for each repeat
     feedback_msg = "";
     hand_hold_run = 2;
-    sum = function (arr) {
-    return arr.reduce((a,b)=>a+b)
-    }
-    total_fix = Number.parseInt(sum(fixColorIdx_Run1));
+    total_fix = Number.parseInt((sum(fixColorIdx_Run1) / 2));
     feedback_msg = (((("You caught " + (total_fix - incorr_fix).toString()) + " of the ") + total_fix.toString()) + " cross changes.");
     
     text_10.setText(feedback_msg);
