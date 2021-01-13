@@ -138,12 +138,12 @@ psychoJS.start({
   expName: expName,
   expInfo: expInfo,
   resources: [
-    {'name': 'Designs/baby_squirt_GJ.png', 'path': 'Designs/baby_squirt_GJ.png'},
+    {'name': 'Designs/baby_dory_GJ.png', 'path': 'Designs/baby_dory_GJ.png'},
     {'name': 'Designs/prac_instr1.png', 'path': 'Designs/prac_instr1.png'},
     {'name': 'bankcard.png', 'path': 'bankcard.png'},
+    {'name': 'Designs/baby_squirt_GJ.png', 'path': 'Designs/baby_squirt_GJ.png'},
     {'name': 'Designs/prac_instr3.png', 'path': 'Designs/prac_instr3.png'},
-    {'name': 'Designs/prac_instr2.png', 'path': 'Designs/prac_instr2.png'},
-    {'name': 'Designs/baby_dory_GJ.png', 'path': 'Designs/baby_dory_GJ.png'}
+    {'name': 'Designs/prac_instr2.png', 'path': 'Designs/prac_instr2.png'}
   ]
 });
 
