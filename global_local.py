@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2020.2.4),
-    on Mon Jan 11 13:56:49 2021
+    on Wed Jan 13 14:09:46 2021
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -424,7 +424,9 @@ elif int(expInfo['design'])==4:
     instructions_run1 =  'Designs/design4_run1.png'
     cond_file_run1 = 'Designs/design4_run1.csv'
 
-
+rand_side = [0,1] # left = 0, right = 1
+shuffle(rand_side)
+start_side = rand_side[0]
 
 if int(expInfo['position'])==2:
     Trial_run1 = 1
@@ -628,7 +630,6 @@ text_3 = visual.TextStim(win=win, name='text_3',
     color='white', colorSpace='rgb', opacity=1, 
     languageStyle='LTR',
     depth=-1.0);
-fix_respP2_1 = keyboard.Keyboard()
 
 # Initialize components for Routine "prac_img"
 prac_imgClock = core.Clock()
@@ -650,17 +651,54 @@ prac_image = visual.ImageStim(
 prac_resp = keyboard.Keyboard()
 prac_fix_resp = keyboard.Keyboard()
 
-# Initialize components for Routine "Feedback"
-FeedbackClock = core.Clock()
-imFeedback = visual.ImageStim(
+# Initialize components for Routine "Feedback2"
+Feedback2Clock = core.Clock()
+feedIM =''
+if prac_resp.keys == corr: 
+    if prac_fix_resp.corr == 1:
+        feedIM = 'Stimuli/greenCheck.png'
+        prac_msg = 'Well done!'
+    else:
+        numIncorr_fix = numIncorr_fix + 1
+        feedIM = 'Stimuli/redWrong.png'
+        if corrfixResp == 'space':
+            prac_msg = 'Oops, you missed the cross change.'
+        else:
+            prac_msg = 'Oops, you pressed space when the cross didn\'t change.'
+elif prac_resp.keys != corr:
+    if prac_resp.keys == None:
+       feedIM = 'Stimuli/redWrong.png'
+       numIncorr_miss = numIncorr_miss + 1
+       if corrfixResp == 'space':
+            numIncorr_fix = numIncorr_fix + 1
+       prac_msg = 'Oops, time ran out. That\'s ok, try again!' 
+    else:
+        if prac_fix_resp.corr == 1:
+            feedIM = 'Stimuli/redWrong.png'
+            numIncorr_img = numIncorr_img + 1
+            if corrfixResp == 'space':
+                prac_msg = 'Good job! You got pressed space when the cross changed! But the picture response was wrong.'
+            else:
+                prac_msg = 'Oops, the picture response was wrong.'
+        else:
+            numIncorr_img = numIncorr_img + 1
+            numIncorr_fix = numIncorr_fix + 1
+            feedIM = 'Stimuli/redWrong.png'
+            if corrfixResp == 'space':
+                prac_msg = 'Oops, you missed the cross change and the picture response was wrong.'
+            else:
+                prac_msg = 'Oops, you press space when the cross didn\'t change and the picture response was wrong.'
+
+
+imFeedback2 = visual.ImageStim(
     win=win,
-    name='imFeedback', 
+    name='imFeedback2', 
     image='sin', mask=None,
     ori=0, pos=(0, 0), size=(0.25, 0.25),
     color=[1,1,1], colorSpace='rgb', opacity=1,
     flipHoriz=False, flipVert=False,
     texRes=512, interpolate=True, depth=-1.0)
-feedback_msg = visual.TextStim(win=win, name='feedback_msg',
+feedback_msg2 = visual.TextStim(win=win, name='feedback_msg2',
     text='default text',
     font='Arial',
     pos=(0, -0.25), height=0.05, wrapWidth=None, ori=0, 
@@ -755,6 +793,9 @@ image_4 = visual.ImageStim(
     flipHoriz=False, flipVert=False,
     texRes=512, interpolate=True, depth=-2.0)
 
+# Initialize components for Routine "nextBlock"
+nextBlockClock = core.Clock()
+
 # Initialize components for Routine "trial_instr_run1"
 trial_instr_run1Clock = core.Clock()
 if int(expInfo['design'])==1:
@@ -770,7 +811,9 @@ elif int(expInfo['design'])==4:
     instructions_run1 =  'Designs/design4_run1.png'
     cond_file_run1 = 'Designs/design4_run1.csv'
 
-
+rand_side = [0,1] # left = 0, right = 1
+shuffle(rand_side)
+start_side = rand_side[0]
 
 if int(expInfo['position'])==2:
     Trial_run1 = 1
@@ -1620,6 +1663,7 @@ routineTimer.reset()
 # ------Prepare to start Routine "prac_instr_run1"-------
 continueRoutine = True
 # update component parameters for each repeat
+blockID = 1
 Pinstructions_imageR1.setImage(instructions_run1)
 key_resp.keys = []
 key_resp.rt = []
@@ -1748,7 +1792,7 @@ for thisRepeat in repeats:
         shuffle(rand4Idx)
         randRows_run1 = rand4Idx
         shuffle(rand4Idx)
-        randRows_run2 = rand4Idx
+        randRows_run1 = rand4Idx
     
     pTrial_run1 = 1
     pracTotal_run1 = 6
@@ -2112,8 +2156,7 @@ for thisRepeat in repeats:
         continueRoutine = True
         routineTimer.add(2.000000)
         # update component parameters for each repeat
-        feedIM=''
-        prac_msg=''
+        feedIM =''
         if prac_resp.keys == corr: 
             if prac_fix_resp.corr == 1:
                 feedIM = 'Stimuli/greenCheck.png'
@@ -2231,6 +2274,8 @@ for thisRepeat in repeats:
         for thisComponent in FeedbackComponents:
             if hasattr(thisComponent, "setAutoDraw"):
                 thisComponent.setAutoDraw(False)
+        prac_trials_run1.addData('feedback_msg.started', feedback_msg.tStartRefresh)
+        prac_trials_run1.addData('feedback_msg.stopped', feedback_msg.tStopRefresh)
         thisExp.nextEntry()
         
     # completed 1 repeats of 'prac_trials_run1'
@@ -2244,7 +2289,7 @@ for thisRepeat in repeats:
         repeats.finished = True
     else:
         if numIncorr_fix > 1 and numIncorr_img < 2 and numIncorr_miss < 2:
-            prac_feedback = 'Good job with the pictures! \n You missed ' + str(numIncorr_fix) + ' of the two fix changes. \n In the real game, make sure you press Space as soon as you see it change!\n\n Let\'s try some more practice. \n Press Space to start.'
+            prac_feedback = 'Good job with the pictures! \n You missed ' + str(numIncorr_fix) + ' of the two fix changes. \n Make sure you press Space as soon as you see it change!\n\n Let\'s try some more practice. \n Press Space to start.'
         elif numIncorr_fix < 2 and numIncorr_img > 1 and numIncorr_miss < 2:
             prac_feedback = 'Good job, you got ' + str(2-numIncorr_fix) + ' of the 2 fix changes! \nYou missed ' + str(numIncorr_img) + ' of the pictures. \n Sometimes the big letter and the little letters are different. \nMake sure you focus on the right ones and press the right keys! \n\nLet\'s try some more practice. \n Press Space to start.'
         elif numIncorr_fix < 2 and numIncorr_img < 2 and numIncorr_miss > 1:
@@ -2343,6 +2388,7 @@ continueRoutine = True
 # update component parameters for each repeat
 incorr_fix = 0
 runType = 1
+
 instructions_imageR1.setImage(instructions_run1)
 key_resp_2.keys = []
 key_resp_2.rt = []
@@ -2469,10 +2515,16 @@ for thisTrials_run1 in trials_run1:
     if int(expInfo['position']) == 0:
         xPosition = 0
     elif int(expInfo['position']) == 2:
-        if runType == 1:
-            xPosition = -(width4deg*x_scale)
-        else:
-            xPosition = width4deg*x_scale
+        if blockID == 1:
+            if start_side == 0:
+                xPosition = -(width4deg*x_scale)
+            else:
+                xPosition = width4deg*x_scale
+        elif blockID == 2:
+            if start_side == 0:
+                xPosition = width4deg*x_scale
+            else:
+                xPosition = -(width4deg*x_scale)
     elif int(expInfo['position']) == 1:
         xPosition = -(width4deg*x_scale)
     elif int(expInfo['position']) == 3:
@@ -2614,12 +2666,14 @@ for thisTrials_run1 in trials_run1:
     _fix_resp_2_allKeys = []
     if runType == 1:
         if corrResp == 'space':
-            if fix_resp1_1.corr != 1 :
-                incorr_fix = incorr_fix + 1
+            if fix_resp1_1.corr != 1:
+                if fix_resp_2.corr != 1:
+                    incorr_fix = incorr_fix + 1
     else:
         if corrResp == 'space':
             if fix_resp2_1.corr != 1:
-                 incorr_fix = incorr_fix + 1
+                if fix_resp_2.corr != 1:
+                    incorr_fix = incorr_fix + 1
     
     # keep track of which components have finished
     trial_imgComponents = [text_6, trial_image, trial_resp, fix_resp_2]
@@ -2702,13 +2756,17 @@ for thisTrials_run1 in trials_run1:
             # keyboard checking is just starting
             waitOnFlip = True
             win.callOnFlip(fix_resp_2.clock.reset)  # t=0 on next screen flip
-            win.callOnFlip(fix_resp_2.clearEvents, eventType='keyboard')  # clear events on next screen flip
         if fix_resp_2.status == STARTED and not waitOnFlip:
             theseKeys = fix_resp_2.getKeys(keyList=['space'], waitRelease=False)
             _fix_resp_2_allKeys.extend(theseKeys)
             if len(_fix_resp_2_allKeys):
                 fix_resp_2.keys = _fix_resp_2_allKeys[-1].name  # just the last key pressed
                 fix_resp_2.rt = _fix_resp_2_allKeys[-1].rt
+                # was this correct?
+                if (fix_resp_2.keys == str(corrResp)) or (fix_resp_2.keys == corrResp):
+                    fix_resp_2.corr = 1
+                else:
+                    fix_resp_2.corr = 0
         
         # check for quit (typically the Esc key)
         if endExpNow or defaultKeyboard.getKeys(keyList=["escape"]):
@@ -2753,7 +2811,14 @@ for thisTrials_run1 in trials_run1:
     # check responses
     if fix_resp_2.keys in ['', [], None]:  # No response was made
         fix_resp_2.keys = None
+        # was no response the correct answer?!
+        if str(corrResp).lower() == 'none':
+           fix_resp_2.corr = 1;  # correct non-response
+        else:
+           fix_resp_2.corr = 0;  # failed to respond (incorrectly)
+    # store data for trials_run1 (TrialHandler)
     trials_run1.addData('fix_resp_2.keys',fix_resp_2.keys)
+    trials_run1.addData('fix_resp_2.corr', fix_resp_2.corr)
     if fix_resp_2.keys != None:  # we had a response
         trials_run1.addData('fix_resp_2.rt', fix_resp_2.rt)
     trials_run1.addData('fix_resp_2.started', fix_resp_2.tStartRefresh)
@@ -3318,7 +3383,7 @@ for thisRepeats2 in repeats2:
         shuffle(rand4Idx)
         randRows_run1 = rand4Idx
         shuffle(rand4Idx)
-        randRows_run2 = rand4Idx
+        randRows_run1 = rand4Idx
     
     pTrial_run1 = 1
     pracTotal_run1 = 6
@@ -3400,16 +3465,17 @@ for thisRepeats2 in repeats2:
             currFix = fixColor_opts[0]
             corrfixResp = None
         else:
-            if prac2_fixColSwitch[pTrial_run2-1] == 0:
-                currFix = currFix
-                corrfixResp = None
-            elif  prac2_fixColSwitch[pTrial_run2-1] == 1:
+            if prac2_fixColSwitch[pTrial_run2-1] == 1:
                 if currFix == 'white':
                     currFix = 'black'
                     corrfixResp = 'space'
-                else:
+                elif currFix == 'black':
                     currFix = 'white'
                     corrfixResp = 'space'
+            else:
+                currFix = currFix
+                corrfixResp = None
+        
         a = 1.25 # min ITI
         b = 1.75 # max ITI
         fixDur = (b-a) * random()+a
@@ -3417,9 +3483,9 @@ for thisRepeats2 in repeats2:
         if (expInfo['position']) == 0:
             xPosition = 0
         elif int(expInfo['position']) == 2:
-            if runType == 1:
+            if side == 'left':
                 xPosition = -(width4deg*x_scale)
-            else:
+            elif side == 'right':
                 xPosition = width4deg*x_scale
         elif int(expInfo['position']) == 1:
             xPosition = -(width4deg*x_scale)
@@ -3428,11 +3494,8 @@ for thisRepeats2 in repeats2:
         
         thisExp.addData('fixpR2', prac2_fixColSwitch[pTrial_run2-1])
         text_3.setColor(currFix, colorSpace='rgb')
-        fix_respP2_1.keys = []
-        fix_respP2_1.rt = []
-        _fix_respP2_1_allKeys = []
         # keep track of which components have finished
-        pracFixR2Components = [text_3, fix_respP2_1]
+        pracFixR2Components = [text_3]
         for thisComponent in pracFixR2Components:
             thisComponent.tStart = None
             thisComponent.tStop = None
@@ -3472,34 +3535,6 @@ for thisRepeats2 in repeats2:
                     win.timeOnFlip(text_3, 'tStopRefresh')  # time at next scr refresh
                     text_3.setAutoDraw(False)
             
-            # *fix_respP2_1* updates
-            waitOnFlip = False
-            if fix_respP2_1.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
-                # keep track of start time/frame for later
-                fix_respP2_1.frameNStart = frameN  # exact frame index
-                fix_respP2_1.tStart = t  # local t and not account for scr refresh
-                fix_respP2_1.tStartRefresh = tThisFlipGlobal  # on global time
-                win.timeOnFlip(fix_respP2_1, 'tStartRefresh')  # time at next scr refresh
-                fix_respP2_1.status = STARTED
-                # keyboard checking is just starting
-                waitOnFlip = True
-                win.callOnFlip(fix_respP2_1.clock.reset)  # t=0 on next screen flip
-                win.callOnFlip(fix_respP2_1.clearEvents, eventType='keyboard')  # clear events on next screen flip
-            if fix_respP2_1.status == STARTED:
-                # is it time to stop? (based on global clock, using actual start)
-                if tThisFlipGlobal > fix_respP2_1.tStartRefresh + fixDur-frameTolerance:
-                    # keep track of stop time/frame for later
-                    fix_respP2_1.tStop = t  # not accounting for scr refresh
-                    fix_respP2_1.frameNStop = frameN  # exact frame index
-                    win.timeOnFlip(fix_respP2_1, 'tStopRefresh')  # time at next scr refresh
-                    fix_respP2_1.status = FINISHED
-            if fix_respP2_1.status == STARTED and not waitOnFlip:
-                theseKeys = fix_respP2_1.getKeys(keyList=['space'], waitRelease=False)
-                _fix_respP2_1_allKeys.extend(theseKeys)
-                if len(_fix_respP2_1_allKeys):
-                    fix_respP2_1.keys = _fix_respP2_1_allKeys[-1].name  # just the last key pressed
-                    fix_respP2_1.rt = _fix_respP2_1_allKeys[-1].rt
-            
             # check for quit (typically the Esc key)
             if endExpNow or defaultKeyboard.getKeys(keyList=["escape"]):
                 core.quit()
@@ -3522,12 +3557,6 @@ for thisRepeats2 in repeats2:
             if hasattr(thisComponent, "setAutoDraw"):
                 thisComponent.setAutoDraw(False)
         pTrial_run2 = pTrial_run2 + 1
-        # check responses
-        if fix_respP2_1.keys in ['', [], None]:  # No response was made
-            fix_respP2_1.keys = None
-        prac_trials_run2.addData('fix_respP2_1.keys',fix_respP2_1.keys)
-        if fix_respP2_1.keys != None:  # we had a response
-            prac_trials_run2.addData('fix_respP2_1.rt', fix_respP2_1.rt)
         # the Routine "pracFixR2" was not non-slip safe, so reset the non-slip timer
         routineTimer.reset()
         
@@ -3715,53 +3744,15 @@ for thisRepeats2 in repeats2:
         if prac_fix_resp.keys != None:  # we had a response
             prac_trials_run2.addData('prac_fix_resp.rt', prac_fix_resp.rt)
         
-        # ------Prepare to start Routine "Feedback"-------
+        # ------Prepare to start Routine "Feedback2"-------
         continueRoutine = True
         routineTimer.add(2.000000)
         # update component parameters for each repeat
-        feedIM=''
-        prac_msg=''
-        if prac_resp.keys == corr: 
-            if prac_fix_resp.corr == 1:
-                feedIM = 'Stimuli/greenCheck.png'
-                prac_msg = 'Well done!'
-            else:
-                numIncorr_fix = numIncorr_fix + 1
-                feedIM = 'Stimuli/redWrong.png'
-                if corrfixResp == 'space':
-                    prac_msg = 'Oops, you missed the cross change.'
-                else:
-                    prac_msg = 'Oops, you pressed space when the cross didn\'t change.'
-        elif prac_resp.keys != corr:
-            if prac_resp.keys == None:
-               feedIM = 'Stimuli/redWrong.png'
-               numIncorr_miss = numIncorr_miss + 1
-               if corrfixResp == 'space':
-                    numIncorr_fix = numIncorr_fix + 1
-               prac_msg = 'Oops, time ran out. That\'s ok, try again!' 
-            else:
-                if prac_fix_resp.corr == 1:
-                    feedIM = 'Stimuli/redWrong.png'
-                    numIncorr_img = numIncorr_img + 1
-                    if corrfixResp == 'space':
-                        prac_msg = 'Good job! You got pressed space when the cross changed! But the picture response was wrong.'
-                    else:
-                        prac_msg = 'Oops, the picture response was wrong.'
-                else:
-                    numIncorr_img = numIncorr_img + 1
-                    numIncorr_fix = numIncorr_fix + 1
-                    feedIM = 'Stimuli/redWrong.png'
-                    if corrfixResp == 'space':
-                        prac_msg = 'Oops, you missed the cross change and the picture response was wrong.'
-                    else:
-                        prac_msg = 'Oops, you press space when the cross didn\'t change and the picture response was wrong.'
-        
-        
-        imFeedback.setImage(feedIM)
-        feedback_msg.setText(prac_msg)
+        imFeedback2.setImage(feedIM)
+        feedback_msg2.setText(prac_msg)
         # keep track of which components have finished
-        FeedbackComponents = [imFeedback, feedback_msg]
-        for thisComponent in FeedbackComponents:
+        Feedback2Components = [imFeedback2, feedback_msg2]
+        for thisComponent in Feedback2Components:
             thisComponent.tStart = None
             thisComponent.tStop = None
             thisComponent.tStartRefresh = None
@@ -3771,51 +3762,51 @@ for thisRepeats2 in repeats2:
         # reset timers
         t = 0
         _timeToFirstFrame = win.getFutureFlipTime(clock="now")
-        FeedbackClock.reset(-_timeToFirstFrame)  # t0 is time of first possible flip
+        Feedback2Clock.reset(-_timeToFirstFrame)  # t0 is time of first possible flip
         frameN = -1
         
-        # -------Run Routine "Feedback"-------
+        # -------Run Routine "Feedback2"-------
         while continueRoutine and routineTimer.getTime() > 0:
             # get current time
-            t = FeedbackClock.getTime()
-            tThisFlip = win.getFutureFlipTime(clock=FeedbackClock)
+            t = Feedback2Clock.getTime()
+            tThisFlip = win.getFutureFlipTime(clock=Feedback2Clock)
             tThisFlipGlobal = win.getFutureFlipTime(clock=None)
             frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
             # update/draw components on each frame
             
-            # *imFeedback* updates
-            if imFeedback.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+            # *imFeedback2* updates
+            if imFeedback2.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
                 # keep track of start time/frame for later
-                imFeedback.frameNStart = frameN  # exact frame index
-                imFeedback.tStart = t  # local t and not account for scr refresh
-                imFeedback.tStartRefresh = tThisFlipGlobal  # on global time
-                win.timeOnFlip(imFeedback, 'tStartRefresh')  # time at next scr refresh
-                imFeedback.setAutoDraw(True)
-            if imFeedback.status == STARTED:
+                imFeedback2.frameNStart = frameN  # exact frame index
+                imFeedback2.tStart = t  # local t and not account for scr refresh
+                imFeedback2.tStartRefresh = tThisFlipGlobal  # on global time
+                win.timeOnFlip(imFeedback2, 'tStartRefresh')  # time at next scr refresh
+                imFeedback2.setAutoDraw(True)
+            if imFeedback2.status == STARTED:
                 # is it time to stop? (based on global clock, using actual start)
-                if tThisFlipGlobal > imFeedback.tStartRefresh + 2-frameTolerance:
+                if tThisFlipGlobal > imFeedback2.tStartRefresh + 2-frameTolerance:
                     # keep track of stop time/frame for later
-                    imFeedback.tStop = t  # not accounting for scr refresh
-                    imFeedback.frameNStop = frameN  # exact frame index
-                    win.timeOnFlip(imFeedback, 'tStopRefresh')  # time at next scr refresh
-                    imFeedback.setAutoDraw(False)
+                    imFeedback2.tStop = t  # not accounting for scr refresh
+                    imFeedback2.frameNStop = frameN  # exact frame index
+                    win.timeOnFlip(imFeedback2, 'tStopRefresh')  # time at next scr refresh
+                    imFeedback2.setAutoDraw(False)
             
-            # *feedback_msg* updates
-            if feedback_msg.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+            # *feedback_msg2* updates
+            if feedback_msg2.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
                 # keep track of start time/frame for later
-                feedback_msg.frameNStart = frameN  # exact frame index
-                feedback_msg.tStart = t  # local t and not account for scr refresh
-                feedback_msg.tStartRefresh = tThisFlipGlobal  # on global time
-                win.timeOnFlip(feedback_msg, 'tStartRefresh')  # time at next scr refresh
-                feedback_msg.setAutoDraw(True)
-            if feedback_msg.status == STARTED:
+                feedback_msg2.frameNStart = frameN  # exact frame index
+                feedback_msg2.tStart = t  # local t and not account for scr refresh
+                feedback_msg2.tStartRefresh = tThisFlipGlobal  # on global time
+                win.timeOnFlip(feedback_msg2, 'tStartRefresh')  # time at next scr refresh
+                feedback_msg2.setAutoDraw(True)
+            if feedback_msg2.status == STARTED:
                 # is it time to stop? (based on global clock, using actual start)
-                if tThisFlipGlobal > feedback_msg.tStartRefresh + 2-frameTolerance:
+                if tThisFlipGlobal > feedback_msg2.tStartRefresh + 2-frameTolerance:
                     # keep track of stop time/frame for later
-                    feedback_msg.tStop = t  # not accounting for scr refresh
-                    feedback_msg.frameNStop = frameN  # exact frame index
-                    win.timeOnFlip(feedback_msg, 'tStopRefresh')  # time at next scr refresh
-                    feedback_msg.setAutoDraw(False)
+                    feedback_msg2.tStop = t  # not accounting for scr refresh
+                    feedback_msg2.frameNStop = frameN  # exact frame index
+                    win.timeOnFlip(feedback_msg2, 'tStopRefresh')  # time at next scr refresh
+                    feedback_msg2.setAutoDraw(False)
             
             # check for quit (typically the Esc key)
             if endExpNow or defaultKeyboard.getKeys(keyList=["escape"]):
@@ -3825,7 +3816,7 @@ for thisRepeats2 in repeats2:
             if not continueRoutine:  # a component has requested a forced-end of Routine
                 break
             continueRoutine = False  # will revert to True if at least one component still running
-            for thisComponent in FeedbackComponents:
+            for thisComponent in Feedback2Components:
                 if hasattr(thisComponent, "status") and thisComponent.status != FINISHED:
                     continueRoutine = True
                     break  # at least one component has not yet finished
@@ -3834,8 +3825,8 @@ for thisRepeats2 in repeats2:
             if continueRoutine:  # don't flip if this routine is over or we'll get a blank screen
                 win.flip()
         
-        # -------Ending Routine "Feedback"-------
-        for thisComponent in FeedbackComponents:
+        # -------Ending Routine "Feedback2"-------
+        for thisComponent in Feedback2Components:
             if hasattr(thisComponent, "setAutoDraw"):
                 thisComponent.setAutoDraw(False)
         thisExp.nextEntry()
@@ -3851,7 +3842,7 @@ for thisRepeats2 in repeats2:
         repeats2.finished = True
     else:
         if numIncorr_fix > 1 and numIncorr_img < 2 and numIncorr_miss < 2:
-            prac_feedback = 'Good job with the pictures! \n You missed ' + str(numIncorr_fix) + ' of the two fix changes. \n In the real game, make sure you press Space as soon as you see it change!\n\n Let\'s try some more practice. \n Press Space to start.'
+            prac_feedback = 'Good job with the pictures! \n You missed ' + str(numIncorr_fix) + ' of the two fix changes. \n Make sure you press Space as soon as you see it change!\n\n Let\'s try some more practice. \n Press Space to start.'
         elif numIncorr_fix < 2 and numIncorr_img > 1 and numIncorr_miss < 2:
             prac_feedback = 'Good job, you got ' + str(2-numIncorr_fix) + ' of the 2 fix changes! \nYou missed ' + str(numIncorr_img) + ' of the pictures. \n Sometimes the big letter and the little letters are different. \nMake sure you focus on the right ones and press the right keys! \n\nLet\'s try some more practice. \n Press Space to start.'
         elif numIncorr_fix < 2 and numIncorr_img < 2 and numIncorr_miss > 1:
@@ -4078,10 +4069,16 @@ for thisTrials_run2 in trials_run2:
     if int(expInfo['position']) == 0:
         xPosition = 0
     elif int(expInfo['position']) == 2:
-        if side == 'left':
-            xPosition = -(width4deg*x_scale)
-        elif side == 'right':
-            xPosition = width4deg*x_scale
+        if blockID == 1:
+            if start_side == 0:
+                xPosition = -(width4deg*x_scale)
+            else:
+                xPosition = width4deg*x_scale
+        elif blockID == 2:
+            if start_side == 0:
+                xPosition = width4deg*x_scale
+            else:
+                xPosition = -(width4deg*x_scale)
     elif int(expInfo['position']) == 1:
         xPosition = -(width4deg*x_scale)
     elif (expInfo['position']) == 3:
@@ -4223,12 +4220,14 @@ for thisTrials_run2 in trials_run2:
     _fix_resp_2_allKeys = []
     if runType == 1:
         if corrResp == 'space':
-            if fix_resp1_1.corr != 1 :
-                incorr_fix = incorr_fix + 1
+            if fix_resp1_1.corr != 1:
+                if fix_resp_2.corr != 1:
+                    incorr_fix = incorr_fix + 1
     else:
         if corrResp == 'space':
             if fix_resp2_1.corr != 1:
-                 incorr_fix = incorr_fix + 1
+                if fix_resp_2.corr != 1:
+                    incorr_fix = incorr_fix + 1
     
     # keep track of which components have finished
     trial_imgComponents = [text_6, trial_image, trial_resp, fix_resp_2]
@@ -4311,13 +4310,17 @@ for thisTrials_run2 in trials_run2:
             # keyboard checking is just starting
             waitOnFlip = True
             win.callOnFlip(fix_resp_2.clock.reset)  # t=0 on next screen flip
-            win.callOnFlip(fix_resp_2.clearEvents, eventType='keyboard')  # clear events on next screen flip
         if fix_resp_2.status == STARTED and not waitOnFlip:
             theseKeys = fix_resp_2.getKeys(keyList=['space'], waitRelease=False)
             _fix_resp_2_allKeys.extend(theseKeys)
             if len(_fix_resp_2_allKeys):
                 fix_resp_2.keys = _fix_resp_2_allKeys[-1].name  # just the last key pressed
                 fix_resp_2.rt = _fix_resp_2_allKeys[-1].rt
+                # was this correct?
+                if (fix_resp_2.keys == str(corrResp)) or (fix_resp_2.keys == corrResp):
+                    fix_resp_2.corr = 1
+                else:
+                    fix_resp_2.corr = 0
         
         # check for quit (typically the Esc key)
         if endExpNow or defaultKeyboard.getKeys(keyList=["escape"]):
@@ -4362,7 +4365,14 @@ for thisTrials_run2 in trials_run2:
     # check responses
     if fix_resp_2.keys in ['', [], None]:  # No response was made
         fix_resp_2.keys = None
+        # was no response the correct answer?!
+        if str(corrResp).lower() == 'none':
+           fix_resp_2.corr = 1;  # correct non-response
+        else:
+           fix_resp_2.corr = 0;  # failed to respond (incorrectly)
+    # store data for trials_run2 (TrialHandler)
     trials_run2.addData('fix_resp_2.keys',fix_resp_2.keys)
+    trials_run2.addData('fix_resp_2.corr', fix_resp_2.corr)
     if fix_resp_2.keys != None:  # we had a response
         trials_run2.addData('fix_resp_2.rt', fix_resp_2.rt)
     trials_run2.addData('fix_resp_2.started', fix_resp_2.tStartRefresh)
@@ -4463,11 +4473,64 @@ for thisComponent in btwn_trial_GJComponents:
     if hasattr(thisComponent, "setAutoDraw"):
         thisComponent.setAutoDraw(False)
 
+# ------Prepare to start Routine "nextBlock"-------
+continueRoutine = True
+# update component parameters for each repeat
+blockID = 2
+# keep track of which components have finished
+nextBlockComponents = []
+for thisComponent in nextBlockComponents:
+    thisComponent.tStart = None
+    thisComponent.tStop = None
+    thisComponent.tStartRefresh = None
+    thisComponent.tStopRefresh = None
+    if hasattr(thisComponent, 'status'):
+        thisComponent.status = NOT_STARTED
+# reset timers
+t = 0
+_timeToFirstFrame = win.getFutureFlipTime(clock="now")
+nextBlockClock.reset(-_timeToFirstFrame)  # t0 is time of first possible flip
+frameN = -1
+
+# -------Run Routine "nextBlock"-------
+while continueRoutine:
+    # get current time
+    t = nextBlockClock.getTime()
+    tThisFlip = win.getFutureFlipTime(clock=nextBlockClock)
+    tThisFlipGlobal = win.getFutureFlipTime(clock=None)
+    frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
+    # update/draw components on each frame
+    
+    # check for quit (typically the Esc key)
+    if endExpNow or defaultKeyboard.getKeys(keyList=["escape"]):
+        core.quit()
+    
+    # check if all components have finished
+    if not continueRoutine:  # a component has requested a forced-end of Routine
+        break
+    continueRoutine = False  # will revert to True if at least one component still running
+    for thisComponent in nextBlockComponents:
+        if hasattr(thisComponent, "status") and thisComponent.status != FINISHED:
+            continueRoutine = True
+            break  # at least one component has not yet finished
+    
+    # refresh the screen
+    if continueRoutine:  # don't flip if this routine is over or we'll get a blank screen
+        win.flip()
+
+# -------Ending Routine "nextBlock"-------
+for thisComponent in nextBlockComponents:
+    if hasattr(thisComponent, "setAutoDraw"):
+        thisComponent.setAutoDraw(False)
+# the Routine "nextBlock" was not non-slip safe, so reset the non-slip timer
+routineTimer.reset()
+
 # ------Prepare to start Routine "trial_instr_run1"-------
 continueRoutine = True
 # update component parameters for each repeat
 incorr_fix = 0
 runType = 1
+
 instructions_imageR1.setImage(instructions_run1)
 key_resp_2.keys = []
 key_resp_2.rt = []
@@ -4594,10 +4657,16 @@ for thisTrials_run3 in trials_run3:
     if int(expInfo['position']) == 0:
         xPosition = 0
     elif int(expInfo['position']) == 2:
-        if runType == 1:
-            xPosition = -(width4deg*x_scale)
-        else:
-            xPosition = width4deg*x_scale
+        if blockID == 1:
+            if start_side == 0:
+                xPosition = -(width4deg*x_scale)
+            else:
+                xPosition = width4deg*x_scale
+        elif blockID == 2:
+            if start_side == 0:
+                xPosition = width4deg*x_scale
+            else:
+                xPosition = -(width4deg*x_scale)
     elif int(expInfo['position']) == 1:
         xPosition = -(width4deg*x_scale)
     elif int(expInfo['position']) == 3:
@@ -4739,12 +4808,14 @@ for thisTrials_run3 in trials_run3:
     _fix_resp_2_allKeys = []
     if runType == 1:
         if corrResp == 'space':
-            if fix_resp1_1.corr != 1 :
-                incorr_fix = incorr_fix + 1
+            if fix_resp1_1.corr != 1:
+                if fix_resp_2.corr != 1:
+                    incorr_fix = incorr_fix + 1
     else:
         if corrResp == 'space':
             if fix_resp2_1.corr != 1:
-                 incorr_fix = incorr_fix + 1
+                if fix_resp_2.corr != 1:
+                    incorr_fix = incorr_fix + 1
     
     # keep track of which components have finished
     trial_imgComponents = [text_6, trial_image, trial_resp, fix_resp_2]
@@ -4827,13 +4898,17 @@ for thisTrials_run3 in trials_run3:
             # keyboard checking is just starting
             waitOnFlip = True
             win.callOnFlip(fix_resp_2.clock.reset)  # t=0 on next screen flip
-            win.callOnFlip(fix_resp_2.clearEvents, eventType='keyboard')  # clear events on next screen flip
         if fix_resp_2.status == STARTED and not waitOnFlip:
             theseKeys = fix_resp_2.getKeys(keyList=['space'], waitRelease=False)
             _fix_resp_2_allKeys.extend(theseKeys)
             if len(_fix_resp_2_allKeys):
                 fix_resp_2.keys = _fix_resp_2_allKeys[-1].name  # just the last key pressed
                 fix_resp_2.rt = _fix_resp_2_allKeys[-1].rt
+                # was this correct?
+                if (fix_resp_2.keys == str(corrResp)) or (fix_resp_2.keys == corrResp):
+                    fix_resp_2.corr = 1
+                else:
+                    fix_resp_2.corr = 0
         
         # check for quit (typically the Esc key)
         if endExpNow or defaultKeyboard.getKeys(keyList=["escape"]):
@@ -4878,7 +4953,14 @@ for thisTrials_run3 in trials_run3:
     # check responses
     if fix_resp_2.keys in ['', [], None]:  # No response was made
         fix_resp_2.keys = None
+        # was no response the correct answer?!
+        if str(corrResp).lower() == 'none':
+           fix_resp_2.corr = 1;  # correct non-response
+        else:
+           fix_resp_2.corr = 0;  # failed to respond (incorrectly)
+    # store data for trials_run3 (TrialHandler)
     trials_run3.addData('fix_resp_2.keys',fix_resp_2.keys)
+    trials_run3.addData('fix_resp_2.corr', fix_resp_2.corr)
     if fix_resp_2.keys != None:  # we had a response
         trials_run3.addData('fix_resp_2.rt', fix_resp_2.rt)
     trials_run3.addData('fix_resp_2.started', fix_resp_2.tStartRefresh)
@@ -5108,10 +5190,16 @@ for thisTrials_run4 in trials_run4:
     if int(expInfo['position']) == 0:
         xPosition = 0
     elif int(expInfo['position']) == 2:
-        if side == 'left':
-            xPosition = -(width4deg*x_scale)
-        elif side == 'right':
-            xPosition = width4deg*x_scale
+        if blockID == 1:
+            if start_side == 0:
+                xPosition = -(width4deg*x_scale)
+            else:
+                xPosition = width4deg*x_scale
+        elif blockID == 2:
+            if start_side == 0:
+                xPosition = width4deg*x_scale
+            else:
+                xPosition = -(width4deg*x_scale)
     elif int(expInfo['position']) == 1:
         xPosition = -(width4deg*x_scale)
     elif (expInfo['position']) == 3:
@@ -5253,12 +5341,14 @@ for thisTrials_run4 in trials_run4:
     _fix_resp_2_allKeys = []
     if runType == 1:
         if corrResp == 'space':
-            if fix_resp1_1.corr != 1 :
-                incorr_fix = incorr_fix + 1
+            if fix_resp1_1.corr != 1:
+                if fix_resp_2.corr != 1:
+                    incorr_fix = incorr_fix + 1
     else:
         if corrResp == 'space':
             if fix_resp2_1.corr != 1:
-                 incorr_fix = incorr_fix + 1
+                if fix_resp_2.corr != 1:
+                    incorr_fix = incorr_fix + 1
     
     # keep track of which components have finished
     trial_imgComponents = [text_6, trial_image, trial_resp, fix_resp_2]
@@ -5341,13 +5431,17 @@ for thisTrials_run4 in trials_run4:
             # keyboard checking is just starting
             waitOnFlip = True
             win.callOnFlip(fix_resp_2.clock.reset)  # t=0 on next screen flip
-            win.callOnFlip(fix_resp_2.clearEvents, eventType='keyboard')  # clear events on next screen flip
         if fix_resp_2.status == STARTED and not waitOnFlip:
             theseKeys = fix_resp_2.getKeys(keyList=['space'], waitRelease=False)
             _fix_resp_2_allKeys.extend(theseKeys)
             if len(_fix_resp_2_allKeys):
                 fix_resp_2.keys = _fix_resp_2_allKeys[-1].name  # just the last key pressed
                 fix_resp_2.rt = _fix_resp_2_allKeys[-1].rt
+                # was this correct?
+                if (fix_resp_2.keys == str(corrResp)) or (fix_resp_2.keys == corrResp):
+                    fix_resp_2.corr = 1
+                else:
+                    fix_resp_2.corr = 0
         
         # check for quit (typically the Esc key)
         if endExpNow or defaultKeyboard.getKeys(keyList=["escape"]):
@@ -5392,7 +5486,14 @@ for thisTrials_run4 in trials_run4:
     # check responses
     if fix_resp_2.keys in ['', [], None]:  # No response was made
         fix_resp_2.keys = None
+        # was no response the correct answer?!
+        if str(corrResp).lower() == 'none':
+           fix_resp_2.corr = 1;  # correct non-response
+        else:
+           fix_resp_2.corr = 0;  # failed to respond (incorrectly)
+    # store data for trials_run4 (TrialHandler)
     trials_run4.addData('fix_resp_2.keys',fix_resp_2.keys)
+    trials_run4.addData('fix_resp_2.corr', fix_resp_2.corr)
     if fix_resp_2.keys != None:  # we had a response
         trials_run4.addData('fix_resp_2.rt', fix_resp_2.rt)
     trials_run4.addData('fix_resp_2.started', fix_resp_2.tStartRefresh)

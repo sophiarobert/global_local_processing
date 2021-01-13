@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2020.2.4),
-    on Wed Jan 13 13:59:12 2021
+    on Wed Jan 13 14:12:14 2021
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -651,17 +651,54 @@ prac_image = visual.ImageStim(
 prac_resp = keyboard.Keyboard()
 prac_fix_resp = keyboard.Keyboard()
 
-# Initialize components for Routine "Feedback"
-FeedbackClock = core.Clock()
-imFeedback = visual.ImageStim(
+# Initialize components for Routine "Feedback2"
+Feedback2Clock = core.Clock()
+feedIM =''
+if prac_resp.keys == corr: 
+    if prac_fix_resp.corr == 1:
+        feedIM = 'Stimuli/greenCheck.png'
+        prac_msg = 'Well done!'
+    else:
+        numIncorr_fix = numIncorr_fix + 1
+        feedIM = 'Stimuli/redWrong.png'
+        if corrfixResp == 'space':
+            prac_msg = 'Oops, you missed the cross change.'
+        else:
+            prac_msg = 'Oops, you pressed space when the cross didn\'t change.'
+elif prac_resp.keys != corr:
+    if prac_resp.keys == None:
+       feedIM = 'Stimuli/redWrong.png'
+       numIncorr_miss = numIncorr_miss + 1
+       if corrfixResp == 'space':
+            numIncorr_fix = numIncorr_fix + 1
+       prac_msg = 'Oops, time ran out. That\'s ok, try again!' 
+    else:
+        if prac_fix_resp.corr == 1:
+            feedIM = 'Stimuli/redWrong.png'
+            numIncorr_img = numIncorr_img + 1
+            if corrfixResp == 'space':
+                prac_msg = 'Good job! You got pressed space when the cross changed! But the picture response was wrong.'
+            else:
+                prac_msg = 'Oops, the picture response was wrong.'
+        else:
+            numIncorr_img = numIncorr_img + 1
+            numIncorr_fix = numIncorr_fix + 1
+            feedIM = 'Stimuli/redWrong.png'
+            if corrfixResp == 'space':
+                prac_msg = 'Oops, you missed the cross change and the picture response was wrong.'
+            else:
+                prac_msg = 'Oops, you press space when the cross didn\'t change and the picture response was wrong.'
+
+
+imFeedback2 = visual.ImageStim(
     win=win,
-    name='imFeedback', 
+    name='imFeedback2', 
     image='sin', mask=None,
     ori=0, pos=(0, 0), size=(0.25, 0.25),
     color=[1,1,1], colorSpace='rgb', opacity=1,
     flipHoriz=False, flipVert=False,
     texRes=512, interpolate=True, depth=-1.0)
-feedback_msg = visual.TextStim(win=win, name='feedback_msg',
+feedback_msg2 = visual.TextStim(win=win, name='feedback_msg2',
     text='default text',
     font='Arial',
     pos=(0, -0.25), height=0.05, wrapWidth=None, ori=0, 
@@ -3707,52 +3744,15 @@ for thisRepeats2 in repeats2:
         if prac_fix_resp.keys != None:  # we had a response
             prac_trials_run2.addData('prac_fix_resp.rt', prac_fix_resp.rt)
         
-        # ------Prepare to start Routine "Feedback"-------
+        # ------Prepare to start Routine "Feedback2"-------
         continueRoutine = True
         routineTimer.add(2.000000)
         # update component parameters for each repeat
-        feedIM =''
-        if prac_resp.keys == corr: 
-            if prac_fix_resp.corr == 1:
-                feedIM = 'Stimuli/greenCheck.png'
-                prac_msg = 'Well done!'
-            else:
-                numIncorr_fix = numIncorr_fix + 1
-                feedIM = 'Stimuli/redWrong.png'
-                if corrfixResp == 'space':
-                    prac_msg = 'Oops, you missed the cross change.'
-                else:
-                    prac_msg = 'Oops, you pressed space when the cross didn\'t change.'
-        elif prac_resp.keys != corr:
-            if prac_resp.keys == None:
-               feedIM = 'Stimuli/redWrong.png'
-               numIncorr_miss = numIncorr_miss + 1
-               if corrfixResp == 'space':
-                    numIncorr_fix = numIncorr_fix + 1
-               prac_msg = 'Oops, time ran out. That\'s ok, try again!' 
-            else:
-                if prac_fix_resp.corr == 1:
-                    feedIM = 'Stimuli/redWrong.png'
-                    numIncorr_img = numIncorr_img + 1
-                    if corrfixResp == 'space':
-                        prac_msg = 'Good job! You got pressed space when the cross changed! But the picture response was wrong.'
-                    else:
-                        prac_msg = 'Oops, the picture response was wrong.'
-                else:
-                    numIncorr_img = numIncorr_img + 1
-                    numIncorr_fix = numIncorr_fix + 1
-                    feedIM = 'Stimuli/redWrong.png'
-                    if corrfixResp == 'space':
-                        prac_msg = 'Oops, you missed the cross change and the picture response was wrong.'
-                    else:
-                        prac_msg = 'Oops, you press space when the cross didn\'t change and the picture response was wrong.'
-        
-        
-        imFeedback.setImage(feedIM)
-        feedback_msg.setText(prac_msg)
+        imFeedback2.setImage(feedIM)
+        feedback_msg2.setText(prac_msg)
         # keep track of which components have finished
-        FeedbackComponents = [imFeedback, feedback_msg]
-        for thisComponent in FeedbackComponents:
+        Feedback2Components = [imFeedback2, feedback_msg2]
+        for thisComponent in Feedback2Components:
             thisComponent.tStart = None
             thisComponent.tStop = None
             thisComponent.tStartRefresh = None
@@ -3762,51 +3762,51 @@ for thisRepeats2 in repeats2:
         # reset timers
         t = 0
         _timeToFirstFrame = win.getFutureFlipTime(clock="now")
-        FeedbackClock.reset(-_timeToFirstFrame)  # t0 is time of first possible flip
+        Feedback2Clock.reset(-_timeToFirstFrame)  # t0 is time of first possible flip
         frameN = -1
         
-        # -------Run Routine "Feedback"-------
+        # -------Run Routine "Feedback2"-------
         while continueRoutine and routineTimer.getTime() > 0:
             # get current time
-            t = FeedbackClock.getTime()
-            tThisFlip = win.getFutureFlipTime(clock=FeedbackClock)
+            t = Feedback2Clock.getTime()
+            tThisFlip = win.getFutureFlipTime(clock=Feedback2Clock)
             tThisFlipGlobal = win.getFutureFlipTime(clock=None)
             frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
             # update/draw components on each frame
             
-            # *imFeedback* updates
-            if imFeedback.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+            # *imFeedback2* updates
+            if imFeedback2.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
                 # keep track of start time/frame for later
-                imFeedback.frameNStart = frameN  # exact frame index
-                imFeedback.tStart = t  # local t and not account for scr refresh
-                imFeedback.tStartRefresh = tThisFlipGlobal  # on global time
-                win.timeOnFlip(imFeedback, 'tStartRefresh')  # time at next scr refresh
-                imFeedback.setAutoDraw(True)
-            if imFeedback.status == STARTED:
+                imFeedback2.frameNStart = frameN  # exact frame index
+                imFeedback2.tStart = t  # local t and not account for scr refresh
+                imFeedback2.tStartRefresh = tThisFlipGlobal  # on global time
+                win.timeOnFlip(imFeedback2, 'tStartRefresh')  # time at next scr refresh
+                imFeedback2.setAutoDraw(True)
+            if imFeedback2.status == STARTED:
                 # is it time to stop? (based on global clock, using actual start)
-                if tThisFlipGlobal > imFeedback.tStartRefresh + 2-frameTolerance:
+                if tThisFlipGlobal > imFeedback2.tStartRefresh + 2-frameTolerance:
                     # keep track of stop time/frame for later
-                    imFeedback.tStop = t  # not accounting for scr refresh
-                    imFeedback.frameNStop = frameN  # exact frame index
-                    win.timeOnFlip(imFeedback, 'tStopRefresh')  # time at next scr refresh
-                    imFeedback.setAutoDraw(False)
+                    imFeedback2.tStop = t  # not accounting for scr refresh
+                    imFeedback2.frameNStop = frameN  # exact frame index
+                    win.timeOnFlip(imFeedback2, 'tStopRefresh')  # time at next scr refresh
+                    imFeedback2.setAutoDraw(False)
             
-            # *feedback_msg* updates
-            if feedback_msg.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+            # *feedback_msg2* updates
+            if feedback_msg2.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
                 # keep track of start time/frame for later
-                feedback_msg.frameNStart = frameN  # exact frame index
-                feedback_msg.tStart = t  # local t and not account for scr refresh
-                feedback_msg.tStartRefresh = tThisFlipGlobal  # on global time
-                win.timeOnFlip(feedback_msg, 'tStartRefresh')  # time at next scr refresh
-                feedback_msg.setAutoDraw(True)
-            if feedback_msg.status == STARTED:
+                feedback_msg2.frameNStart = frameN  # exact frame index
+                feedback_msg2.tStart = t  # local t and not account for scr refresh
+                feedback_msg2.tStartRefresh = tThisFlipGlobal  # on global time
+                win.timeOnFlip(feedback_msg2, 'tStartRefresh')  # time at next scr refresh
+                feedback_msg2.setAutoDraw(True)
+            if feedback_msg2.status == STARTED:
                 # is it time to stop? (based on global clock, using actual start)
-                if tThisFlipGlobal > feedback_msg.tStartRefresh + 2-frameTolerance:
+                if tThisFlipGlobal > feedback_msg2.tStartRefresh + 2-frameTolerance:
                     # keep track of stop time/frame for later
-                    feedback_msg.tStop = t  # not accounting for scr refresh
-                    feedback_msg.frameNStop = frameN  # exact frame index
-                    win.timeOnFlip(feedback_msg, 'tStopRefresh')  # time at next scr refresh
-                    feedback_msg.setAutoDraw(False)
+                    feedback_msg2.tStop = t  # not accounting for scr refresh
+                    feedback_msg2.frameNStop = frameN  # exact frame index
+                    win.timeOnFlip(feedback_msg2, 'tStopRefresh')  # time at next scr refresh
+                    feedback_msg2.setAutoDraw(False)
             
             # check for quit (typically the Esc key)
             if endExpNow or defaultKeyboard.getKeys(keyList=["escape"]):
@@ -3816,7 +3816,7 @@ for thisRepeats2 in repeats2:
             if not continueRoutine:  # a component has requested a forced-end of Routine
                 break
             continueRoutine = False  # will revert to True if at least one component still running
-            for thisComponent in FeedbackComponents:
+            for thisComponent in Feedback2Components:
                 if hasattr(thisComponent, "status") and thisComponent.status != FINISHED:
                     continueRoutine = True
                     break  # at least one component has not yet finished
@@ -3825,12 +3825,10 @@ for thisRepeats2 in repeats2:
             if continueRoutine:  # don't flip if this routine is over or we'll get a blank screen
                 win.flip()
         
-        # -------Ending Routine "Feedback"-------
-        for thisComponent in FeedbackComponents:
+        # -------Ending Routine "Feedback2"-------
+        for thisComponent in Feedback2Components:
             if hasattr(thisComponent, "setAutoDraw"):
                 thisComponent.setAutoDraw(False)
-        prac_trials_run2.addData('feedback_msg.started', feedback_msg.tStartRefresh)
-        prac_trials_run2.addData('feedback_msg.stopped', feedback_msg.tStopRefresh)
         thisExp.nextEntry()
         
     # completed 1 repeats of 'prac_trials_run2'
